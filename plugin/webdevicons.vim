@@ -21,7 +21,7 @@ endif
 let g:WebDevIconsUnicodeDecorateFileNodes = 1
 let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = { 'styl': '', 'scss': '', 'htm': '', 'html': '', 'css': '', 'less': '', 'md': '', 'json': '', 'js': '', 'rb': '', 'php': '', 'py': '', 'coffee': '','mustache': '', 'hbs': '', 'conf': '', 'ini': '', 'yml': '', 'jpg': '', 'jpeg': '', 'bmp': '', 'png': '', 'gif': '', 'ai': '' }
-let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'Gruntfile.js': '', 'Gulpfile.js': '' }
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'Gruntfile.coffee': '', 'Gruntfile.js': '', 'Gruntfile.ls': '', 'gulpfile.coffee': '', 'gulpfile.js': '', 'gulpfile.ls': '' }
 
 
 " a:1 (bufferName)
@@ -29,10 +29,10 @@ function! WebDevIconsGetFileTypeSymbol(...)
 
   if a:0 == 0
     let fileNodeExtension = expand("%:e")
-    let fileNode = expand("%:s")
+    let fileNode = expand("%:t")
   else
     let fileNodeExtension = fnamemodify(a:1, ':e')
-    let fileNode = fnamemodify(a:1, ':s')
+    let fileNode = fnamemodify(a:1, ':t')
   end
 
   let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
