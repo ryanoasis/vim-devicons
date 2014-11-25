@@ -21,7 +21,8 @@ endif
 let g:WebDevIconsUnicodeDecorateFileNodes = 1
 let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = { 'styl': '', 'scss': '', 'htm': '', 'html': '', 'css': '', 'less': '', 'md': '', 'json': '', 'js': '', 'rb': '', 'php': '', 'py': '', 'coffee': '','mustache': '', 'hbs': '', 'conf': '', 'ini': '', 'yml': '', 'jpg': '', 'jpeg': '', 'bmp': '', 'png': '', 'gif': '', 'ai': '' }
-let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'Gruntfile.coffee': '', 'Gruntfile.js': '', 'Gruntfile.ls': '', 'gulpfile.coffee': '', 'gulpfile.js': '', 'gulpfile.ls': '' }
+" do not remove: exact-match-case-sensitive-*
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'exact-match-case-sensitive-1.txt': 'X1', 'exact-match-case-sensitive-2': 'X2', 'gruntfile.coffee': '', 'gruntfile.js': '', 'gruntfile.ls': '', 'gulpfile.coffee': '', 'gulpfile.js': '', 'gulpfile.ls': '' }
 
 
 " a:1 (bufferName)
@@ -34,6 +35,9 @@ function! WebDevIconsGetFileTypeSymbol(...)
     let fileNodeExtension = fnamemodify(a:1, ':e')
     let fileNode = fnamemodify(a:1, ':t')
   end
+
+  let fileNodeExtension = tolower(fileNodeExtension)
+  let fileNode = tolower(fileNode)
 
   let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
 
