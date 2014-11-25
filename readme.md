@@ -1,11 +1,19 @@
 vim-webdevicons
 =================
 
-## Intro
+Adds filetype glyphs (icons) to other vim plugins such as nerdtree and vim-airline
 
-After seeing the awesome theme for Atom (set-ui) and the awesome plugins work done for NERDTree and vim-airline and wanting something like this for Vim I decided to create my first plugin.
+## Usage
+
+After installing the patched font and setting vim font just open nerdtree or look at vim-airline (statusline or tabline)
+
+## Background
+
+After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work done for NERDTree and vim-airline and wanting something like this for Vim I decided to create my first plugin.
 
 Adds a global config map of characters to file extensions (or entire filenames).
+
+## Configuration
 
 Works without Configuration *ONLY* when used with the patched font provided (see lib folder), install font and add to your vimrc or gvimrc, e.g.:
 > set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
