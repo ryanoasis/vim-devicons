@@ -8,16 +8,42 @@ Adds filetype glyphs (icons) to other vim plugins such as nerdtree and vim-airli
 After installing the patched font and setting the vim font just open nerdtree or look at vim-airline (statusline or tabline)
   * _NOTE:_ if you don't have a vim font set and not running gvim you will need to set the terminal font
 
-## Configuration
+## Font Configuration (experimental)
 
-Works without Configuration *ONLY* when used with the patched font provided (see lib folder), install font and add to your vimrc or gvimrc, e.g.:
+* The _ONLY_ configuration needed should be setting the font vim uses to a patched font (some are provided)
+
+| Currnetly Included Patched Fonts                        |
+|--------------------------------------------------------|
+| Anonymice Powerline Plus Nerd File Types               |
+| Droid Sans Mono for Powerline Plus Nerd File Types     |
+| Literation Mono Powerline Plus Nerd File Types         |
+| ProggyCleanTT Plus Nerd File Types                     |
+| Sauce Code Powerline Plus Nerd File Types              |
+| Ubuntu Mono derivative Powerline Plus Nerd File Types  |
+
+Patching the font of your own choosing:
+* requires: python2, python-fontforge package
+* usage:
+
+	> ./font-patcher PATH_TO_FONT
+
+e.g.
+
+	./font-patcher unpatched-sample-fonts/Droid\ Sans\ Mono\ for\ Powerline.otf
+	
+	./font-patcher Inconsolata.otf
+
+Works without Configuration *ONLY* when used with the patched font provided (see lib folder), install font and add to your vimrc or gvimrc
+
+ ```vim
+ set guifont=<FONT_NAME> <FONT_SIZE>
+ ```
+
+e.g.
 
  ```vim
  set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
  ```
-
-* additional fonts coming soon
-* font patching coming soon
 
 ## Screenshots
 
@@ -32,6 +58,10 @@ Works without Configuration *ONLY* when used with the patched font provided (see
    ![image](screenshots/airline-statusline.png)
  * tabline
   ![image](screenshots/airline-tabline.png)
+
+* Different patched fonts example:
+
+![image](screenshots/different-fonts-sample.png)
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
@@ -48,10 +78,10 @@ Works without Configuration *ONLY* when used with the patched font provided (see
   * example usage
 	> ./font-patcher unpatched-sample-fonts/Droid\ Sans\ Mono\ for\ Powerline.otf
 
-## Configuration
+## Extra Configuration
 
 * by default you should not *NEED* to configure anything to get the basics working
-  * _NOTE:_ For the time being you do *NEED* the patched font provided _unless_ you want to configure the filetype to glyph mappings yourself for your current font
+  * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own _unless_ you want to configure the filetype to glyph mappings yourself for your current font
 * these options can be defined in your vimrc or gvimrc
 * the following options are provided however for overriding
 
@@ -88,6 +118,10 @@ Works without Configuration *ONLY* when used with the patched font provided (see
 * change the default dictionary mappings for exact file node matches
 
  >	let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'MyReallyCoolFile.okay': 'myreallycoolglyph' }
+ 
+* add or override individual additional filetypes
+
+ >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'mysymbol'
 
 ## todo
 
@@ -98,12 +132,11 @@ Works without Configuration *ONLY* when used with the patched font provided (see
 
 ## FAQ / Troubleshooting
 
-* I don't want to use font XYZ, I want to use font ABC
- * font patching is coming soon
+* I don't want to use any of the fonts provided, I want to use font ABC
+ * see font configuration above
 
 * It isn't working
-  * Are you using the patched font provided?
-    * Support for other fonts will come when patching is working
+  * Are you using the patched font provided or are you patching your own?
   * _NOTE:_ if running vim and no font set it will default to the termianl font that is set
   * check what the vim/gvim font is set to, from ex mode:
 
