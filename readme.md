@@ -40,6 +40,10 @@ Works without Configuration *ONLY* when used with the patched font provided (see
   * if you are unhappy with the default glpyh used you can choose your own
 * supports a range of file type extensions by default:
   * styl, scss, htm, html, css, less, md, json, js, rb, php, py , coffee ,mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai
+* font patcher
+  * requires: python2, python-fontforge package
+  * example usage
+	> ./font-patcher unpatched-sample-fonts/Droid\ Sans\ Mono\ for\ Powerline.otf
 
 ## Configuration
 
