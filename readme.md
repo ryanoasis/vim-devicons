@@ -8,6 +8,12 @@ Adds filetype glyphs (icons) to other vim plugins such as nerdtree and vim-airli
 After installing the patched font and setting the vim font just open nerdtree or look at vim-airline (statusline or tabline)
   * _NOTE:_ if you don't have a vim font set and not running gvim you will need to set the terminal font
 
+
+## Installing the font
+
+Run the `install_font.sh` script. The script support currently only Linux machines.
+
+
 ## Configuration
 
 Works without Configuration *ONLY* when used with the patched font provided (see lib folder), install font and add to your vimrc or gvimrc, e.g.:
@@ -54,7 +60,7 @@ Works without Configuration *ONLY* when used with the patched font provided (see
 * enable/disable loading the plugin (default 1)
 
  >	let g:webdevicons_enable = 1
- 
+
 * enable/disable adding the flags to NERDTree (default 1)
 
  >	let g:webdevicons_enable_nerdtree = 1
