@@ -6,15 +6,16 @@ Adds filetype glyphs (icons) to other vim plugins such as nerdtree and vim-airli
 ## Usage
 
 After installing the patched font and setting the vim font just open nerdtree or look at vim-airline (statusline or tabline)
-  * _NOTE:_ if you don't have a vim font set and not running gvim you will need to set the terminal font
+
+* _NOTE:_ if you don't have a vim font set and not running gvim you will need to set the terminal font
 
 ## Configuration
 
 Works without Configuration *ONLY* when used with the patched font provided (see lib folder), install font and add to your vimrc or gvimrc, e.g.:
 
- ```vim
- set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
- ```
+```vim
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+```
 
 * additional fonts coming soon
 * font patching coming soon
@@ -40,7 +41,7 @@ Works without Configuration *ONLY* when used with the patched font provided (see
 * Adds a global config map of characters to file extensions (or entire filenames)
 * customizable and extendable filetype detections
   * ability to override predefined dictionary variable
-  * if you are unhappy with the default glpyh used you can choose your own
+  * if you are unhappy with the default glyph used you can choose your own
 * supports a range of file type extensions by default:
   * styl, scss, htm, html, css, less, md, json, js, rb, php, py , coffee ,mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai
 
@@ -54,7 +55,7 @@ Works without Configuration *ONLY* when used with the patched font provided (see
 * enable/disable loading the plugin (default 1)
 
  >	let g:webdevicons_enable = 1
- 
+
 * enable/disable adding the flags to NERDTree (default 1)
 
  >	let g:webdevicons_enable_nerdtree = 1
@@ -100,7 +101,7 @@ Works without Configuration *ONLY* when used with the patched font provided (see
 * It isn't working
   * Are you using the patched font provided?
     * Support for other fonts will come when patching is working
-  * _NOTE:_ if running vim and no font set it will default to the termianl font that is set
+  * _NOTE:_ if running vim and no font set it will default to the terminal font that is set
   * check what the vim/gvim font is set to, from ex mode:
 
     >	:set guifont?
