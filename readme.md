@@ -46,8 +46,10 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 * customizable and extendable filetype detections
   * ability to override predefined dictionary variable
   * if you are unhappy with the default glyph used you can choose your own
-* supports a range of file type extensions by default:
-  * styl, scss, htm, html, css, less, md, json, js, rb, php, py , coffee ,mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai, twig
+* supports a range of file type extensions, by default:
+  * ```styl, scss, htm, html, css, less, md, json, js, rb, php, py , coffee ,mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai, twig```
+* supports full filename matches, by default:
+  * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls```
 
 ## Configuration
 
