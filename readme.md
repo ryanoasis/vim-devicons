@@ -3,10 +3,15 @@ vim-webdevicons
 
 Adds filetype glyphs (icons) to other vim plugins such as nerdtree and vim-airline
 
+## Contributing
+
+* Contribution welcome. No real formal process setup just try to stick to general good conventions for now. Pull requests welcomed.
+
 ## Usage
 
 After installing the patched font and setting the vim font just open nerdtree or look at vim-airline (statusline or tabline)
-  * _NOTE:_ if you don't have a vim font set and not running gvim you will need to set the terminal font
+
+* _NOTE:_ if you don't have a vim font set and not running gvim you will need to set the terminal font
 
 ## Font Configuration
 
@@ -22,9 +27,9 @@ Works without Configuration *ONLY* when used with a patched font provided in the
 
 e.g.
 
- ```vim
- set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
- ```
+```vim
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+```
 
 ## Screenshots
 
@@ -51,9 +56,11 @@ e.g.
 * Adds a global config map of characters to file extensions (or entire filenames)
 * customizable and extendable filetype detections
   * ability to override predefined dictionary variable
-  * if you are unhappy with the default glpyh used you can choose your own
+  * if you are unhappy with the default glyph used you can choose your own
 * supports a range of file type extensions by default:
-  * styl, scss, htm, html, css, less, md, json, js, rb, php, py , coffee ,mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai
+  * ```styl, scss, htm, html, css, less, md, json, js, rb, php, py , coffee ,mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai, twig, cpp```
+* supports full filename matches, by default:
+  * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls```
 * font patcher ([nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher))
   * requires: python2, python-fontforge package
   * example usage
@@ -69,7 +76,7 @@ e.g.
 * enable/disable loading the plugin (default 1)
 
  >	let g:webdevicons_enable = 1
- 
+
 * enable/disable adding the flags to NERDTree (default 1)
 
  >	let g:webdevicons_enable_nerdtree = 1
@@ -119,7 +126,7 @@ e.g.
 
 * It isn't working
   * Are you using the patched font provided in the separate repo ([nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)) or are you patching your own?
-  * _NOTE:_ if running vim and no font set it will default to the termianl font that is set
+  * _NOTE:_ if running vim and no font set it will default to the terminal font that is set
   * check what the vim/gvim font is set to, from ex mode:
 
     >	:set guifont?

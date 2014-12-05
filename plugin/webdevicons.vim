@@ -20,7 +20,9 @@ endif
 
 let g:WebDevIconsUnicodeDecorateFileNodes = 1
 let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
+<<<<<<< HEAD
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = { 'styl': '', 'scss': '', 'htm': '', 'html': '', 'css': '', 'less': '', 'md': '', 'json': '', 'js': '', 'rb': '', 'php': '', 'py': '', 'coffee': '','mustache': '', 'hbs': '', 'conf': '', 'ini': '', 'yml': '', 'jpg': '', 'jpeg': '', 'bmp': '', 'png': '', 'gif': '', 'ai': '', 'twig': '', 'cpp': ''}
+
 " do not remove: exact-match-case-sensitive-*
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'exact-match-case-sensitive-1.txt': 'X1', 'exact-match-case-sensitive-2': 'X2', 'gruntfile.coffee': '', 'gruntfile.js': '', 'gruntfile.ls': '', 'gulpfile.coffee': '', 'gulpfile.js': '', 'gulpfile.ls': '' }
 
