@@ -181,6 +181,8 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 * [seti-ui](https://atom.io/themes/seti-ui)
+* [devicons by Theodore Vorillas](http://vorillaz.github.io/devicons)
+* [benatespina development.svg.icons](https://github.com/benatespina/development.svg.icons)
 * [Steve Losh](http://learnvimscriptthehardway.stevelosh.com/)
 
 ## License
