@@ -4,6 +4,8 @@ vim-webdevicons
 Adds filetype glyphs (icons) to other vim plugins such as nerdtree and
 vim-airline.
 
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.1.5/overall-screenshot.png)
+
 ## Usage
 
 After installing the patched font and setting the vim font just open nerdtree
@@ -51,6 +53,10 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 * Different patched fonts example:
 
 ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/different-fonts-sample.png)
+
+* Glyph set test file
+
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.1.5/glyph-set-test.png)
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
