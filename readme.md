@@ -13,16 +13,23 @@ After installing the patched font and setting the vim font just open nerdtree or
 
 * _NOTE:_ if you don't have a vim font set and not running gvim you will need to set the terminal font
 
-## Configuration
+## Font Configuration
 
-Works without Configuration *ONLY* when used with the patched font provided (see lib folder), install font and add to your vimrc or gvimrc, e.g.:
+* The _ONLY_ configuration needed should be setting the font vim uses to a patched font
+
+already patched fonts and font patcher script provided here: [nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)
+
+Works without Configuration *ONLY* when used with a patched font provided in the separate repository above, install font and add to your vimrc or gvimrc
+
+ ```vim
+ set guifont=<FONT_NAME> <FONT_SIZE>
+ ```
+
+e.g.
 
 ```vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 ```
-
-* additional fonts coming soon (see experimental branch if curious: https://github.com/ryanoasis/vim-webdevicons/tree/features/1-script-patch-fonts)
-* font patching coming soon (see experimental branch if curious: https://github.com/ryanoasis/vim-webdevicons/tree/features/1-script-patch-fonts)
 
 ## Screenshots
 
@@ -38,6 +45,10 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
  * tabline
   ![image](screenshots/airline-tabline.png)
 
+* Different patched fonts example:
+
+![image](screenshots/different-fonts-sample.png)
+
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
   * [NERDTree](https://github.com/scrooloose/nerdtree)
@@ -46,15 +57,19 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 * customizable and extendable filetype detections
   * ability to override predefined dictionary variable
   * if you are unhappy with the default glyph used you can choose your own
-* supports a range of file type extensions, by default:
-  * ```styl, scss, htm, html, css, less, md, json, js, rb, php, py , coffee ,mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai, twig```
+* supports a range of file type extensions by default:
+  * ```styl, scss, htm, html, css, less, md, json, js, rb, php, py , coffee ,mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai, twig, cpp```
 * supports full filename matches, by default:
   * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls```
+* font patcher ([nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher))
+  * requires: python2, python-fontforge package
+  * example usage
+	> ./font-patcher unpatched-sample-fonts/Droid\ Sans\ Mono\ for\ Powerline.otf
 
-## Configuration
+## Extra Configuration
 
 * by default you should not *NEED* to configure anything to get the basics working
-  * _NOTE:_ For the time being you do *NEED* the patched font provided _unless_ you want to configure the filetype to glyph mappings yourself for your current font
+  * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own ([nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)) _unless_ you want to configure the filetype to glyph mappings yourself for your current font
 * these options can be defined in your vimrc or gvimrc
 * the following options are provided however for overriding
 
@@ -91,6 +106,10 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 * change the default dictionary mappings for exact file node matches
 
  >	let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'MyReallyCoolFile.okay': 'myreallycoolglyph' }
+ 
+* add or override individual additional filetypes
+
+ >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'mysymbol'
 
 ## todo
 
@@ -101,12 +120,12 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 
 ## FAQ / Troubleshooting
 
-* I don't want to use font XYZ, I want to use font ABC
- * font patching is coming soon
+* I don't want to use any of the fonts provided, I want to use font ABC
+ * try the font patcher: [nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)
+ * see font configuration above for more details
 
 * It isn't working
-  * Are you using the patched font provided?
-    * Support for other fonts will come when patching is working
+  * Are you using the patched font provided in the separate repo ([nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)) or are you patching your own?
   * _NOTE:_ if running vim and no font set it will default to the terminal font that is set
   * check what the vim/gvim font is set to, from ex mode:
 
