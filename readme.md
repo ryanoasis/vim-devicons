@@ -1,25 +1,35 @@
 vim-webdevicons
 =================
 
-Adds filetype glyphs (icons) to other vim plugins such as nerdtree and vim-airline
+Adds filetype glyphs (icons) to other vim plugins such as nerdtree and
+vim-airline.
 
 ## Contributing
 
-* Contribution welcome. No real formal process setup just try to stick to general good conventions for now. Pull requests welcomed.
+Contributions and pull requests are welcome.
+
+No real formal process has been setup - just stick to general good conventions
+for now.
 
 ## Usage
 
-After installing the patched font and setting the vim font just open nerdtree or look at vim-airline (statusline or tabline)
+After installing the patched font and setting the vim font just open nerdtree
+or look at vim-airline (statusline or tabline).
 
-* _NOTE:_ if you don't have a vim font set and not running gvim you will need to set the terminal font
+* _NOTE:_ if you don't have a vim font set and are not running gvim you will
+  need to set the terminal font.
 
 ## Font Configuration
 
-* The _ONLY_ configuration needed should be setting the font vim uses to a patched font
+* The _ONLY_ configuration needed should be setting the font vim uses to a
+  patched font.
 
-already patched fonts and font patcher script provided here: [nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)
+Already patched fonts and the font patcher script are provided at:
+[nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)
 
-Works without Configuration *ONLY* when used with a patched font provided in the separate repository above, install font and add to your vimrc or gvimrc
+It works without configuration *ONLY* when used with a patched font provided in
+the separate repository above. Install the font and add it to your vimrc or
+gvimrc:
 
  ```vim
  set guifont=<FONT_NAME> <FONT_SIZE>
@@ -106,7 +116,7 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 * change the default dictionary mappings for exact file node matches
 
  >	let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'MyReallyCoolFile.okay': 'myreallycoolglyph' }
- 
+
 * add or override individual additional filetypes
 
  >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'mysymbol'
