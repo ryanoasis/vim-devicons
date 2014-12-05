@@ -4,13 +4,6 @@ vim-webdevicons
 Adds filetype glyphs (icons) to other vim plugins such as nerdtree and
 vim-airline.
 
-## Contributing
-
-Contributions and pull requests are welcome.
-
-No real formal process has been setup - just stick to general good conventions
-for now.
-
 ## Usage
 
 After installing the patched font and setting the vim font just open nerdtree
@@ -164,6 +157,13 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
     >	:let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol='x'
 
 * @todo: more specific FAQ and Troubleshooting help
+
+## Contributing
+
+Contributions and pull requests are welcome.
+
+No real formal process has been setup - just stick to general good conventions
+for now.
 
 ## Rationale
 
