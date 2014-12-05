@@ -43,21 +43,21 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 
 ## Screenshots
 
-![image](screenshots/vim.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/vim.png)
 
 * NERDTree:
 
-![image](screenshots/nerdtree.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/nerdtree.png)
 
 * vim-airline
  * statusline
-   ![image](screenshots/airline-statusline.png)
+   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/airline-statusline.png)
  * tabline
-  ![image](screenshots/airline-tabline.png)
+  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/airline-tabline.png)
 
 * Different patched fonts example:
 
-![image](screenshots/different-fonts-sample.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/different-fonts-sample.png)
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
