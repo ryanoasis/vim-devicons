@@ -120,7 +120,20 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 
  >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'mysymbol'
 
-## todo
+## Installation
+
+This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
+
+*  [Pathogen](https://github.com/tpope/vim-pathogen)
+  *  `git clone https://github.com/ryanoasis/vim-webdevicons ~/.vim/bundle/vim-webdevicons`
+*  [NeoBundle](https://github.com/Shougo/neobundle.vim)
+  *  `NeoBundle 'ryanoasis/vim-webdevicons'`
+*  [Vundle](https://github.com/gmarik/vundle)
+  *  `Plugin 'ryanoasis/vim-webdevicons'`
+*  manual
+  *  copy all of the files into your `~/.vim` directory
+
+## Todo
 
 * more filetypes to support
 * make sure it works properly and does not conflict with [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
