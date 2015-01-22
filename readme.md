@@ -4,12 +4,7 @@ vim-webdevicons
 Adds filetype glyphs (icons) to other vim plugins such as nerdtree and
 vim-airline.
 
-## Contributing
-
-Contributions and pull requests are welcome.
-
-No real formal process has been setup - just stick to general good conventions
-for now.
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.1.5/overall-screenshot.png)
 
 ## Usage
 
@@ -58,6 +53,10 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 * Different patched fonts example:
 
 ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/different-fonts-sample.png)
+
+* Glyph set test file
+
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.1.5/glyph-set-test.png)
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
@@ -121,7 +120,20 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 
  >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'mysymbol'
 
-## todo
+## Installation
+
+This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
+
+*  [Pathogen](https://github.com/tpope/vim-pathogen)
+  *  `git clone https://github.com/ryanoasis/vim-webdevicons ~/.vim/bundle/vim-webdevicons`
+*  [NeoBundle](https://github.com/Shougo/neobundle.vim)
+  *  `NeoBundle 'ryanoasis/vim-webdevicons'`
+*  [Vundle](https://github.com/gmarik/vundle)
+  *  `Plugin 'ryanoasis/vim-webdevicons'`
+*  manual
+  *  copy all of the files into your `~/.vim` directory
+
+## Todo
 
 * more filetypes to support
 * make sure it works properly and does not conflict with [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
@@ -165,6 +177,13 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 
 * @todo: more specific FAQ and Troubleshooting help
 
+## Contributing
+
+Contributions and pull requests are welcome.
+
+No real formal process has been setup - just stick to general good conventions
+for now.
+
 ## Rationale
 
 After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work done for NERDTree and vim-airline and wanting something like this for Vim I decided to create my first plugin.
@@ -175,6 +194,8 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 * [seti-ui](https://atom.io/themes/seti-ui)
+* [devicons by Theodore Vorillas](http://vorillaz.github.io/devicons)
+* [benatespina development.svg.icons](https://github.com/benatespina/development.svg.icons)
 * [Steve Losh](http://learnvimscriptthehardway.stevelosh.com/)
 
 ## License
