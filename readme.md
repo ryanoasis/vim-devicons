@@ -6,23 +6,21 @@ vim-airline.
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.1.5/overall-screenshot.png)
 
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
 - [vim-webdevicons v0.3.3](#)
-	- [Usage](#)
-	- [Font Configuration](#)
-	- [Font Installation](#)
-	- [Screenshots](#)
-	- [Features](#)
-	- [Extra Configuration](#)
-		- [character mappings](#)
-	- [Installation](#)
-	- [Todo](#)
-	- [FAQ / Troubleshooting](#)
-	- [Contributing](#)
-	- [Rationale](#)
-	- [Inspiration and special thanks](#)
-	- [License](#)
+	- [Usage](#usage)
+	- [Font Configuration](#font-configuration)
+	- [Font Installation](#font-installation)
+	- [Screenshots](#screenshots)
+	- [Features](#features)
+	- [Extra Configuration](#extra-configuration)
+		- [character mappings](#character-mappings)
+	- [Installation](#installation)
+	- [Todo](#todo)
+	- [FAQ / Troubleshooting](#faq--troubleshooting)
+	- [Contributing](#contributing)
+	- [Rationale](#rationale)
+	- [Inspiration and special thanks](#inspiration-and-special-thanks)
+	- [License](#license)
 
 ## Usage
 
