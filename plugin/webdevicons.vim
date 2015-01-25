@@ -1,3 +1,6 @@
+if exists('g:loaded_webdevicons')
+  finish
+endif
 let g:loaded_webdevicons = 1
 
 if !exists('g:webdevicons_enable')
