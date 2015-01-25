@@ -6,6 +6,24 @@ vim-airline.
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.1.5/overall-screenshot.png)
 
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [vim-webdevicons v0.3.3](#)
+	- [Usage](#)
+	- [Font Configuration](#)
+	- [Font Installation](#)
+	- [Screenshots](#)
+	- [Features](#)
+	- [Extra Configuration](#)
+		- [character mappings](#)
+	- [Installation](#)
+	- [Todo](#)
+	- [FAQ / Troubleshooting](#)
+	- [Contributing](#)
+	- [Rationale](#)
+	- [Inspiration and special thanks](#)
+	- [License](#)
+
 ## Usage
 
 After installing the patched font and setting the vim font just open nerdtree
