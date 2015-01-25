@@ -1,4 +1,4 @@
-vim-webdevicons
+vim-webdevicons v0.3.3
 =================
 
 Adds filetype glyphs (icons) to other vim plugins such as nerdtree and

@@ -1,3 +1,11 @@
+- v0.3.3
+-- Load the plugin once only (blueyed)
+-- Add font installation instructions, fixes #5 (wikimatze)
+-- added plugin install instructions
+-- slight readme re-ordering
+-- moved contributing section near bottom
+-- added additional screenshots
+-- added more thanks to those whose some more of the glyphs came from
 - v0.3.2
 -- moved screenshots into the wiki (wiki.vim-webdevicons) to reduce unnecessary project size of cloning repo
 - v0.3.1
