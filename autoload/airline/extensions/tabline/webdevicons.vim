@@ -1,3 +1,5 @@
 function! airline#extensions#tabline#webdevicons#format(bufnr, buffers)
-  return fnamemodify(bufname(a:bufnr), ':t') . ' ' . WebDevIconsGetFileTypeSymbol(bufname(a:bufnr)) . ' '
+  " Call original formatter.
+  let s = airline#extensions#tabline#{g:_webdevicons_airline_orig_formatter}#format(a:bufnr, a:buffers)
+  return s . ' ' . WebDevIconsGetFileTypeSymbol(bufname(a:bufnr)) . ' '
 endfunction
