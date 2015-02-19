@@ -139,6 +139,14 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
  >	let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = 'x'
 
+* enable folder/directory glpyh flag (disabled by default)
+
+ >	let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
+* change the default folder/directory glyph/icon
+
+ >	let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'mycoolFolderGlyph'
+
 * change the default dictionary mappings for file extension matches
 
  >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = { 'js': 'mycoolJSfontglyph' }

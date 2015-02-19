@@ -23,7 +23,9 @@ endif
 " config
 
 let g:WebDevIconsUnicodeDecorateFileNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
+let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = { 'styl': '', 'scss': '', 'htm': '', 'html': '', 'css': '', 'less': '', 'md': '', 'json': '', 'js': '', 'rb': '', 'php': '', 'py': '', 'coffee': '','mustache': '', 'hbs': '', 'conf': '', 'ini': '', 'yml': '', 'jpg': '', 'jpeg': '', 'bmp': '', 'png': '', 'gif': '', 'ai': '', 'twig': '', 'cpp': ''}
 
 " do not remove: exact-match-case-sensitive-*
@@ -83,11 +85,20 @@ endif
 
 function! NERDTreeWebDevIconsRefreshListener(event)
   let path = a:event.subject
-  let flag = WebDevIconsGetFileTypeSymbol(path.str()) . ' '
+
+  if !path.isDirectory
+    let flag = WebDevIconsGetFileTypeSymbol(path.str()) . ' '
+  elseif path.isDirectory && g:WebDevIconsUnicodeDecorateFolderNodes == 1
+    let flag = g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol . ' '
+  else
+    let flag = ''
+  endif
+
   call path.flagSet.clearFlags("webdevicons")
 
-  if flag != '' && !path.isDirectory
+  if flag != ''
     call path.flagSet.addFlag("webdevicons", flag)
   endif
+
 endfunction
 
