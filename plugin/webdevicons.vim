@@ -44,14 +44,14 @@ function! WebDevIconsGetFileTypeSymbol(...)
   let fileNodeExtension = tolower(fileNodeExtension)
   let fileNode = tolower(fileNode)
 
-  let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
-
-  if has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
-    let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
-  endif
-
   if has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, fileNode)
     let symbol = g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[fileNode]
+
+  elseif has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
+    let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
+
+  else
+    let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
   endif
 
   return symbol
