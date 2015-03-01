@@ -1,14 +1,14 @@
-vim-webdevicons v0.3.3
-=================
+vim-webdevicons v0.3.4
+=======================
 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons)
-=================
+=======================
 
 Adds filetype glyphs (icons) to other vim plugins such as nerdtree and
 vim-airline.
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.1.5/overall-screenshot.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.3.4/overall-screenshot.png)
 
-- [vim-webdevicons v0.3.3](#)
+- [vim-webdevicons v0.3.4](#)
 	- [Usage](#usage)
 	- [Font Configuration](#font-configuration)
 	- [Font Installation](#font-installation)
@@ -69,25 +69,25 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 ## Screenshots
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/vim.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/vim.png)
 
 * NERDTree:
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/nerdtree.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/nerdtree.png)
 
 * vim-airline
  * statusline
-   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/airline-statusline.png)
+   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/airline-statusline.png)
  * tabline
-  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/airline-tabline.png)
+  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/airline-tabline.png)
 
 * Different patched fonts example:
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.1.5/different-fonts-sample.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/different-fonts-sample.png)
 
 * Glyph set test file
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.1.5/glyph-set-test.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.3.4/glyph-set-test.png)
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
@@ -98,9 +98,9 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
   * ability to override predefined dictionary variable
   * if you are unhappy with the default glyph used you can choose your own
 * supports a range of file type extensions by default:
-  * ```styl, scss, htm, html, css, less, md, json, js, rb, php, py , coffee ,mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai, twig, cpp```
+  * ```styl, scss, htm, html, css, less, md, json, js, rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai, twig, cpp, c++, cc, cp, cxx, cpp, c, hs, lhs, lua, sh, diff, clj, dart, db, go, scala, sln, suo, xul```
 * supports full filename matches, by default:
-  * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls```
+  * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls, dropbox```
 * font patcher ([nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher))
   * requires: python2, python-fontforge package
   * example usage
@@ -129,9 +129,13 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
  >	let g:webdevicons_enable_airline_statusline = 1
 
-* turn on/off file node glpyh decorations (not particularly useful)
+* turn on/off file node glyph decorations (not particularly useful)
 
  >	let g:WebDevIconsUnicodeDecorateFileNodes = 1
+
+* whether or not font is using double-width glyphs (default 1, set to 0 for single character width glyphs)
+
+ >	let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 
 ### character mappings
 
@@ -139,9 +143,13 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
  >	let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = 'x'
 
-* enable folder/directory glpyh flag (disabled by default)
+* enable folder/directory glyph flag (disabled by default with 0)
 
  >	let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
+* enable custom folder/directory glyph exact matching (enabled by default when g:WebDevIconsUnicodeDecorateFolderNodes is set to 1)
+
+ >	let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
 
 * change the default folder/directory glyph/icon
 
@@ -149,11 +157,11 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 * change the default dictionary mappings for file extension matches
 
- >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = { 'js': 'mycoolJSfontglyph' }
+ >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'mycoolJSfontglyph'
 
 * change the default dictionary mappings for exact file node matches
 
- >	let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'MyReallyCoolFile.okay': 'myreallycoolglyph' }
+ >	let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['MyReallyCoolFile.okay'] = 'myreallycoolglyph'
 
 * add or override individual additional filetypes
 
