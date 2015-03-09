@@ -89,6 +89,17 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.3.4/glyph-set-test.png)
 
+### Various Terminal Emulators
+
+* gnome terminal
+
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.3.4/terminal-gnome-sample.png)
+
+* Urxvt terminal
+
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.3.4/terminal-urxvt-sample.png)
+
+
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
   * [NERDTree](https://github.com/scrooloose/nerdtree)
