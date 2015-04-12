@@ -121,58 +121,71 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 * the following options are provided however for overriding
 
 * enable/disable loading the plugin (default 1)
-
- >	let g:webdevicons_enable = 1
+ ```vim
+let g:webdevicons_enable = 1
+ ```
 
 * enable/disable adding the flags to NERDTree (default 1)
-
- >	let g:webdevicons_enable_nerdtree = 1
+ ```vim
+ let g:webdevicons_enable_nerdtree = 1
+  ```
 
 * enable/disable adding to vim-airline's tabline (default 1)
-
- >	let g:webdevicons_enable_airline_tabline = 1
+ ```vim
+let g:webdevicons_enable_airline_tabline = 1
+  ```
 
 * enable/disable adding to vim-airline's statusline (default 1)
-
- >	let g:webdevicons_enable_airline_statusline = 1
+ ```vim
+let g:webdevicons_enable_airline_statusline = 1
+  ```
 
 * turn on/off file node glyph decorations (not particularly useful)
-
- >	let g:WebDevIconsUnicodeDecorateFileNodes = 1
+ ```vim
+let g:WebDevIconsUnicodeDecorateFileNodes = 1
+  ```
 
 * whether or not font is using double-width glyphs (default 1, set to 0 for single character width glyphs)
-
- >	let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+ ```vim
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+  ```
 
 ### character mappings
 
 * change the default character when no match found
-
- >	let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = 'x'
+ ```vim
+let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = 'x'
+  ```
 
 * enable folder/directory glyph flag (disabled by default with 0)
-
- >	let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+ ```vim
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+  ```
 
 * enable custom folder/directory glyph exact matching (enabled by default when g:WebDevIconsUnicodeDecorateFolderNodes is set to 1)
-
- >	let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
+ ```vim
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
+  ```
 
 * change the default folder/directory glyph/icon
-
- >	let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'mycoolFolderGlyph'
+ ```vim
+let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'mycoolFolderGlyph'
+  ```
 
 * change the default dictionary mappings for file extension matches
-
- >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'mycoolJSfontglyph'
+ ```vim
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'mycoolJSfontglyph'
+  ```
 
 * change the default dictionary mappings for exact file node matches
-
- >	let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['MyReallyCoolFile.okay'] = 'myreallycoolglyph'
+ ```vim
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['MyReallyCoolFile.okay'] = 'myreallycoolglyph'
+  ```
 
 * add or override individual additional filetypes
-
- >	let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'mysymbol'
+ ```vim
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'mysymbol'
+  ```
 
 ## Installation
 
@@ -205,29 +218,41 @@ This plugin follows the standard runtime path structure, and as such it can be i
   * _NOTE:_ if running vim and no font set it will default to the terminal font that is set
   * check what the vim/gvim font is set to, from ex mode:
 
-    >	:set guifont?
+    ```vim
+    :set guifont?
+    ```
 
   * check if the plugin is loaded (should give '1'), from ex mode:
 
-    >	:echo loaded_webdevicons
+    ```vim
+    :echo loaded_webdevicons
+    ```
 
   * check if the plugin is enabled (should give '1'), from ex mode:
 
-    >	:echo g:webdevicons_enable
+    ```vim
+    :echo g:webdevicons_enable
+    ```
 
   * check if the plugin is enabled for NERDTree (should give '1'), from ex mode:
     * this should *NOT* need to be set under normal circumstances
 
-    >	:echo g:webdevicons_enable_nerdtree
+    ```vim
+    :echo g:webdevicons_enable_nerdtree
+    ```
 
   * check if you are able to see the characters, from ex mode:
 
-    >	:echo g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
+    	```vim
+    	:echo g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
+    	```
 
   * if all this looks correct you may try this to see if any files show flags
     * last resort, see if you can even set the default symbol and have it display anywhere (NERDTree, vim-airline's statusline, vim-airlines's tabline), from ex mode:
 
-    >	:let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol='x'
+    ```vim
+    :let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol='x'
+    ```
 
 * @todo: more specific FAQ and Troubleshooting help
 
