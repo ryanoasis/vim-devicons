@@ -1,8 +1,22 @@
+" Vim global plugin for correcting typing mistakes
+" Version: 0.4.0
+" Webpage: https://github.com/ryanoasis/vim-webdevicons
+" Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
+" Licencse: see LICENSE
+
+" standard fix/safety: line continuation (avoiding side effects)
+let s:save_cpo = &cpo
+set cpo&vim
+
+" standard loading / not loading
+
 if exists('g:loaded_webdevicons')
   finish
 endif
 
 let g:loaded_webdevicons = 1
+
+" config enable / disable settings
 
 if !exists('g:webdevicons_enable')
   let g:webdevicons_enable = 1
@@ -20,11 +34,13 @@ if !exists('g:webdevicons_enable_airline_statusline')
   let g:webdevicons_enable_airline_statusline = 1
 endif
 
-" config
+" config options
 
 let g:WebDevIconsUnicodeDecorateFileNodes = 1
+
 " whether to show default folder glyphs on directories:
 let g:WebDevIconsUnicodeDecorateFolderNodes = 0
+
 " whether to try to match folder notes with any exact file node matches
 " default is to match but requires WebDevIconsUnicodeDecorateFolderNodes set
 " to 1:
@@ -35,6 +51,8 @@ endif
 if !exists('g:WebDevIconsUnicodeGlyphDoubleWidth')
   let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 endif
+
+" config defaults
 
 if !exists('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol')
   let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
@@ -51,6 +69,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'exact-match-case-sens
 
 
 " a:1 (bufferName), a:2 (isDirectory)
+" scope: public
 function! WebDevIconsGetFileTypeSymbol(...)
 
   if a:0 == 0
@@ -86,8 +105,9 @@ function! WebDevIconsGetFileTypeSymbol(...)
 
 endfunction
 
-" airline:
+" for airline plugin:
 
+" scope: global
 function! AirlineWebDevIcons(...)
   let w:airline_section_x = get(w:, 'airline_section_x', g:airline_section_x)
   let w:airline_section_x .= ' %{WebDevIconsGetFileTypeSymbol()} '
@@ -107,8 +127,9 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_airline_tabline
   let g:airline#extensions#tabline#formatter = 'webdevicons'
 endif
 
-" nerdtree:
+" for nerdtree plugin:
 
+" scope: public
 function! NERDTreeWebDevIconsRefreshListener(event)
   let path = a:event.subject
   let padding = ' '
@@ -136,4 +157,8 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   endif
 
 endfunction
+
+" standard fix/safety: line continuation (avoiding side effects)
+let &cpo = s:save_cpo
+unlet s:save_cpo
 
