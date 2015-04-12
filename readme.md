@@ -243,9 +243,9 @@ This plugin follows the standard runtime path structure, and as such it can be i
 
   * check if you are able to see the characters, from ex mode:
 
-    	```vim
-    	:echo g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
-    	```
+    ```vim
+    :echo g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
+    ```
 
   * if all this looks correct you may try this to see if any files show flags
     * last resort, see if you can even set the default symbol and have it display anywhere (NERDTree, vim-airline's statusline, vim-airlines's tabline), from ex mode:
