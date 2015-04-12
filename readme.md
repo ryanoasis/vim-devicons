@@ -202,10 +202,10 @@ This plugin follows the standard runtime path structure, and as such it can be i
 
 ## Todo
 
-* more filetypes to support
-* make sure it works properly and does not conflict with [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
-* customize filetype icon colors
-* more customization options in general
+* [ ] more filetypes to support
+* [ ] make sure it works properly and does not conflict with [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+* [ ] customize filetype icon colors
+* [ ] more customization options in general
 
 ## FAQ / Troubleshooting
 
