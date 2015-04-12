@@ -46,7 +46,13 @@ if !exists('g:webdevicons_enable_airline_statusline')
   let g:webdevicons_enable_airline_statusline = 1
 endif
 
-" config options
+if !exists('g:webdevicons_conceal_nerdtree_brackets')
+  let g:webdevicons_conceal_nerdtree_brackets = 1
+endif
+
+
+" config options {{{1
+"========================================================================
 
 let g:WebDevIconsUnicodeDecorateFileNodes = 1
 
@@ -64,7 +70,13 @@ if !exists('g:WebDevIconsUnicodeGlyphDoubleWidth')
   let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 endif
 
-" config defaults
+if !exists('g:WebDevIconsNerdTreeAfterGlyphPadding')
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+endif
+
+
+" config defaults {{{1
+"========================================================================
 
 if !exists('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol')
   let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
@@ -256,12 +268,13 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_airline_tabline
   let g:airline#extensions#tabline#formatter = 'webdevicons'
 endif
 
-" for nerdtree plugin:
+" for nerdtree plugin {{{3
+"========================================================================
 
 " scope: public
 function! NERDTreeWebDevIconsRefreshListener(event)
   let path = a:event.subject
-  let padding = ' '
+  let padding = g:WebDevIconsNerdTreeAfterGlyphPadding
 
   if g:WebDevIconsUnicodeGlyphDoubleWidth == 0
     let padding = ''
