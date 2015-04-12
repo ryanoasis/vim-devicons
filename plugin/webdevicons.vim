@@ -1,14 +1,17 @@
-" Vim global plugin for correcting typing mistakes
 " Version: 0.4.0
 " Webpage: https://github.com/ryanoasis/vim-webdevicons
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " Licencse: see LICENSE
 
-" standard fix/safety: line continuation (avoiding side effects)
+let s:version = '0.4.0'
+
+" standard fix/safety: line continuation (avoiding side effects) {{{1
+"========================================================================
 let s:save_cpo = &cpo
 set cpo&vim
 
-" standard loading / not loading
+" standard loading / not loading {{{1
+"========================================================================
 
 if exists('g:loaded_webdevicons')
   finish
@@ -16,7 +19,8 @@ endif
 
 let g:loaded_webdevicons = 1
 
-" config enable / disable settings
+" config enable / disable settings {{{1
+"========================================================================
 
 if !exists('g:webdevicons_enable')
   let g:webdevicons_enable = 1
@@ -62,13 +66,77 @@ if !exists('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol')
   let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 endif
 
+" functions {{{1
+"========================================================================
+
+" local functions {{{2
+"========================================================================
+
 " scope: local
-function! s:WebDevIconsSetDictionaries()
-	echom "call WebDevIconsSetDictionaries"
+function! s:setDictionaries()
 
-	let s:file_node_extensions = { 'styl': '', 'scss': '', 'htm': '', 'html': '', 'css': '', 'less': '', 'md': '', 'json': '', 'js': '', 'rb': '', 'php': '', 'py': '', 'pyc': '', 'pyo': '', 'pyd': '', 'coffee': '','mustache': '', 'hbs': '', 'conf': '', 'ini': '', 'yml': '', 'jpg': '', 'jpeg': '', 'bmp': '', 'png': '', 'gif': '', 'ai': '', 'twig': '', 'cpp': '', 'c++': '', 'cxx': '', 'cc': '', 'cp': '', 'c': '', 'hs': '', 'lhs': '', 'lua': '', 'java': '', 'sh': '', 'diff': '', 'db': '', 'clj': '', 'scala': '', 'go': '', 'dart': '', 'xul': '', 'sln': '', 'suo': ''}
+	let s:file_node_extensions = {
+		\	'styl'     : '',
+		\	'scss'     : '',
+		\	'htm'      : '',
+		\	'html'     : '',
+		\	'css'      : '',
+		\	'less'     : '',
+		\	'md'       : '',
+		\	'json'     : '',
+		\	'js'       : '',
+		\	'rb'       : '',
+		\	'php'      : '',
+		\	'py'       : '',
+		\	'pyc'      : '',
+		\	'pyo'      : '',
+		\	'pyd'      : '',
+		\	'coffee'   : '',
+		\	'mustache' : '',
+		\	'hbs'      : '',
+		\	'conf'     : '',
+		\	'ini'      : '',
+		\	'yml'      : '',
+		\	'jpg'      : '',
+		\	'jpeg'     : '',
+		\	'bmp'      : '',
+		\	'png'      : '',
+		\	'gif'      : '',
+		\	'ai'       : '',
+		\	'twig'     : '',
+		\	'cpp'      : '',
+		\	'c++'      : '',
+		\	'cxx'      : '',
+		\	'cc'       : '',
+		\	'cp'       : '',
+		\	'c'        : '',
+		\	'hs'       : '',
+		\	'lhs'      : '',
+		\	'lua'      : '',
+		\	'java'     : '',
+		\	'sh'       : '',
+		\	'diff'     : '',
+		\	'db'       : '',
+		\	'clj'      : '',
+		\	'scala'    : '',
+		\	'go'       : '',
+		\	'dart'     : '',
+		\	'xul'      : '',
+		\	'sln'      : '',
+		\	'suo'      : ''
+	\}
 
-	let s:file_node_exact_matches = {'exact-match-case-sensitive-1.txt': 'X1', 'exact-match-case-sensitive-2': 'X2', 'gruntfile.coffee': '', 'gruntfile.js': '', 'gruntfile.ls': '', 'gulpfile.coffee': '', 'gulpfile.js': '', 'gulpfile.ls': '', 'dropbox': ''}
+	let s:file_node_exact_matches = {
+		\	'exact-match-case-sensitive-1.txt' : 'X1',
+		\	'exact-match-case-sensitive-2'     : 'X2',
+		\	'gruntfile.coffee'                 : '',
+		\	'gruntfile.js'                     : '',
+		\	'gruntfile.ls'                     : '',
+		\	'gulpfile.coffee'                  : '',
+		\	'gulpfile.js'                      : '',
+		\	'gulpfile.ls'                      : '',
+		\	'dropbox'                          : ''
+	\}
 
 	if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
 		let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
@@ -78,13 +146,6 @@ function! s:WebDevIconsSetDictionaries()
 		" do not remove: exact-match-case-sensitive-*
 		let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
 	endif
-
-"for [next_key, next_val] in items(s:file_node_exact_matches)
-"   echom next_key
-"   echom next_val
-"    let result = process(next_val)
-"    echo "Result for " next_key " is " result
-"endfor
 
 	" iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
 	for [key, val] in items(s:file_node_extensions)
@@ -102,7 +163,30 @@ function! s:WebDevIconsSetDictionaries()
 
 endfunction
 
-call s:WebDevIconsSetDictionaries()
+function! s:setSyntax()
+   if g:webdevicons_conceal_nerdtree_brackets == 1
+      exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" contained conceal cchar=_ containedin=ALL'
+   endif
+endfunction
+
+" scope: local
+function! s:initialize()
+   call s:setDictionaries()
+   call s:setSyntax()
+endfunction
+
+" initialization {{{1
+"========================================================================
+
+call s:initialize()
+
+" public functions {{{2
+"========================================================================
+
+" scope: public
+function! webdevicons#version()
+   return s:version
+endfunction
 
 " a:1 (bufferName), a:2 (isDirectory)
 " scope: public
@@ -141,7 +225,8 @@ function! WebDevIconsGetFileTypeSymbol(...)
 
 endfunction
 
-" for airline plugin:
+" for airline plugin {{{3
+"========================================================================
 
 " scope: global
 function! AirlineWebDevIcons(...)
@@ -194,7 +279,9 @@ function! NERDTreeWebDevIconsRefreshListener(event)
 
 endfunction
 
-" standard fix/safety: line continuation (avoiding side effects)
+" standard fix/safety: line continuation (avoiding side effects) {{{1
+"========================================================================
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
+" vim: fdm=marker:
