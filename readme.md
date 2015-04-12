@@ -1,10 +1,10 @@
-vim-webdevicons v0.3.4 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons)
+vim-webdevicons v0.4.0 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons)
 =======================
 Adds filetype glyphs (icons) to other vim plugins such as nerdtree and
 vim-airline.
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.3.4/overall-screenshot.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/overall-screenshot.png)
 
-- [vim-webdevicons v0.3.4](#)
+- [vim-webdevicons v0.4.0](#)
 	- [Usage](#usage)
 	- [Font Configuration](#font-configuration)
 	- [Font Installation](#font-installation)
@@ -37,8 +37,8 @@ Already patched fonts and the font patcher script are provided at:
 [nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)
 
 It works without configuration *ONLY* when used with a patched font provided in
-the separate repository above. Install the font and add it to your vimrc or
-gvimrc:
+the separate repository above. Install the font and add it to your `vimrc` or
+`gvimrc`:
 
  ```vim
  set guifont=<FONT_NAME> <FONT_SIZE>
@@ -65,35 +65,35 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 ## Screenshots
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/vim.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/vim.png)
 
 * NERDTree:
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/nerdtree.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/nerdtree.png)
 
 * vim-airline
  * statusline
-   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/airline-statusline.png)
+   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/airline-statusline.png)
  * tabline
-  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/airline-tabline.png)
+  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/airline-tabline.png)
 
 * Different patched fonts example:
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.3.4/different-fonts-sample.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/different-fonts-sample.png)
 
 * Glyph set test file
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.3.4/glyph-set-test.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/glyph-set-test.png)
 
 ### Various Terminal Emulators
 
 * gnome terminal
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.3.4/terminal-gnome-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/terminal-gnome-sample.png)
 
 * Urxvt terminal
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.3.4/terminal-urxvt-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/terminal-urxvt-sample.png)
 
 
 ## Features
@@ -117,7 +117,7 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 * by default you should not *NEED* to configure anything to get the basics working
   * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own ([nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)) _unless_ you want to configure the filetype to glyph mappings yourself for your current font
-* these options can be defined in your vimrc or gvimrc
+* these options can be defined in your `vimrc` or `gvimrc`
 * the following options are provided however for overriding
 
 * enable/disable loading the plugin (default 1)
@@ -146,15 +146,18 @@ let g:WebDevIconsUnicodeDecorateFileNodes = 1
   ```
 
 * whether or not font is using double-width glyphs (default 1, set to 0 for single character width glyphs)
+	* _note:_ does not actually switch the font or try to use the correct font, just adds a space to account for a double width glyph, you have to set the correct double width glyph font in your terminal or `guifont`
  ```vim
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
   ```
 
 ### character mappings
 
+* `ƛ` is used as an example below, substitute for the glyph you **actually** want to use
+
 * change the default character when no match found
  ```vim
-let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = 'x'
+let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = 'ƛ'
   ```
 
 * enable folder/directory glyph flag (disabled by default with 0)
@@ -169,22 +172,25 @@ let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
 
 * change the default folder/directory glyph/icon
  ```vim
-let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'mycoolFolderGlyph'
+let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
   ```
 
 * change the default dictionary mappings for file extension matches
  ```vim
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'mycoolJSfontglyph'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'ƛ'
   ```
 
 * change the default dictionary mappings for exact file node matches
  ```vim
-let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['MyReallyCoolFile.okay'] = 'myreallycoolglyph'
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['MyReallyCoolFile.okay'] = 'ƛ'
   ```
 
 * add or override individual additional filetypes
  ```vim
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'mysymbol'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'ƛ'
   ```
 
 ## Installation

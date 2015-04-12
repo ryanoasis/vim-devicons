@@ -1,2 +1,358 @@
-*webdevicons.txt* @todo
-*webdevicons*
+*readme.txt*  vim-webdevicons v0.4.0 
+
+===============================================================================
+Contents ~
+
+ 1. Introduction                                          |readme-introduction|
+ 2. Usage                                                        |readme-usage|
+ 3. Font Configuration                              |readme-font-configuration|
+ 4. Font Installation                                |readme-font-installation|
+ 5. Screenshots                                            |readme-screenshots|
+  1. Various Terminal Emulators             |readme-various-terminal-emulators|
+ 6. Features                                                  |readme-features|
+ 7. Extra Configuration                            |readme-extra-configuration|
+  1. character mappings                             |readme-character-mappings|
+ 8. Installation                                          |readme-installation|
+ 9. Todo                                                          |readme-todo|
+ 10. FAQ / Troubleshooting                         |readme-faq-troubleshooting|
+ 11. Contributing                                         |readme-contributing|
+ 12. Rationale                                               |readme-rationale|
+ 13. Inspiration and special thanks         |readme-inspiration-special-thanks|
+ 14. License                                                   |readme-license|
+ 15. References                                             |readme-references|
+
+===============================================================================
+                                                          *readme-introduction*
+Introduction ~
+
+Adds filetype glyphs (icons) to other vim plugins such as nerdtree and vim-
+airline. Image: image (see reference [1])
+
+- vim-webdevicons v0.4.0
+
+  - Usage
+  - Font Configuration
+  - Font Installation
+  - Screenshots
+  - Features
+  - Extra Configuration
+
+    - character mappings
+
+  - Installation
+  - Todo
+  - FAQ / Troubleshooting
+  - Contributing
+  - Rationale
+  - Inspiration and special thanks
+  - License
+
+===============================================================================
+                                                                 *readme-usage*
+Usage ~
+
+After installing the patched font and setting the vim font just open nerdtree
+or look at vim-airline (statusline or tabline).
+
+- _NOTE:_ if you don't have a vim font set and are not running gvim you will
+  need to set the terminal font.
+
+===============================================================================
+                                                    *readme-font-configuration*
+Font Configuration ~
+
+- The _ONLY_ configuration needed should be setting the font vim uses to a
+  patched font.
+
+Already patched fonts and the font patcher script are provided at: nerd-
+filetype-glyphs-fonts-patcher [2]
+
+It works without configuration _ONLY_ when used with a patched font provided in
+the separate repository above. Install the font and add it to your 'vimrc' or
+'gvimrc':
+
+'vim set guifont=<FONT_NAME> <FONT_SIZE>'
+
+e.g.
+>
+  set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+<
+===============================================================================
+                                                     *readme-font-installation*
+Font Installation ~
+
+You basically have to put any font you would like to use into the '~/.fonts'
+folder. For example:
+>
+  cd ~/.fonts && curl -fLo DroidSansMonoForPowerlinePlusNerdFileTypes.otf https://raw.githubusercontent.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher/master/patched-fonts/Droid%20Sans%20Mono%20for%20Powerline%20Plus%20Nerd%20File%20Types.otf
+<
+You can find more fonts under my repository nerd-filetype-glyphs-fonts-patcher
+[3].
+
+===============================================================================
+                                                           *readme-screenshots*
+Screenshots ~
+
+  Image: image (see reference [4])
+
+- NERDTree:
+
+  Image: image (see reference [5])
+
+- vim-airline
+- statusline Image: image (see reference [6])
+- tabline Image: image (see reference [7])
+
+- Different patched fonts example:
+
+  Image: image (see reference [8])
+
+- Glyph set test file
+
+  Image: image (see reference [9])
+
+-------------------------------------------------------------------------------
+                                            *readme-various-terminal-emulators*
+Various Terminal Emulators ~
+
+- gnome terminal
+
+  Image: image (see reference [10])
+
+- Urxvt terminal
+
+  Image: image (see reference [11])
+
+===============================================================================
+                                                              *readme-features*
+Features ~
+
+- show developer file type glyphs from a font in various vim plugins,
+  currently supports:
+- NERDTree [12]
+- vim-airline [13] (statusline and tabline)
+- Adds a global config map of characters to file extensions (or entire
+  filenames)
+- customizable and extendable filetype detections
+- ability to override predefined dictionary variable
+- if you are unhappy with the default glyph used you can choose your own
+- supports a range of file type extensions by default:
+- 'styl, scss, htm, html, css, less, md, json, js, rb, php, py, pyc, pyd,
+  pyo, coffee, mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai,
+  twig, cpp, c++, cc, cp, cxx, cpp, c, hs, lhs, lua, sh, diff, clj, dart, db,
+  go, scala, sln, suo, xul'
+- supports full filename matches, by default:
+- 'gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee,
+  gulpfile.js, gulpfile.ls, dropbox'
+- font patcher (nerd-filetype-glyphs-fonts-patcher [2])
+- requires: python2, python-fontforge package
+- example usage > ./font-patcher unpatched-sample-fonts/Droid\ Sans\ Mono\
+  for\ Powerline.otf
+
+===============================================================================
+                                                   *readme-extra-configuration*
+Extra Configuration ~
+
+- by default you should not _NEED_ to configure anything to get the basics
+  working
+
+- _NOTE:_ You _NEED_ to use one of the patched font provided or patch your
+  own (nerd-filetype-glyphs-fonts-patcher [2]) _unless_ you want to configure
+  the filetype to glyph mappings yourself for your current font
+
+- these options can be defined in your 'vimrc' or 'gvimrc'
+
+- the following options are provided however for overriding
+
+- enable/disable loading the plugin (default 1) 'vim let g:webdevicons_enable
+  = 1'
+
+- enable/disable adding the flags to NERDTree (default 1) 'vim let
+  g:webdevicons_enable_nerdtree = 1'
+
+- enable/disable adding to vim-airline's tabline (default 1) 'vim let
+  g:webdevicons_enable_airline_tabline = 1'
+
+- enable/disable adding to vim-airline's statusline (default 1) 'vim let
+  g:webdevicons_enable_airline_statusline = 1'
+
+- turn on/off file node glyph decorations (not particularly useful) 'vim let
+  g:WebDevIconsUnicodeDecorateFileNodes = 1'
+
+- whether or not font is using double-width glyphs (default 1, set to 0 for
+  single character width glyphs)
+
+  - _note:_ does not actually switch the font or try to use the correct
+    font, just adds a space to account for a double width glyph, you have
+    to set the correct double width glyph font in your terminal or
+    'guifont''vim let g:WebDevIconsUnicodeGlyphDoubleWidth = 1'
+
+-------------------------------------------------------------------------------
+                                                    *readme-character-mappings*
+character mappings ~
+
+- 'ƛ' is used as an example below, substitute for the glyph you **actually**
+  want to use
+
+- change the default character when no match found "vim let
+  g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = 'ƛ'"
+
+- enable folder/directory glyph flag (disabled by default with 0) 'vim let
+  g:WebDevIconsUnicodeDecorateFolderNodes = 1'
+
+- enable custom folder/directory glyph exact matching (enabled by default
+  when g:WebDevIconsUnicodeDecorateFolderNodes is set to 1) 'vim let
+  WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1'
+
+- change the default folder/directory glyph/icon "vim let
+  g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'"
+
+- change the default dictionary mappings for file extension matches "vim let
+  g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed let
+  g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'ƛ'"
+
+- change the default dictionary mappings for exact file node matches "vim let
+  g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed let
+  g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['MyReallyCoolFile.okay']
+  = 'ƛ'"
+
+- add or override individual additional filetypes "vim let
+  g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed let
+  g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'ƛ'"
+
+===============================================================================
+                                                          *readme-installation*
+Installation ~
+
+This plugin follows the standard runtime path structure, and as such it can be
+installed with a variety of plugin managers:
+
+- Pathogen [14]
+- 'git clone https://github.com/ryanoasis/vim-webdevicons ~/.vim/bundle/vim-
+  webdevicons'
+- NeoBundle [15]
+- "NeoBundle 'ryanoasis/vim-webdevicons'"
+- Vundle [16]
+- "Plugin 'ryanoasis/vim-webdevicons'"
+- manual
+- copy all of the files into your '~/.vim' directory
+
+===============================================================================
+                                                                  *readme-todo*
+Todo ~
+
+- [ ] more filetypes to support
+- [ ] make sure it works properly and does not conflict with nerdtree-git-
+  plugin [17]
+- [ ] customize filetype icon colors
+- [ ] more customization options in general
+
+===============================================================================
+                                                   *readme-faq-troubleshooting*
+FAQ / Troubleshooting ~
+
+- I don't want to use any of the fonts provided, I want to use font ABC
+- try the font patcher: nerd-filetype-glyphs-fonts-patcher [2]
+- see font configuration above for more details
+
+- It isn't working
+
+- Are you using the patched font provided in the separate repo (nerd-
+  filetype-glyphs-fonts-patcher [2]) or are you patching your own?
+- _NOTE:_ if running vim and no font set it will default to the terminal font
+  that is set
+- check what the vim/gvim font is set to, from ex mode:
+
+  'vim :set guifont?'
+
+- check if the plugin is loaded (should give '1'), from ex mode:
+
+  'vim :echo loaded_webdevicons'
+
+- check if the plugin is enabled (should give '1'), from ex mode:
+
+  'vim :echo g:webdevicons_enable'
+
+- check if the plugin is enabled for NERDTree (should give '1'), from ex
+  mode:
+
+  - this should _NOT_ need to be set under normal circumstances
+
+  'vim :echo g:webdevicons_enable_nerdtree'
+
+- check if you are able to see the characters, from ex mode:
+
+  'vim :echo g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol'
+
+- if all this looks correct you may try this to see if any files show flags
+
+  - last resort, see if you can even set the default symbol and have it
+    display anywhere (NERDTree, vim-airline's statusline, vim-airlines's
+    tabline), from ex mode:
+
+  "vim :let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol='x'"
+
+- @todo: more specific FAQ and Troubleshooting help
+
+===============================================================================
+                                                          *readme-contributing*
+Contributing ~
+
+Contributions and pull requests are welcome.
+
+No real formal process has been setup - just stick to general good conventions
+for now.
+
+===============================================================================
+                                                             *readme-rationale*
+Rationale ~
+
+After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work
+done for NERDTree and vim-airline and wanting something like this for Vim I
+decided to create my first plugin.
+
+===============================================================================
+                                            *readme-inspiration-special-thanks*
+Inspiration and special thanks ~
+
+- vim-airline [13]
+- nerdtree [12]
+- nerdtree-git-plugin [17]
+- seti-ui [18]
+- devicons by Theodore Vorillas [19]
+- benatespina development.svg.icons [20]
+- Steve Losh [21]
+
+===============================================================================
+                                                               *readme-license*
+License ~
+
+see LICENSE
+
+===============================================================================
+                                                            *readme-references*
+References ~
+
+[1] https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/overall-screenshot.png
+[2] https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher
+[3] https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher/tree/master/patched-fonts
+[4] https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/vim.png
+[5] https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/nerdtree.png
+[6] https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/airline-statusline.png
+[7] https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/airline-tabline.png
+[8] https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/different-fonts-sample.png
+[9] https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/glyph-set-test.png
+[10] https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/terminal-gnome-sample.png
+[11] https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/terminal-urxvt-sample.png
+[12] https://github.com/scrooloose/nerdtree
+[13] https://github.com/bling/vim-airline
+[14] https://github.com/tpope/vim-pathogen
+[15] https://github.com/Shougo/neobundle.vim
+[16] https://github.com/gmarik/vundle
+[17] https://github.com/Xuyuanp/nerdtree-git-plugin
+[18] https://atom.io/themes/seti-ui
+[19] http://vorillaz.github.io/devicons
+[20] https://github.com/benatespina/development.svg.icons
+[21] http://learnvimscriptthehardway.stevelosh.com/
+
+vim: ft=help
