@@ -62,11 +62,47 @@ if !exists('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol')
   let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 endif
 
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = { 'styl': '', 'scss': '', 'htm': '', 'html': '', 'css': '', 'less': '', 'md': '', 'json': '', 'js': '', 'rb': '', 'php': '', 'py': '', 'pyc': '', 'pyo': '', 'pyd': '', 'coffee': '','mustache': '', 'hbs': '', 'conf': '', 'ini': '', 'yml': '', 'jpg': '', 'jpeg': '', 'bmp': '', 'png': '', 'gif': '', 'ai': '', 'twig': '', 'cpp': '', 'c++': '', 'cxx': '', 'cc': '', 'cp': '', 'c': '', 'hs': '', 'lhs': '', 'lua': '', 'java': '', 'sh': '', 'diff': '', 'db': '', 'clj': '', 'scala': '', 'go': '', 'dart': '', 'xul': '', 'sln': '', 'suo': '' }
+" scope: local
+function! s:WebDevIconsSetDictionaries()
+	echom "call WebDevIconsSetDictionaries"
 
-" do not remove: exact-match-case-sensitive-*
-let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = { 'exact-match-case-sensitive-1.txt': 'X1', 'exact-match-case-sensitive-2': 'X2', 'gruntfile.coffee': '', 'gruntfile.js': '', 'gruntfile.ls': '', 'gulpfile.coffee': '', 'gulpfile.js': '', 'gulpfile.ls': '', 'dropbox': '' }
+	let s:file_node_extensions = { 'styl': '', 'scss': '', 'htm': '', 'html': '', 'css': '', 'less': '', 'md': '', 'json': '', 'js': '', 'rb': '', 'php': '', 'py': '', 'pyc': '', 'pyo': '', 'pyd': '', 'coffee': '','mustache': '', 'hbs': '', 'conf': '', 'ini': '', 'yml': '', 'jpg': '', 'jpeg': '', 'bmp': '', 'png': '', 'gif': '', 'ai': '', 'twig': '', 'cpp': '', 'c++': '', 'cxx': '', 'cc': '', 'cp': '', 'c': '', 'hs': '', 'lhs': '', 'lua': '', 'java': '', 'sh': '', 'diff': '', 'db': '', 'clj': '', 'scala': '', 'go': '', 'dart': '', 'xul': '', 'sln': '', 'suo': ''}
 
+	let s:file_node_exact_matches = {'exact-match-case-sensitive-1.txt': 'X1', 'exact-match-case-sensitive-2': 'X2', 'gruntfile.coffee': '', 'gruntfile.js': '', 'gruntfile.ls': '', 'gulpfile.coffee': '', 'gulpfile.js': '', 'gulpfile.ls': '', 'dropbox': ''}
+
+	if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
+		let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+	endif
+
+	if !exists('g:WebDevIconsUnicodeDecorateFileNodesExactSymbols')
+		" do not remove: exact-match-case-sensitive-*
+		let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
+	endif
+
+"for [next_key, next_val] in items(s:file_node_exact_matches)
+"   echom next_key
+"   echom next_val
+"    let result = process(next_val)
+"    echo "Result for " next_key " is " result
+"endfor
+
+	" iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
+	for [key, val] in items(s:file_node_extensions)
+		if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, key)
+			let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[key] = val
+		endif
+	endfor
+
+	" iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
+	for [key, val] in items(s:file_node_exact_matches)
+		if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, key)
+			let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[key] = val
+		endif
+	endfor
+
+endfunction
+
+call s:WebDevIconsSetDictionaries()
 
 " a:1 (bufferName), a:2 (isDirectory)
 " scope: public
