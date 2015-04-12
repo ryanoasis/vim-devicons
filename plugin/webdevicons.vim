@@ -30,6 +30,14 @@ if !exists('g:webdevicons_enable_nerdtree')
   let g:webdevicons_enable_nerdtree = 1
 endif
 
+if g:webdevicons_enable_nerdtree == 1
+   if !exists('g:NERDTreePathNotifier')
+      g:webdevicons_enable_nerdtree = 0
+      echohl WarningMsg |
+      \ echomsg "vim-webdevicons requires a newer version of NERDTree to show glyphs in NERDTree - consider updating NERDTree"
+   endif
+endif
+
 if !exists('g:webdevicons_enable_airline_tabline')
   let g:webdevicons_enable_airline_tabline = 1
 endif
