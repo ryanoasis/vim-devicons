@@ -1,7 +1,7 @@
 vim-webdevicons v0.4.0 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons)
 =======================
-Adds filetype glyphs (icons) to other vim plugins such as nerdtree and
-vim-airline.
+Adds filetype glyphs (icons) to other vim plugins such as [nerdtree](https://github.com/scrooloose/nerdtree) and
+[vim-airline](https://github.com/bling/vim-airline).
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/overall-screenshot.png)
 
 - [vim-webdevicons v0.4.0](#)
@@ -150,6 +150,16 @@ let g:WebDevIconsUnicodeDecorateFileNodes = 1
  ```vim
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
   ```
+
+* whether or not to show the nerdtree brackets around flags (default 1)
+```vim
+let g:webdevicons_conceal_nerdtree_brackets = 1
+```
+
+* the amount of space to use after the glyph character (default ' ')
+```vim
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+```
 
 ### character mappings
 
