@@ -29,6 +29,9 @@ or look at vim-airline (statusline or tabline).
 * _NOTE:_ if you don't have a vim font set and are not running gvim you will
   need to set the terminal font.
 
+* _NOTE:_ for NERDTree support, you must configure vim to load NERDTree _before_ vim-webdevicons loads.
+
+
 ## <a name="quick-setup"></a>Quick Setup (TL;DR)
 
 1. Install the plugin per your usual method _[More details](#installation)_
