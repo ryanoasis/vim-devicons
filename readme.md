@@ -6,6 +6,7 @@ Adds filetype glyphs (icons) to other vim plugins such as [nerdtree](https://git
 
 - [vim-webdevicons v0.4.0](#)
 	- [Usage](#usage)
+	- [Quick Setup (TL;DR)](#quick-setup)
 	- [Font Configuration](#font-configuration)
 	- [Font Installation](#font-installation)
 	- [Screenshots](#screenshots)
@@ -27,6 +28,12 @@ or look at vim-airline (statusline or tabline).
 
 * _NOTE:_ if you don't have a vim font set and are not running gvim you will
   need to set the terminal font.
+
+## <a name="quick-setup"></a>Quick Setup (TL;DR)
+
+1. Install the plugin per your usual method _[More details](#installation)_
+2. Download and install a patched font (or patch your own) from: [ryanoasis/nerd-filetype-glyphs-fonts-patcher]( https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher) _[More details](#font-installation)_
+3. Set terminal font (if using `vim`) or set `guifont` in `vimrc` (if using `gvim`) _[More details](#font-configuration)_
 
 ## Font Configuration
 
