@@ -210,9 +210,31 @@ This plugin follows the standard runtime path structure, and as such it can be i
 *  [Pathogen](https://github.com/tpope/vim-pathogen)
   *  `git clone https://github.com/ryanoasis/vim-webdevicons ~/.vim/bundle/vim-webdevicons`
 *  [NeoBundle](https://github.com/Shougo/neobundle.vim)
-  *  `NeoBundle 'ryanoasis/vim-webdevicons'`
+  * Add to vimrc:
+
+      ```vim
+      NeoBundle 'ryanoasis/vim-webdevicons'
+      ```
+  * And install it:
+
+      ```vim
+      :so ~/.vimrc
+      :NeoBundleInstall
+      ```
+
 *  [Vundle](https://github.com/gmarik/vundle)
-  *  `Plugin 'ryanoasis/vim-webdevicons'`
+  * Add to vimrc:
+ 
+       ```vim
+       Plugin 'ryanoasis/vim-webdevicons'
+       ```
+  * And install it:
+
+       ```vim
+       :so ~/.vimrc
+       :PluginInstall`
+       ```
+
 *  manual
   *  copy all of the files into your `~/.vim` directory
 
