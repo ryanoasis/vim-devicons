@@ -5,21 +5,22 @@ Contents ~
 
  1. Introduction                                          |readme-introduction|
  2. Usage                                                        |readme-usage|
- 3. Font Configuration                              |readme-font-configuration|
- 4. Font Installation                                |readme-font-installation|
- 5. Screenshots                                            |readme-screenshots|
+ 3. Quick Setup (TL;DR)                                    |readme-quick-setup|
+ 4. Font Configuration                              |readme-font-configuration|
+ 5. Font Installation                                |readme-font-installation|
+ 6. Screenshots                                            |readme-screenshots|
   1. Various Terminal Emulators             |readme-various-terminal-emulators|
- 6. Features                                                  |readme-features|
- 7. Extra Configuration                            |readme-extra-configuration|
+ 7. Features                                                  |readme-features|
+ 8. Extra Configuration                            |readme-extra-configuration|
   1. character mappings                             |readme-character-mappings|
- 8. Installation                                          |readme-installation|
- 9. Todo                                                          |readme-todo|
- 10. FAQ / Troubleshooting                         |readme-faq-troubleshooting|
- 11. Contributing                                         |readme-contributing|
- 12. Rationale                                               |readme-rationale|
- 13. Inspiration and special thanks         |readme-inspiration-special-thanks|
- 14. License                                                   |readme-license|
- 15. References                                             |readme-references|
+ 9. Installation                                          |readme-installation|
+ 10. Todo                                                         |readme-todo|
+ 11. FAQ / Troubleshooting                         |readme-faq-troubleshooting|
+ 12. Contributing                                         |readme-contributing|
+ 13. Rationale                                               |readme-rationale|
+ 14. Inspiration and special thanks         |readme-inspiration-special-thanks|
+ 15. License                                                   |readme-license|
+ 16. References                                             |readme-references|
 
 ===============================================================================
                                                           *readme-introduction*
@@ -31,6 +32,7 @@ airline [2]. Image: image (see reference [3])
 - vim-webdevicons v0.4.0
 
   - Usage
+  - Quick Setup (TL;DR)
   - Font Configuration
   - Font Installation
   - Screenshots
@@ -56,6 +58,21 @@ or look at vim-airline (statusline or tabline).
 
 - _NOTE:_ if you don't have a vim font set and are not running gvim you will
   need to set the terminal font.
+
+- _NOTE:_ for NERDTree support, you must configure vim to load NERDTree
+  _before_ vim-webdevicons loads.
+
+===============================================================================
+                                                           *readme-quick-setup*
+Quick Setup (TL;DR) ~
+
+1. Install the plugin per your usual method _More details_
+
+2. Download and install a patched font (or patch your own) from: ryanoasis
+   /nerd-filetype-glyphs-fonts-patcher [4]_More details_
+
+3. Set terminal font (if using 'vim') or set 'guifont' in 'vimrc' (if using
+   'gvim') _More details_
 
 ===============================================================================
                                                     *readme-font-configuration*
@@ -239,10 +256,22 @@ installed with a variety of plugin managers:
 - 'git clone https://github.com/ryanoasis/vim-webdevicons ~/.vim/bundle/vim-
   webdevicons'
 - NeoBundle [15]
-- "NeoBundle 'ryanoasis/vim-webdevicons'"
+- Add to vimrc:
+
+  "vim NeoBundle 'ryanoasis/vim-webdevicons'" * And install it:
+
+  'vim :so ~/.vimrc :NeoBundleInstall'
+
 - Vundle [16]
-- "Plugin 'ryanoasis/vim-webdevicons'"
+
+- Add to vimrc:
+
+  "vim Plugin 'ryanoasis/vim-webdevicons'" * And install it:
+
+  'vim :so ~/.vimrc :PluginInstall`'
+
 - manual
+
 - copy all of the files into your '~/.vim' directory
 
 ===============================================================================
@@ -260,15 +289,19 @@ Todo ~
 FAQ / Troubleshooting ~
 
 - I don't want to use any of the fonts provided, I want to use font ABC
+
 - try the font patcher: nerd-filetype-glyphs-fonts-patcher [4]
+
 - see font configuration above for more details
 
 - It isn't working
 
 - Are you using the patched font provided in the separate repo (nerd-
   filetype-glyphs-fonts-patcher [4]) or are you patching your own?
+
 - _NOTE:_ if running vim and no font set it will default to the terminal font
   that is set
+
 - check what the vim/gvim font is set to, from ex mode:
 
   'vim :set guifont?'
@@ -299,6 +332,32 @@ FAQ / Troubleshooting ~
     tabline), from ex mode:
 
   "vim :let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol='x'"
+
+- How did you get color matching based on file type in nerdtree?
+
+- my current settings added on orignally from:
+  https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
+
+  ```vim " NERDTress File highlighting function!
+  NERDTreeHighlightFile(extension, fg, bg, guifg, guibg) exec 'autocmd
+  filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .'
+  ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg exec 'autocmd
+  filetype nerdtree syn match ' . a:extension .' #^\s+.*'. a:extension .'$#'
+  endfunction
+
+  call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+  call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+  call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515') call
+  NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515') call
+  NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515') call
+  NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515') call
+  NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515') call
+  NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515') call
+  NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515') call
+  NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515') call
+  NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515') call
+  NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515') call
+  NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515') ```
 
 - @todo: more specific FAQ and Troubleshooting help
 
@@ -364,4 +423,3 @@ References ~
 [21] http://learnvimscriptthehardway.stevelosh.com/
 
 vim: ft=help
-
