@@ -14,6 +14,7 @@ Adds filetype glyphs (icons) to other vim plugins such as [nerdtree](https://git
 	- [Extra Configuration](#extra-configuration)
 		- [character mappings](#character-mappings)
 	- [Installation](#installation)
+	- [Lightline](#lightline)
 	- [Todo](#todo)
 	- [FAQ / Troubleshooting](#faq--troubleshooting)
 	- [Contributing](#contributing)
@@ -247,6 +248,16 @@ This plugin follows the standard runtime path structure, and as such it can be i
 
 *  manual
   *  copy all of the files into your `~/.vim` directory
+
+## Lightline
+
+To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` in your `.vimrc`. For example, you might set your filetype section to:
+
+```
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+```
 
 ## Todo
 
