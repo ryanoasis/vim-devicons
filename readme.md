@@ -1,10 +1,10 @@
-vim-webdevicons v0.4.0 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons)
+vim-webdevicons v0.4.1 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons)
 =======================
 Adds filetype glyphs (icons) to other vim plugins such as [nerdtree](https://github.com/scrooloose/nerdtree) and
 [vim-airline](https://github.com/bling/vim-airline), and [lightline.vim](https://github.com/itchyny/lightline.vim)
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.1/overall-screenshot.png)
 
-- [vim-webdevicons v0.4.0](#)
+- [vim-webdevicons v0.4.1](#)
 	- [Usage](#usage)
 	- [Quick Setup (TL;DR)](#quick-setup)
 	- [Font Configuration](#font-configuration)
