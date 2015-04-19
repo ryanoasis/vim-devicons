@@ -1,8 +1,8 @@
 vim-webdevicons v0.4.0 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons)
 =======================
 Adds filetype glyphs (icons) to other vim plugins such as [nerdtree](https://github.com/scrooloose/nerdtree) and
-[vim-airline](https://github.com/bling/vim-airline).
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/overall-screenshot.png)
+[vim-airline](https://github.com/bling/vim-airline), and [lightline.vim](https://github.com/itchyny/lightline.vim)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.1/overall-screenshot.png)
 
 - [vim-webdevicons v0.4.0](#)
 	- [Usage](#usage)
@@ -94,7 +94,11 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 * Glyph set test file
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/glyph-set-test.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.1/glyph-set-test.png)
+
+* Lightline:
+
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.1/lightline.png)
 
 ### Various Terminal Emulators
 
@@ -111,6 +115,8 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 * show developer file type glyphs from a font in various vim plugins, currently supports:
   * [NERDTree](https://github.com/scrooloose/nerdtree)
   * [vim-airline](https://github.com/bling/vim-airline) (statusline and tabline)
+  * [lightline.vim](https://github.com/itchyny/lightline.vim) (statusline)
+    * see: [Lightline](#lightline) for setup
 * Adds a global config map of characters to file extensions (or entire filenames)
 * customizable and extendable filetype detections
   * ability to override predefined dictionary variable
@@ -235,7 +241,7 @@ This plugin follows the standard runtime path structure, and as such it can be i
 
 *  [Vundle](https://github.com/gmarik/vundle)
   * Add to vimrc:
- 
+
        ```vim
        Plugin 'ryanoasis/vim-webdevicons'
        ```
@@ -253,7 +259,13 @@ This plugin follows the standard runtime path structure, and as such it can be i
 
 To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` in your `.vimrc`. For example, you might set your filetype section to:
 
-```
+```vim
+let g:lightline = {
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \ }
+      \ }
+
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
@@ -322,7 +334,7 @@ endfunction
 	 exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
 	 exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 	endfunction
-	
+
 	call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
 	call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
 	call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
