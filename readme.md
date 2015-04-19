@@ -76,21 +76,21 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 ## Screenshots
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/vim.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.1/vim.png)
 
 * NERDTree:
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/nerdtree.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.1/nerdtree.png)
 
 * vim-airline
  * statusline
-   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/airline-statusline.png)
+   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.1/airline-statusline.png)
  * tabline
-  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/airline-tabline.png)
+  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.1/airline-tabline.png)
 
 * Different patched fonts example:
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.0/different-fonts-sample.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.1/different-fonts-sample.png)
 
 * Glyph set test file
 
@@ -104,11 +104,11 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 * gnome terminal
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/terminal-gnome-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.1/terminal-gnome-sample.png)
 
 * Urxvt terminal
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.0/terminal-urxvt-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.1/terminal-urxvt-sample.png)
 
 
 ## Features
