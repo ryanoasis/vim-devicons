@@ -51,14 +51,26 @@ It works without configuration *ONLY* when used with a patched font provided in
 the separate repository above. Install the font and add it to your `vimrc` or
 `gvimrc`:
 
+Linux
  ```vim
  set guifont=<FONT_NAME> <FONT_SIZE>
  ```
 
+OS X
+ ```vim
+ set guifont=<FONT_NAME>:h<FONT_SIZE>
+ ```
+
 e.g.
 
+Linux
 ```vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+```
+
+OS X
+```vim
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 ```
 
 ## Font Installation
