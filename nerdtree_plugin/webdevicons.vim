@@ -9,11 +9,11 @@ if !exists('g:webdevicons_enable_nerdtree')
 endif
 
 if g:webdevicons_enable_nerdtree == 1
-   if !exists('g:NERDTreePathNotifier')
-      let g:webdevicons_enable_nerdtree = 0
-      echohl WarningMsg |
-      \ echomsg "vim-webdevicons requires a newer version of NERDTree to show glyphs in NERDTree - consider updating NERDTree"
-   endif
+  if !exists('g:NERDTreePathNotifier')
+    let g:webdevicons_enable_nerdtree = 0
+    echohl WarningMsg |
+          \ echomsg "vim-webdevicons requires a newer version of NERDTree to show glyphs in NERDTree - consider updating NERDTree."
+  endif
 endif
 
 if !exists('g:webdevicons_enable_airline_tabline')
@@ -24,12 +24,12 @@ if !exists('g:webdevicons_enable_airline_statusline')
   let g:webdevicons_enable_airline_statusline = 1
 endif
 
-function! SetupListeners()
+function! s:SetupListeners()
   call g:NERDTreePathNotifier.AddListener("init", "NERDTreeWebDevIconsRefreshListener")
   call g:NERDTreePathNotifier.AddListener("refresh", "NERDTreeWebDevIconsRefreshListener")
   call g:NERDTreePathNotifier.AddListener("refreshFlags", "NERDTreeWebDevIconsRefreshListener")
 endfunction
 
 if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
-  call SetupListeners()
+  call s:SetupListeners()
 endif
