@@ -184,17 +184,21 @@ function! s:setDictionaries()
 endfunction
 
 function! s:setSyntax()
-   if g:webdevicons_conceal_nerdtree_brackets == 1
-      exec 'autocmd filetype nerdtree syntax match hideBracketsInNerdTree "[\]|\[]*" contained conceal cchar=_ containedin=ALL'
-      exec 'autocmd filetype nerdtree set conceallevel=3'
-      exec 'autocmd filetype nerdtree set concealcursor=nvic'
-   endif
+  if g:webdevicons_conceal_nerdtree_brackets == 1
+    augroup webdevicons_conceal_nerdtree_brackets
+      au!
+      autocmd filetype nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal cchar=  containedin=ALL
+      autocmd filetype nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
+      autocmd filetype nerdtree set conceallevel=2
+      autocmd filetype nerdtree set concealcursor=nvic
+    augroup END
+  endif
 endfunction
 
 " scope: local
 function! s:initialize()
-   call s:setDictionaries()
-   call s:setSyntax()
+  call s:setDictionaries()
+  call s:setSyntax()
 endfunction
 
 " initialization {{{1
@@ -207,7 +211,7 @@ call s:initialize()
 
 " scope: public
 function! webdevicons#version()
-   return s:version
+  return s:version
 endfunction
 
 " a:1 (bufferName), a:2 (isDirectory)
