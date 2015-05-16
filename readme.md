@@ -361,6 +361,11 @@ endfunction
 	call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 	call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 	```
+	Note: If the colors still are not highlighting, try invoking such as:
+	```
+	autocmd VimEnter * call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+	```
+	per: https://github.com/ryanoasis/vim-webdevicons/issues/49#issuecomment-101753558
 
 * @todo: more specific FAQ and Troubleshooting help
 
