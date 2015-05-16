@@ -56,7 +56,7 @@ Linux
  set guifont=<FONT_NAME> <FONT_SIZE>
  ```
 
-OS X
+OS X and Windows
  ```vim
  set guifont=<FONT_NAME>:h<FONT_SIZE>
  ```
@@ -68,7 +68,7 @@ Linux
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 ```
 
-OS X
+OS X and Windows
 ```vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 ```
