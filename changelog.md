@@ -1,72 +1,72 @@
 - v0.4.2
--- Updated vim doc with latest readme updates (html2vimdoc)
--- Fixes #7 update readme for font and vim setup on osx and win platforms
--- Fixes #49 with a FAQ update
--- Fixes #41 No such event: nerdtree syntax match (@nbicalcarata)
--- Removed test files from the repo and added folders to git-ignore
--- Warn about loading vim-webdevicons before nerdtree plugin
--- fix lazy NERDTree (@blueyed)
--- Improve conceiling with NERDTree (@blueyed)
--- add instructions to readme for vim setup on os x (@alfredbez)
+  - Updated vim doc with latest readme updates (html2vimdoc)
+  - Fixes #7 update readme for font and vim setup on osx and win platforms
+  - Fixes #49 with a FAQ update
+  - Fixes #41 No such event: nerdtree syntax match (@nbicalcarata)
+  - Removed test files from the repo and added folders to git-ignore
+  - Warn about loading vim-webdevicons before nerdtree plugin
+  - fix lazy NERDTree (@blueyed)
+  - Improve conceiling with NERDTree (@blueyed)
+  - add instructions to readme for vim setup on os x (@alfredbez)
 - v0.4.1
--- Fixes #39 - updated screenshots (particularly nerdtree)
--- Fixes #37 - g:webdevicons_conceal_nerdtree_brackets applying global config
--- Add instructions to readme for adding icon to lightline (@hoop33)
--- Updated vim doc with latest readme updates (sync'd with html2vimdoc)
--- Added TL;DR section to readme
--- Add a note to readme to load NERDTree before vim-webdevicons (@hoop33)
--- Fix: Automatically turning off NERDTree support (@hoop33)
--- general readme updates
+  - Fixes #39 - updated screenshots (particularly nerdtree)
+  - Fixes #37 - g:webdevicons_conceal_nerdtree_brackets applying global config
+  - Add instructions to readme for adding icon to lightline (@hoop33)
+  - Updated vim doc with latest readme updates (sync'd with html2vimdoc)
+  - Added TL;DR section to readme
+  - Add a note to readme to load NERDTree before vim-webdevicons (@hoop33)
+  - Fix: Automatically turning off NERDTree support (@hoop33)
+  - general readme updates
 - v0.4.0
--- #27 Remove [ ] wrapping icons
--- #26 Add detection and warning on unsupported (old) NERDTree versions
--- updated readme with more links and new details on new features and conifgs
--- #30 Improve vim standard plugin conventions and tips
--- #30 work on sections and standard plugin conventions part 1
--- #30 clean-up of unused (for now) autoload file
--- #28 setting global options broken part 1
--- #29 Add vimdoc, more updates
--- autogenerating vimdoc using html2vimdoc
--- readme updates
+  - #27 Remove [ ] wrapping icons
+  - #26 Add detection and warning on unsupported (old) NERDTree versions
+  - updated readme with more links and new details on new features and conifgs
+  - #30 Improve vim standard plugin conventions and tips
+  - #30 work on sections and standard plugin conventions part 1
+  - #30 clean-up of unused (for now) autoload file
+  - #28 setting global options broken part 1
+  - #29 Add vimdoc, more updates
+  - autogenerating vimdoc using html2vimdoc
+  - readme updates
 - v0.3.4
--- Adds basic support for directory/folder glyphs - fixes #22
--- optimize icon lookup - WebDevIconsGetFileTypeSymbol: use if/else (@blueyed)
--- Do not clobber the default or customized airline formatter (@blueyed)
--- fixed a bug related to the latest airline updates (Ali Aliev)
--- various readme updates
--- more sample usage images
+  - Adds basic support for directory/folder glyphs - fixes #22
+  - optimize icon lookup - WebDevIconsGetFileTypeSymbol: use if/else (@blueyed)
+  - Do not clobber the default or customized airline formatter (@blueyed)
+  - fixed a bug related to the latest airline updates (Ali Aliev)
+  - various readme updates
+  - more sample usage images
 - v0.3.3
--- Load the plugin once only (@blueyed)
--- Add font installation instructions, fixes #5 (@wikimatze)
--- added plugin install instructions
--- slight readme re-ordering
--- moved contributing section near bottom
--- added additional screenshots
--- added more thanks to those whose some more of the glyphs came from
+  - Load the plugin once only (@blueyed)
+  - Add font installation instructions, fixes #5 (@wikimatze)
+  - added plugin install instructions
+  - slight readme re-ordering
+  - moved contributing section near bottom
+  - added additional screenshots
+  - added more thanks to those whose some more of the glyphs came from
 - v0.3.2
--- moved screenshots into the wiki (wiki.vim-webdevicons) to reduce unnecessary project size of cloning repo
+  - moved screenshots into the wiki (wiki.vim-webdevicons) to reduce unnecessary project size of cloning repo
 - v0.3.1
--- readme updates (with references to new font-patcher repo)
--- readme updates screenshots reference wiki
+  - readme updates (with references to new font-patcher repo)
+  - readme updates screenshots reference wiki
 - v0.3.0
--- moved font-patcher and patched fonts into a separate repo (nerd-filetype-glyphs-fonts-patcher)
--- adds twigg file type support for #10 (@wikimatze)
--- adds cpp file type support
--- updated utf8 test file with glyphs
--- readme fixes (@wikimatze, @blueyed)
--- readme updates
+  - moved font-patcher and patched fonts into a separate repo (nerd-filetype-glyphs-fonts-patcher)
+  - adds twigg file type support for #10 (@wikimatze)
+  - adds cpp file type support
+  - updated utf8 test file with glyphs
+  - readme fixes (@wikimatze, @blueyed)
+  - readme updates
 - v0.2.1
--- readme updates
+  - readme updates
 - v0.2.0
--- Script for patching any font: Initial cleaned up work for issue (feature enhancement) for #1
--- added python font patcher and readme updates
+  - Script for patching any font: Initial cleaned up work for issue (feature enhancement) for #1
+  - added python font patcher and readme updates
 - v0.1.4
--- readme updates
+  - readme updates
 - v0.1.3
--- fixes #3 make matches case insensitive (ignore case)
+  - fixes #3 make matches case insensitive (ignore case)
 - v0.1.2
--- fixes lookup for exact file notes (@johngeorgewright)
+  - fixes lookup for exact file notes (@johngeorgewright)
 - v0.1.1
--- updated readme substantially
+  - updated readme substantially
 - v0.1.0
--- release
+  - release
