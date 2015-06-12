@@ -239,7 +239,14 @@ function! WebDevIconsGetFileTypeSymbol(...)
     endif
   endif
 
-  return symbol
+  " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
+  " actual font patcher)
+  let artifactFix = "\u00A0"
+
+  return symbol . artifactFix
+
+endfunction
+
 
 endfunction
 
