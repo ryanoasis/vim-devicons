@@ -1,3 +1,11 @@
+- v0.4.3
+  - Temporary fix for gvim glyph artifact issues (particuarly NERDTree) (Fixes #58)
+  - Support file format symbols (glyphs) in vim-airline (Enhancement #66)
+  - Add vimrc setup example to readme (Documentation #65)
+  - Fixes Conceal highlighting issues (Fixes #53, #52)
+  - Make sure plugin plays nice with [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) (Enhancement #62)
+  - general readme updates and improvements
+  - changelog format fixes
 - v0.4.2
   - Updated vim doc with latest readme updates (html2vimdoc)
   - Fixes #7 update readme for font and vim setup on osx and win platforms
