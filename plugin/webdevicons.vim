@@ -38,6 +38,10 @@ if !exists('g:webdevicons_enable_airline_statusline')
   let g:webdevicons_enable_airline_statusline = 1
 endif
 
+if !exists('g:webdevicons_enable_airline_statusline_fileformat_symbols')
+  let g:webdevicons_enable_airline_statusline_fileformat_symbols = 1
+endif
+
 if !exists('g:webdevicons_conceal_nerdtree_brackets')
   let g:webdevicons_conceal_nerdtree_brackets = 1
 endif
@@ -247,7 +251,23 @@ function! WebDevIconsGetFileTypeSymbol(...)
 
 endfunction
 
+function! WebDevIconsGetFileFormatSymbol(...)
+  let fileformat = ""
 
+  if &fileformat == "dos"
+	  let fileformat = ""
+	elseif &fileformat == "unix"
+		let fileformat = ""
+	elseif &fileformat == "mac"
+		let fileformat = ""
+  endif
+
+  " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
+  " actual font patcher)
+  redraw!
+  let artifactFix = "\u00A0"
+
+  return &enc . " " . fileformat . artifactFix
 endfunction
 
 " for airline plugin {{{3
@@ -257,6 +277,9 @@ endfunction
 function! AirlineWebDevIcons(...)
   let w:airline_section_x = get(w:, 'airline_section_x', g:airline_section_x)
   let w:airline_section_x .= ' %{WebDevIconsGetFileTypeSymbol()} '
+  if g:webdevicons_enable_airline_statusline_fileformat_symbols
+    let w:airline_section_y = ' %{WebDevIconsGetFileFormatSymbol()} '
+  endif
 endfunction
 
 if g:webdevicons_enable == 1 && g:webdevicons_enable_airline_statusline
