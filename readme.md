@@ -35,8 +35,8 @@ or look at vim-airline (statusline or tabline).
 
 * _NOTE:_ for better [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) support, you _should_ configure vim to load nerdtree-git-plugin _before_ vim-webdevicons loads.
 
-
-## Quick Setup (TL;DR)<a name="quick-setup"></a>
+<a name="quick-setup"></a>
+## Quick Setup (TL;DR)
 
 1. Install the plugin per your usual method _[More details...](#installation)_
 2. Download and install a patched font (or patch your own) from: [ryanoasis/nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher) _[More details...](#font-installation)_
@@ -110,6 +110,8 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
  * tabline
   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-tabline-1.png)
   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-tabline-2.png)
+ * fileformats symbols
+  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/fileformats-symbols-sample.png)
 
 * Different patched fonts example:
 
