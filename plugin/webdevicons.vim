@@ -1,9 +1,9 @@
-" Version: 0.4.2
+" Version: 0.4.3
 " Webpage: https://github.com/ryanoasis/vim-webdevicons
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " Licencse: see LICENSE
 
-let s:version = '0.4.2'
+let s:version = '0.4.3'
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================
@@ -214,7 +214,6 @@ endfunction
 " a:1 (bufferName), a:2 (isDirectory)
 " scope: public
 function! WebDevIconsGetFileTypeSymbol(...)
-
   if a:0 == 0
     let fileNodeExtension = expand("%:e")
     let fileNode = expand("%:t")
