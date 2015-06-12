@@ -126,6 +126,10 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.2/terminal-urxvt-sample.png)
 
+### Windows OS
+
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/windows-sample.png)
+
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
