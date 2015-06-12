@@ -67,7 +67,7 @@ if !exists('g:WebDevIconsUnicodeGlyphDoubleWidth')
 endif
 
 if !exists('g:WebDevIconsNerdTreeAfterGlyphPadding')
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 endif
 
 
@@ -179,15 +179,16 @@ function! s:setDictionaries()
 
 endfunction
 
+" scope: local
 function! s:setSyntax()
   if g:webdevicons_conceal_nerdtree_brackets == 1
-    augroup webdevicons_conceal_nerdtree_brackets
-      au!
-      autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal cchar=  containedin=ALL
-      autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
-      autocmd FileType nerdtree set conceallevel=2
-      autocmd FileType nerdtree set concealcursor=nvic
-    augroup END
+	 augroup webdevicons_conceal_nerdtree_brackets
+		au!
+		autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
+		autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
+		autocmd FileType nerdtree set conceallevel=3
+		autocmd FileType nerdtree set concealcursor=nvic
+	 augroup END
   endif
 endfunction
 
