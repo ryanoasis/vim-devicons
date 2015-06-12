@@ -1,11 +1,10 @@
-vim-webdevicons v0.4.2 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons)
+vim-webdevicons v0.4.3 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons)
 =======================
-Adds filetype glyphs (icons) to other vim plugins such as [nerdtree](https://github.com/scrooloose/nerdtree) and
-[vim-airline](https://github.com/bling/vim-airline), and [lightline.vim](https://github.com/itchyny/lightline.vim)
+Adds filetype glyphs (icons) to other vim plugins such as [NERDTree](https://github.com/scrooloose/nerdtree), [vim-airline](https://github.com/bling/vim-airline), and [lightline.vim](https://github.com/itchyny/lightline.vim)
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.2/overall-screenshot.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/overall-screenshot.png)
 
-- [vim-webdevicons v0.4.2](#)
+- [vim-webdevicons v0.4.3](#)
 	- [Usage](#usage)
 	- [Quick Setup (TL;DR)](#quick-setup)
 	- [Font Configuration](#font-configuration)
@@ -31,18 +30,25 @@ or look at vim-airline (statusline or tabline).
 * _NOTE:_ if you don't have a vim font set and are not running gvim you will
   need to set the terminal font.
 
-* _NOTE:_ for NERDTree support, you must configure vim to load NERDTree _before_ vim-webdevicons loads.
+* _NOTE:_ for [NERDTree](https://github.com/scrooloose/nerdtree) support, you **must** configure vim to load NERDTree _before_ vim-webdevicons loads.
+
+* _NOTE:_ for better [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) support, you _should_ configure vim to load nerdtree-git-plugin _before_ vim-webdevicons loads.
 
 
-## <a name="quick-setup"></a>Quick Setup (TL;DR)
+## Quick Setup (TL;DR)<a name="quick-setup"></a>
 
-1. Install the plugin per your usual method _[More details](#installation)_
-2. Download and install a patched font (or patch your own) from: [ryanoasis/nerd-filetype-glyphs-fonts-patcher]( https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher) _[More details](#font-installation)_
-3. Set font _[More details](#font-configuration)_
+1. Install the plugin per your usual method _[More details...](#installation)_
+2. Download and install a patched font (or patch your own) from: [ryanoasis/nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher) _[More details...](#font-installation)_
+3. Set font _[More details...](#font-configuration)_
   * a. If using `vim`: Set terminal font
   * b. If using `gvim`: Set `guifont` in `vimrc`
 
 ## Font Configuration
+
+* Encoding **must** be set to UTF-8 for the glyphs to show
+  ```vim
+  set encoding=utf8
+  ```
 
 * The _ONLY_ configuration needed should be setting the font vim uses to a
   patched font.
@@ -91,45 +97,52 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 ## Screenshots
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.2/vim.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/vim.png)
 
 * NERDTree:
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.2/nerdtree.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/nerdtree.png)
 
 * vim-airline
  * statusline
-   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.2/airline-statusline.png)
+   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-statusline.png)
  * tabline
-  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.2/airline-tabline-1.png)
-  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.2/airline-tabline-2.png)
+  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-tabline-1.png)
+  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-tabline-2.png)
 
 * Different patched fonts example:
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.2/different-fonts-sample.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/different-fonts-sample.png)
 
 * Glyph set test file
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.2/glyph-set-test.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/glyph-set-test.png)
 
 * Lightline:
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.2/lightline.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/lightline.png)
 
 ### Various Terminal Emulators
 
 * gnome terminal
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.2/terminal-gnome-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/terminal-gnome-sample.png)
 
 * Urxvt terminal
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.2/terminal-urxvt-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/terminal-urxvt-sample.png)
 
 ### Windows OS
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/windows-sample.png)
 
+### Mac OS X
+
+help wanted: https://github.com/ryanoasis/vim-webdevicons/issues/32
+
+### nerdtree-git-plugin
+
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/nerdtree-git-plugin-sample.png)
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
