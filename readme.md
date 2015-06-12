@@ -290,7 +290,7 @@ endfunction
 ## Todo
 
 * [ ] more filetypes to support
-* [ ] make sure it works properly and does not conflict with [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+* [x] make sure it works properly and does not conflict with [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 * [ ] customize filetype icon colors
 * [ ] more customization options in general
 

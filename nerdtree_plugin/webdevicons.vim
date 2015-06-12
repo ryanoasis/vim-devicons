@@ -25,6 +25,16 @@ if g:webdevicons_enable_nerdtree == 1
      echohl WarningMsg |
         \ echomsg "vim-webdevicons requires a newer version of NERDTree to show glyphs in NERDTree - consider updating NERDTree."
   endif
+
+  " @todo I don't even want this to execute UNLESS the user has the
+  " 'nerdtree-git-plugin' INSTALLED (not LOADED)
+  " As it currently functions this warning will display even if the user does
+  " not have nerdtree-git-plugin not just if it isn't loaded yet 
+  " (not what we want)
+  "if !exists('g:loaded_nerdtree_git_status')
+  "   echohl WarningMsg |
+  "     \ echomsg "vim-webdevicons works better when 'nerdtree-git-plugin' is loaded before vim-webdevicons (small refresh issues otherwise)."
+  "endif
 endif
 
 if !exists('g:webdevicons_enable_airline_tabline')

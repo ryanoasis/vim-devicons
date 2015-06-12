@@ -280,18 +280,24 @@ endif
 function! NERDTreeWebDevIconsRefreshListener(event)
   let path = a:event.subject
   let padding = g:WebDevIconsNerdTreeAfterGlyphPadding
+  let prePadding = ''
+  let hasGitFlags = (len(path.flagSet._flagsForScope("git")) > 0)
 
   if g:WebDevIconsUnicodeGlyphDoubleWidth == 0
     let padding = ''
   endif
 
+  if hasGitFlags && g:WebDevIconsUnicodeGlyphDoubleWidth == 1
+    let prePadding = ' '
+  endif
+
   if !path.isDirectory
-    let flag = WebDevIconsGetFileTypeSymbol(path.str()) . padding
+    let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str()) . padding
   elseif path.isDirectory && g:WebDevIconsUnicodeDecorateFolderNodes == 1
     if g:WebDevIconsUnicodeDecorateFolderNodesExactMatches == 1
-      let flag = WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory) . padding
+      let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory) . padding
     else
-      let flag = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
+      let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
     endif
   else
     let flag = ''
