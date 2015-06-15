@@ -25,13 +25,15 @@ Adds filetype glyphs (icons) to other vim plugins such as [NERDTree](https://git
 
 ## Usage
 
-After installing the patched font and setting the vim font just open nerdtree
-or look at vim-airline (statusline or tabline).
+After installing the patched font and setting the vim font just open [NERDTree](https://github.com/scrooloose/nerdtree)
+or look at [vim-airline](https://github.com/bling/vim-airline) (statusline or tabline).
 
 * _NOTE:_ if you don't have a vim font set and are not running gvim you will
   need to set the terminal font.
 
 * _NOTE:_ for [NERDTree](https://github.com/scrooloose/nerdtree) support, you **must** configure vim to load NERDTree _before_ vim-webdevicons loads.
+
+* _NOTE:_ for [vim-airline](https://github.com/bling/vim-airline) support, you **must** configure vim to load vim-airline _before_ vim-webdevicons loads.
 
 * _NOTE:_ for better [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) support, you _should_ configure vim to load nerdtree-git-plugin _before_ vim-webdevicons loads.
 
@@ -398,6 +400,24 @@ endfunction
 
 ## Contributing
 
+Best ways to contribute
+* Star it on GitHub - if you use it and like it please at least star it :)
+* [Promote](#promotion)
+* Open [issues/tickets](https://github.com/ryanoasis/vim-webdevicons/issues)
+* Submit fixes and/or improvements with [Pull Requests](#source-code)
+
+### Promotion
+
+Like the project? Please support to ensure continued development going forward:
+* Star this repo on [GitHub](https://github.com/ryanoasis/vim-webdevicons)
+* Follow the repo on [GitHub](https://github.com/ryanoasis/vim-webdevicons)
+* Vote for it on [vim.org](http://www.vim.org/scripts/script.php?script_id=5114)
+* Follow me
+** [Twitter](http://twitter.com/ryanlmcintyre)
+** [GitHub](https://github.com/ryanoasis)
+
+### Source code
+
 Contributions and pull requests are welcome.
 
 No real formal process has been setup - just stick to general good conventions
@@ -416,6 +436,9 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 * [devicons by Theodore Vorillas](http://vorillaz.github.io/devicons)
 * [benatespina development.svg.icons](https://github.com/benatespina/development.svg.icons)
 * [Steve Losh](http://learnvimscriptthehardway.stevelosh.com/)
+
+### Also thanks to the many contributors:
+* [contributors list](https://github.com/ryanoasis/vim-webdevicons/network/members)
 
 ## License
 
