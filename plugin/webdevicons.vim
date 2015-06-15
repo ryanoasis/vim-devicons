@@ -281,7 +281,7 @@ function! AirlineWebDevIcons(...)
   endif
 endfunction
 
-if g:webdevicons_enable == 1 && g:loaded_airline && g:webdevicons_enable_airline_statusline
+if g:webdevicons_enable == 1 && exists("g:loaded_airline") && g:loaded_airline == 1 && g:webdevicons_enable_airline_statusline
   call airline#add_statusline_func('AirlineWebDevIcons')
 endif
 
