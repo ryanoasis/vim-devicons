@@ -264,7 +264,6 @@ function! WebDevIconsGetFileFormatSymbol(...)
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
   " actual font patcher)
-  redraw!
   let artifactFix = "\u00A0"
 
   return &enc . " " . fileformat . artifactFix
