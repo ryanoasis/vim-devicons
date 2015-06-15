@@ -298,17 +298,22 @@ This plugin follows the standard runtime path structure, and as such it can be i
 
 ## Lightline
 
-To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` in your `.vimrc`. For example, you might set your filetype section to:
+To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` and/or `WebDevIconsGetFileFormatSymbol()` in your `.vimrc`. For example, you could set your sections to:
 
 ```vim
 let g:lightline = {
       \ 'component_function': {
       \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
       \ }
       \ }
 
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 ```
 
