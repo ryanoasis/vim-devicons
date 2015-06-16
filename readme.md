@@ -372,7 +372,7 @@ endfunction
     ```
 
 * How did you get color matching based on file type in nerdtree?
-  * my current settings added on orignally from: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
+  * my current settings are from: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
 
 	```vim
 	" NERDTress File highlighting
