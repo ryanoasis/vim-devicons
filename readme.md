@@ -102,28 +102,28 @@ You can find more fonts under my repository [nerd-filetype-glyphs-fonts-patcher]
 
 ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/vim.png)
 
-* NERDTree:
+### NERDTree
 
 ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/nerdtree.png)
 
-* vim-airline
- * statusline
-   ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-statusline.png)
- * tabline
-  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-tabline-1.png)
-  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-tabline-2.png)
- * fileformats symbols
-  ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/fileformats-symbols-sample.png)
+### vim-airline
 
-* Different patched fonts example:
+section             | preview
+------------------- | -------------
+statusline          | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-statusline.png)
+tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-tabline-1.png)
+tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/airline-tabline-2.png)
+fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/fileformats-symbols-sample.png)
+
+### Different patched fonts example
 
 ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/different-fonts-sample.png)
 
-* Glyph set test file
+### Glyph set test file
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/glyph-set-test.png)
 
-* Lightline:
+### Lightline
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/lightline.png)
 
