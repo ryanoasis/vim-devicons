@@ -342,9 +342,10 @@ endfunction
 ## Todo
 
 * [ ] more filetypes to support
-* [x] make sure it works properly and does not conflict with [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+* [x] ~~make sure it works properly and does not conflict with [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)~~
 * [ ] customize filetype icon colors
 * [ ] more customization options in general
+* [ ] more specific FAQ and Troubleshooting help
 
 ## FAQ / Troubleshooting
 
@@ -422,8 +423,6 @@ endfunction
 	autocmd VimEnter * call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
 	```
 	per: https://github.com/ryanoasis/vim-webdevicons/issues/49#issuecomment-101753558
-
-* @todo: more specific FAQ and Troubleshooting help
 
 ## Contributing
 
