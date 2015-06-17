@@ -25,6 +25,8 @@ Start temporary poll section
 End temporary poll section
 -->
 
+## Table of Contents
+
 - [vim-webdevicons v0.4.3](#)
 	- [Usage](#usage)
 	- [Quick Setup (TL;DR)](#quick-setup)
