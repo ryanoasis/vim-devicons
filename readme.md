@@ -440,8 +440,8 @@ Like the project? Please support to ensure continued development going forward:
 * Follow the repo on [GitHub](https://github.com/ryanoasis/vim-webdevicons)
 * Vote for it on [vim.org](http://www.vim.org/scripts/script.php?script_id=5114)
 * Follow me
-** [Twitter](http://twitter.com/ryanlmcintyre)
-** [GitHub](https://github.com/ryanoasis)
+  * [Twitter](http://twitter.com/ryanlmcintyre)
+  * [GitHub](https://github.com/ryanoasis)
 
 ### Source code
 
