@@ -1,7 +1,7 @@
 vim-webdevicons
 =======================
 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)](http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons) [![Join the chat at https://gitter.im/ryanoasis/vim-webdevicons](https://badges.gitter.im/Chat.svg)](https://gitter.im/ryanoasis/vim-webdevicons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ryanoasis&url=https://github.com/ryanoasis/vim-webdevicons&title=vim-webdevicons&language=viml&tags=github&category=software)
-https://img.shields.io/badge/gitter-chat_%E2%86%92-1dce73.svg
+
 Adds filetype glyphs (icons) to other vim plugins such as [NERDTree](https://github.com/scrooloose/nerdtree), [vim-airline](https://github.com/bling/vim-airline), and [lightline.vim](https://github.com/itchyny/lightline.vim)
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/overall-screenshot.png)
