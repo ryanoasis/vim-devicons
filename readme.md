@@ -4,7 +4,7 @@ vim-webdevicons
 
 Adds filetype glyphs (icons) to other vim plugins such as [NERDTree](https://github.com/scrooloose/nerdtree), [vim-airline](https://github.com/bling/vim-airline), and [lightline.vim](https://github.com/itchyny/lightline.vim) 
 
-[Vote for upcoming features or suggest new ones](#vote)
+[» Vote for upcoming features or suggest new ones](#vote)
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/overall-screenshot.png)
 
@@ -75,7 +75,7 @@ or look at [vim-airline](https://github.com/bling/vim-airline) (statusline or ta
   set encoding=utf8
   ```
 
-* The _ONLY_ configuration needed should be setting the font vim uses to a
+* The _ONLY_ other configuration needed should be setting the font vim uses to a
   patched font.
 
 Already patched fonts and the font patcher script are provided at:
