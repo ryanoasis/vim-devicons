@@ -65,8 +65,8 @@ or look at [vim-airline](https://github.com/bling/vim-airline) (statusline or ta
 1. Install the plugin per your usual method _[More details...](#installation)_
 2. Download and install a patched font (or patch your own) from: [ryanoasis/nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher) _[More details...](#font-installation)_
 3. Set font _[More details...](#font-configuration)_
-  * a. If using `vim`: Set terminal font
-  * b. If using `gvim`: Set `guifont` in `vimrc`
+  * a. If using **vim**: Set your terminal emulator font
+  * b. If using **gvim**: Set `guifont` in your `vimrc`
 
 ## Font Configuration
 
