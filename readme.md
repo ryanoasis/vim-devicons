@@ -159,7 +159,7 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/terminal-urxvt-sample.png)
 
-### Windows OS
+### Windows
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/windows-sample.png)
 
