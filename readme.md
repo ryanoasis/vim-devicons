@@ -28,8 +28,8 @@ End temporary poll section
 ## Table of Contents
 
 - [vim-webdevicons v0.4.3](#)
-	- [Usage](#usage)
 	- [Quick Setup (TL;DR)](#quick-setup)
+	- [Usage](#usage)
 	- [Font Configuration](#font-configuration)
 	- [Font Installation](#font-installation)
 	- [Screenshots](#screenshots)
@@ -45,6 +45,17 @@ End temporary poll section
 	- [Inspiration and special thanks](#inspiration-and-special-thanks)
 	- [License](#license)
 
+
+<a name="quick-setup"></a>
+## Quick Setup (TL;DR)
+
+1. Install the plugin per your usual method  _[(» More details... «)](#installation)_
+2. Download and install a patched font (or patch your own):
+  * [nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher)  _[(» More details... «)](#font-installation)_
+3. Set font  _[(» More details... «)](#font-configuration)_
+  * a. If using **vim**: Set your terminal emulator font
+  * b. If using **gvim**: Set `guifont` in your `vimrc`
+
 ## Usage
 
 After installing the patched font and setting the vim font just open [NERDTree](https://github.com/scrooloose/nerdtree)
@@ -58,15 +69,6 @@ or look at [vim-airline](https://github.com/bling/vim-airline) (statusline or ta
 * _NOTE:_ for [vim-airline](https://github.com/bling/vim-airline) support, you **must** configure vim to load vim-airline _before_ vim-webdevicons loads.
 
 * _NOTE:_ for better [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) support, you _should_ configure vim to load nerdtree-git-plugin _before_ vim-webdevicons loads.
-
-<a name="quick-setup"></a>
-## Quick Setup (TL;DR)
-
-1. Install the plugin per your usual method _[More details...](#installation)_
-2. Download and install a patched font (or patch your own) from: [ryanoasis/nerd-filetype-glyphs-fonts-patcher](https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher) _[More details...](#font-installation)_
-3. Set font _[More details...](#font-configuration)_
-  * a. If using **vim**: Set your terminal emulator font
-  * b. If using **gvim**: Set `guifont` in your `vimrc`
 
 ## Font Configuration
 
@@ -141,13 +143,13 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.4.3/different-fonts-sample.png)
 
-### Glyph set test file
-
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/glyph-set-test.png)
-
 ### Lightline
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/lightline.png)
+
+### nerdtree-git-plugin
+
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/nerdtree-git-plugin-sample.png)
 
 ### Various Terminal Emulators
 
@@ -165,11 +167,11 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ### Mac OS X
 
-help wanted: https://github.com/ryanoasis/vim-webdevicons/issues/32
+**Help wanted: https://github.com/ryanoasis/vim-webdevicons/issues/32**
 
-### nerdtree-git-plugin
+### Glyph set test file
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/nerdtree-git-plugin-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.3/glyph-set-test.png)
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
@@ -468,4 +470,4 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 
 ## License
 
-see [LICENSE](LICENSE)
+See [LICENSE](LICENSE)
