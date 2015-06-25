@@ -79,7 +79,7 @@ if !exists('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol')
 endif
 
 if !exists('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol')
-  let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+  let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 endif
 
 " functions {{{1
