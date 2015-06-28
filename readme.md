@@ -49,19 +49,21 @@ End temporary poll section
 <a name="quick-setup"></a>
 ## Quick Setup (TL;DR)
 
-1. Install the plugin per your usual method  _[(» More details... «)](#installation)_
+1. Install the plugin per your usual method
+   _[(» More details... «)](#installation)_
 2. Download and install a patched font (or patch your own):
-  * [nerd-filetype-glyphs-fonts-patcher]  _[(» More details... «)](#font-installation)_
+  * [nerd-filetype-glyphs-fonts-patcher]
+   _[(» More details... «)](#font-installation)_
 3. Set font  _[(» More details... «)](#font-configuration)_
-  * a. If using **vim**: Set your terminal emulator font
-  * b. If using **gvim**: Set `guifont` in your `vimrc`
+  * a. **vim**: Set your terminal emulator font
+  * b. **gvim**: Set `guifont` in your `vimrc`
 
 ## Usage
 
 After installing the patched font and setting the vim font just open [NERDTree]
 or look at [airline][vim-airline] (statusline or tabline).
 
-* _NOTE:_ if you don't `guifont` set and are not running gvim you will need to set the terminal font.
+* _NOTE:_ if you don't have `guifont` set and are not running gvim you will need to set the terminal font.
 
 * _NOTE:_ for [NERDTree] support, you **must** configure vim to load NERDTree **_before_** vim-webdevicons loads.
 
