@@ -50,10 +50,14 @@ endif
 " config options {{{1
 "========================================================================
 
-let g:WebDevIconsUnicodeDecorateFileNodes = 1
+if !exists('g:WebDevIconsUnicodeDecorateFileNodes')
+  let g:WebDevIconsUnicodeDecorateFileNodes = 1
+endif
 
 " whether to show default folder glyphs on directories:
-let g:WebDevIconsUnicodeDecorateFolderNodes = 0
+if !exists('g:WebDevIconsUnicodeDecorateFolderNodes')
+  let g:WebDevIconsUnicodeDecorateFolderNodes = 0
+endif
 
 " whether to try to match folder notes with any exact file node matches
 " default is to match but requires WebDevIconsUnicodeDecorateFolderNodes set
