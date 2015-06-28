@@ -181,7 +181,7 @@ endfunction
 
 " scope: local
 function! s:setSyntax()
-  if g:webdevicons_conceal_nerdtree_brackets == 1
+  if g:webdevicons_enable_nerdtree == 1 && g:webdevicons_conceal_nerdtree_brackets == 1
 	 augroup webdevicons_conceal_nerdtree_brackets
 		au!
 		autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
@@ -190,6 +190,14 @@ function! s:setSyntax()
 		autocmd FileType nerdtree set concealcursor=nvic
 	 augroup END
   endif
+endfunction
+
+" scope: local
+function! s:hardRefreshNerdTree()
+	if g:webdevicons_enable_nerdtree == 1 && g:webdevicons_conceal_nerdtree_brackets == 1 && g:NERDTree.IsOpen()
+		NERDTreeClose
+		NERDTree
+	endif
 endfunction
 
 " scope: local
@@ -210,6 +218,13 @@ call s:initialize()
 function! webdevicons#version()
   return s:version
 endfunction
+
+" scope: public
+function! webdevicons#refresh()
+  call s:setSyntax()
+  call s:hardRefreshNerdTree()
+endfunction
+
 
 " a:1 (bufferName), a:2 (isDirectory)
 " scope: public
