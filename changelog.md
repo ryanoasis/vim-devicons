@@ -1,3 +1,8 @@
+
+CHANGELOG
+================================================================================
+This project is using [Semantic Versioning 2.0.0](http://semver.org/)
+
 - v0.4.3
   - Prevent error 'Unknown function' when opening Vim without airline plugin (Fixes #67)
   - Temporary fix for gvim glyph artifact issues (particuarly NERDTree) (Fixes #58)
