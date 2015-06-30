@@ -168,7 +168,8 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ### Mac OS X
 
-**Help wanted: https://github.com/ryanoasis/vim-webdevicons/issues/32**
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.4/osx-sample.png)
+*Thanks @RageZBla*
 
 ### Glyph set test file
 
