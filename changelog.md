@@ -3,6 +3,13 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.4.4
+  - Lots of readme updates and tweaks
+  - Mac OS X screenshot (Fixes #32) (@RageZBla)
+  - Fixed misalignment when used with  [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) (Fixes #71)
+  - Fixed re-sourcing bug (Fixes #71)
+  - Fixed directory node user settings being overwritten (Fixes #59)
+  - Fixed minor screenshot issues and clean-up
 - v0.4.3
   - Prevent error 'Unknown function' when opening Vim without airline plugin (Fixes #67)
   - Temporary fix for gvim glyph artifact issues (particuarly NERDTree) (Fixes #58)
