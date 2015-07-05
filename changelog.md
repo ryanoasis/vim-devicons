@@ -5,6 +5,9 @@ This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
 - v0.4.4
   - Lots of readme updates and tweaks
+  - Changelog semver details
+  - Spelling / confusing grammar corrections (PR #68) (@adelarsq)
+  - Fixed default folder/directory glyph (PR Fixes #72) (@cj)
   - Mac OS X screenshot (Fixes #32) (@RageZBla)
   - Fixed misalignment when used with  [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) (Fixes #71)
   - Fixed re-sourcing bug (Fixes #71)
