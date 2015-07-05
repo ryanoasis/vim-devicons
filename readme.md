@@ -151,9 +151,11 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ### [nerdtree-git-plugin]
 
 * with `g:WebDevIconsNerdTreeGitPluginForceVAlign` on
+
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.4/nerdtree-git-plugin-valign-on-sample.png)
 
 * with `g:WebDevIconsNerdTreeGitPluginForceVAlign` off
+
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.4.4/nerdtree-git-plugin-valign-off-sample.png)
 
 ### Various Terminal Emulators
