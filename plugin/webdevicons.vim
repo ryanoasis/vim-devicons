@@ -30,6 +30,14 @@ if !exists('g:webdevicons_enable_nerdtree')
   let g:webdevicons_enable_nerdtree = 1
 endif
 
+if !exists('g:webdevicons_enable_unite')
+  let g:webdevicons_enable_unite = 1
+endif
+
+if !exists('g:webdevicons_enable_vimfiler')
+  let g:webdevicons_enable_vimfiler = 1
+endif
+
 if !exists('g:webdevicons_enable_airline_tabline')
   let g:webdevicons_enable_airline_tabline = 1
 endif
@@ -40,6 +48,14 @@ endif
 
 if !exists('g:webdevicons_enable_airline_statusline_fileformat_symbols')
   let g:webdevicons_enable_airline_statusline_fileformat_symbols = 1
+endif
+
+if !exists('g:webdevicons_enable_flagship_statusline')
+  let g:webdevicons_enable_flagship_statusline = 1
+endif
+
+if !exists('g:webdevicons_enable_flagship_statusline_fileformat_symbols')
+  let g:webdevicons_enable_flagship_statusline_fileformat_symbols = 1
 endif
 
 if !exists('g:webdevicons_conceal_nerdtree_brackets')
@@ -212,6 +228,9 @@ endfunction
 function! s:initialize()
   call s:setDictionaries()
   call s:setSyntax()
+  call s:initializeFlagship()
+  call s:initializeUnite()
+  call s:initializeVimfiler()
 endfunction
 
 
@@ -358,6 +377,82 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   endif
 
 endfunction
+
+" for vim-flagship plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeFlagship()
+  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline
+    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileTypeSymbol")
+  endif
+
+  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline_fileformat_symbols
+    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
+  endif
+
+endfunction
+
+" for unite plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeUnite()
+  if exists("g:loaded_unite") && g:webdevicons_enable_unite
+    let s:filters = {
+          \   "name" : "devicons_converter",
+          \}
+
+    function! s:filters.filter(candidates, context)
+      for candidate in a:candidates
+        "echom "candidate"
+        "for [next_key, next_val] in items(candidate)
+        "  "let result = process(next_val)
+        "  echo "Result for " next_key " is " next_val
+        "endfor
+
+        if has_key(candidate, "action__buffer_nr")
+          let bufname = bufname(candidate.action__buffer_nr)
+          let filename = fnamemodify(bufname, ':p:t')
+          let path = fnamemodify(bufname, ':p:h')
+        elseif has_key(candidate, "word") && has_key(candidate, "action__path")
+          let path = candidate.action__path
+          let filename = candidate.word
+        endif
+
+        let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
+
+        " Customize output format.
+        let candidate.abbr = printf("%s %s", icon, path)
+      endfor
+      return a:candidates
+    endfunction
+
+    call unite#define_filter(s:filters)
+    unlet s:filters
+
+    call unite#custom#source('file,file_rec,buffer', 'converters', 'devicons_converter')
+    "unite#filters#converter_default#use("devicons_converter")
+  endif
+endfunction
+
+" for vimfiler plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeVimfiler()
+  if exists("g:loaded_vimfiler") && g:webdevicons_enable_vimfiler
+    call vimfiler#custom#profile('default', 'context', {
+      \ 'columns' : 'type:devicons:size:time'
+      \ })
+  endif
+endfunction
+
+
+" initialization {{{1
+"========================================================================
+
+call s:initialize()
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================
