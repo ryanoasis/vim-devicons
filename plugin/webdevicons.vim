@@ -274,33 +274,34 @@ function! WebDevIconsGetFileTypeSymbol(...)
 
 endfunction
 
+" scope: public
 function! WebDevIconsGetFileFormatSymbol(...)
   let fileformat = ""
 
   if &fileformat == "dos"
-	  let fileformat = ""
-	elseif &fileformat == "unix"
-		let fileformat = ""
-	elseif &fileformat == "mac"
-		let fileformat = ""
+    let fileformat = ""
+  elseif &fileformat == "unix"
+    let fileformat = ""
+  elseif &fileformat == "mac"
+    let fileformat = ""
   endif
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
   " actual font patcher)
   let artifactFix = "\u00A0"
 
-  return &enc . " " . fileformat . artifactFix
+  return fileformat . artifactFix
 endfunction
 
 " for airline plugin {{{3
 "========================================================================
 
-" scope: global
+" scope: public
 function! AirlineWebDevIcons(...)
   let w:airline_section_x = get(w:, 'airline_section_x', g:airline_section_x)
   let w:airline_section_x .= ' %{WebDevIconsGetFileTypeSymbol()} '
   if g:webdevicons_enable_airline_statusline_fileformat_symbols
-    let w:airline_section_y = ' %{WebDevIconsGetFileFormatSymbol()} '
+    let w:airline_section_y = ' %{&fenc . " " . WebDevIconsGetFileFormatSymbol()} '
   endif
 endfunction
 
