@@ -1,9 +1,9 @@
-" Version: 0.4.4
+" Version: 0.5.0
 " Webpage: https://github.com/ryanoasis/vim-webdevicons
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " Licencse: see LICENSE
 
-let s:version = '0.4.4'
+let s:version = '0.5.0'
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================
@@ -190,22 +190,22 @@ endfunction
 " scope: local
 function! s:setSyntax()
   if g:webdevicons_enable_nerdtree == 1 && g:webdevicons_conceal_nerdtree_brackets == 1
-	 augroup webdevicons_conceal_nerdtree_brackets
-		au!
-		autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
-		autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
-		autocmd FileType nerdtree set conceallevel=3
-		autocmd FileType nerdtree set concealcursor=nvic
-	 augroup END
+    augroup webdevicons_conceal_nerdtree_brackets
+      au!
+      autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
+      autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
+      autocmd FileType nerdtree set conceallevel=3
+      autocmd FileType nerdtree set concealcursor=nvic
+    augroup END
   endif
 endfunction
 
 " scope: local
 function! s:hardRefreshNerdTree()
-	if g:webdevicons_enable_nerdtree == 1 && g:webdevicons_conceal_nerdtree_brackets == 1 && g:NERDTree.IsOpen()
-		NERDTreeClose
-		NERDTree
-	endif
+  if g:webdevicons_enable_nerdtree == 1 && g:webdevicons_conceal_nerdtree_brackets == 1 && g:NERDTree.IsOpen()
+    NERDTreeClose
+    NERDTree
+  endif
 endfunction
 
 " scope: local
@@ -214,10 +214,6 @@ function! s:initialize()
   call s:setSyntax()
 endfunction
 
-" initialization {{{1
-"========================================================================
-
-call s:initialize()
 
 " public functions {{{2
 "========================================================================
@@ -368,4 +364,5 @@ endfunction
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-" vim: fdm=marker:
+" modeline syntax:
+" vim: fdm=marker tabstop=2 softtabstop=2 shiftwidth=2 expandtab:
