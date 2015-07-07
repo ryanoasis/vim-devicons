@@ -125,6 +125,7 @@ function! s:setDictionaries()
 		\	'md'       : '',
 		\	'json'     : '',
 		\	'js'       : '',
+		\	'jsx'      : '',
 		\	'rb'       : '',
 		\	'php'      : '',
 		\	'py'       : '',
@@ -142,7 +143,6 @@ function! s:setDictionaries()
 		\	'bmp'      : '',
 		\	'png'      : '',
 		\	'gif'      : '',
-		\	'ai'       : '',
 		\	'twig'     : '',
 		\	'cpp'      : '',
 		\	'c++'      : '',
@@ -158,12 +158,32 @@ function! s:setDictionaries()
 		\	'diff'     : '',
 		\	'db'       : '',
 		\	'clj'      : '',
+		\	'cljs'     : '',
+		\	'edn'      : '',
 		\	'scala'    : '',
-		\	'go'       : '',
+		\	'go'       : '',
 		\	'dart'     : '',
 		\	'xul'      : '',
 		\	'sln'      : '',
-		\	'suo'      : ''
+		\	'suo'      : '',
+		\	'pl'       : '',
+		\	'pm'       : '',
+		\	't'        : '',
+		\	'rss'      : '',
+		\	'f#'       : '',
+		\	'fsscript' : '',
+		\	'fsx'      : '',
+		\	'fs'       : '',
+		\	'fsi'      : '',
+		\	'rs'       : '',
+		\	'rlib'     : '',
+		\	'd'        : '',
+		\	'erl'      : '',
+		\	'hrl'      : '',
+		\	'vim'      : '',
+		\	'ai'       : '',
+		\	'psd'      : '',
+		\	'psb'      : ''
 	\}
 
 	let s:file_node_exact_matches = {
@@ -175,31 +195,60 @@ function! s:setDictionaries()
 		\	'gulpfile.coffee'                  : '',
 		\	'gulpfile.js'                      : '',
 		\	'gulpfile.ls'                      : '',
-		\	'dropbox'                          : ''
+		\	'dropbox'                          : '',
+		\	'.ds_store'                        : '',
+		\	'.gitconfig'                       : '',
+		\	'.gitignore'                       : '',
+		\	'.bashrc'                          : '',
+		\	'.bashprofile'                     : '',
+		\	'favicon.ico'                      : '',
+		\	'license'                          : '',
+		\	'node_modules'                     : ''
 	\}
 
-	if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
-		let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
-	endif
+	let s:file_node_pattern_matches = {
+		\ '.*jquery.*\.js$'       : '',
+		\ '.*angular.*\.js$'      : '',
+		\ '.*backbone.*\.js$'     : '',
+		\ '.*require.*\.js$'      : '',
+		\ '.*materialize.*\.js$'  : '',
+		\ '.*materialize.*\.css$' : '',
+		\ '.*mootools.*\.js$'     : ''
+	\}
 
-	if !exists('g:WebDevIconsUnicodeDecorateFileNodesExactSymbols')
-		" do not remove: exact-match-case-sensitive-*
-		let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
-	endif
+  if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
+    let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+  endif
 
-	" iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
-	for [key, val] in items(s:file_node_extensions)
-		if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, key)
-			let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[key] = val
-		endif
-	endfor
+  if !exists('g:WebDevIconsUnicodeDecorateFileNodesExactSymbols')
+    " do not remove: exact-match-case-sensitive-*
+    let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
+  endif
 
-	" iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
-	for [key, val] in items(s:file_node_exact_matches)
-		if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, key)
-			let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[key] = val
-		endif
-	endfor
+  if !exists('g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols')
+    let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {}
+  endif
+
+  " iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
+  for [key, val] in items(s:file_node_extensions)
+    if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, key)
+      let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[key] = val
+    endif
+  endfor
+
+  " iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
+  for [key, val] in items(s:file_node_exact_matches)
+    if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, key)
+      let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[key] = val
+    endif
+  endfor
+
+  " iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
+  for [key, val] in items(s:file_node_pattern_matches)
+    if !has_key(g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols, key)
+      let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols[key] = val
+    endif
+  endfor
 
 endfunction
 
@@ -266,18 +315,23 @@ function! WebDevIconsGetFileTypeSymbol(...)
     endif
   endif
 
+  let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
   let fileNodeExtension = tolower(fileNodeExtension)
   let fileNode = tolower(fileNode)
 
-  if has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, fileNode)
-    let symbol = g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[fileNode]
-  elseif has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
-    let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
-  else
-    if isDirectory == 1
+  for [pattern, glyph] in items(g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols)
+    if match(fileNode, pattern) != -1
+      let symbol = glyph
+    endif
+  endfor
+
+  if symbol == g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
+    if has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, fileNode)
+      let symbol = g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[fileNode]
+    elseif has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
+      let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
+    elseif isDirectory == 1
       let symbol = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
-    else
-      let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
     endif
   endif
 
