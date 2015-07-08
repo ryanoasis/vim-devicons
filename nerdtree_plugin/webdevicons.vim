@@ -92,4 +92,5 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
   endif
 endif
 
-
+" modeline syntax:
+" vim: fdm=marker tabstop=2 softtabstop=2 shiftwidth=2 expandtab:
