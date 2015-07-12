@@ -2,7 +2,7 @@ vim-webdevicons
 =======================
 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-webdevicons](https://img.shields.io/badge/%E2%8A%AA%20GITTER%20-CHAT%20%E2%86%92-1dce73.svg?style=flat)][badge-gitter] [![Flattr this git repo](https://img.shields.io/badge/donate-flattr%20this!-8DB65B.svg?style=flat)][badge-flattr]
 
-Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [unite], [lightline.vim], [vimfiler], and [flagship].
+Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [unite], [lightline.vim], [vimfiler], and [flagship].
 
 [» Vote for upcoming features or suggest new ones](#vote)
 
@@ -17,7 +17,6 @@ Start temporary poll section
  _Current open polls: Vote for upcoming features or suggest new ones:_  | [vote][vim-webdevicons-polls]
 ------------------------------------------------------------------------- | :-----:
 » [Rename project: vim-webdevicons to vim-devicons?](https://github.com/ryanoasis/vim-webdevicons/issues/64) | [☑](http://poll.gitrun.com/ryanoasis/vim-webdevicons/issues/64)
-» [support ctrlp.vim?](https://github.com/ryanoasis/vim-webdevicons/issues/56) | [☑](http://poll.gitrun.com/ryanoasis/vim-webdevicons/issues/56)
 » [Something else? (Open an issue)][vim-webdevicons-polls] | [☑][vim-webdevicons-polls]
 
 <!---
@@ -66,6 +65,8 @@ After installing the patched font and setting the vim font just open or look at 
 * _NOTE:_ for [NERDTree] support, you **must** configure vim to load NERDTree **_before_** vim-webdevicons loads.
 
 * _NOTE:_ for [vim-airline] support, you **must** configure vim to load vim-airline **_before_** vim-webdevicons loads.
+
+* _NOTE:_ for [CtrlP] support, you **must** configure vim to load CtrlP **_before_** vim-webdevicons loads.
 
 * _NOTE:_ for [unite] support, you **must** configure vim to load unite **_before_** vim-webdevicons loads.
 
@@ -143,6 +144,13 @@ statusline          | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.0/airline-tabline-1.png)
 tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.0/airline-tabline-2.png)
 fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.0/fileformats-symbols-sample.png)
+
+
+### [CtrlP][CtrlP]
+
+* Supports the original [CtrlP][CtrlP] plugin and [ctrlpvim-CtrlP](CtrlP active fork)
+
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.0/ctrlp.png)
 
 
 ### [unite][unite]
@@ -554,6 +562,8 @@ Link References
 [unite.vim]:https://github.com/Shougo/unite.vim
 [vimfiler]:https://github.com/Shougo/vimfiler.vim
 [flagship]:https://github.com/tpope/vim-flagship
+[CtrlP]:https://github.com/kien/ctrlp.vim
+[ctrlpvim-CtrlP]:https://github.com/ctrlpvim/ctrlp.vim
 
 [vim-webdevicons-repo]:https://github.com/ryanoasis/vim-webdevicons
 [vim-webdevicons-polls]:https://github.com/ryanoasis/vim-webdevicons/labels/poll
