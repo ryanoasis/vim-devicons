@@ -38,6 +38,10 @@ if !exists('g:webdevicons_enable_vimfiler')
   let g:webdevicons_enable_vimfiler = 1
 endif
 
+if !exists('g:webdevicons_enable_ctrlp')
+  let g:webdevicons_enable_ctrlp = 1
+endif
+
 if !exists('g:webdevicons_enable_airline_tabline')
   let g:webdevicons_enable_airline_tabline = 1
 endif
@@ -61,7 +65,6 @@ endif
 if !exists('g:webdevicons_conceal_nerdtree_brackets')
   let g:webdevicons_conceal_nerdtree_brackets = 1
 endif
-
 
 " config options {{{1
 "========================================================================
@@ -93,7 +96,6 @@ endif
 if !exists('g:WebDevIconsNerdTreeGitPluginForceVAlign')
   let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 endif
-
 
 " config defaults {{{1
 "========================================================================
@@ -161,7 +163,7 @@ function! s:setDictionaries()
 		\	'cljs'     : '',
 		\	'edn'      : '',
 		\	'scala'    : '',
-		\	'go'       : '',
+		\	'go'       : '',
 		\	'dart'     : '',
 		\	'xul'      : '',
 		\	'sln'      : '',
@@ -201,7 +203,7 @@ function! s:setDictionaries()
 		\	'.gitignore'                       : '',
 		\	'.bashrc'                          : '',
 		\	'.bashprofile'                     : '',
-		\	'favicon.ico'                      : '',
+		\	'favicon.ico'                      : '',
 		\	'license'                          : '',
 		\	'node_modules'                     : ''
 	\}
@@ -273,6 +275,180 @@ function! s:hardRefreshNerdTree()
   endif
 endfunction
 
+" for vim-flagship plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeFlagship()
+  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline
+    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileTypeSymbol")
+  endif
+
+  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline_fileformat_symbols
+    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
+  endif
+
+endfunction
+
+" for unite plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeUnite()
+  if exists("g:loaded_unite") && g:webdevicons_enable_unite
+    let s:filters = {
+          \   "name" : "devicons_converter",
+          \}
+
+    function! s:filters.filter(candidates, context)
+      for candidate in a:candidates
+
+        if has_key(candidate, "action__buffer_nr")
+          let bufname = bufname(candidate.action__buffer_nr)
+          let filename = fnamemodify(bufname, ':p:t')
+          let path = fnamemodify(bufname, ':p:h')
+        elseif has_key(candidate, "word") && has_key(candidate, "action__path")
+          let path = candidate.action__path
+          let filename = candidate.word
+        endif
+
+        let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
+
+        " Customize output format.
+        let candidate.abbr = printf("%s %s", icon, path)
+      endfor
+      return a:candidates
+    endfunction
+
+    call unite#define_filter(s:filters)
+    unlet s:filters
+
+    call unite#custom#source('file,file_rec,buffer', 'converters', 'devicons_converter')
+  endif
+endfunction
+
+" for vimfiler plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeVimfiler()
+  if exists("g:loaded_vimfiler") && g:webdevicons_enable_vimfiler
+    call vimfiler#custom#profile('default', 'context', {
+      \ 'columns' : 'type:devicons:size:time'
+      \ })
+  endif
+endfunction
+
+" for ctrlp plugin {{{3
+"========================================================================
+
+" scope: local
+" Either initialize for: kien/ctrlp.vim OR up to date fork: ctrlpvim/ctrlp.vim
+" mostly a hack/overwrite to add icons to the official inactive ctrlP repo
+" only overwriting the necessary functions to make it work
+" unless we detect the newer active ctrlp fork
+function! s:initializeCtrlP()
+  if exists("g:loaded_ctrlp") && g:webdevicons_enable_ctrlp
+    let g:ctrlp_open_func = {
+      \ 'files': 'webdevicons#ctrlPOpenFunc',
+      \ 'buffers': 'webdevicons#ctrlPOpenFunc',
+      \ 'mru files': 'webdevicons#ctrlPOpenFunc'
+      \ }
+
+    if exists("g:ctrlp_mruf_map_string")
+      " logic for ctrlpvim/ctrlp.vim:
+      let g:ctrlp_mruf_map_string = '!stridx(v:val, cwd) ? WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . " " . strpart(v:val, idx) : g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol . " " . v:val'
+    else
+      " logic for kien/ctrlp.vim:
+      call s:initializeCtrlPOverwrite()
+    endif
+  endif
+endfunction
+
+" scope: local
+" logic for kien/ctrlp.vim
+" @todo a better cleaner way? is it possible?
+function! s:initializeCtrlPOverwrite()
+  if g:webdevicons_enable_ctrlp
+    " Static variables {{{1
+    let [s:mrbs, s:mrufs] = [[], []]
+
+    fu! ctrlp#mrufiles#opts()
+    	let [pref, opts] = ['g:ctrlp_mruf_', {
+    		\ 'max': ['s:max', 250],
+    		\ 'include': ['s:in', ''],
+    		\ 'exclude': ['s:ex', ''],
+    		\ 'case_sensitive': ['s:cseno', 1],
+    		\ 'relative': ['s:re', 0],
+    		\ 'save_on_update': ['s:soup', 1],
+    		\ }]
+    	for [ke, va] in items(opts)
+    		let [{va[0]}, {pref.ke}] = [pref.ke, exists(pref.ke) ? {pref.ke} : va[1]]
+    	endfo
+    endf
+    cal ctrlp#mrufiles#opts()
+
+    fu! s:mergelists()
+    	let diskmrufs = ctrlp#utils#readfile(ctrlp#mrufiles#cachefile())
+    	cal filter(diskmrufs, 'index(s:mrufs, v:val) < 0')
+    	let mrufs = s:mrufs + diskmrufs
+    	retu s:chop(mrufs)
+    endf
+
+    fu! s:chop(mrufs)
+    	if len(a:mrufs) > {s:max} | cal remove(a:mrufs, {s:max}, -1) | en
+    	retu a:mrufs
+    endf
+
+    fu! s:reformat(mrufs, ...)
+    	let cwd = getcwd()
+    	let cwd .= cwd !~ '[\/]$' ? ctrlp#utils#lash() : ''
+    	if {s:re}
+    		let cwd = exists('+ssl') ? tr(cwd, '/', '\') : cwd
+    		cal filter(a:mrufs, '!stridx(v:val, cwd)')
+    	en
+    	if a:0 && a:1 == 'raw' | retu a:mrufs | en
+    	let idx = strlen(cwd)
+    	if exists('+ssl') && &ssl
+    		let cwd = tr(cwd, '\', '/')
+    		cal map(a:mrufs, 'tr(v:val, "\\", "/")')
+    	en
+    	retu map(a:mrufs, '!stridx(v:val, cwd) ? WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . " " . strpart(v:val, idx) : g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol . " " . v:val')
+    endf
+
+    fu! ctrlp#mrufiles#refresh(...)
+    	let mrufs = s:mergelists()
+    	cal filter(mrufs, '!empty(ctrlp#utils#glob(v:val, 1)) && !s:excl(v:val)')
+    	if exists('+ssl')
+    		cal map(mrufs, 'tr(v:val, "/", "\\")')
+    		cal map(s:mrufs, 'tr(v:val, "/", "\\")')
+    		let cond = 'count(mrufs, v:val, !{s:cseno}) == 1'
+    		cal filter(mrufs, cond)
+    		cal filter(s:mrufs, cond)
+    	en
+    	cal s:savetofile(mrufs)
+    	retu a:0 && a:1 == 'raw' ? [] : s:reformat(mrufs)
+    endf
+
+    fu! ctrlp#mrufiles#remove(files)
+    	let mrufs = []
+    	if a:files != []
+    		let mrufs = s:mergelists()
+    		let cond = 'index(a:files, v:val, 0, !{s:cseno}) < 0'
+    		cal filter(mrufs, cond)
+    		cal filter(s:mrufs, cond)
+    	en
+    	cal s:savetofile(mrufs)
+    	retu s:reformat(mrufs)
+    endf
+
+    fu! ctrlp#mrufiles#list(...)
+    	retu a:0 ? a:1 == 'raw' ? s:reformat(s:mergelists(), a:1) : 0
+    		\ : s:reformat(s:mergelists())
+    endf
+  endif
+endfunction
+
 " scope: local
 function! s:initialize()
   call s:setDictionaries()
@@ -280,8 +456,13 @@ function! s:initialize()
   call s:initializeFlagship()
   call s:initializeUnite()
   call s:initializeVimfiler()
+  call s:initializeCtrlP()
 endfunction
 
+" local initialization {{{2
+"========================================================================
+
+call s:initialize()
 
 " public functions {{{2
 "========================================================================
@@ -297,6 +478,13 @@ function! webdevicons#refresh()
   call s:hardRefreshNerdTree()
 endfunction
 
+" scope: public
+function! webdevicons#ctrlPOpenFunc(action, line)
+  " Use CtrlP's default file opening function
+  let devIconPrefixLength = 6
+  let line = strpart(a:line, devIconPrefixLength)
+  call call('ctrlp#acceptfile', [a:action, line])
+endfunction
 
 " a:1 (bufferName), a:2 (isDirectory)
 " scope: public
@@ -431,82 +619,6 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   endif
 
 endfunction
-
-" for vim-flagship plugin {{{3
-"========================================================================
-
-" scope: local
-function! s:initializeFlagship()
-  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline
-    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileTypeSymbol")
-  endif
-
-  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline_fileformat_symbols
-    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
-  endif
-
-endfunction
-
-" for unite plugin {{{3
-"========================================================================
-
-" scope: local
-function! s:initializeUnite()
-  if exists("g:loaded_unite") && g:webdevicons_enable_unite
-    let s:filters = {
-          \   "name" : "devicons_converter",
-          \}
-
-    function! s:filters.filter(candidates, context)
-      for candidate in a:candidates
-        "echom "candidate"
-        "for [next_key, next_val] in items(candidate)
-        "  "let result = process(next_val)
-        "  echo "Result for " next_key " is " next_val
-        "endfor
-
-        if has_key(candidate, "action__buffer_nr")
-          let bufname = bufname(candidate.action__buffer_nr)
-          let filename = fnamemodify(bufname, ':p:t')
-          let path = fnamemodify(bufname, ':p:h')
-        elseif has_key(candidate, "word") && has_key(candidate, "action__path")
-          let path = candidate.action__path
-          let filename = candidate.word
-        endif
-
-        let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
-
-        " Customize output format.
-        let candidate.abbr = printf("%s %s", icon, path)
-      endfor
-      return a:candidates
-    endfunction
-
-    call unite#define_filter(s:filters)
-    unlet s:filters
-
-    call unite#custom#source('file,file_rec,buffer', 'converters', 'devicons_converter')
-    "unite#filters#converter_default#use("devicons_converter")
-  endif
-endfunction
-
-" for vimfiler plugin {{{3
-"========================================================================
-
-" scope: local
-function! s:initializeVimfiler()
-  if exists("g:loaded_vimfiler") && g:webdevicons_enable_vimfiler
-    call vimfiler#custom#profile('default', 'context', {
-      \ 'columns' : 'type:devicons:size:time'
-      \ })
-  endif
-endfunction
-
-
-" initialization {{{1
-"========================================================================
-
-call s:initialize()
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================

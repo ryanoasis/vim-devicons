@@ -3,6 +3,16 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.5.0
+  - Readme updates (removed polls sections, v0.5.0 specific changes)
+  - Misc code formatting fixes (tabs to spaces, modeline additions, reorganization)
+  - Update API: make WebDevIconsGetFileFormatSymbol return only fenc (fixes #73)
+  - Added Perl support (enhancement #60)
+  - Added support for some (mostly frontend) frameworks (enhancement #61)
+  - Added basic support for vim-flagship (enhancement #70)
+  - Added support for Unite and Vimfiler (enhancement #54)
+  - Added support for CtrlP (enhancement #56)
+  - Rebranding part 1: title and image (vim-devicons) (enhancement #76)
 - v0.4.4
   - Lots of readme updates and tweaks
   - Changelog semver details
