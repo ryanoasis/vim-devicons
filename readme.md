@@ -148,7 +148,7 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ### [CtrlP][CtrlP]
 
-* Supports the original [CtrlP][CtrlP] plugin and [ctrlpvim-CtrlP](CtrlP active fork)
+* Supports the original [CtrlP][CtrlP] plugin and [CtrlP active fork][ctrlpvim-CtrlP]
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.0/ctrlp.png)
 
