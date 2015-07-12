@@ -4,24 +4,8 @@ vim-webdevicons
 
 Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [unite], [lightline.vim], [vimfiler], and [flagship].
 
-[» Vote for upcoming features or suggest new ones](#vote)
-
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.0/overall-screenshot.png)
 
-
-<!---
-Start temporary poll section
--->
-<a name="vote"></a>
-
- _Current open polls: Vote for upcoming features or suggest new ones:_  | [vote][vim-webdevicons-polls]
-------------------------------------------------------------------------- | :-----:
-» [Rename project: vim-webdevicons to vim-devicons?](https://github.com/ryanoasis/vim-webdevicons/issues/64) | [☑](http://poll.gitrun.com/ryanoasis/vim-webdevicons/issues/64)
-» [Something else? (Open an issue)][vim-webdevicons-polls] | [☑][vim-webdevicons-polls]
-
-<!---
-End temporary poll section
--->
 
 ## Table of Contents
 
