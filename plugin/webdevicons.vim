@@ -163,7 +163,7 @@ function! s:setDictionaries()
 		\	'cljs'     : '',
 		\	'edn'      : '',
 		\	'scala'    : '',
-		\	'go'       : '',
+		\	'go'       : '',
 		\	'dart'     : '',
 		\	'xul'      : '',
 		\	'sln'      : '',
@@ -203,7 +203,7 @@ function! s:setDictionaries()
 		\	'.gitignore'                       : '',
 		\	'.bashrc'                          : '',
 		\	'.bashprofile'                     : '',
-		\	'favicon.ico'                      : '',
+		\	'favicon.ico'                      : '',
 		\	'license'                          : '',
 		\	'node_modules'                     : ''
 	\}
