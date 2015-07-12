@@ -1,5 +1,6 @@
-vim-webdevicons
-=======================
+<h1 align="center">
+	<img src="https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.0/branding-logo.png" alt="vim-devicons">
+</h1>
 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons.svg)][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-webdevicons](https://img.shields.io/badge/%E2%8A%AA%20GITTER%20-CHAT%20%E2%86%92-1dce73.svg?style=flat)][badge-gitter] [![Flattr this git repo](https://img.shields.io/badge/donate-flattr%20this!-8DB65B.svg?style=flat)][badge-flattr]
 
 Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [unite], [lightline.vim], [vimfiler], and [flagship].

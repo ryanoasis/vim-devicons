@@ -12,6 +12,7 @@ This project is using [Semantic Versioning 2.0.0](http://semver.org/)
   - Added basic support for vim-flagship (enhancement #70)
   - Added support for Unite and Vimfiler (enhancement #54)
   - Added support for CtrlP (enhancement #56)
+  - Rebranding part 1: title and image (vim-devicons) (enhancement #76)
 - v0.4.4
   - Lots of readme updates and tweaks
   - Changelog semver details
