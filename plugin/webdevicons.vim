@@ -115,6 +115,11 @@ endif
 "========================================================================
 
 " scope: local
+function! s:strip(input)
+  return substitute(a:input, '^\s*\(.\{-}\)\s*$', '\1', '')
+endfunction
+
+" scope: local
 function! s:setDictionaries()
 
 	let s:file_node_extensions = {
@@ -480,9 +485,12 @@ endfunction
 
 " scope: public
 function! webdevicons#ctrlPOpenFunc(action, line)
+  let line = a:line
+  " Remove non-breaking space which is present (NBSP U+00A0)
+  let line = substitute(line, " ", "", "")
+  " Trim leading and trailing whitespace and replace private character range characters
+  let line = s:strip(substitute(line, "[-]", "", ""))
   " Use CtrlP's default file opening function
-  let devIconPrefixLength = 6
-  let line = strpart(a:line, devIconPrefixLength)
   call call('ctrlp#acceptfile', [a:action, line])
 endfunction
 
