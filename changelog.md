@@ -3,6 +3,9 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.5.1
+  - Fixed [CtrlP](https://github.com/ctrlpvim/ctrlp.vim) integration bugs (truncating 6 characters is unreliable) and only add glyphs for MRU File Mode (Fixes #80)
+  - Readme updates and improvements
 - v0.5.0
   - Readme updates (removed polls sections, v0.5.0 specific changes)
   - Misc code formatting fixes (tabs to spaces, modeline additions, reorganization)
