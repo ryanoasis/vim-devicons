@@ -352,11 +352,10 @@ endfunction
 " mostly a hack/overwrite to add icons to the official inactive ctrlP repo
 " only overwriting the necessary functions to make it work
 " unless we detect the newer active ctrlp fork
+" @TODO implementation for CtrlP buffer and find file mode
 function! s:initializeCtrlP()
   if exists("g:loaded_ctrlp") && g:webdevicons_enable_ctrlp
     let g:ctrlp_open_func = {
-      \ 'files': 'webdevicons#ctrlPOpenFunc',
-      \ 'buffers': 'webdevicons#ctrlPOpenFunc',
       \ 'mru files': 'webdevicons#ctrlPOpenFunc'
       \ }
 
