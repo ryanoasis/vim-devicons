@@ -47,17 +47,7 @@ After installing the patched font and setting the vim font just open or look at 
 
 * _NOTE:_ if you don't have `guifont` set and are not running gvim you will need to set the terminal font.
 
-* _NOTE:_ for [NERDTree] support, you **must** configure vim to load NERDTree **_before_** vim-webdevicons loads.
-
-* _NOTE:_ for [vim-airline] support, you **must** configure vim to load vim-airline **_before_** vim-webdevicons loads.
-
-* _NOTE:_ for [CtrlP] support, you **must** configure vim to load CtrlP **_before_** vim-webdevicons loads.
-
-* _NOTE:_ for [unite] support, you **must** configure vim to load unite **_before_** vim-webdevicons loads.
-
-* _NOTE:_ for [vimfiler] support, you **must** configure vim to load vimfiler **_before_** vim-webdevicons loads.
-
-* _NOTE:_ for [flagship] support, you **must** configure vim to load flagship **_before_** vim-webdevicons loads.
+* _NOTE:_ for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-webdevicons loads.
 
 * _NOTE:_ for better [nerdtree-git-plugin] support, you _should_ configure vim to load nerdtree-git-plugin **_before_** vim-webdevicons loads.
 
