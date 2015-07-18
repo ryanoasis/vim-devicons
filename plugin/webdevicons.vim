@@ -39,7 +39,7 @@ if !exists('g:webdevicons_enable_vimfiler')
 endif
 
 if !exists('g:webdevicons_enable_ctrlp')
-  let g:webdevicons_enable_ctrlp = 1
+  let g:webdevicons_enable_ctrlp = 0
 endif
 
 if !exists('g:webdevicons_enable_airline_tabline')
