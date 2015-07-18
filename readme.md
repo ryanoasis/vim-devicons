@@ -134,6 +134,7 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ### [CtrlP][CtrlP]
 
 * Supports the original [CtrlP][CtrlP] plugin and [CtrlP active fork][ctrlpvim-CtrlP]
+* Currently only MRU file mode supported
 
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.0/ctrlp.png)
 
@@ -253,6 +254,11 @@ let g:webdevicons_enable_airline_tabline = 1
 * enable/disable adding to vim-airline's statusline (default 1)
  ```vim
 let g:webdevicons_enable_airline_statusline = 1
+  ```
+
+* enable/disable ctrlp MRU file mode glyphs (default 1)
+ ```vim
+ let g:webdevicons_enable_ctrlp = 1
   ```
 
 * enable/disable adding to flagship's statusline (default 1)
