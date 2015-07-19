@@ -131,6 +131,8 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ### [unite][unite]
 
+* Currently only supports `file`, `file_rec`, and `buffer`
+
 ![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/unite.png)
 
 
