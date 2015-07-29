@@ -393,11 +393,20 @@ endfunction
 ## API
 
 ```vim
-" a:1 (filename), a:2 (isDirectory) -- both optional, by default without parameters returns buffer name
+" returns the font character that represents the icon
+" parameters: a:1 (filename), a:2 (isDirectory)
+" both parameters optional
+" by default without parameters uses buffer name
 WebDevIconsGetFileTypeSymbol(...)
 
+" returns the font character that represents
+" the file format as an icon (windows, linux, mac)
 WebDevIconsGetFileFormatSymbol()
 ```
+
+### API Examples
+
+* todo
 
 ## Todo
 
