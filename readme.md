@@ -1,11 +1,11 @@
 <h1 align="center">
 	<img src="https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/branding-logo.png" alt="vim-devicons">
 </h1>
-[![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-devicons.svg)][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-webdevicons](https://img.shields.io/badge/%E2%8A%AA%20GITTER%20-CHAT%20%E2%86%92-1dce73.svg?style=flat)][badge-gitter] [![Flattr this git repo](https://img.shields.io/badge/donate-flattr%20this!-8DB65B.svg?style=flat)][badge-flattr]
+[![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-webdevicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
 ***
-| **[Screenshots](#screenshots)**         | **[API](#api)**         | **[Fonts ➶][font-nerd-icons-patched-fonts]**         | **[Patcher ➶][nerd-filetype-glyphs-fonts-patcher]** |
-|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------|
-| [![screenshots](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v1.0.0/branding-logo-screenshots-sm.png)](#screenshots)                                    | [![api](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v1.0.0/branding-logo-api-sm.png)](#api)                                    | [![patcher-logo-small](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/images/nerd-fonts-character-logo-md.png)][font-nerd-icons-patched-fonts]                                    | [![patcher-logo-small](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/images/nerd-fonts-patcher-logo-md.png)][nerd-filetype-glyphs-fonts-patcher] |
+| **[Screenshots](#screenshots)**| **[API](#api)** | **[Fonts ➶][patched-fonts]** | **[Patcher ➶][nerd-fonts]** |
+|--------------------------------|-----------------|------------------------------|-----------------------------|
+| [![screenshots][img-visual-toc-screenshots]](#screenshots) | [![api][img-visual-toc-api]](#api) | [![patcher-logo-small][img-visual-toc-patched-fonts]][patched-fonts] | [![patcher-logo-small][img-visual-toc-fonts-patcher]][nerd-fonts] |
 ***
 
 Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [unite], [lightline.vim], [vimfiler], and [flagship].
@@ -40,7 +40,7 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 1. Install the plugin per your usual method
    _[(» More details... «)](#installation)_
 2. Download and install a patched font (or patch your own):
-  * [nerd-filetype-glyphs-fonts-patcher]
+  * [nerd-fonts]
    _[(» More details... «)](#font-installation)_
 3. Set font  _[(» More details... «)](#font-configuration)_
   * a. **vim**: Set your terminal emulator font
@@ -67,7 +67,7 @@ After installing the patched font and setting the vim font just open or look at 
   patched font.
 
 Already patched fonts and the font patcher script are provided at:
-[nerd-filetype-glyphs-fonts-patcher]
+[nerd-fonts]
 
 It works without configuration *ONLY* when used with a patched font provided in
 the separate repository above. Install the font and add it to your `vimrc` or
@@ -104,7 +104,7 @@ You basically have to put any font you would like to use into the `~/.fonts` fol
 cd ~/.fonts && curl -fLo DroidSansMonoForPowerlinePlusNerdFileTypes.otf https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline%20Plus%20Nerd%20File%20Types.otf
 ```
 
-You can find more fonts under my [patched fonts repo][font-nerd-icons-patched-fonts].
+You can find more fonts under my [patched fonts repo][patched-fonts].
 
 
 ## Screenshots
@@ -211,7 +211,7 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
   * ```styl, scss, htm, html, css, less, md, json, js, rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai, twig, cpp, c++, cc, cp, cxx, cpp, c, hs, lhs, lua, sh, diff, clj, dart, db, go, scala, sln, suo, xul, pl, pm, t```
 * supports full filename matches, by default:
   * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls, dropbox```
-* font patcher ([nerd-filetype-glyphs-fonts-patcher])
+* font patcher ([nerd-fonts])
   * requires: python2, python-fontforge package
   * example usage
 	> ./font-patcher unpatched-sample-fonts/Droid\ Sans\ Mono\ for\ Powerline.otf
@@ -219,7 +219,7 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ## Extra Configuration
 
 * by default you should not *NEED* to configure anything to get the basics working
-  * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own ([nerd-filetype-glyphs-fonts-patcher]) _unless_ you want to configure the filetype to glyph mappings yourself for your current font
+  * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own ([nerd-fonts]) _unless_ you want to configure the filetype to glyph mappings yourself for your current font
 * these options can be defined in your `vimrc` or `gvimrc`
 * the following options are provided however for overriding
 
@@ -419,11 +419,11 @@ WebDevIconsGetFileFormatSymbol()
 ## FAQ / Troubleshooting
 
 * I don't want to use any of the fonts provided, I want to use font ABC
- * try the font patcher: [nerd-filetype-glyphs-fonts-patcher]
+ * try the font patcher: [nerd-fonts]
  * see font configuration above for more details
 
 * It isn't working
-  * Are you using the patched font provided in the separate repo ([nerd-filetype-glyphs-fonts-patcher]) or are you patching your own?
+  * Are you using the patched font provided in the separate repo ([nerd-fonts]) or are you patching your own?
   * _NOTE:_ if running vim and no font set it will default to the terminal font that is set
   * check what the vim/gvim font is set to, from ex mode:
 
@@ -557,8 +557,8 @@ See [LICENSE](LICENSE)
 Link References
 -->
 
-[nerd-filetype-glyphs-fonts-patcher]:https://github.com/ryanoasis/nerd-fonts
-[font-nerd-icons-patched-fonts]:https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
+[nerd-fonts]:https://github.com/ryanoasis/nerd-fonts
+[patched-fonts]:https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
 [NERDTree]:https://github.com/scrooloose/nerdtree
 [vim-airline]:https://github.com/bling/vim-airline
 [lightline.vim]:https://github.com/itchyny/lightline.vim
@@ -576,3 +576,11 @@ Link References
 [badge-version]:http://badge.fury.io/gh/ryanoasis%2Fvim-webdevicons
 [badge-gitter]:https://gitter.im/ryanoasis/vim-webdevicons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 [badge-flattr]:https://flattr.com/submit/auto?user_id=ryanoasis&url=https://github.com/ryanoasis/vim-webdevicons&title=vim-webdevicons&language=viml&tags=github&category=software
+
+[img-version-badge]:https://badge.fury.io/gh/ryanoasis%2Fvim-devicons.svg
+[img-gitter-badge]:https://img.shields.io/badge/%E2%8A%AA%20GITTER%20-CHAT%20%E2%86%92-1dce73.svg?style=flat
+[img-flattr-badge]:https://img.shields.io/badge/donate-flattr%20this!-8DB65B.svg?style=flat
+[img-visual-toc-screenshots]:https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v1.0.0/branding-logo-screenshots-sm.png
+[img-visual-toc-api]:https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v1.0.0/branding-logo-api-sm.png
+[img-visual-toc-patched-fonts]:https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/images/nerd-fonts-character-logo-md.png
+[img-visual-toc-fonts-patcher]:https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/images/nerd-fonts-patcher-logo-md.png
