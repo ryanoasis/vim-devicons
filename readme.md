@@ -3,7 +3,7 @@
 </h1>
 [![GitHub version](https://badge.fury.io/gh/ryanoasis%2Fvim-devicons.svg)][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-webdevicons](https://img.shields.io/badge/%E2%8A%AA%20GITTER%20-CHAT%20%E2%86%92-1dce73.svg?style=flat)][badge-gitter] [![Flattr this git repo](https://img.shields.io/badge/donate-flattr%20this!-8DB65B.svg?style=flat)][badge-flattr]
 ***
-| **[Screenshots](#screenshots)**         | **[API ➶](#api)**         | **[Fonts ➶][font-nerd-icons-patched-fonts]**         | **[Patcher][nerd-filetype-glyphs-fonts-patcher]** |
+| **[Screenshots](#screenshots)**         | **[API](#api)**         | **[Fonts ➶][font-nerd-icons-patched-fonts]**         | **[Patcher ➶][nerd-filetype-glyphs-fonts-patcher]** |
 |-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------|
 | [![screenshots](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v1.0.0/branding-logo-screenshots-sm.png)](#screenshots)                                    | [![api](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v1.0.0/branding-logo-api-sm.png)](#api)                                    | [![patcher-logo-small](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/images/nerd-fonts-character-logo-md.png)][font-nerd-icons-patched-fonts]                                    | [![patcher-logo-small](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/images/nerd-fonts-patcher-logo-md.png)][nerd-filetype-glyphs-fonts-patcher] |
 ***
