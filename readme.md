@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img src="https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/branding-logo.png" alt="vim-devicons">
+	<img src="https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/branding-logo.png" alt="vim-devicons">
 </h1>
 [![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-webdevicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
 ***
@@ -10,12 +10,12 @@
 
 Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [unite], [lightline.vim], [vimfiler], and [flagship].
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/overall-screenshot.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/overall-screenshot.png)
 
 
 ## Table of Contents
 
-- [vim-webdevicons v0.5.1](#)
+- [vim-webdevicons v0.5.2](#)
 	- [Quick Setup (TL;DR)](#quick-setup)
 	- [Usage](#usage)
 	- [Font Configuration](#font-configuration)
@@ -109,21 +109,21 @@ You can find more fonts under my [patched fonts repo][patched-fonts].
 
 ## Screenshots
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.1/vim.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.2/vim.png)
 
 ### [NERDTree]
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.1/nerdtree.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.2/nerdtree.png)
 
 
 ### [vim-airline]
 
 section             | preview
 ------------------- | -------------
-statusline          | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.1/airline-statusline.png)
-tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.1/airline-tabline-1.png)
-tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.1/airline-tabline-2.png)
-fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.1/fileformats-symbols-sample.png)
+statusline          | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.2/airline-statusline.png)
+tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.2/airline-tabline-1.png)
+tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.2/airline-tabline-2.png)
+fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.2/fileformats-symbols-sample.png)
 
 
 ### [CtrlP][CtrlP]
@@ -131,71 +131,71 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 * Supports the original [CtrlP][CtrlP] plugin and [CtrlP active fork][ctrlpvim-CtrlP]
 * Currently only MRU file mode supported
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/ctrlp.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/ctrlp.png)
 
 
 ### [unite][unite]
 
 * Currently only supports `file`, `file_rec`, and `buffer`
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/unite.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/unite.png)
 
 
 ### [lightline.vim][lightline.vim]
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/lightline.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/lightline.png)
 
 
 ### [vimfiler][vimfiler]
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/vimfiler.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/vimfiler.png)
 
 
 ### [flagship][flagship]
 
 * _NOTE: [flagship] support is **experimental** because the [API may be changing](https://github.com/tpope/vim-flagship/issues/6#issuecomment-116121220)_
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/flagship.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/flagship.png)
 
 
 ### [nerdtree-git-plugin]
 
 * with `g:WebDevIconsNerdTreeGitPluginForceVAlign` on
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/nerdtree-git-plugin-valign-on-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/nerdtree-git-plugin-valign-on-sample.png)
 
 * with `g:WebDevIconsNerdTreeGitPluginForceVAlign` off
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/nerdtree-git-plugin-valign-off-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/nerdtree-git-plugin-valign-off-sample.png)
 
 
 ### Different patched fonts example
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.1/different-fonts-sample.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-webdevicons/screenshots/v0.5.2/different-fonts-sample.png)
 
 
 ### Various Terminal Emulators
 
 * gnome terminal
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/terminal-gnome-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/terminal-gnome-sample.png)
 
 * Urxvt terminal
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/terminal-urxvt-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/terminal-urxvt-sample.png)
 
 ### Windows
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/windows-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/windows-sample.png)
 
 ### Mac OS X
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/osx-sample.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/osx-sample.png)
 *Thanks @RageZBla*
 
 ### Glyph set test file
 
-![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.1/glyph-set-test.png)
+![image](https://github.com/ryanoasis/vim-webdevicons/wiki/screenshots/v0.5.2/glyph-set-test.png)
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
@@ -333,8 +333,8 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'ƛ'
 
 ## Installation
 
-* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-webdevicons/wiki/samples/v0.5.1/.vimrc-windows-1)
-* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-webdevicons/wiki/samples/v0.5.1/.vimrc-linux-1)
+* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-webdevicons/wiki/samples/v0.5.2/.vimrc-windows-1)
+* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-webdevicons/wiki/samples/v0.5.2/.vimrc-linux-1)
 
 This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
 

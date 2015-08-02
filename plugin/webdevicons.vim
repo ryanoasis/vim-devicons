@@ -1,9 +1,9 @@
-" Version: 0.5.1
+" Version: 0.5.2
 " Webpage: https://github.com/ryanoasis/vim-webdevicons
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " Licencse: see LICENSE
 
-let s:version = '0.5.1'
+let s:version = '0.5.2'
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================

@@ -3,6 +3,12 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.5.2
+  - Various readme updates and fixes
+  - Various file clean-up (.gitignore removed)
+  - Fixed link to install fonts (PR #83 fixes #81) (@theRemix)
+  - Fixed glyph used for Go (PR #82) (@hoop33)
+  - Added Code of Conduct
 - v0.5.1
   - Fixed [CtrlP](https://github.com/ctrlpvim/ctrlp.vim) integration bugs (truncating 6 characters is unreliable) and only add glyphs for MRU File Mode (Fixes #80)
   - Readme updates and improvements
