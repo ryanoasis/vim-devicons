@@ -133,7 +133,7 @@ function! s:setDictionaries()
 		\	'json'     : '',
 		\	'js'       : '',
 		\	'jsx'      : '',
-		\	'rb'       : '',
+		\	'rb'       : '',
 		\	'php'      : '',
 		\	'py'       : '',
 		\	'pyc'      : '',
