@@ -266,8 +266,8 @@ function! s:setSyntax()
       au!
       autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
       autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
-      autocmd FileType nerdtree set conceallevel=3
-      autocmd FileType nerdtree set concealcursor=nvic
+      autocmd FileType nerdtree setlocal conceallevel=3
+      autocmd FileType nerdtree setlocal concealcursor=nvic
     augroup END
   endif
 endfunction
