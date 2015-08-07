@@ -163,6 +163,7 @@ function! s:setDictionaries()
 		\	'lua'      : '',
 		\	'java'     : '',
 		\	'sh'       : '',
+		\	'fish'     : '',
 		\	'diff'     : '',
 		\	'db'       : '',
 		\	'clj'      : '',
