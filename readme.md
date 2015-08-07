@@ -208,9 +208,11 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
   * ability to override predefined dictionary variable
   * if you are unhappy with the default glyph used you can choose your own
 * supports a range of file type extensions by default:
-  * ```styl, scss, htm, html, css, less, md, json, js, rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, ai, twig, cpp, c++, cc, cp, cxx, cpp, c, hs, lhs, lua, sh, diff, clj, dart, db, go, scala, sln, suo, xul, pl, pm, t```
+  * ```styl, scss, htm, html, slim, css, less, md, json, js, jsx, rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, jpg, jpeg, bmp, png, gif, twig, cpp, c++, cxx, cc, cp, c, hs, lhs, lua, java, sh, fish, diff, db, clj, cljs, edn, scala, go, dart, xul, sln, suo, pl, pm, t, rss, f#, fsscript, fsx, fs, fsi, rs, rlib, d, erl, hrl, vim, ai, psd, psb```
 * supports full filename matches, by default:
   * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls, dropbox```
+* supports library pattern matches, by default:
+  * ```jquery, angular, backbone, requirejs, materialize, mootools```
 * font patcher ([nerd-fonts])
   * requires: python2, python-fontforge package
   * example usage
