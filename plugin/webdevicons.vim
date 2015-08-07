@@ -127,6 +127,7 @@ function! s:setDictionaries()
 		\	'scss'     : '',
 		\	'htm'      : '',
 		\	'html'     : '',
+		\	'slim'     : '',
 		\	'css'      : '',
 		\	'less'     : '',
 		\	'md'       : '',
