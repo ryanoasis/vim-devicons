@@ -320,6 +320,11 @@ function! s:initializeUnite()
 
         let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
 
+        " prevent filenames of buffers getting 'lost'
+        if filename != path
+          let path = printf("%s %s", filename, path)
+        endif
+
         " Customize output format.
         let candidate.abbr = printf("%s %s", icon, path)
       endfor
