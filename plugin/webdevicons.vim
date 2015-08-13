@@ -166,6 +166,8 @@ function! s:setDictionaries()
 		\	'fish'     : '',
 		\	'diff'     : '',
 		\	'db'       : '',
+		\	'sql'      : '',
+		\	'dump'     : '',
 		\	'clj'      : '',
 		\	'cljs'     : '',
 		\	'edn'      : '',
