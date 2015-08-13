@@ -165,6 +165,7 @@ function! s:setDictionaries()
 		\	'sh'       : '',
 		\	'fish'     : '',
 		\	'ml'       : 'λ',
+		\	'mli'      : 'λ',
 		\	'diff'     : '',
 		\	'db'       : '',
 		\	'clj'      : '',
