@@ -151,6 +151,7 @@ function! s:setDictionaries()
 		\	'bmp'      : '',
 		\	'png'      : '',
 		\	'gif'      : '',
+		\	'ico'      : '',
 		\	'twig'     : '',
 		\	'cpp'      : '',
 		\	'c++'      : '',
