@@ -3,7 +3,7 @@
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " License: see LICENSE
 
-let s:version = '0.5.3'
+let s:version = '0.5.4'
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================

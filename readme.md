@@ -15,7 +15,7 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 
 ## Table of Contents
 
-- [vim-devicons v0.5.3](#)
+- [vim-devicons v0.5.4](#)
 	- [Quick Setup (TL;DR)](#quick-setup)
 	- [Usage](#usage)
 	- [Font Configuration](#font-configuration)
