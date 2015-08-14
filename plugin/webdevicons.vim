@@ -131,6 +131,7 @@ function! s:setDictionaries()
 		\	'css'      : '',
 		\	'less'     : '',
 		\	'md'       : '',
+		\	'markdown' : '',
 		\	'json'     : '',
 		\	'js'       : '',
 		\	'jsx'      : '',
