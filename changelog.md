@@ -3,6 +3,13 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.5.4
+  - Misc readme updates
+  - Add support for ocaml 'ml', 'mli' filetypes (enhancement PR #99) (@CharlieMartell)
+  - Add support for 'sql' and 'dump' filetypes (enhancement PR #100) (@lerrua)
+  - Add support for 'ico' filetypes (enhancement PR #101) (@lerrua)
+  - Add support for 'markdown' filetypes (enhancement PR #102) (@lerrua)
+  - Improved install fonts instructions on Mac (enhancement PR #103) (@lerrua)
 - v0.5.3
   - Add 'slim' filetype support (same icon as 'html') (enhancement PR #98) (@lerrua)
   - Add 'fish' filetype support (same icon as 'sh') (enhancement #93) (@michaelmrose)
