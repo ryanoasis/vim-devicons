@@ -168,6 +168,8 @@ function! s:setDictionaries()
 		\	'mli'      : 'λ',
 		\	'diff'     : '',
 		\	'db'       : '',
+		\	'sql'      : '',
+		\	'dump'     : '',
 		\	'clj'      : '',
 		\	'cljs'     : '',
 		\	'edn'      : '',
