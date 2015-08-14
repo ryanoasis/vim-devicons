@@ -62,6 +62,10 @@ After installing the patched font and setting the vim font just open or look at 
   ```vim
   set encoding=utf8
   ```
+* For Powerline symbols to show in airline the following needs to be set
+  ```vim
+  let g:airline_powerline_fonts = 1
+  ```
 
 * The _ONLY_ other configuration needed should be setting the font vim uses to a
   patched font.
