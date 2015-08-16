@@ -128,6 +128,7 @@ function! s:setDictionaries()
 		\	'htm'      : '',
 		\	'html'     : '',
 		\	'slim'     : '',
+		\	'ejs'      : '',
 		\	'css'      : '',
 		\	'less'     : '',
 		\	'md'       : '',
@@ -147,6 +148,7 @@ function! s:setDictionaries()
 		\	'conf'     : '',
 		\	'ini'      : '',
 		\	'yml'      : '',
+		\	'bat'      : '',
 		\	'jpg'      : '',
 		\	'jpeg'     : '',
 		\	'bmp'      : '',
@@ -176,7 +178,7 @@ function! s:setDictionaries()
 		\	'cljs'     : '',
 		\	'edn'      : '',
 		\	'scala'    : '',
-		\	'go'       : '',
+		\	'go'       : '',
 		\	'dart'     : '',
 		\	'xul'      : '',
 		\	'sln'      : '',
@@ -200,6 +202,7 @@ function! s:setDictionaries()
 		\	'psd'      : '',
 		\	'psb'      : '',
 		\	'ts'       : '',
+		\	'jl'       : ''
 	\}
 
 	let s:file_node_exact_matches = {
@@ -219,7 +222,9 @@ function! s:setDictionaries()
 		\	'.bashprofile'                     : '',
 		\	'favicon.ico'                      : '',
 		\	'license'                          : '',
-		\	'node_modules'                     : ''
+		\	'node_modules'                     : '',
+		\	'react.jsx'                        : '',
+		\	'procfile'                         : '',
 	\}
 
 	let s:file_node_pattern_matches = {
