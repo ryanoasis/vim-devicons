@@ -198,7 +198,8 @@ function! s:setDictionaries()
 		\	'vim'      : '',
 		\	'ai'       : '',
 		\	'psd'      : '',
-		\	'psb'      : ''
+		\	'psb'      : '',
+		\	'ts'       : '',
 	\}
 
 	let s:file_node_exact_matches = {
