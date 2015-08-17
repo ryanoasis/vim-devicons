@@ -1,9 +1,9 @@
-" Version: 0.4.3
+" Version: 0.5.3
 " Webpage: https://github.com/ryanoasis/vim-webdevicons
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
-" Licencse: see LICENSE
+" License: see LICENSE
 
-let s:version = '0.4.3'
+let s:version = '0.5.4'
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================
@@ -30,6 +30,18 @@ if !exists('g:webdevicons_enable_nerdtree')
   let g:webdevicons_enable_nerdtree = 1
 endif
 
+if !exists('g:webdevicons_enable_unite')
+  let g:webdevicons_enable_unite = 1
+endif
+
+if !exists('g:webdevicons_enable_vimfiler')
+  let g:webdevicons_enable_vimfiler = 1
+endif
+
+if !exists('g:webdevicons_enable_ctrlp')
+  let g:webdevicons_enable_ctrlp = 1
+endif
+
 if !exists('g:webdevicons_enable_airline_tabline')
   let g:webdevicons_enable_airline_tabline = 1
 endif
@@ -42,10 +54,17 @@ if !exists('g:webdevicons_enable_airline_statusline_fileformat_symbols')
   let g:webdevicons_enable_airline_statusline_fileformat_symbols = 1
 endif
 
+if !exists('g:webdevicons_enable_flagship_statusline')
+  let g:webdevicons_enable_flagship_statusline = 1
+endif
+
+if !exists('g:webdevicons_enable_flagship_statusline_fileformat_symbols')
+  let g:webdevicons_enable_flagship_statusline_fileformat_symbols = 1
+endif
+
 if !exists('g:webdevicons_conceal_nerdtree_brackets')
   let g:webdevicons_conceal_nerdtree_brackets = 1
 endif
-
 
 " config options {{{1
 "========================================================================
@@ -74,6 +93,9 @@ if !exists('g:WebDevIconsNerdTreeAfterGlyphPadding')
   let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 endif
 
+if !exists('g:WebDevIconsNerdTreeGitPluginForceVAlign')
+  let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+endif
 
 " config defaults {{{1
 "========================================================================
@@ -93,6 +115,11 @@ endif
 "========================================================================
 
 " scope: local
+function! s:strip(input)
+  return substitute(a:input, '^\s*\(.\{-}\)\s*$', '\1', '')
+endfunction
+
+" scope: local
 function! s:setDictionaries()
 
 	let s:file_node_extensions = {
@@ -100,12 +127,15 @@ function! s:setDictionaries()
 		\	'scss'     : '',
 		\	'htm'      : '',
 		\	'html'     : '',
+		\	'slim'     : '',
 		\	'css'      : '',
 		\	'less'     : '',
 		\	'md'       : '',
+		\	'markdown' : '',
 		\	'json'     : '',
 		\	'js'       : '',
-		\	'rb'       : '',
+		\	'jsx'      : '',
+		\	'rb'       : '',
 		\	'php'      : '',
 		\	'py'       : '',
 		\	'pyc'      : '',
@@ -122,7 +152,7 @@ function! s:setDictionaries()
 		\	'bmp'      : '',
 		\	'png'      : '',
 		\	'gif'      : '',
-		\	'ai'       : '',
+		\	'ico'      : '',
 		\	'twig'     : '',
 		\	'cpp'      : '',
 		\	'c++'      : '',
@@ -135,15 +165,40 @@ function! s:setDictionaries()
 		\	'lua'      : '',
 		\	'java'     : '',
 		\	'sh'       : '',
+		\	'fish'     : '',
+		\	'ml'       : 'λ',
+		\	'mli'      : 'λ',
 		\	'diff'     : '',
 		\	'db'       : '',
+		\	'sql'      : '',
+		\	'dump'     : '',
 		\	'clj'      : '',
+		\	'cljs'     : '',
+		\	'edn'      : '',
 		\	'scala'    : '',
 		\	'go'       : '',
 		\	'dart'     : '',
 		\	'xul'      : '',
 		\	'sln'      : '',
-		\	'suo'      : ''
+		\	'suo'      : '',
+		\	'pl'       : '',
+		\	'pm'       : '',
+		\	't'        : '',
+		\	'rss'      : '',
+		\	'f#'       : '',
+		\	'fsscript' : '',
+		\	'fsx'      : '',
+		\	'fs'       : '',
+		\	'fsi'      : '',
+		\	'rs'       : '',
+		\	'rlib'     : '',
+		\	'd'        : '',
+		\	'erl'      : '',
+		\	'hrl'      : '',
+		\	'vim'      : '',
+		\	'ai'       : '',
+		\	'psd'      : '',
+		\	'psb'      : ''
 	\}
 
 	let s:file_node_exact_matches = {
@@ -155,62 +210,273 @@ function! s:setDictionaries()
 		\	'gulpfile.coffee'                  : '',
 		\	'gulpfile.js'                      : '',
 		\	'gulpfile.ls'                      : '',
-		\	'dropbox'                          : ''
+		\	'dropbox'                          : '',
+		\	'.ds_store'                        : '',
+		\	'.gitconfig'                       : '',
+		\	'.gitignore'                       : '',
+		\	'.bashrc'                          : '',
+		\	'.bashprofile'                     : '',
+		\	'favicon.ico'                      : '',
+		\	'license'                          : '',
+		\	'node_modules'                     : ''
 	\}
 
-	if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
-		let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
-	endif
+	let s:file_node_pattern_matches = {
+		\ '.*jquery.*\.js$'       : '',
+		\ '.*angular.*\.js$'      : '',
+		\ '.*backbone.*\.js$'     : '',
+		\ '.*require.*\.js$'      : '',
+		\ '.*materialize.*\.js$'  : '',
+		\ '.*materialize.*\.css$' : '',
+		\ '.*mootools.*\.js$'     : ''
+	\}
 
-	if !exists('g:WebDevIconsUnicodeDecorateFileNodesExactSymbols')
-		" do not remove: exact-match-case-sensitive-*
-		let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
-	endif
+  if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
+    let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+  endif
 
-	" iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
-	for [key, val] in items(s:file_node_extensions)
-		if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, key)
-			let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[key] = val
-		endif
-	endfor
+  if !exists('g:WebDevIconsUnicodeDecorateFileNodesExactSymbols')
+    " do not remove: exact-match-case-sensitive-*
+    let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
+  endif
 
-	" iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
-	for [key, val] in items(s:file_node_exact_matches)
-		if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, key)
-			let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[key] = val
-		endif
-	endfor
+  if !exists('g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols')
+    let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {}
+  endif
+
+  " iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
+  for [key, val] in items(s:file_node_extensions)
+    if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, key)
+      let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[key] = val
+    endif
+  endfor
+
+  " iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
+  for [key, val] in items(s:file_node_exact_matches)
+    if !has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, key)
+      let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[key] = val
+    endif
+  endfor
+
+  " iterate to fix allow user overriding of specific individual keys in vimrc (only gvimrc was working previously)
+  for [key, val] in items(s:file_node_pattern_matches)
+    if !has_key(g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols, key)
+      let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols[key] = val
+    endif
+  endfor
 
 endfunction
 
 " scope: local
 function! s:setSyntax()
   if g:webdevicons_enable_nerdtree == 1 && g:webdevicons_conceal_nerdtree_brackets == 1
-	 augroup webdevicons_conceal_nerdtree_brackets
-		au!
-		autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
-		autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
-		autocmd FileType nerdtree set conceallevel=3
-		autocmd FileType nerdtree set concealcursor=nvic
-	 augroup END
+    augroup webdevicons_conceal_nerdtree_brackets
+      au!
+      autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
+      autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
+      autocmd FileType nerdtree setlocal conceallevel=3
+      autocmd FileType nerdtree setlocal concealcursor=nvic
+    augroup END
   endif
 endfunction
 
 " scope: local
 function! s:hardRefreshNerdTree()
-	if g:webdevicons_enable_nerdtree == 1 && g:webdevicons_conceal_nerdtree_brackets == 1 && g:NERDTree.IsOpen()
-		NERDTreeClose
-		NERDTree
-	endif
+  if g:webdevicons_enable_nerdtree == 1 && g:webdevicons_conceal_nerdtree_brackets == 1 && g:NERDTree.IsOpen()
+    NERDTreeClose
+    NERDTree
+  endif
+endfunction
+
+" for vim-flagship plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeFlagship()
+  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline
+    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileTypeSymbol")
+  endif
+
+  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline_fileformat_symbols
+    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
+  endif
+
+endfunction
+
+" for unite plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeUnite()
+  if exists("g:loaded_unite") && g:webdevicons_enable_unite
+    let s:filters = {
+          \   "name" : "devicons_converter",
+          \}
+
+    function! s:filters.filter(candidates, context)
+      for candidate in a:candidates
+
+        if has_key(candidate, "action__buffer_nr")
+          let bufname = bufname(candidate.action__buffer_nr)
+          let filename = fnamemodify(bufname, ':p:t')
+          let path = fnamemodify(bufname, ':p:h')
+        elseif has_key(candidate, "word") && has_key(candidate, "action__path")
+          let path = candidate.action__path
+          let filename = candidate.word
+        endif
+
+        let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
+
+        " prevent filenames of buffers getting 'lost'
+        if filename != path
+          let path = printf("%s %s", filename, path)
+        endif
+
+        " Customize output format.
+        let candidate.abbr = printf("%s %s", icon, path)
+      endfor
+      return a:candidates
+    endfunction
+
+    call unite#define_filter(s:filters)
+    unlet s:filters
+
+    call unite#custom#source('file,file_rec,buffer', 'converters', 'devicons_converter')
+  endif
+endfunction
+
+" for vimfiler plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeVimfiler()
+  if exists("g:loaded_vimfiler") && g:webdevicons_enable_vimfiler
+    call vimfiler#custom#profile('default', 'context', {
+      \ 'columns' : 'type:devicons:size:time'
+      \ })
+  endif
+endfunction
+
+" for ctrlp plugin {{{3
+"========================================================================
+
+" scope: local
+" Either initialize for: kien/ctrlp.vim OR up to date fork: ctrlpvim/ctrlp.vim
+" mostly a hack/overwrite to add icons to the official inactive ctrlP repo
+" only overwriting the necessary functions to make it work
+" unless we detect the newer active ctrlp fork
+" @TODO implementation for CtrlP buffer and find file mode
+function! s:initializeCtrlP()
+  if exists("g:loaded_ctrlp") && g:webdevicons_enable_ctrlp
+    let g:ctrlp_open_func = {
+      \ 'mru files': 'webdevicons#ctrlPOpenFunc'
+      \ }
+
+    if exists("g:ctrlp_mruf_map_string")
+      " logic for ctrlpvim/ctrlp.vim:
+      let g:ctrlp_mruf_map_string = '!stridx(v:val, cwd) ? WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . " " . strpart(v:val, idx) : g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol . " " . v:val'
+    else
+      " logic for kien/ctrlp.vim:
+      call s:initializeCtrlPOverwrite()
+    endif
+  endif
+endfunction
+
+" scope: local
+" logic for kien/ctrlp.vim
+" @todo a better cleaner way? is it possible?
+function! s:initializeCtrlPOverwrite()
+  if g:webdevicons_enable_ctrlp
+    " Static variables {{{1
+    let [s:mrbs, s:mrufs] = [[], []]
+
+    fu! ctrlp#mrufiles#opts()
+    	let [pref, opts] = ['g:ctrlp_mruf_', {
+    		\ 'max': ['s:max', 250],
+    		\ 'include': ['s:in', ''],
+    		\ 'exclude': ['s:ex', ''],
+    		\ 'case_sensitive': ['s:cseno', 1],
+    		\ 'relative': ['s:re', 0],
+    		\ 'save_on_update': ['s:soup', 1],
+    		\ }]
+    	for [ke, va] in items(opts)
+    		let [{va[0]}, {pref.ke}] = [pref.ke, exists(pref.ke) ? {pref.ke} : va[1]]
+    	endfo
+    endf
+    cal ctrlp#mrufiles#opts()
+
+    fu! s:mergelists()
+    	let diskmrufs = ctrlp#utils#readfile(ctrlp#mrufiles#cachefile())
+    	cal filter(diskmrufs, 'index(s:mrufs, v:val) < 0')
+    	let mrufs = s:mrufs + diskmrufs
+    	retu s:chop(mrufs)
+    endf
+
+    fu! s:chop(mrufs)
+    	if len(a:mrufs) > {s:max} | cal remove(a:mrufs, {s:max}, -1) | en
+    	retu a:mrufs
+    endf
+
+    fu! s:reformat(mrufs, ...)
+    	let cwd = getcwd()
+    	let cwd .= cwd !~ '[\/]$' ? ctrlp#utils#lash() : ''
+    	if {s:re}
+    		let cwd = exists('+ssl') ? tr(cwd, '/', '\') : cwd
+    		cal filter(a:mrufs, '!stridx(v:val, cwd)')
+    	en
+    	if a:0 && a:1 == 'raw' | retu a:mrufs | en
+    	let idx = strlen(cwd)
+    	if exists('+ssl') && &ssl
+    		let cwd = tr(cwd, '\', '/')
+    		cal map(a:mrufs, 'tr(v:val, "\\", "/")')
+    	en
+    	retu map(a:mrufs, '!stridx(v:val, cwd) ? WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . " " . strpart(v:val, idx) : g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol . " " . v:val')
+    endf
+
+    fu! ctrlp#mrufiles#refresh(...)
+    	let mrufs = s:mergelists()
+    	cal filter(mrufs, '!empty(ctrlp#utils#glob(v:val, 1)) && !s:excl(v:val)')
+    	if exists('+ssl')
+    		cal map(mrufs, 'tr(v:val, "/", "\\")')
+    		cal map(s:mrufs, 'tr(v:val, "/", "\\")')
+    		let cond = 'count(mrufs, v:val, !{s:cseno}) == 1'
+    		cal filter(mrufs, cond)
+    		cal filter(s:mrufs, cond)
+    	en
+    	cal s:savetofile(mrufs)
+    	retu a:0 && a:1 == 'raw' ? [] : s:reformat(mrufs)
+    endf
+
+    fu! ctrlp#mrufiles#remove(files)
+    	let mrufs = []
+    	if a:files != []
+    		let mrufs = s:mergelists()
+    		let cond = 'index(a:files, v:val, 0, !{s:cseno}) < 0'
+    		cal filter(mrufs, cond)
+    		cal filter(s:mrufs, cond)
+    	en
+    	cal s:savetofile(mrufs)
+    	retu s:reformat(mrufs)
+    endf
+
+    fu! ctrlp#mrufiles#list(...)
+    	retu a:0 ? a:1 == 'raw' ? s:reformat(s:mergelists(), a:1) : 0
+    		\ : s:reformat(s:mergelists())
+    endf
+  endif
 endfunction
 
 " scope: local
 function! s:initialize()
   call s:setDictionaries()
   call s:setSyntax()
+  call s:initializeFlagship()
+  call s:initializeUnite()
+  call s:initializeVimfiler()
+  call s:initializeCtrlP()
 endfunction
 
-" initialization {{{1
+" local initialization {{{2
 "========================================================================
 
 call s:initialize()
@@ -229,6 +495,16 @@ function! webdevicons#refresh()
   call s:hardRefreshNerdTree()
 endfunction
 
+" scope: public
+function! webdevicons#ctrlPOpenFunc(action, line)
+  let line = a:line
+  " Remove non-breaking space which is present (NBSP U+00A0)
+  let line = substitute(line, " ", "", "")
+  " Trim leading and trailing whitespace and replace private character range characters
+  let line = s:strip(substitute(line, "[-]", "", ""))
+  " Use CtrlP's default file opening function
+  call call('ctrlp#acceptfile', [a:action, line])
+endfunction
 
 " a:1 (bufferName), a:2 (isDirectory)
 " scope: public
@@ -247,18 +523,23 @@ function! WebDevIconsGetFileTypeSymbol(...)
     endif
   endif
 
+  let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
   let fileNodeExtension = tolower(fileNodeExtension)
   let fileNode = tolower(fileNode)
 
-  if has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, fileNode)
-    let symbol = g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[fileNode]
-  elseif has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
-    let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
-  else
-    if isDirectory == 1
+  for [pattern, glyph] in items(g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols)
+    if match(fileNode, pattern) != -1
+      let symbol = glyph
+    endif
+  endfor
+
+  if symbol == g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
+    if has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, fileNode)
+      let symbol = g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[fileNode]
+    elseif has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
+      let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
+    elseif isDirectory == 1
       let symbol = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
-    else
-      let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
     endif
   endif
 
@@ -270,33 +551,34 @@ function! WebDevIconsGetFileTypeSymbol(...)
 
 endfunction
 
+" scope: public
 function! WebDevIconsGetFileFormatSymbol(...)
   let fileformat = ""
 
   if &fileformat == "dos"
-	  let fileformat = ""
-	elseif &fileformat == "unix"
-		let fileformat = ""
-	elseif &fileformat == "mac"
-		let fileformat = ""
+    let fileformat = ""
+  elseif &fileformat == "unix"
+    let fileformat = ""
+  elseif &fileformat == "mac"
+    let fileformat = ""
   endif
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
   " actual font patcher)
   let artifactFix = "\u00A0"
 
-  return &enc . " " . fileformat . artifactFix
+  return fileformat . artifactFix
 endfunction
 
 " for airline plugin {{{3
 "========================================================================
 
-" scope: global
+" scope: public
 function! AirlineWebDevIcons(...)
   let w:airline_section_x = get(w:, 'airline_section_x', g:airline_section_x)
   let w:airline_section_x .= ' %{WebDevIconsGetFileTypeSymbol()} '
   if g:webdevicons_enable_airline_statusline_fileformat_symbols
-    let w:airline_section_y = ' %{WebDevIconsGetFileFormatSymbol()} '
+    let w:airline_section_y = ' %{&fenc . " " . WebDevIconsGetFileFormatSymbol()} '
   endif
 endfunction
 
@@ -323,6 +605,7 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   let padding = g:WebDevIconsNerdTreeAfterGlyphPadding
   let prePadding = ''
   let hasGitFlags = (len(path.flagSet._flagsForScope("git")) > 0)
+  let hasGitNerdTreePlugin = (exists('g:loaded_nerdtree_git_status') == 1)
 
   if g:WebDevIconsUnicodeGlyphDoubleWidth == 0
     let padding = ''
@@ -330,6 +613,11 @@ function! NERDTreeWebDevIconsRefreshListener(event)
 
   if hasGitFlags && g:WebDevIconsUnicodeGlyphDoubleWidth == 1
     let prePadding = ' '
+  endif
+
+  " align vertically at the same level: non git-flag nodes with git-flag nodes
+  if g:WebDevIconsNerdTreeGitPluginForceVAlign && !hasGitFlags && hasGitNerdTreePlugin
+    let prePadding .= '  '
   endif
 
   if !path.isDirectory
@@ -357,4 +645,5 @@ endfunction
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-" vim: fdm=marker:
+" modeline syntax:
+" vim: fdm=marker tabstop=2 softtabstop=2 shiftwidth=2 expandtab:

@@ -3,6 +3,50 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.5.4
+  - Misc readme updates
+  - Add support for ocaml 'ml', 'mli' filetypes (enhancement PR #99) (@CharlieMartell)
+  - Add support for 'sql' and 'dump' filetypes (enhancement PR #100) (@lerrua)
+  - Add support for 'ico' filetypes (enhancement PR #101) (@lerrua)
+  - Add support for 'markdown' filetypes (enhancement PR #102) (@lerrua)
+  - Improved install fonts instructions on Mac (enhancement PR #103) (@lerrua)
+- v0.5.3
+  - Add 'slim' filetype support (same icon as 'html') (enhancement PR #98) (@lerrua)
+  - Add 'fish' filetype support (same icon as 'sh') (enhancement #93) (@michaelmrose)
+  - Updated old link references (enhancement PR #87) (@lerrua)
+  - Improved default Ruby icon (uses 'glyph set 2') (enhancement PR #97) (@lerrua)
+  - Prevent destorying user's conceal settings (Use setlocal) (enhancement PR #96) (@shawncplus)
+  - Fixes filenames of buffers getting lost in unite filter (fixes #86) (@ahrse)
+  - Various readme updates and fixes
+- v0.5.2
+  - Various readme updates and fixes
+  - Various file clean-up (.gitignore removed)
+  - Fixed link to install fonts (PR #83 fixes #81) (@theRemix)
+  - Fixed glyph used for Go (PR #82) (@hoop33)
+  - Added Code of Conduct
+- v0.5.1
+  - Fixed [CtrlP](https://github.com/ctrlpvim/ctrlp.vim) integration bugs (truncating 6 characters is unreliable) and only add glyphs for MRU File Mode (Fixes #80)
+  - Readme updates and improvements
+- v0.5.0
+  - Readme updates (removed polls sections, v0.5.0 specific changes)
+  - Misc code formatting fixes (tabs to spaces, modeline additions, reorganization)
+  - Update API: make WebDevIconsGetFileFormatSymbol return only fenc (fixes #73)
+  - Added Perl support (enhancement #60)
+  - Added support for some (mostly frontend) frameworks (enhancement #61)
+  - Added basic support for vim-flagship (enhancement #70)
+  - Added support for Unite and Vimfiler (enhancement #54)
+  - Added support for CtrlP (enhancement #56)
+  - Rebranding part 1: title and image (vim-devicons) (enhancement #76)
+- v0.4.4
+  - Lots of readme updates and tweaks
+  - Changelog semver details
+  - Spelling / confusing grammar corrections (PR #68) (@adelarsq)
+  - Fixed default folder/directory glyph (PR Fixes #72) (@cj)
+  - Mac OS X screenshot (Fixes #32) (@RageZBla)
+  - Fixed misalignment when used with  [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) (Fixes #71)
+  - Fixed re-sourcing bug (Fixes #71)
+  - Fixed directory node user settings being overwritten (Fixes #59)
+  - Fixed minor screenshot issues and clean-up
 - v0.4.3
   - Prevent error 'Unknown function' when opening Vim without airline plugin (Fixes #67)
   - Temporary fix for gvim glyph artifact issues (particuarly NERDTree) (Fixes #58)
