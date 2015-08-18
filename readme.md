@@ -26,6 +26,7 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 		- [character mappings](#character-mappings)
 	- [Installation](#installation)
 	- [Lightline](#lightline.vim)
+	- [Powerline](#powerline)
 	- [Todo](#todo)
 	- [FAQ / Troubleshooting](#faq--troubleshooting)
 	- [Contributing](#contributing)
@@ -48,11 +49,11 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 
 ## Usage
 
-After installing the patched font and setting the vim font just open or look at any of the supported plugins you have installed ([NERDTree][nerdtree], [airline][vim-airline], [unite], [lightline.vim], [vimfiler], or [flagship]).
+After installing the patched font and setting the vim font just open or look at any of the supported plugins you have installed ([NERDTree][nerdtree], [airline][vim-airline], [powerline], [unite], [lightline.vim], [vimfiler], or [flagship]).
 
 * _NOTE:_ if you don't have `guifont` set and are not running gvim you will need to set the terminal font.
 
-* _NOTE:_ for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
+* _NOTE:_ for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
 
 * _NOTE:_ for better [nerdtree-git-plugin] support, you _should_ configure vim to load nerdtree-git-plugin **_before_** vim-devicons loads.
 
@@ -213,6 +214,8 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
   * [vim-airline][vim-airline] (statusline and tabline)
   * [lightline.vim][lightline.vim] (statusline)
     * see: [lightline](#lightline) for setup
+  * [Powerline][powerline] (statusline)
+    * see: [powerline](#powerline) for setup
 * Adds a global config map of characters to file extensions (or entire filenames)
 * customizable and extendable filetype detections
   * ability to override predefined dictionary variable
@@ -243,6 +246,11 @@ let g:webdevicons_enable = 1
 * enable/disable adding the flags to NERDTree (default 1)
  ```vim
  let g:webdevicons_enable_nerdtree = 1
+  ```
+
+* enable/disable adding to powerline's statusline (default 1)
+ ```vim
+ let g:webdevicons_enable_powerline = 1
   ```
 
 * enable/disable adding the custom source to unite (default 1)
@@ -401,6 +409,48 @@ function! MyFileformat()
   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 ```
+
+## Powerline
+
+* Note this is for the current [Powerline][powerline] not the [deprecated vim-powerline](https://github.com/Lokaltog/vim-powerline)
+
+To enable for [Powerline][powerline] some `vimrc` and powerline configuration changes are needed:
+
+`vimrc` changes (only required if you don't already have powerline setup for vim):
+
+```vim
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+```
+
+powerline configuration changes:
+
+file type segment
+```json
+{
+	"function": "vim_devicons.powerline.segments.webdevicons",
+	"priority": 10,
+	"draw_soft_divider": false,
+	"after": "  "
+}
+```
+
+file format segment
+```json
+{
+		"function": "vim_devicons.powerline.segments.webdevicons_file_format",
+	 "draw_soft_divider": false,
+	 "exclude_modes": ["nc"],
+	 "priority": 90
+ }
+```
+
+for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.6.x/powerline/themes/vim/default.json)
 
 ## API
 
@@ -582,6 +632,7 @@ Link References
 [flagship]:https://github.com/tpope/vim-flagship
 [CtrlP]:https://github.com/kien/ctrlp.vim
 [ctrlpvim-CtrlP]:https://github.com/ctrlpvim/ctrlp.vim
+[powerline]:https://github.com/powerline/powerline
 
 [vim-devicons-repo]:https://github.com/ryanoasis/vim-devicons
 [vim-devicons-polls]:https://github.com/ryanoasis/vim-devicons/labels/poll
