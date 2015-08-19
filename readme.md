@@ -24,9 +24,10 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 	- [Features](#features)
 	- [Extra Configuration](#extra-configuration)
 		- [character mappings](#character-mappings)
-	- [Installation](#installation)
-	- [Lightline](#lightline-setup)
-	- [Powerline](#powerline-setup)
+	- [Lightline Setup](#lightline-setup)
+	- [Powerline Setup](#powerline-setup)
+	- [Vim Plugin Installation](#installation)
+	- [API](#api)
 	- [Todo](#todo)
 	- [FAQ / Troubleshooting](#faq--troubleshooting)
 	- [Contributing](#contributing)
@@ -365,44 +366,6 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'ƛ'
   ```
 
-## Installation
-
-* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.6.x/.vimrc-windows-1)
-* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.6.x/.vimrc-linux-1)
-
-This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
-
-*  [Pathogen](https://github.com/tpope/vim-pathogen)
-  *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
-*  [NeoBundle](https://github.com/Shougo/neobundle.vim)
-  * Add to vimrc:
-
-      ```vim
-      NeoBundle 'ryanoasis/vim-devicons'
-      ```
-  * And install it:
-
-      ```vim
-      :so ~/.vimrc
-      :NeoBundleInstall
-      ```
-
-*  [Vundle](https://github.com/gmarik/vundle)
-  * Add to vimrc:
-
-       ```vim
-       Plugin 'ryanoasis/vim-devicons'
-       ```
-  * And install it:
-
-       ```vim
-       :so ~/.vimrc
-       :PluginInstall`
-       ```
-
-*  manual
-  *  copy all of the files into your `~/.vim` directory
-
 ## Lightline Setup
 
 To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` and/or `WebDevIconsGetFileFormatSymbol()` in your `.vimrc`. For example, you could set your sections to:
@@ -426,7 +389,7 @@ endfunction
 
 ## Powerline Setup
 
-* Note this is for the current [Powerline][powerline] not the [deprecated vim-powerline](https://github.com/Lokaltog/vim-powerline)
+* _Note this is for the current [Powerline][powerline] not the [deprecated vim-powerline](https://github.com/Lokaltog/vim-powerline)_
 
 To enable for [Powerline][powerline] some `vimrc` and powerline configuration changes are needed:
 
@@ -466,6 +429,45 @@ file format segment
 
 for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.6.x/powerline/themes/vim/default.json)
 
+## Installation
+
+* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.6.x/.vimrc-windows-1)
+* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.6.x/.vimrc-linux-1)
+
+This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
+
+*  [Pathogen](https://github.com/tpope/vim-pathogen)
+  *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
+*  [NeoBundle](https://github.com/Shougo/neobundle.vim)
+  * Add to vimrc:
+
+      ```vim
+      NeoBundle 'ryanoasis/vim-devicons'
+      ```
+  * And install it:
+
+      ```vim
+      :so ~/.vimrc
+      :NeoBundleInstall
+      ```
+
+*  [Vundle](https://github.com/gmarik/vundle)
+  * Add to vimrc:
+
+       ```vim
+       Plugin 'ryanoasis/vim-devicons'
+       ```
+  * And install it:
+
+       ```vim
+       :so ~/.vimrc
+       :PluginInstall`
+       ```
+
+*  manual
+  *  copy all of the files into your `~/.vim` directory
+
+
 ## API
 
 ```vim
@@ -487,7 +489,6 @@ WebDevIconsGetFileFormatSymbol()
 ## Todo
 
 * [ ] more filetypes to support
-* [x] ~~make sure it works properly and does not conflict with [nerdtree-git-plugin]~~
 * [ ] customize filetype icon colors
 * [ ] more customization options in general
 * [ ] more specific FAQ and Troubleshooting help
