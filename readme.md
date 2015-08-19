@@ -327,6 +327,11 @@ let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = 'ƛ'
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
   ```
 
+* enable open and close folder/directory glyph flags (disabled by default with 0)
+ ```vim
+let g:DevIconsEnableFoldersOpenClose = 1
+  ```
+
 * enable custom folder/directory glyph exact matching (enabled by default when g:WebDevIconsUnicodeDecorateFolderNodes is set to 1)
  ```vim
 let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
@@ -336,6 +341,11 @@ let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
  ```vim
 let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
   ```
+
+* change the default open folder/directory glyph/icon (default is '')
+ ```vim
+let g:DevIconsDefaultFolderOpenSymbol = 'ƛ'
+ ```
 
 * change the default dictionary mappings for file extension matches
  ```vim

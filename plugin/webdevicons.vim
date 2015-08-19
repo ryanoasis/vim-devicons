@@ -78,6 +78,12 @@ if !exists('g:WebDevIconsUnicodeDecorateFolderNodes')
   let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 endif
 
+if g:WebDevIconsUnicodeDecorateFolderNodes
+  if !exists('g:DevIconsEnableFoldersOpenClose')
+    let g:DevIconsEnableFoldersOpenClose = 0
+  endif
+endif
+
 " whether to try to match folder notes with any exact file node matches
 " default is to match but requires WebDevIconsUnicodeDecorateFolderNodes set
 " to 1:
@@ -105,7 +111,17 @@ if !exists('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol')
 endif
 
 if !exists('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol')
-  let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+  if g:DevIconsEnableFoldersOpenClose
+    " use new glyph
+    let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+  else
+    " use older glyph
+    let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+  endif
+endif
+
+if !exists('g:DevIconsDefaultFolderOpenSymbol')
+    let g:DevIconsDefaultFolderOpenSymbol = ''
 endif
 
 " functions {{{1
@@ -629,10 +645,28 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   if !path.isDirectory
     let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str()) . padding
   elseif path.isDirectory && g:WebDevIconsUnicodeDecorateFolderNodes == 1
+
+    let directoryOpened = 0
+
+    if g:DevIconsEnableFoldersOpenClose && len(path.flagSet._flagsForScope("webdevicons")) > 0
+      " isOpen is not available on the path listener, compare using symbols
+      if path.flagSet._flagsForScope("webdevicons")[0] == prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
+        let directoryOpened = 1
+      endif
+    endif
+
     if g:WebDevIconsUnicodeDecorateFolderNodesExactMatches == 1
-      let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory) . padding
+      if g:DevIconsEnableFoldersOpenClose && directoryOpened
+        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
+      else
+        let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory) . padding
+      endif
     else
-      let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
+      if g:DevIconsEnableFoldersOpenClose && directoryOpened
+        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
+      else
+        let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
+      endif
     endif
   else
     let flag = ''
