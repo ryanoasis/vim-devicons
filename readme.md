@@ -25,8 +25,8 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 	- [Extra Configuration](#extra-configuration)
 		- [character mappings](#character-mappings)
 	- [Installation](#installation)
-	- [Lightline](#lightline.vim)
-	- [Powerline](#powerline)
+	- [Lightline](#lightline-setup)
+	- [Powerline](#powerline-setup)
 	- [Todo](#todo)
 	- [FAQ / Troubleshooting](#faq--troubleshooting)
 	- [Contributing](#contributing)
@@ -403,7 +403,7 @@ This plugin follows the standard runtime path structure, and as such it can be i
 *  manual
   *  copy all of the files into your `~/.vim` directory
 
-## Lightline
+## Lightline Setup
 
 To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` and/or `WebDevIconsGetFileFormatSymbol()` in your `.vimrc`. For example, you could set your sections to:
 
@@ -424,7 +424,7 @@ function! MyFileformat()
 endfunction
 ```
 
-## Powerline
+## Powerline Setup
 
 * Note this is for the current [Powerline][powerline] not the [deprecated vim-powerline](https://github.com/Lokaltog/vim-powerline)
 
