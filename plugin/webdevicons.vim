@@ -303,6 +303,30 @@ function! s:setSyntax()
 endfunction
 
 " scope: local
+" stole solution/idea from nerdtree-git-plugin :)
+function! s:setCursorHold()
+  if g:webdevicons_enable_nerdtree
+    augroup webdevicons_cursor_hold
+      autocmd CursorHold * silent! call s:CursorHoldUpdate()
+    augroup END
+  endif
+endfunction
+
+" scope: local
+" stole solution/idea from nerdtree-git-plugin :)
+function! s:CursorHoldUpdate()
+  if g:NERDTreeUpdateOnCursorHold != 1
+    return
+  endif
+
+  if !g:NERDTree.IsOpen()
+    return
+  endif
+
+  b:NERDTreeRoot.refreshFlags()
+endfunction
+
+" scope: local
 function! s:hardRefreshNerdTree()
   if g:webdevicons_enable_nerdtree == 1 && g:webdevicons_conceal_nerdtree_brackets == 1 && g:NERDTree.IsOpen()
     NERDTreeClose
@@ -492,6 +516,7 @@ endfunction
 function! s:initialize()
   call s:setDictionaries()
   call s:setSyntax()
+  call s:setCursorHold()
   call s:initializeFlagship()
   call s:initializeUnite()
   call s:initializeVimfiler()
