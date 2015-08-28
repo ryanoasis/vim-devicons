@@ -253,11 +253,6 @@ let g:webdevicons_enable = 1
  let g:webdevicons_enable_nerdtree = 1
   ```
 
-* enable/disable adding to powerline's statusline (default 1)
- ```vim
- let g:webdevicons_enable_powerline = 1
-  ```
-
 * enable/disable adding the custom source to unite (default 1)
  ```vim
  let g:webdevicons_enable_unite = 1
