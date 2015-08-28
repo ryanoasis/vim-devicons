@@ -8,6 +8,12 @@ if !exists('g:webdevicons_enable_nerdtree')
   let g:webdevicons_enable_nerdtree = 1
 endif
 
+if !exists('g:DevIconsEnableFoldersOpenClose')
+  let g:DevIconsEnableFoldersOpenClose = 0
+endif
+
+" end @todo duplicate global variables
+
 " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
 " actual font patcher)
 if !exists('g:webdevicons_gui_glyph_fix')
