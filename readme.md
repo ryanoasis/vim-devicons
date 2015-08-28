@@ -23,7 +23,7 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 	- [Screenshots](#screenshots)
 	- [Features](#features)
 	- [Extra Configuration](#extra-configuration)
-		- [character mappings](#character-mappings)
+		- [Character Mappings](#character-mappings)
 	- [Lightline Setup](#lightline-setup)
 	- [Powerline Setup](#powerline-setup)
 	- [Vim Plugin Installation](#installation)
@@ -149,6 +149,7 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ### [powerline][powerline]
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.6.x/powerline.png)
+
 
 ### [unite][unite]
 
