@@ -8,7 +8,7 @@ This project is using [Semantic Versioning 2.0.0](http://semver.org/)
   - Added support for 'ts' (TypeScript) filetypes (enhancement #79)
   - Added support for 'jl' (Julia) filetypes
   - Added support for 'bat' (batch) filetypes
-  - Added support for 'ejs' (Embedded JavaScript Templates) filetypes
+  - Added support for 'ejs' (Embedded JavaScript Templates) filetypes (enhancement #105) (@lerrua)
   - Added support for 'react.jsx' filetype
   - Added support for 'procfile' filetype
   - Changed default 'go' filetype glyph to a better one
