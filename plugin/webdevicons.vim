@@ -78,10 +78,8 @@ if !exists('g:WebDevIconsUnicodeDecorateFolderNodes')
   let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 endif
 
-if g:WebDevIconsUnicodeDecorateFolderNodes
-  if !exists('g:DevIconsEnableFoldersOpenClose')
-    let g:DevIconsEnableFoldersOpenClose = 0
-  endif
+if !exists('g:DevIconsEnableFoldersOpenClose')
+  let g:DevIconsEnableFoldersOpenClose = 0
 endif
 
 " whether to try to match folder notes with any exact file node matches
