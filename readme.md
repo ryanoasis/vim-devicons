@@ -219,9 +219,9 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
   * [NERDTree]
   * [vim-airline][vim-airline] (statusline and tabline)
   * [lightline.vim][lightline.vim] (statusline)
-    * see: [lightline](#lightline) for setup
+    * see: [lightline setup](#lightline-setup)
   * [Powerline][powerline] (statusline)
-    * see: [powerline](#powerline) for setup
+    * see: [powerline setup](#powerline-setup)
 * Adds a global config map of characters to file extensions (or entire filenames)
 * customizable and extendable filetype detections
   * ability to override predefined dictionary variable
@@ -416,10 +416,10 @@ file type segment
 file format segment
 ```json
 {
-		"function": "vim_devicons.powerline.segments.webdevicons_file_format",
-	 "draw_soft_divider": false,
-	 "exclude_modes": ["nc"],
-	 "priority": 90
+	"function": "vim_devicons.powerline.segments.webdevicons_file_format",
+	"draw_soft_divider": false,
+	"exclude_modes": ["nc"],
+	"priority": 90
  }
 ```
 
