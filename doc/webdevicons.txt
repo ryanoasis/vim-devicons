@@ -67,7 +67,7 @@ vimfiler [19], and flagship [20].
                                                      *readme-table-of-contents*
 Table of Contents ~
 
-- vim-devicons v0.6.0
+- vim-devicons v0.6.1
 
   - Quick Setup (TL;DR)
   - Usage
