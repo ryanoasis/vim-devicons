@@ -3,6 +3,9 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.6.1
+  - Fixed likely breaking bug: undefined variable g:DevIconsEnableFoldersOpenClose (fixes #109)
+  - Fixed up the changelog details
 - v0.6.0
   - Added support for [Powerline](https://github.com/powerline/powerline) (enhancement PR #74) (@delphinus35)
   - Added support for 'ts' (TypeScript) filetypes (enhancement #79)
