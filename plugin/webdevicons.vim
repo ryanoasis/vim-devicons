@@ -1,9 +1,9 @@
-" Version: 0.6.0
+" Version: 0.6.1
 " Webpage: https://github.com/ryanoasis/vim-devicons
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " License: see LICENSE
 
-let s:version = '0.6.0'
+let s:version = '0.6.1'
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================
