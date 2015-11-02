@@ -189,6 +189,7 @@ function! s:setDictionaries()
 		\	'sql'      : '',
 		\	'dump'     : '',
 		\	'clj'      : '',
+		\	'cljc'     : '',
 		\	'cljs'     : '',
 		\	'edn'      : '',
 		\	'scala'    : '',
