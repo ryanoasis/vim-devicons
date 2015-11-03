@@ -1,6 +1,17 @@
 <h1 align="center">
 	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.6.x/branding-logo.png" alt="vim-devicons">
 </h1>
+***
+<!---
+Start temporary notice section
+-->
+| Upcoming deprecation warning |
+-------------------------------
+| Support for the [Original Kien CtrlP Repo][CtrlP] will be dropped in [v0.7.0](https://github.com/ryanoasis/vim-devicons/milestones/v0.7.0) and only the [active CtrlP fork][ctrlpvim-CtrlP] will be supported |
+<!---
+End temporary notice section
+-->
+***
 [![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
 ***
 | **[Screenshots](#screenshots)**| **[API](#api)** | **[Fonts ➶][patched-fonts]** | **[Patcher ➶][nerd-fonts]** |
