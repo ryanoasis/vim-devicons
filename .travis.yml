@@ -1,0 +1,9 @@
+language: vim
+
+before_script: |
+  git clone https://github.com/junegunn/vader.vim.git
+script: |
+  vim -Nu <(cat << VIMRC
+  set rtp+=vader.vim
+  set rtp+=.
+  VIMRC) -c 'Vader! test/*' > /dev/null
