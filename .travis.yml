@@ -6,4 +6,4 @@ script: |
   vim -Nu <(cat << VIMRC
   set rtp+=vader.vim
   set rtp+=.
-  VIMRC) -c 'Vader! test/*' > /dev/null
+  VIMRC) -c 'Vader! test/*' -c 'qa!' > /dev/null
