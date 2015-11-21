@@ -19,7 +19,7 @@ End temporary notice section
 | [![screenshots][img-visual-toc-screenshots]](#screenshots) | [![api][img-visual-toc-api]](#api) | [![patcher-logo-small][img-visual-toc-patched-fonts]][patched-fonts] | [![patcher-logo-small][img-visual-toc-fonts-patcher]][nerd-fonts] |
 ***
 
-Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [lightline.vim], [vimfiler], and [flagship].
+Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.6.x/overall-screenshot.png)
 
@@ -172,6 +172,11 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ### [lightline.vim][lightline.vim]
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.6.x/lightline.png)
+
+
+### [vim-startify][vim-startify]
+
+![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.6.x/vim-startify.png)
 
 
 ### [vimfiler][vimfiler]
@@ -655,6 +660,7 @@ Link References
 [CtrlP]:https://github.com/kien/ctrlp.vim
 [ctrlpvim-CtrlP]:https://github.com/ctrlpvim/ctrlp.vim
 [powerline]:https://github.com/powerline/powerline
+[vim-startify]:https://github.com/mhinz/vim-startify
 
 [vim-devicons-repo]:https://github.com/ryanoasis/vim-devicons
 [vim-devicons-polls]:https://github.com/ryanoasis/vim-devicons/labels/poll
