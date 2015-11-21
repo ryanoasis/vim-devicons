@@ -3,6 +3,7 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.7.0
 - v0.6.1
   - Fixed likely breaking bug: undefined variable g:DevIconsEnableFoldersOpenClose (fixes #109)
   - Fixed up the changelog details

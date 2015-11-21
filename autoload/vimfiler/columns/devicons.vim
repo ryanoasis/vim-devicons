@@ -1,6 +1,8 @@
 "=============================================================================
 " FILE: devicons.vim
-" AUTHOR:  Ryan McIntyre <ryanoasis@gmail.com>
+" Version: 0.7.0
+" Webpage: https://github.com/ryanoasis/vim-devicons
+" Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
