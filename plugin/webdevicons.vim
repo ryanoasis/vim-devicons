@@ -82,6 +82,14 @@ if !exists('g:DevIconsEnableFoldersOpenClose')
   let g:DevIconsEnableFoldersOpenClose = 0
 endif
 
+if !exists('g:DevIconsEnableFolderPatternMatching')
+  let g:DevIconsEnableFolderPatternMatching = 1
+endif
+
+if !exists('g:DevIconsEnableFolderExtensionPatternMatching')
+  let g:DevIconsEnableFolderExtensionPatternMatching = 0
+endif
+
 " whether to try to match folder notes with any exact file node matches
 " default is to match but requires WebDevIconsUnicodeDecorateFolderNodes set
 " to 1:
@@ -483,24 +491,30 @@ function! WebDevIconsGetFileTypeSymbol(...)
     endif
   endif
 
-  let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
-  let fileNodeExtension = tolower(fileNodeExtension)
-  let fileNode = tolower(fileNode)
+  if isDirectory == 0 || g:DevIconsEnableFolderPatternMatching
 
-  for [pattern, glyph] in items(g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols)
-    if match(fileNode, pattern) != -1
-      let symbol = glyph
-    endif
-  endfor
+    let symbol = g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
+    let fileNodeExtension = tolower(fileNodeExtension)
+    let fileNode = tolower(fileNode)
 
-  if symbol == g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
-    if has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, fileNode)
-      let symbol = g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[fileNode]
-    elseif has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
-      let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
-    elseif isDirectory == 1
-      let symbol = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
+    for [pattern, glyph] in items(g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols)
+      if match(fileNode, pattern) != -1
+        let symbol = glyph
+      endif
+    endfor
+
+    if symbol == g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
+      if has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, fileNode)
+        let symbol = g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[fileNode]
+      elseif ((isDirectory == 1 && g:DevIconsEnableFolderExtensionPatternMatching) || isDirectory == 0) && has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
+        let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
+      elseif isDirectory == 1
+        let symbol = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
+      endif
     endif
+
+  else
+    let symbol = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
   endif
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the

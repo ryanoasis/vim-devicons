@@ -345,6 +345,17 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
   ```
 
+* enable pattern matching glyphs on folder/directory (enabled by default with 1)
+ ```vim
+let g:DevIconsEnableFolderPatternMatching = 1
+  ```
+
+* enable file extension pattern matching glyphs on folder/directory (disabled by default with 0)
+ ```vim
+let g:DevIconsEnableFolderExtensionPatternMatching = 0
+  ```
+
+
 * enable custom folder/directory glyph exact matching (enabled by default when g:WebDevIconsUnicodeDecorateFolderNodes is set to 1)
  ```vim
 let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1

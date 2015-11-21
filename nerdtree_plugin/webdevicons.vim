@@ -16,6 +16,14 @@ if !exists('g:DevIconsEnableFoldersOpenClose')
   let g:DevIconsEnableFoldersOpenClose = 0
 endif
 
+if !exists('g:DevIconsEnableFolderPatternMatching')
+  let g:DevIconsEnableFolderPatternMatching = 1
+endif
+
+if !exists('g:DevIconsEnableFolderExtensionPatternMatching')
+  let g:DevIconsEnableFolderExtensionPatternMatching = 0
+endif
+
 " end @todo duplicate global variables
 
 " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
