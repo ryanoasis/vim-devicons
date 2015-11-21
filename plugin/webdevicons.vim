@@ -529,11 +529,16 @@ endfunction
 " scope: public
 function! WebDevIconsGetFileFormatSymbol(...)
   let fileformat = ""
+  let operatingsystem = system("uname -s")
 
   if &fileformat == "dos"
     let fileformat = ""
   elseif &fileformat == "unix"
-    let fileformat = ""
+    if operatingsystem == "Darwin\n"
+      let fileformat = ""
+    else
+      let fileformat = ""
+    endif
   elseif &fileformat == "mac"
     let fileformat = ""
   endif
