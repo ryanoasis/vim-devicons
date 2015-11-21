@@ -4,6 +4,13 @@ CHANGELOG
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
 - v0.7.0
+  - Deprecated support for [kien/ctrlp](https://github.com/kien/ctrlp.vim) and only support [active ctrlp fork](https://github.com/ctrlpvim/ctrlp.vim) going forward (fixes #117)
+  - Added information to readme about [vim-startify](https://github.com/mhinz/vim-startify) support (enhancement #94)
+  - Added information to readme with possible fix to 'Dots after icons' (fixes #110) (@KabbAmine)
+  - Added support for 'cljc' (Clojure) filetypes (fix PR #120) (@spacepluk)
+  - Fixed certain folders in NERDTree showing file glyphs (based on pattern matching) (fixes #112)
+  - Fixed OS icon being display with as Linux Tux on Mac (fixes #118,fix PR #121) (@trodrigu)
+  - Fixed deprecated Linux font path in readme (fix PR #123) (@jrobeson)
 - v0.6.1
   - Fixed likely breaking bug: undefined variable g:DevIconsEnableFoldersOpenClose (fixes #109)
   - Fixed up the changelog details
