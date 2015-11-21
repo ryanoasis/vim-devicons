@@ -607,6 +607,13 @@ WebDevIconsGetFileFormatSymbol()
 	endif
 	```
 
+* Artifacts after or instead of glyphs
+  * Dots after icons in NERDTree (on GVim), try:
+  ```vim
+  autocmd FileType nerdtree setlocal nolist
+  ```
+  per: https://github.com/ryanoasis/vim-devicons/issues/110#issue-103801335
+
 ## Contributing
 
 Best ways to contribute
