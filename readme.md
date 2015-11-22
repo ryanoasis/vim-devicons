@@ -114,7 +114,7 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
 ## Font Installation
 
-You basically have to put any font you would like to use into the `~/.fonts` folder. For example:
+Put any font you would like to use into the `~/.local/share/fonts` (Linux) or `~/Library/Fonts/`(OS X) folder. For example:
 
 
 Linux
