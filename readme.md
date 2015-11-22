@@ -28,6 +28,7 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 
 - [vim-devicons v0.7.0](#)
 	- [Quick Setup (TL;DR)](#quick-setup)
+    - [Installation](#installation)
 	- [Usage](#usage)
 	- [Font Configuration](#font-configuration)
 	- [Font Installation](#font-installation)
@@ -58,6 +59,46 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 3. Set font  _[(» More details... «)](#font-configuration)_
   * a. **vim**: Set your terminal emulator font
   * b. **gvim**: Set `guifont` in your `vimrc`
+
+<a name="installation"></a>
+## Installation
+
+* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-windows-1)
+* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-linux-1)
+
+This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
+
+*  [Pathogen](https://github.com/tpope/vim-pathogen)
+  *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
+*  [NeoBundle](https://github.com/Shougo/neobundle.vim)
+  * Add to vimrc:
+
+      ```vim
+      NeoBundle 'ryanoasis/vim-devicons'
+      ```
+  * And install it:
+
+      ```vim
+      :so ~/.vimrc
+      :NeoBundleInstall
+      ```
+
+*  [Vundle](https://github.com/gmarik/vundle)
+  * Add to vimrc:
+
+       ```vim
+       Plugin 'ryanoasis/vim-devicons'
+       ```
+  * And install it:
+
+       ```vim
+       :so ~/.vimrc
+       :PluginInstall`
+       ```
+
+*  manual
+  *  copy all of the files into your `~/.vim` directory
+
 
 ## Usage
 
@@ -454,44 +495,6 @@ file format segment
 ```
 
 for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/powerline/themes/vim/default.json)
-
-## Installation
-
-* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-windows-1)
-* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-linux-1)
-
-This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
-
-*  [Pathogen](https://github.com/tpope/vim-pathogen)
-  *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
-*  [NeoBundle](https://github.com/Shougo/neobundle.vim)
-  * Add to vimrc:
-
-      ```vim
-      NeoBundle 'ryanoasis/vim-devicons'
-      ```
-  * And install it:
-
-      ```vim
-      :so ~/.vimrc
-      :NeoBundleInstall
-      ```
-
-*  [Vundle](https://github.com/gmarik/vundle)
-  * Add to vimrc:
-
-       ```vim
-       Plugin 'ryanoasis/vim-devicons'
-       ```
-  * And install it:
-
-       ```vim
-       :so ~/.vimrc
-       :PluginInstall`
-       ```
-
-*  manual
-  *  copy all of the files into your `~/.vim` directory
 
 
 ## API
