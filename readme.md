@@ -30,7 +30,6 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 	- [Quick Setup (TL;DR)](#quick-setup)
     - [Installation](#installation)
 	- [Usage](#usage)
-	- [Font Configuration](#font-configuration)
 	- [Screenshots](#screenshots)
 	- [Features](#features)
 	- [Extra Configuration](#extra-configuration)
@@ -98,19 +97,6 @@ This plugin follows the standard runtime path structure, and as such it can be i
 *  manual
   *  copy all of the files into your `~/.vim` directory
 
-
-## Usage
-
-After installing the patched font and setting the vim font just open or look at any of the supported plugins you have installed ([NERDTree][nerdtree], [airline][vim-airline], [powerline], [unite], [lightline.vim], [vimfiler], or [flagship]).
-
-* _NOTE:_ if you don't have `guifont` set and are not running gvim you will need to set the terminal font.
-
-* _NOTE:_ for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
-
-* _NOTE:_ for better [nerdtree-git-plugin] support, you _should_ configure vim to load nerdtree-git-plugin **_before_** vim-devicons loads.
-
-## Font Configuration
-
 * Encoding **must** be set to UTF-8 for the glyphs to show
   ```vim
   set encoding=utf8
@@ -151,6 +137,17 @@ OS X and Windows
 ```vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 ```
+
+## Usage
+
+After installing the patched font and setting the vim font just open or look at any of the supported plugins you have installed ([NERDTree][nerdtree], [airline][vim-airline], [powerline], [unite], [lightline.vim], [vimfiler], or [flagship]).
+
+* _NOTE:_ if you don't have `guifont` set and are not running gvim you will need to set the terminal font.
+
+* _NOTE:_ for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
+
+* _NOTE:_ for better [nerdtree-git-plugin] support, you _should_ configure vim to load nerdtree-git-plugin **_before_** vim-devicons loads.
+
 
 ## Screenshots
 
