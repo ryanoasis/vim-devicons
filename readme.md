@@ -66,9 +66,10 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 
 This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
 
-*  [Pathogen](https://github.com/tpope/vim-pathogen)
+#### [Pathogen](https://github.com/tpope/vim-pathogen)
   *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
-*  [NeoBundle](https://github.com/Shougo/neobundle.vim)
+
+#### [NeoBundle](https://github.com/Shougo/neobundle.vim)
   * Add to vimrc:
 
       ```vim
@@ -81,7 +82,7 @@ This plugin follows the standard runtime path structure, and as such it can be i
       :NeoBundleInstall
       ```
 
-*  [Vundle](https://github.com/gmarik/vundle)
+#### [Vundle](https://github.com/gmarik/vundle)
   * Add to vimrc:
 
        ```vim
@@ -94,19 +95,19 @@ This plugin follows the standard runtime path structure, and as such it can be i
        :PluginInstall`
        ```
 
-*  manual
+#### Manual
   *  copy all of the files into your `~/.vim` directory
 
-* Encoding **must** be set to UTF-8 for the glyphs to show
+##### Encoding **must** be set to UTF-8 for the glyphs to show
   ```vim
   set encoding=utf8
   ```
-* For Powerline symbols to show in airline the following needs to be set
+##### For Powerline symbols to show in airline the following needs to be set
   ```vim
   let g:airline_powerline_fonts = 1
   ```
 
-* The _ONLY_ other configuration needed should be setting the font vim uses to a
+The _ONLY_ other configuration needed should be setting the font vim uses to a
   patched font.
 
 Already patched fonts and the font patcher script are provided at:
@@ -116,24 +117,20 @@ It works without configuration *ONLY* when used with a patched font provided in
 the separate repository above. Install the font and add it to your `vimrc` or
 `gvimrc`:
 
-Linux
+**Linux**
  ```vim
  set guifont=<FONT_NAME> <FONT_SIZE>
  ```
 
-OS X and Windows
- ```vim
- set guifont=<FONT_NAME>:h<FONT_SIZE>
- ```
-
-e.g.
-
-Linux
 ```vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 ```
 
-OS X and Windows
+**OS X and Windows**
+```vim
+set guifont=<FONT_NAME>:h<FONT_SIZE>
+```
+
 ```vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 ```
