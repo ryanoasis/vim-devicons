@@ -4,6 +4,7 @@
 " License: see LICENSE
 
 let s:version = '0.7.0'
+let s:operatingsystem = system("uname -s")
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================
@@ -529,12 +530,11 @@ endfunction
 " scope: public
 function! WebDevIconsGetFileFormatSymbol(...)
   let fileformat = ""
-  let operatingsystem = system("uname -s")
 
   if &fileformat == "dos"
     let fileformat = ""
   elseif &fileformat == "unix"
-    if operatingsystem == "Darwin\n"
+    if s:operatingsystem == "Darwin\n"
       let fileformat = ""
     else
       let fileformat = ""
