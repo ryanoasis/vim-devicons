@@ -61,10 +61,9 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 <a name="installation"></a>
 ## Installation
 
-* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-windows-1)
-* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-linux-1)
-
 This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
+
+### Step 1
 
 #### [Pathogen](https://github.com/tpope/vim-pathogen)
   *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
@@ -98,6 +97,10 @@ This plugin follows the standard runtime path structure, and as such it can be i
 #### Manual
   *  copy all of the files into your `~/.vim` directory
 
+### Step 2
+
+Add the following to your .vimrc or .gvimrc:
+
 ##### Encoding **must** be set to UTF-8 for the glyphs to show
   ```vim
   set encoding=utf8
@@ -106,6 +109,9 @@ This plugin follows the standard runtime path structure, and as such it can be i
   ```vim
   let g:airline_powerline_fonts = 1
   ```
+#### vimrc examples
+* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-windows-1)
+* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-linux-1)
 
 The _ONLY_ other configuration needed should be setting the font vim uses to a
   patched font.
