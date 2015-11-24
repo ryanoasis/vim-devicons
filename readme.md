@@ -49,14 +49,13 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 <a name="quick-setup"></a>
 ## Quick Setup (TL;DR)
 
-1. Download and install a patched font (or patch your own):
-  * [nerd-fonts]
-   _[(» More details... «)](#font-installation)_
-2. Set font  _[(» More details... «)](#font-configuration)_
+1. Download and install a patched **[nerd-font](#nerd-fonts)** (or patch your own) _[(» More details... «)](#nerd-fonts)_
+
+2. Install the plugin per your usual method _[(» More details... «)](#installation)_
+
+3. Set font  _[(» More details... «)](#install-step2)_
   * a. **vim**: Set your terminal emulator font
   * b. **gvim**: Set `guifont` in your `vimrc`
-3. Install the plugin per your usual method
-   _[(» More details... «)](#installation)_
 
 <a name="installation"></a>
 ## Installation
@@ -97,6 +96,7 @@ This plugin follows the standard runtime path structure, and as such it can be i
 #### Manual
   *  copy all of the files into your `~/.vim` directory
 
+<a name="install-step2"></a>
 ### Step 2
 
 Add the following to your .vimrc or .gvimrc:
