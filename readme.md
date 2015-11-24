@@ -28,9 +28,8 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 
 - [vim-devicons v0.7.0](#)
 	- [Quick Setup (TL;DR)](#quick-setup)
+    - [Installation](#installation)
 	- [Usage](#usage)
-	- [Font Configuration](#font-configuration)
-	- [Font Installation](#font-installation)
 	- [Screenshots](#screenshots)
 	- [Features](#features)
 	- [Extra Configuration](#extra-configuration)
@@ -50,14 +49,97 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 <a name="quick-setup"></a>
 ## Quick Setup (TL;DR)
 
-1. Install the plugin per your usual method
-   _[(» More details... «)](#installation)_
-2. Download and install a patched font (or patch your own):
-  * [nerd-fonts]
-   _[(» More details... «)](#font-installation)_
-3. Set font  _[(» More details... «)](#font-configuration)_
+1. Download and install a patched **[nerd-font](https://github.com/ryanoasis/nerd-fonts)** (or patch your own) _[(» More details... «)](https://github.com/ryanoasis/nerd-fonts)_
+
+2. Install the plugin per your usual method _[(» More details... «)](#installation)_
+
+3. Set font  _[(» More details... «)](#install-step2)_
   * a. **vim**: Set your terminal emulator font
   * b. **gvim**: Set `guifont` in your `vimrc`
+
+<a name="installation"></a>
+## Installation
+
+This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
+
+### Step 1
+
+#### [Pathogen](https://github.com/tpope/vim-pathogen)
+  *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
+
+#### [NeoBundle](https://github.com/Shougo/neobundle.vim)
+  * Add to vimrc:
+
+      ```vim
+      NeoBundle 'ryanoasis/vim-devicons'
+      ```
+  * And install it:
+
+      ```vim
+      :so ~/.vimrc
+      :NeoBundleInstall
+      ```
+
+#### [Vundle](https://github.com/gmarik/vundle)
+  * Add to vimrc:
+
+       ```vim
+       Plugin 'ryanoasis/vim-devicons'
+       ```
+  * And install it:
+
+       ```vim
+       :so ~/.vimrc
+       :PluginInstall`
+       ```
+
+#### Manual
+  *  copy all of the files into your `~/.vim` directory
+
+<a name="install-step2"></a>
+### Step 2
+
+Add the following to your .vimrc or .gvimrc:
+
+##### Encoding **must** be set to UTF-8 for the glyphs to show
+  ```vim
+  set encoding=utf8
+  ```
+##### For Powerline symbols to show in airline the following needs to be set
+  ```vim
+  let g:airline_powerline_fonts = 1
+  ```
+#### vimrc examples
+* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-windows-1)
+* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-linux-1)
+
+The _ONLY_ other configuration needed should be setting the font vim uses to a
+  patched font.
+
+Already patched fonts and the font patcher script are provided at:
+[nerd-fonts]
+
+It works without configuration *ONLY* when used with a patched font provided in
+the separate repository above. Install the font and add it to your `vimrc` or
+`gvimrc`:
+
+**Linux**
+ ```vim
+ set guifont=<FONT_NAME> <FONT_SIZE>
+ ```
+
+```vim
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+```
+
+**OS X and Windows**
+```vim
+set guifont=<FONT_NAME>:h<FONT_SIZE>
+```
+
+```vim
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+```
 
 ## Usage
 
@@ -68,69 +150,6 @@ After installing the patched font and setting the vim font just open or look at 
 * _NOTE:_ for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
 
 * _NOTE:_ for better [nerdtree-git-plugin] support, you _should_ configure vim to load nerdtree-git-plugin **_before_** vim-devicons loads.
-
-## Font Configuration
-
-* Encoding **must** be set to UTF-8 for the glyphs to show
-  ```vim
-  set encoding=utf8
-  ```
-* For Powerline symbols to show in airline the following needs to be set
-  ```vim
-  let g:airline_powerline_fonts = 1
-  ```
-
-* The _ONLY_ other configuration needed should be setting the font vim uses to a
-  patched font.
-
-Already patched fonts and the font patcher script are provided at:
-[nerd-fonts]
-
-It works without configuration *ONLY* when used with a patched font provided in
-the separate repository above. Install the font and add it to your `vimrc` or
-`gvimrc`:
-
-Linux
- ```vim
- set guifont=<FONT_NAME> <FONT_SIZE>
- ```
-
-OS X and Windows
- ```vim
- set guifont=<FONT_NAME>:h<FONT_SIZE>
- ```
-
-e.g.
-
-Linux
-```vim
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
-```
-
-OS X and Windows
-```vim
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
-```
-
-## Font Installation
-
-You basically have to put any font you would like to use into the `~/.fonts` folder. For example:
-
-
-Linux
-```sh
-mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo DroidSansMonoForPowerlinePlusNerdFileTypes.otf https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline%20Plus%20Nerd%20File%20Types.otf
-```
-
-deprecated alternate paths: `~/.fonts`
-
-OS X
-```sh
-cd ~/Library/Fonts && curl -fLo DroidSansMonoForPowerlinePlusNerdFileTypes.otf https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DroidSansMono/Droid%20Sans%20Mono%20for%20Powerline%20Plus%20Nerd%20File%20Types.otf
-```
-
-You can find more fonts under my [patched fonts repo][patched-fonts].
 
 
 ## Screenshots
@@ -454,44 +473,6 @@ file format segment
 ```
 
 for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/powerline/themes/vim/default.json)
-
-## Installation
-
-* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-windows-1)
-* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.7.x/.vimrc-linux-1)
-
-This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
-
-*  [Pathogen](https://github.com/tpope/vim-pathogen)
-  *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
-*  [NeoBundle](https://github.com/Shougo/neobundle.vim)
-  * Add to vimrc:
-
-      ```vim
-      NeoBundle 'ryanoasis/vim-devicons'
-      ```
-  * And install it:
-
-      ```vim
-      :so ~/.vimrc
-      :NeoBundleInstall
-      ```
-
-*  [Vundle](https://github.com/gmarik/vundle)
-  * Add to vimrc:
-
-       ```vim
-       Plugin 'ryanoasis/vim-devicons'
-       ```
-  * And install it:
-
-       ```vim
-       :so ~/.vimrc
-       :PluginInstall`
-       ```
-
-*  manual
-  *  copy all of the files into your `~/.vim` directory
 
 
 ## API
