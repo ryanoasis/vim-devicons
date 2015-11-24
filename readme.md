@@ -49,7 +49,7 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 <a name="quick-setup"></a>
 ## Quick Setup (TL;DR)
 
-1. Download and install a patched **[nerd-font](#nerd-fonts)** (or patch your own) _[(» More details... «)](#nerd-fonts)_
+1. Download and install a patched **[nerd-font](nerd-fonts)** (or patch your own) _[(» More details... «)](nerd-fonts)_
 
 2. Install the plugin per your usual method _[(» More details... «)](#installation)_
 
