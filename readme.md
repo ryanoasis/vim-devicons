@@ -246,7 +246,7 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ### Mac OS X
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.7.x/osx-sample.png)
-*Thanks @RageZBla*
+*Thanks [@RageZBla](https://github.com/RageZBla)*
 
 ### Glyph set test file
 
