@@ -395,7 +395,7 @@ function! s:initializeUnite()
     call unite#define_filter(s:filters)
     unlet s:filters
 
-    call unite#custom#source('file,file_rec,buffer', 'converters', 'devicons_converter')
+    call unite#custom#source('file,file_rec,buffer,file_rec/async,file_rec/neovim', 'converters', 'devicons_converter')
   endif
 endfunction
 
