@@ -3,6 +3,10 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.7.1
+  - Misc readme updates
+  - Fixed performance issues and odd graphical artifacts in v0.7.0 (fixes #127)
+  - Improved installation instructions and re-organized some items to [Nerd Fonts repo](https://github.com/ryanoasis/nerd-fonts) (PR #129, fixes #125, #128) (@her)
 - v0.7.0
   - Deprecated support for [kien/ctrlp](https://github.com/kien/ctrlp.vim) and only support [active ctrlp fork](https://github.com/ctrlpvim/ctrlp.vim) going forward (fixes #117)
   - Added information to readme about [vim-startify](https://github.com/mhinz/vim-startify) support (enhancement #94)

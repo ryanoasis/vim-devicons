@@ -7,7 +7,7 @@ Start temporary notice section
 -->
 | Upcoming deprecation warning |
 -------------------------------
-| Support for the [Original Kien CtrlP Repo][CtrlP] will be dropped in [v0.7.0](https://github.com/ryanoasis/vim-devicons/milestones/v0.7.0) and only the [active CtrlP fork][ctrlpvim-CtrlP] will be supported |
+| Support for the [Original Kien CtrlP Repo][CtrlP] has been dropped since [v0.7.0](https://github.com/ryanoasis/vim-devicons/milestones/v0.7.0) and only the [active CtrlP fork][ctrlpvim-CtrlP] will be supported |
 <!---
 End temporary notice section
 -->
@@ -26,7 +26,7 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 
 ## Table of Contents
 
-- [vim-devicons v0.7.0](#)
+- [vim-devicons v0.7.1](#)
 	- [Quick Setup (TL;DR)](#quick-setup)
     - [Installation](#installation)
 	- [Usage](#usage)
@@ -158,7 +158,9 @@ After installing the patched font and setting the vim font just open or look at 
 
 ### [NERDTree]
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.7.x/nerdtree.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.7.x/nerdtree-1.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.7.x/nerdtree-2.png)
+![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.7.x/nerdtree-3.png)
 
 
 ### [vim-airline]
