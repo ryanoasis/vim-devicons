@@ -4,7 +4,6 @@
 " License: see LICENSE
 
 let s:version = '0.7.1'
-let s:operatingsystem = system("uname -s")
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================
@@ -136,6 +135,36 @@ endif
 
 " local functions {{{2
 "========================================================================
+
+" scope: local
+function s:isDarwin()
+  if exists('s:is_darwin')
+    return s:is_darwin
+  endif
+
+  if exists('g:WebDevIconsOS')
+    let s:is_darwin = g:WebDevIconsOS ==? 'Darwin'
+    return s:is_darwin
+  endif
+
+  if has('macunix')
+    let s:is_darwin = 1
+    return s:is_darwin
+  endif
+
+  if ! has('unix')
+    let s:is_darwin = 0
+    return s:is_darwin
+  endif
+
+  if system('uname -s') ==# "Darwin\n"
+    let s:is_darwin = 1
+  else
+    let s:is_darwin = 0
+  endif
+
+  return s:is_darwin
+endfunction
 
 " scope: local
 function! s:strip(input)
@@ -534,7 +563,7 @@ function! WebDevIconsGetFileFormatSymbol(...)
   if &fileformat == "dos"
     let fileformat = ""
   elseif &fileformat == "unix"
-    if s:operatingsystem == "Darwin\n"
+    if s:isDarwin()
       let fileformat = ""
     else
       let fileformat = ""
