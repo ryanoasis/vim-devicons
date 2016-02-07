@@ -413,6 +413,12 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'ƛ'
   ```
 
+* specify OS to decide an icon for unix fileformat (_not_ defined by default)
+  - this is useful for avoiding unnecessary `system()` call. you might see [#135](https://github.com/ryanoasis/vim-devicons/pull/135) to know logic further.
+ ```vim
+let g:WebDevIconsOS = 'Darwin'
+  ```
+
 ## Lightline Setup
 
 To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` and/or `WebDevIconsGetFileFormatSymbol()` in your `.vimrc`. For example, you could set your sections to:
