@@ -75,7 +75,7 @@ endfunction
 " NERDTree-C
 " scope: global
 function! WebDevIconsNERDTreeChangeRootHandler(node)
-  call a:node.makeRoot()
+  call b:NERDTree.changeRoot(a:node)
   call NERDTreeRender()
   call a:node.putCursorHere(0, 0)
   redraw!
