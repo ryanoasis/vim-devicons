@@ -3,6 +3,11 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.8.0
+  - Added support for more [unite](https://github.com/Shougo/unite.vim) actions: `file_rec/async`, `file_rec/neovim`, `file_rec/neovim2` (enhancement PR #132, fixes #131) (@mhartington)
+  - Improved Darwin detection by using a lighter method/logic (#135) (@delphinus35)
+  - Fixes `NERDTree-C` (fix PR #139) (@endenwer)
+  - Fixes error using open/close symbols for folder (fixes #130)
 - v0.7.1
   - Misc readme updates
   - Fixed performance issues and odd graphical artifacts in v0.7.0 (fixes #127)
