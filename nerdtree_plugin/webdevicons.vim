@@ -123,7 +123,7 @@ function! WebDevIconsNERDTreeMapActivateNode(node)
 
   if flag != ''
     call a:node.path.flagSet.addFlag("webdevicons", flag)
-    call a:node.path.refreshFlags()
+    call a:node.path.refreshFlags(b:NERDTree)
   endif
 
   " continue with normal activate logic
