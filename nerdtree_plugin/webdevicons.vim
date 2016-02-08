@@ -1,4 +1,4 @@
-" Version: 0.7.1
+" Version: 0.8.0
 " Webpage: https://github.com/ryanoasis/vim-devicons
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " License: see LICENSE
