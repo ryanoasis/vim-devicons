@@ -3,6 +3,11 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.8.1
+  - Fixed Unite display issues (absolute paths and/or duplicate paths) (fixes #140)
+  - Fixed custom CtrlP open function causing 'E16' (fixes #115)
+  - Fixed typo in readme for setting default folder glyph (PR #143)
+  - Added documentation for highlighting icon/glyphs only (not just entire lines) in NERDTree (fixes #142)
 - v0.8.0
   - Added support for more [unite](https://github.com/Shougo/unite.vim) actions: `file_rec/async`, `file_rec/neovim`, `file_rec/neovim2`, `file_rec/git` (enhancement PR #132, fixes #131) (@mhartington)
   - Improved Darwin detection by using a lighter method/logic (#135) (@delphinus35)
