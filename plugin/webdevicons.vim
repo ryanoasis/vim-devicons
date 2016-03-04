@@ -412,7 +412,7 @@ function! s:initializeUnite()
 
         " prevent filenames of buffers getting 'lost'
         if filename != path
-          let path = printf("%s %s", filename, path)
+          let path = printf("%s", filename)
         endif
 
         " Customize output format.
