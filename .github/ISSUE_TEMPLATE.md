@@ -17,6 +17,6 @@ These items you must provide answers to. Make sure to add **all the information 
 - [ ] Are you using vim from the terminal or a GUI vim?
 - [ ] Are you using Mac, Linux or Windows?
 
-#### Optional (please check off with 'x')
+#### Optional
 
 - [ ] Provide **screenshots** where appropriate
