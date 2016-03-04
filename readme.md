@@ -382,7 +382,7 @@ let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
 
 * change the default folder/directory glyph/icon
  ```vim
-let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = 'ƛ'
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = 'ƛ'
   ```
 
 * change the default open folder/directory glyph/icon (default is '')
