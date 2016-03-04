@@ -449,6 +449,8 @@ endfunction
 " @TODO implementation for CtrlP buffer and find file mode
 function! s:initializeCtrlP()
   if exists("g:loaded_ctrlp") && g:webdevicons_enable_ctrlp
+    let s:glyphASCIIRangeStart = 57344
+    let s:glyphASCIIRangeEnd = 63743
     let g:ctrlp_open_func = {
       \ 'mru files': 'webdevicons#ctrlPOpenFunc'
       \ }
@@ -500,7 +502,11 @@ function! webdevicons#ctrlPOpenFunc(action, line)
   " Remove non-breaking space which is present (NBSP U+00A0)
   let line = substitute(line, " ", "", "")
   " Trim leading and trailing whitespace and replace private character range characters
-  let line = s:strip(substitute(line, "[-]", "", ""))
+  let glyphASCIICandidate = char2nr(strpart(line, 0, 3))
+
+  if glyphASCIICandidate >= s:glyphASCIIRangeStart && glyphASCIICandidate <= s:glyphASCIIRangeEnd
+    let line = s:strip(strpart(line, 3))
+  endif
   " Use CtrlP's default file opening function
   call call('ctrlp#acceptfile', [a:action, line])
 endfunction
