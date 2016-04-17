@@ -4,7 +4,7 @@ CHANGELOG
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
 - v0.8.2
-  - Updated `jsx` filetype (using React glyph) (enhancement PR #148)
+  - Updated `jsx` filetype (using React glyph) (enhancement PR #148) (@alpertuna)
   - Added issue and pull request templates
 - v0.8.1
   - Fixed Unite display issues (absolute paths and/or duplicate paths) (fixes #140)
