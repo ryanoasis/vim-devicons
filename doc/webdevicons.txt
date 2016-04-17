@@ -76,7 +76,7 @@ startify [19], vimfiler [20], and flagship [21].
                                                      *readme-table-of-contents*
 Table of Contents ~
 
-- vim-devicons v0.8.1
+- vim-devicons v0.8.2
 
   - Quick Setup (TL;DR)
   - Installation
