@@ -187,7 +187,7 @@ function! s:setDictionaries()
 		\	'markdown' : '',
 		\	'json'     : '',
 		\	'js'       : '',
-		\	'jsx'      : '',
+		\	'jsx'      : '',
 		\	'rb'       : '',
 		\	'php'      : '',
 		\	'py'       : '',
