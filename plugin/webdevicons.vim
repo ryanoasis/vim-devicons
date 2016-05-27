@@ -109,6 +109,11 @@ if !exists('g:WebDevIconsNerdTreeGitPluginForceVAlign')
   let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 endif
 
+" fix for refreshing NERDTree flags upon creating new files
+if !exists('g:NERDTreeUpdateOnCursorHold')
+  let g:NERDTreeUpdateOnCursorHold = 1
+endif
+
 " config defaults {{{1
 "========================================================================
 
@@ -360,7 +365,13 @@ function! s:CursorHoldUpdate()
     return
   endif
 
-  b:NERDTreeRoot.refreshFlags()
+  " winnr need to make focus go to opened file
+  " CursorToTreeWin needed to avoid error on opening file
+  let l:winnr = winnr()
+  call g:NERDTree.CursorToTreeWin()
+  call b:NERDTree.root.refreshFlags()
+  call NERDTreeRender()
+  exec l:winnr . 'wincmd w'
 endfunction
 
 " scope: local
