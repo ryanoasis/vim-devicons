@@ -382,6 +382,14 @@ function! s:hardRefreshNerdTree()
   endif
 endfunction
 
+" scope: local
+function! s:softRefreshNerdTree()
+  if g:webdevicons_enable_nerdtree == 1 && g:NERDTree.IsOpen()
+    NERDTreeToggle
+    NERDTreeToggle
+  endif
+endfunction
+
 " for vim-flagship plugin {{{3
 "========================================================================
 
@@ -502,9 +510,21 @@ function! webdevicons#version()
 endfunction
 
 " scope: public
+" allow the first version of refresh to now call softRefresh
 function! webdevicons#refresh()
+  call webdevicons#softRefresh()
+endfunction
+
+" scope: public
+function! webdevicons#hardRefresh()
   call s:setSyntax()
   call s:hardRefreshNerdTree()
+endfunction
+
+" scope: public
+function! webdevicons#softRefresh()
+  call s:setSyntax()
+  call s:softRefreshNerdTree()
 endfunction
 
 " scope: public
