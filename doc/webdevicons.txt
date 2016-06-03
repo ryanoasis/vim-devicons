@@ -41,8 +41,9 @@ Contents ~
   1. Character Mappings                             |readme-character-mappings|
  10. Lightline Setup                                   |readme-lightline-setup|
  11. Powerline Setup                                   |readme-powerline-setup|
- 12. API                                                           |readme-api|
-  1. API Examples                                         |readme-api-examples|
+ 12. Public Methods                                     |readme-public-methods|
+  1. API                                                           |readme-api|
+   1. API Examples                                        |readme-api-examples|
  13. Todo                                                         |readme-todo|
  14. FAQ / Troubleshooting                         |readme-faq-troubleshooting|
  15. Contributing                                         |readme-contributing|
@@ -76,7 +77,7 @@ startify [19], vimfiler [20], and flagship [21].
                                                      *readme-table-of-contents*
 Table of Contents ~
 
-- vim-devicons v0.8.2
+- vim-devicons v0.8.3
 
   - Quick Setup (TL;DR)
   - Installation
@@ -84,12 +85,11 @@ Table of Contents ~
   - Screenshots
   - Features
   - Extra Configuration
-
-    - Character Mappings
-
+  - Character Mappings
   - Lightline Setup
   - Powerline Setup
   - Vim Plugin Installation
+  - Methods
   - API
   - Todo
   - FAQ / Troubleshooting
@@ -586,6 +586,31 @@ file format segment
 for full example see sample file [58]
 
 ===============================================================================
+                                                        *readme-public-methods*
+Public Methods ~
+>
+  " returns the current version of the plugin
+  webdevicons#version()
+<
+
+>
+  " calls webdevicons#softRefresh()
+  " (basically a backwards compat convenience)
+  webdevicons#refresh()
+<
+
+>
+  " Does a 'hard' refresh of NERDTree
+  " resets vim-devicons syntax and closes and reopens NERDTree
+  webdevicons#hardRefresh()
+<
+
+>
+  " Does a 'soft' refresh of NERDTree
+  " resets vim-devicons syntax and toggles NERDTree to the same state
+  webdevicons#softRefresh()
+<
+-------------------------------------------------------------------------------
                                                                    *readme-api*
 API ~
 >
@@ -723,6 +748,13 @@ FAQ / Troubleshooting ~
 - Dots after icons in NERDTree (on GVim), try: 'vim autocmd FileType nerdtree
   setlocal nolist' per: https://github.com/ryanoasis/vim-
   devicons/issues/110#issue-103801335
+
+- Newly created files in NERDTree are slow to show the glyph (icon)
+
+- check your current setting of ':updatetime?'
+
+- try setting 'updatetime' in your 'vimrc' to a lower value like '250', for
+  more info see: https://github.com/ryanoasis/vim-devicons/issues/153
 
 ===============================================================================
                                                           *readme-contributing*
