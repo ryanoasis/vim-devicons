@@ -24,11 +24,12 @@ Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline],
 	- [Screenshots](#screenshots)
 	- [Features](#features)
 	- [Extra Configuration](#extra-configuration)
-		- [Character Mappings](#character-mappings)
+	  - [Character Mappings](#character-mappings)
 	- [Lightline Setup](#lightline-setup)
 	- [Powerline Setup](#powerline-setup)
 	- [Vim Plugin Installation](#installation)
-	- [API](#api)
+	- [Methods](#public-methods)
+	  - [API](#api)
 	- [Todo](#todo)
 	- [FAQ / Troubleshooting](#faq--troubleshooting)
 	- [Contributing](#contributing)
@@ -477,8 +478,32 @@ file format segment
 
 for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/powerline/themes/vim/default.json)
 
+## Public Methods
 
-## API
+```vim
+" returns the current version of the plugin
+webdevicons#version()
+```
+
+```vim
+" calls webdevicons#softRefresh()
+" (basically a backwards compat convenience)
+webdevicons#refresh()
+```
+
+```vim
+" Does a 'hard' refresh of NERDTree
+" resets vim-devicons syntax and closes and reopens NERDTree
+webdevicons#hardRefresh()
+```
+
+```vim
+" Does a 'soft' refresh of NERDTree
+" resets vim-devicons syntax and toggles NERDTree to the same state
+webdevicons#softRefresh()
+```
+
+### API
 
 ```vim
 " returns the font character that represents the icon
@@ -492,7 +517,7 @@ WebDevIconsGetFileTypeSymbol(...)
 WebDevIconsGetFileFormatSymbol()
 ```
 
-### API Examples
+#### API Examples
 
 * todo
 
@@ -616,6 +641,12 @@ WebDevIconsGetFileFormatSymbol()
   autocmd FileType nerdtree setlocal nolist
   ```
   per: https://github.com/ryanoasis/vim-devicons/issues/110#issue-103801335
+
+* Newly created files in NERDTree are slow to show the glyph (icon)
+  * check your current setting of `:updatetime?`
+  * try setting `updatetime` in your `vimrc` to a lower value like `250`,
+  for more info see: https://github.com/ryanoasis/vim-devicons/issues/153
+
 
 ## Contributing
 
