@@ -2,18 +2,17 @@
 	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/branding-logo.png" alt="vim-devicons">
 </h1>
 
-***
 [![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
-***
-| **[Screenshots](#screenshots)**| **[API](#api)** | **[Fonts ➶][patched-fonts]** | **[Patcher ➶][nerd-fonts]** |
-|--------------------------------|-----------------|------------------------------|-----------------------------|
-| [![screenshots][img-visual-toc-screenshots]](#screenshots) | [![api][img-visual-toc-api]](#api) | [![patcher-logo-small][img-visual-toc-patched-fonts]][patched-fonts] | [![patcher-logo-small][img-visual-toc-fonts-patcher]][nerd-fonts] |
-***
 
-Adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
+**Vim-Devicons** adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png)
 
+## Quick Links
+
+| **[Screenshots](#screenshots)**| **[API](#api)** | **[Fonts ➶][patched-fonts]** | **[Patcher ➶][nerd-fonts]** |
+|--------------------------------|-----------------|------------------------------|-----------------------------|
+| [![screenshots][img-visual-toc-screenshots]](#screenshots) | [![api][img-visual-toc-api]](#api) | [![patcher-logo-small][img-visual-toc-patched-fonts]][patched-fonts] | [![patcher-logo-small][img-visual-toc-fonts-patcher]][nerd-fonts] |
 
 ## Table of Contents
 
