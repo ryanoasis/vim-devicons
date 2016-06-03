@@ -181,121 +181,121 @@ endfunction
 " scope: local
 function! s:setDictionaries()
 
-	let s:file_node_extensions = {
-		\	'styl'     : '',
-		\	'scss'     : '',
-		\	'htm'      : '',
-		\	'html'     : '',
-		\	'slim'     : '',
-		\	'ejs'      : '',
-		\	'css'      : '',
-		\	'less'     : '',
-		\	'md'       : '',
-		\	'markdown' : '',
-		\	'json'     : '',
-		\	'js'       : '',
-		\	'jsx'      : '',
-		\	'rb'       : '',
-		\	'php'      : '',
-		\	'py'       : '',
-		\	'pyc'      : '',
-		\	'pyo'      : '',
-		\	'pyd'      : '',
-		\	'coffee'   : '',
-		\	'mustache' : '',
-		\	'hbs'      : '',
-		\	'conf'     : '',
-		\	'ini'      : '',
-		\	'yml'      : '',
-		\	'bat'      : '',
-		\	'jpg'      : '',
-		\	'jpeg'     : '',
-		\	'bmp'      : '',
-		\	'png'      : '',
-		\	'gif'      : '',
-		\	'ico'      : '',
-		\	'twig'     : '',
-		\	'cpp'      : '',
-		\	'c++'      : '',
-		\	'cxx'      : '',
-		\	'cc'       : '',
-		\	'cp'       : '',
-		\	'c'        : '',
-		\	'hs'       : '',
-		\	'lhs'      : '',
-		\	'lua'      : '',
-		\	'java'     : '',
-		\	'sh'       : '',
-		\	'fish'     : '',
-		\	'ml'       : 'λ',
-		\	'mli'      : 'λ',
-		\	'diff'     : '',
-		\	'db'       : '',
-		\	'sql'      : '',
-		\	'dump'     : '',
-		\	'clj'      : '',
-		\	'cljc'     : '',
-		\	'cljs'     : '',
-		\	'edn'      : '',
-		\	'scala'    : '',
-		\	'go'       : '',
-		\	'dart'     : '',
-		\	'xul'      : '',
-		\	'sln'      : '',
-		\	'suo'      : '',
-		\	'pl'       : '',
-		\	'pm'       : '',
-		\	't'        : '',
-		\	'rss'      : '',
-		\	'f#'       : '',
-		\	'fsscript' : '',
-		\	'fsx'      : '',
-		\	'fs'       : '',
-		\	'fsi'      : '',
-		\	'rs'       : '',
-		\	'rlib'     : '',
-		\	'd'        : '',
-		\	'erl'      : '',
-		\	'hrl'      : '',
-		\	'vim'      : '',
-		\	'ai'       : '',
-		\	'psd'      : '',
-		\	'psb'      : '',
-		\	'ts'       : '',
-		\	'jl'       : ''
-	\}
+  let s:file_node_extensions = {
+        \ 'styl'     : '',
+        \ 'scss'     : '',
+        \ 'htm'      : '',
+        \ 'html'     : '',
+        \ 'slim'     : '',
+        \ 'ejs'      : '',
+        \ 'css'      : '',
+        \ 'less'     : '',
+        \ 'md'       : '',
+        \ 'markdown' : '',
+        \ 'json'     : '',
+        \ 'js'       : '',
+        \ 'jsx'      : '',
+        \ 'rb'       : '',
+        \ 'php'      : '',
+        \ 'py'       : '',
+        \ 'pyc'      : '',
+        \ 'pyo'      : '',
+        \ 'pyd'      : '',
+        \ 'coffee'   : '',
+        \ 'mustache' : '',
+        \ 'hbs'      : '',
+        \ 'conf'     : '',
+        \ 'ini'      : '',
+        \ 'yml'      : '',
+        \ 'bat'      : '',
+        \ 'jpg'      : '',
+        \ 'jpeg'     : '',
+        \ 'bmp'      : '',
+        \ 'png'      : '',
+        \ 'gif'      : '',
+        \ 'ico'      : '',
+        \ 'twig'     : '',
+        \ 'cpp'      : '',
+        \ 'c++'      : '',
+        \ 'cxx'      : '',
+        \ 'cc'       : '',
+        \ 'cp'       : '',
+        \ 'c'        : '',
+        \ 'hs'       : '',
+        \ 'lhs'      : '',
+        \ 'lua'      : '',
+        \ 'java'     : '',
+        \ 'sh'       : '',
+        \ 'fish'     : '',
+        \ 'ml'       : 'λ',
+        \ 'mli'      : 'λ',
+        \ 'diff'     : '',
+        \ 'db'       : '',
+        \ 'sql'      : '',
+        \ 'dump'     : '',
+        \ 'clj'      : '',
+        \ 'cljc'     : '',
+        \ 'cljs'     : '',
+        \ 'edn'      : '',
+        \ 'scala'    : '',
+        \ 'go'       : '',
+        \ 'dart'     : '',
+        \ 'xul'      : '',
+        \ 'sln'      : '',
+        \ 'suo'      : '',
+        \ 'pl'       : '',
+        \ 'pm'       : '',
+        \ 't'        : '',
+        \ 'rss'      : '',
+        \ 'f#'       : '',
+        \ 'fsscript' : '',
+        \ 'fsx'      : '',
+        \ 'fs'       : '',
+        \ 'fsi'      : '',
+        \ 'rs'       : '',
+        \ 'rlib'     : '',
+        \ 'd'        : '',
+        \ 'erl'      : '',
+        \ 'hrl'      : '',
+        \ 'vim'      : '',
+        \ 'ai'       : '',
+        \ 'psd'      : '',
+        \ 'psb'      : '',
+        \ 'ts'       : '',
+        \ 'jl'       : ''
+        \}
 
-	let s:file_node_exact_matches = {
-		\	'exact-match-case-sensitive-1.txt' : 'X1',
-		\	'exact-match-case-sensitive-2'     : 'X2',
-		\	'gruntfile.coffee'                 : '',
-		\	'gruntfile.js'                     : '',
-		\	'gruntfile.ls'                     : '',
-		\	'gulpfile.coffee'                  : '',
-		\	'gulpfile.js'                      : '',
-		\	'gulpfile.ls'                      : '',
-		\	'dropbox'                          : '',
-		\	'.ds_store'                        : '',
-		\	'.gitconfig'                       : '',
-		\	'.gitignore'                       : '',
-		\	'.bashrc'                          : '',
-		\	'.bashprofile'                     : '',
-		\	'favicon.ico'                      : '',
-		\	'license'                          : '',
-		\	'node_modules'                     : '',
-		\	'react.jsx'                        : '',
-		\	'procfile'                         : '',
-	\}
+  let s:file_node_exact_matches = {
+        \ 'exact-match-case-sensitive-1.txt' : 'X1',
+        \ 'exact-match-case-sensitive-2'     : 'X2',
+        \ 'gruntfile.coffee'                 : '',
+        \ 'gruntfile.js'                     : '',
+        \ 'gruntfile.ls'                     : '',
+        \ 'gulpfile.coffee'                  : '',
+        \ 'gulpfile.js'                      : '',
+        \ 'gulpfile.ls'                      : '',
+        \ 'dropbox'                          : '',
+        \ '.ds_store'                        : '',
+        \ '.gitconfig'                       : '',
+        \ '.gitignore'                       : '',
+        \ '.bashrc'                          : '',
+        \ '.bashprofile'                     : '',
+        \ 'favicon.ico'                      : '',
+        \ 'license'                          : '',
+        \ 'node_modules'                     : '',
+        \ 'react.jsx'                        : '',
+        \ 'procfile'                         : '',
+        \}
 
-	let s:file_node_pattern_matches = {
-		\ '.*jquery.*\.js$'       : '',
-		\ '.*angular.*\.js$'      : '',
-		\ '.*backbone.*\.js$'     : '',
-		\ '.*require.*\.js$'      : '',
-		\ '.*materialize.*\.js$'  : '',
-		\ '.*materialize.*\.css$' : '',
-		\ '.*mootools.*\.js$'     : ''
-	\}
+  let s:file_node_pattern_matches = {
+        \ '.*jquery.*\.js$'       : '',
+        \ '.*angular.*\.js$'      : '',
+        \ '.*backbone.*\.js$'     : '',
+        \ '.*require.*\.js$'      : '',
+        \ '.*materialize.*\.js$'  : '',
+        \ '.*materialize.*\.css$' : '',
+        \ '.*mootools.*\.js$'     : ''
+        \}
 
   if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
     let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
@@ -397,14 +397,19 @@ endfunction
 
 " scope: local
 function! s:initializeFlagship()
-  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline
-    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileTypeSymbol")
-  endif
+  if exists('g:loaded_flagship')
+    if g:webdevicons_enable_flagship_statusline
+      augroup webdevicons_flagship_filetype
+        autocmd User Flags call Hoist('buffer', 'WebDevIconsGetFileTypeSymbol')
+      augroup END
+    endif
 
-  if exists("g:loaded_flagship") && g:webdevicons_enable_flagship_statusline_fileformat_symbols
-    autocmd User Flags call Hoist("buffer", "WebDevIconsGetFileFormatSymbol")
+    if g:webdevicons_enable_flagship_statusline_fileformat_symbols
+      augroup webdevicons_flagship_filesymbol
+        autocmd User Flags call Hoist('buffer', 'WebDevIconsGetFileFormatSymbol')
+      augroup END
+    endif
   endif
-
 endfunction
 
 " for unite plugin {{{3
@@ -412,19 +417,19 @@ endfunction
 
 " scope: local
 function! s:initializeUnite()
-  if exists("g:loaded_unite") && g:webdevicons_enable_unite
+  if exists('g:loaded_unite') && g:webdevicons_enable_unite
     let s:filters = {
-          \   "name" : "devicons_converter",
+          \   'name' : 'devicons_converter',
           \}
 
     function! s:filters.filter(candidates, context)
       for candidate in a:candidates
 
-        if has_key(candidate, "action__buffer_nr")
+        if has_key(candidate, 'action__buffer_nr')
           let bufname = bufname(candidate.action__buffer_nr)
           let filename = fnamemodify(bufname, ':p:t')
           let path = fnamemodify(bufname, ':p:h')
-        elseif has_key(candidate, "word") && has_key(candidate, "action__path")
+        elseif has_key(candidate, 'word') && has_key(candidate, 'action__path')
           let path = candidate.action__path
           let filename = candidate.word
         endif
@@ -433,11 +438,11 @@ function! s:initializeUnite()
 
         " prevent filenames of buffers getting 'lost'
         if filename != path
-          let path = printf("%s", filename)
+          let path = printf('%s', filename)
         endif
 
         " Customize output format.
-        let candidate.abbr = printf("%s %s", icon, path)
+        let candidate.abbr = printf('%s %s', icon, path)
       endfor
       return a:candidates
     endfunction
@@ -454,7 +459,7 @@ endfunction
 
 " scope: local
 function! s:initializeVimfiler()
-  if exists("g:loaded_vimfiler") && g:webdevicons_enable_vimfiler
+  if exists('g:loaded_vimfiler') && g:webdevicons_enable_vimfiler
     call vimfiler#custom#profile('default', 'context', {
       \ 'columns' : 'type:devicons:size:time'
       \ })
@@ -469,20 +474,20 @@ endfunction
 " Support for kien/ctrlp.vim deprecated since v0.7.0
 " @TODO implementation for CtrlP buffer and find file mode
 function! s:initializeCtrlP()
-  if exists("g:loaded_ctrlp") && g:webdevicons_enable_ctrlp
+  if exists('g:loaded_ctrlp') && g:webdevicons_enable_ctrlp
     let s:glyphASCIIRangeStart = 57344
     let s:glyphASCIIRangeEnd = 63743
     let g:ctrlp_open_func = {
       \ 'mru files': 'webdevicons#ctrlPOpenFunc'
       \ }
 
-    if exists("g:ctrlp_mruf_map_string")
+    if exists('g:ctrlp_mruf_map_string')
       " logic for ctrlpvim/ctrlp.vim:
       let g:ctrlp_mruf_map_string = '!stridx(v:val, cwd) ? WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . " " . strpart(v:val, idx) : g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol . " " . v:val'
     else
       " logic for kien/ctrlp.vim:
       echohl WarningMsg |
-        \ echomsg "vim-devicons: https://github.com/kien/ctrlp.vim is deprecated since v0.7.0, please use https://github.com/ctrlpvim/ctrlp.vim"
+        \ echomsg 'vim-devicons: https://github.com/kien/ctrlp.vim is deprecated since v0.7.0, please use https://github.com/ctrlpvim/ctrlp.vim'
     endif
   endif
 endfunction
@@ -533,7 +538,7 @@ endfunction
 function! webdevicons#ctrlPOpenFunc(action, line)
   let line = a:line
   " Remove non-breaking space which is present (NBSP U+00A0)
-  let line = substitute(line, " ", "", "")
+  let line = substitute(line, ' ', '', '')
   " Trim leading and trailing whitespace and replace private character range characters
   let glyphASCIICandidate = char2nr(strpart(line, 0, 3))
 
@@ -548,8 +553,8 @@ endfunction
 " scope: public
 function! WebDevIconsGetFileTypeSymbol(...)
   if a:0 == 0
-    let fileNodeExtension = expand("%:e")
-    let fileNode = expand("%:t")
+    let fileNodeExtension = expand('%:e')
+    let fileNode = expand('%:t')
     let isDirectory = 0
   else
     let fileNodeExtension = fnamemodify(a:1, ':e')
@@ -597,18 +602,18 @@ endfunction
 
 " scope: public
 function! WebDevIconsGetFileFormatSymbol(...)
-  let fileformat = ""
+  let fileformat = ''
 
-  if &fileformat == "dos"
-    let fileformat = ""
-  elseif &fileformat == "unix"
+  if &fileformat ==? 'dos'
+    let fileformat = ''
+  elseif &fileformat ==? 'unix'
     if s:isDarwin()
-      let fileformat = ""
+      let fileformat = ''
     else
-      let fileformat = ""
+      let fileformat = ''
     endif
-  elseif &fileformat == "mac"
-    let fileformat = ""
+  elseif &fileformat ==? 'mac'
+    let fileformat = ''
   endif
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
@@ -630,7 +635,7 @@ function! AirlineWebDevIcons(...)
   endif
 endfunction
 
-if g:webdevicons_enable == 1 && exists("g:loaded_airline") && g:loaded_airline == 1 && g:webdevicons_enable_airline_statusline
+if g:webdevicons_enable == 1 && exists('g:loaded_airline') && g:loaded_airline == 1 && g:webdevicons_enable_airline_statusline
   call airline#add_statusline_func('AirlineWebDevIcons')
 endif
 
@@ -652,7 +657,7 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   let path = a:event.subject
   let padding = g:WebDevIconsNerdTreeAfterGlyphPadding
   let prePadding = ''
-  let hasGitFlags = (len(path.flagSet._flagsForScope("git")) > 0)
+  let hasGitFlags = (len(path.flagSet._flagsForScope('git')) > 0)
   let hasGitNerdTreePlugin = (exists('g:loaded_nerdtree_git_status') == 1)
 
   if g:WebDevIconsUnicodeGlyphDoubleWidth == 0
@@ -674,9 +679,9 @@ function! NERDTreeWebDevIconsRefreshListener(event)
 
     let directoryOpened = 0
 
-    if g:DevIconsEnableFoldersOpenClose && len(path.flagSet._flagsForScope("webdevicons")) > 0
+    if g:DevIconsEnableFoldersOpenClose && len(path.flagSet._flagsForScope('webdevicons')) > 0
       " isOpen is not available on the path listener, compare using symbols
-      if path.flagSet._flagsForScope("webdevicons")[0] == prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
+      if path.flagSet._flagsForScope('webdevicons')[0] == prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
         let directoryOpened = 1
       endif
     endif
@@ -698,10 +703,10 @@ function! NERDTreeWebDevIconsRefreshListener(event)
     let flag = ''
   endif
 
-  call path.flagSet.clearFlags("webdevicons")
+  call path.flagSet.clearFlags('webdevicons')
 
-  if flag != ''
-    call path.flagSet.addFlag("webdevicons", flag)
+  if flag !=? ''
+    call path.flagSet.addFlag('webdevicons', flag)
   endif
 
 endfunction

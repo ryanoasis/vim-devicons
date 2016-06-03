@@ -35,13 +35,13 @@ endif
 if g:webdevicons_enable_nerdtree == 1
   if !exists('g:loaded_nerd_tree')
      echohl WarningMsg |
-       \ echomsg "vim-webdevicons requires NERDTree to be loaded before vim-webdevicons."
+       \ echomsg 'vim-webdevicons requires NERDTree to be loaded before vim-webdevicons.'
   endif
 
   if exists('g:loaded_nerd_tree') && g:loaded_nerd_tree == 1 && !exists('g:NERDTreePathNotifier')
      let g:webdevicons_enable_nerdtree = 0
      echohl WarningMsg |
-        \ echomsg "vim-webdevicons requires a newer version of NERDTree to show glyphs in NERDTree - consider updating NERDTree."
+        \ echomsg 'vim-webdevicons requires a newer version of NERDTree to show glyphs in NERDTree - consider updating NERDTree.'
   endif
 
   " @todo I don't even want this to execute UNLESS the user has the
@@ -51,7 +51,7 @@ if g:webdevicons_enable_nerdtree == 1
   " (not what we want)
   "if !exists('g:loaded_nerdtree_git_status')
   "   echohl WarningMsg |
-  "     \ echomsg "vim-webdevicons works better when 'nerdtree-git-plugin' is loaded before vim-webdevicons (small refresh issues otherwise)."
+  "     \ echomsg 'vim-webdevicons works better when 'nerdtree-git-plugin' is loaded before vim-webdevicons (small refresh issues otherwise).'
   "endif
 endif
 
@@ -64,9 +64,9 @@ if !exists('g:webdevicons_enable_airline_statusline')
 endif
 
 function! s:SetupListeners()
-  call g:NERDTreePathNotifier.AddListener("init", "NERDTreeWebDevIconsRefreshListener")
-  call g:NERDTreePathNotifier.AddListener("refresh", "NERDTreeWebDevIconsRefreshListener")
-  call g:NERDTreePathNotifier.AddListener("refreshFlags", "NERDTreeWebDevIconsRefreshListener")
+  call g:NERDTreePathNotifier.AddListener('init', 'NERDTreeWebDevIconsRefreshListener')
+  call g:NERDTreePathNotifier.AddListener('refresh', 'NERDTreeWebDevIconsRefreshListener')
+  call g:NERDTreePathNotifier.AddListener('refreshFlags', 'NERDTreeWebDevIconsRefreshListener')
 endfunction
 
 " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
@@ -96,7 +96,7 @@ function! WebDevIconsNERDTreeMapActivateNode(node)
   let isOpen = a:node.isOpen
   let padding = g:WebDevIconsNerdTreeAfterGlyphPadding
   let prePadding = ''
-  let hasGitFlags = (len(path.flagSet._flagsForScope("git")) > 0)
+  let hasGitFlags = (len(path.flagSet._flagsForScope('git')) > 0)
   let hasGitNerdTreePlugin = (exists('g:loaded_nerdtree_git_status') == 1)
 
   if g:WebDevIconsUnicodeGlyphDoubleWidth == 0
@@ -119,10 +119,10 @@ function! WebDevIconsNERDTreeMapActivateNode(node)
     let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
   endif
 
-  call a:node.path.flagSet.clearFlags("webdevicons")
+  call a:node.path.flagSet.clearFlags('webdevicons')
 
-  if flag != ''
-    call a:node.path.flagSet.addFlag("webdevicons", flag)
+  if flag !=? ''
+    call a:node.path.flagSet.addFlag('webdevicons', flag)
     call a:node.path.refreshFlags(b:NERDTree)
   endif
 
@@ -151,7 +151,7 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
   " actual font patcher)
-  if g:webdevicons_gui_glyph_fix == 1 && has("gui_running")
+  if g:webdevicons_gui_glyph_fix == 1 && has('gui_running')
     call NERDTreeAddKeyMap({
       \ 'key': g:NERDTreeMapChangeRoot,
       \ 'callback': 'WebDevIconsNERDTreeChangeRootHandler',

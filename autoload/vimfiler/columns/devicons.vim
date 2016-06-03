@@ -71,7 +71,7 @@ function! s:column.define_syntax(context) "{{{
 endfunction"}}}
 
 function! s:column.get(file, context)
-  return WebDevIconsGetFileTypeSymbol(strpart(a:file.action__path, strridx(a:file.action__path, "/")), a:file.vimfiler__is_directory)
+  return WebDevIconsGetFileTypeSymbol(strpart(a:file.action__path, strridx(a:file.action__path, '/')), a:file.vimfiler__is_directory)
 endfunction
 
 let &cpo = s:save_cpo
