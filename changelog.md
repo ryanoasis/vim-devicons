@@ -3,6 +3,14 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.8.3
+  - Fixed NERDTree not displaying glyph (icon) for newly created files (fixes #153)
+    - Also adds info to readme about `updatetime`
+  - Fixed resourcing `vimrc` not maintaining current NERDTree state (fixes #154)
+    - Adds new public methods `webdevicons#hardRefresh()` and `webdevicons#softRefresh()`
+    - Makes public method `webdevicons#refresh()` do a 'soft' refresh
+  - Fixed various source formatting and implemented most of vim lint ([vint](https://github.com/Kuniwak/vint)) recommendations
+  - Added public methods available to readme
 - v0.8.2
   - Updated `jsx` filetype (using React glyph) (enhancement PR #148) (@alpertuna)
   - Added issue and pull request templates
