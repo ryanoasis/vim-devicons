@@ -1,9 +1,11 @@
-" Version: 0.8.2
+" Version: 0.8.3
 " Webpage: https://github.com/ryanoasis/vim-devicons
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " License: see LICENSE
 
-let s:version = '0.8.2'
+let s:version = '0.8.3'
+" set scriptencoding after 'encoding' and when using multibyte chars
+scriptencoding utf-8
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================
