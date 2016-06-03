@@ -6,7 +6,9 @@
 
 **Vim-Devicons** adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
 
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png)
+<h1 align="center">
+	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
+</h1>
 
 ## Quick Links
 
