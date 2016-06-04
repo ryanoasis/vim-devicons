@@ -246,10 +246,6 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/osx-sample.png)
 *Thanks [@RageZBla](https://github.com/RageZBla)*
 
-### Glyph set test file
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/glyph-set-test.png)
-
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
   * [NERDTree]
