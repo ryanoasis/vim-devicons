@@ -248,11 +248,11 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ## Features
 * show developer file type glyphs from a font in various vim plugins, currently supports:
-  * [NERDTree]
-  * [vim-airline][vim-airline] (statusline and tabline)
-  * [lightline.vim][lightline.vim] (statusline)
+  * [NERDTree][]
+  * [vim-airline][] (statusline and tabline)
+  * [lightline.vim][] (statusline)
     * see: [lightline setup](#lightline-setup)
-  * [Powerline][powerline] (statusline)
+  * [powerline][] (statusline)
     * see: [powerline setup](#powerline-setup)
 * Adds a global config map of characters to file extensions (or entire filenames)
 * customizable and extendable filetype detections
