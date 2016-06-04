@@ -482,13 +482,13 @@ for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wik
 ## Public Methods
 
 ```vim
-" returns the current version of the plugin
+" Returns the current version of the plugin
 webdevicons#version()
 ```
 
 ```vim
-" calls webdevicons#softRefresh()
-" (basically a backwards compat convenience)
+" Calls webdevicons#softRefresh()
+" basically a backwards compatibility convenience
 webdevicons#refresh()
 ```
 
@@ -530,10 +530,6 @@ WebDevIconsGetFileFormatSymbol()
 * [ ] more specific FAQ and Troubleshooting help
 
 ## FAQ / Troubleshooting
-
-* I don't want to use any of the fonts provided, I want to use font ABC
- * try the font patcher: [nerd-fonts]
- * see font configuration above for more details
 
 * It isn't working
   * Are you using the patched font provided in the separate repo ([nerd-fonts]) or are you patching your own?
@@ -687,9 +683,7 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 * [devicons by Theodore Vorillas](http://vorillaz.github.io/devicons)
 * [benatespina development.svg.icons](https://github.com/benatespina/development.svg.icons)
 * [Steve Losh](http://learnvimscriptthehardway.stevelosh.com/)
-
-### Also thanks to the many contributors:
-* [contributors list](https://github.com/ryanoasis/vim-devicons/graphs/contributors)
+* Also thanks to the many [contributors](https://github.com/ryanoasis/vim-devicons/graphs/contributors)
 
 ## License
 
