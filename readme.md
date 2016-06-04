@@ -50,7 +50,6 @@
   * a. **vim**: Set your terminal emulator font
   * b. **gvim**: Set `guifont` in your `vimrc`
 
-<a name="installation"></a>
 ## Installation
 
 This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
