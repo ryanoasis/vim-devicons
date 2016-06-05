@@ -10,39 +10,49 @@
 	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
 </h1>
 
+## Features
+* Adds filetype glyphs (icons) to various vim plugins, currently supports:
+  * [NERDTree], [vim-airline], [CtrlP][ctrlpvim-CtrlP], [powerline], [unite], [lightline.vim],
+    [vim-startify], [vimfiler], [flagship]
+* Customizable and extendable glyphs (icons) settings
+  * ability to override defaults and use your own characters or glyphs
+* Supports a wide range of file type extensions _[(» More details... «)](#detailed-features)_
+* Supports full filename matches _[(» More details... «)](#detailed-features)_
+* Supports library pattern matches _[(» More details... «)](#detailed-features)_
+* Works with patched fonts, especially [Nerd Fonts]
+
 ## Quick Links
 
-| **[Screenshots](#screenshots)**| **[API](#api)** | **[Fonts ➶][patched-fonts]** | **[Patcher ➶][nerd-fonts]** |
+| **[Screenshots](#screenshots)**| **[API](#api)** | **[Fonts ➶][patched-fonts]** | **[Patcher ➶][Nerd Fonts]** |
 |--------------------------------|-----------------|------------------------------|-----------------------------|
-| [![screenshots][img-visual-toc-screenshots]](#screenshots) | [![api][img-visual-toc-api]](#api) | [![patcher-logo-small][img-visual-toc-patched-fonts]][patched-fonts] | [![patcher-logo-small][img-visual-toc-fonts-patcher]][nerd-fonts] |
+| [![screenshots][img-visual-toc-screenshots]](#screenshots) | [![api][img-visual-toc-api]](#api) | [![patcher-logo-small][img-visual-toc-patched-fonts]][patched-fonts] | [![patcher-logo-small][img-visual-toc-fonts-patcher]][Nerd Fonts] |
 
 ## Table of Contents
 
-- [vim-devicons v0.8.3](#)
-	- [Quick Setup (TL;DR)](#quick-setup)
-    - [Installation](#installation)
-	- [Usage](#usage)
-	- [Screenshots](#screenshots)
-	- [Features](#features)
-	- [Extra Configuration](#extra-configuration)
-	  - [Character Mappings](#character-mappings)
-	- [Lightline Setup](#lightline-setup)
-	- [Powerline Setup](#powerline-setup)
-	- [Vim Plugin Installation](#installation)
-	- [Methods](#public-methods)
-	  - [API](#api)
-	- [Todo](#todo)
-	- [FAQ / Troubleshooting](#faq--troubleshooting)
-	- [Contributing](#contributing)
-	- [Rationale](#rationale)
-	- [Inspiration and special thanks](#inspiration-and-special-thanks)
-	- [License](#license)
+- [Quick Setup (TL;DR)](#quick-setup)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Features](#detailed-features)
+- [Extra Configuration](#extra-configuration)
+  - [Character Mappings](#character-mappings)
+- [Lightline Setup](#lightline-setup)
+- [Powerline Setup](#powerline-setup)
+- [Vim Plugin Installation](#installation)
+- [Methods](#public-methods)
+  - [API](#api)
+- [Todo](#todo)
+- [FAQ / Troubleshooting](#faq--troubleshooting)
+- [Contributing](#contributing)
+- [Rationale](#rationale)
+- [Inspiration and special thanks](#inspiration-and-special-thanks)
+- [License](#license)
 
 
 <a name="quick-setup"></a>
 ## Quick Setup (TL;DR)
 
-1. Download and install a patched **[nerd-font](https://github.com/ryanoasis/nerd-fonts)** (or patch your own) _[(» More details... «)](https://github.com/ryanoasis/nerd-fonts)_
+1. Download and install a patched **[Nerd Fonts]** (or patch your own) _[(» More details... «)][Nerd Fonts]_
 
 2. Install the plugin per your usual method _[(» More details... «)](#installation)_
 
@@ -109,7 +119,7 @@ The _ONLY_ other configuration needed should be setting the font vim uses to a
   patched font.
 
 Already patched fonts and the font patcher script are provided at:
-[nerd-fonts]
+[Nerd Fonts]
 
 It works without configuration *ONLY* when used with a patched font provided in
 the separate repository above. Install the font and add it to your `vimrc` or
@@ -246,33 +256,33 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/osx-sample.png)
 *Thanks [@RageZBla](https://github.com/RageZBla)*
 
-## Features
-* show developer file type glyphs from a font in various vim plugins, currently supports:
+## Detailed Features
+* Adds filetype glyphs (icons) to various vim plugins, currently supports:
   * [NERDTree][]
   * [vim-airline][] (statusline and tabline)
-  * [lightline.vim][] (statusline)
-    * see: [lightline setup](#lightline-setup)
+  * [CtrlP][ctrlpvim-CtrlP]
   * [powerline][] (statusline)
     * see: [powerline setup](#powerline-setup)
-* Adds a global config map of characters to file extensions (or entire filenames)
-* customizable and extendable filetype detections
-  * ability to override predefined dictionary variable
-  * if you are unhappy with the default glyph used you can choose your own
-* supports a range of file type extensions by default:
+  * [unite]
+  * [lightline.vim][] (statusline)
+    * see: [lightline setup](#lightline-setup)
+  * [vim-startify]
+  * [vimfiler]
+  * [flagship]
+* Customizable and extendable glyphs (icons) settings
+  * ability to override defaults and use your own characters or glyphs
+* Supports a wide range of file type extensions by default:
   * ```styl, scss, htm, html, slim, ejs, css, less, md, json, js, jsx, rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, bat, jpg, jpeg, bmp, png, gif, twig, cpp, c++, cxx, cc, cp, c, hs, lhs, lua, java, sh, fish, diff, db, clj, cljs, edn, scala, go, dart, xul, sln, suo, pl, pm, t, rss, f#, fsscript, fsx, fs, fsi, rs, rlib, d, erl, hrl, vim, ai, psd, psb, ts, jl```
-* supports full filename matches, by default:
+* Supports a few full filename matches, by default:
   * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls, dropbox, .ds_store, .gitconfig, .gitignore, .bashrc, .bashprofile, favicon.ico, license, node_modules, react.jsx, procfile```
-* supports library pattern matches, by default:
+* Supports a few library pattern matches, by default:
   * ```jquery, angular, backbone, requirejs, materialize, mootools```
-* font patcher ([nerd-fonts])
-  * requires: python2, python-fontforge package
-  * example usage
-	> ./font-patcher unpatched-sample-fonts/Droid\ Sans\ Mono\ for\ Powerline.otf
+* Works with patched fonts, especially [Nerd Fonts]
 
 ## Extra Configuration
 
 * by default you should not *NEED* to configure anything to get the basics working
-  * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own ([nerd-fonts]) _unless_ you want to configure the filetype to glyph mappings yourself for your current font
+  * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own ([Nerd Fonts]) _unless_ you want to configure the filetype to glyph mappings yourself for your current font
 * these options can be defined in your `vimrc` or `gvimrc`
 * the following options are provided however for overriding
 
@@ -527,7 +537,7 @@ WebDevIconsGetFileFormatSymbol()
 ## FAQ / Troubleshooting
 
 * It isn't working
-  * Are you using the patched font provided in the separate repo ([nerd-fonts]) or are you patching your own?
+  * Are you using the patched font provided in the separate repo ([Nerd Fonts]) or are you patching your own?
   * _NOTE:_ if running vim and no font set it will default to the terminal font that is set
   * check what the vim/gvim font is set to, from ex mode:
 
@@ -688,7 +698,7 @@ See [LICENSE](LICENSE)
 Link References
 -->
 
-[nerd-fonts]:https://github.com/ryanoasis/nerd-fonts
+[Nerd Fonts]:https://github.com/ryanoasis/nerd-fonts
 [patched-fonts]:https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
 [NERDTree]:https://github.com/scrooloose/nerdtree
 [vim-airline]:https://github.com/bling/vim-airline
