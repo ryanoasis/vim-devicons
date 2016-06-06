@@ -53,7 +53,9 @@ if !exists('g:webdevicons_enable_airline_statusline')
 endif
 
 if !exists('g:webdevicons_enable_airline_statusline_fileformat_symbols')
-  let g:webdevicons_enable_airline_statusline_fileformat_symbols = 1
+  " 2 means to only replace the default ffenc() part.
+  " If the user has customized that away, do not substitute/add the icon.
+  let g:webdevicons_enable_airline_statusline_fileformat_symbols = 2
 endif
 
 if !exists('g:webdevicons_enable_flagship_statusline')
