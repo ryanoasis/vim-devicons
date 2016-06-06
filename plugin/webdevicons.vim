@@ -624,29 +624,24 @@ function! WebDevIconsGetFileFormatSymbol(...)
 endfunction
 
 " for airline plugin {{{3
+" For its statusline plugin see autoload/airline/extensions/webdevicons.vim.
 "========================================================================
 
-" scope: public
-function! AirlineWebDevIcons(...)
-  let w:airline_section_x = get(w:, 'airline_section_x', g:airline_section_x)
-  let w:airline_section_x .= ' %{WebDevIconsGetFileTypeSymbol()} '
-  if g:webdevicons_enable_airline_statusline_fileformat_symbols
-    let w:airline_section_y = ' %{&fenc . " " . WebDevIconsGetFileFormatSymbol()} '
-  endif
-endfunction
-
-if g:webdevicons_enable == 1 && exists('g:loaded_airline') && g:loaded_airline == 1 && g:webdevicons_enable_airline_statusline
-  call airline#add_statusline_func('AirlineWebDevIcons')
-endif
-
 if g:webdevicons_enable == 1 && g:webdevicons_enable_airline_tabline
-  " Store original formatter.
-  if exists('g:airline#extensions#tabline#formatter')
-    let g:_webdevicons_airline_orig_formatter = g:airline#extensions#tabline#formatter
-  else
-    let g:_webdevicons_airline_orig_formatter = 'default'
-  endif
-  let g:airline#extensions#tabline#formatter = 'webdevicons'
+  function! s:AirlineAfterInit()
+    " Store original formatter.
+    if exists('g:airline#extensions#tabline#formatter')
+      let g:_webdevicons_airline_orig_formatter = g:airline#extensions#tabline#formatter
+    else
+      let g:_webdevicons_airline_orig_formatter = 'default'
+    endif
+    let g:airline#extensions#tabline#formatter = 'webdevicons'
+  endfunction
+
+  augroup webdevicons_init
+    au!
+    autocmd User AirlineAfterInit call s:AirlineAfterInit()
+  augroup END
 endif
 
 " for nerdtree plugin {{{3
