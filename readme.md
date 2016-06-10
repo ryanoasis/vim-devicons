@@ -711,6 +711,8 @@ echo WebDevIconsGetFileFormatSymbol()
 
 > How did you get color matching on just the glyph/icon in nerdtree ?
 
+  * You can add something like this to your `vimrc`
+
 	```vim
 	" NERDTress File highlighting only the glyph/icon
 	" test highlight just the glyph (icons) in nerdtree:
