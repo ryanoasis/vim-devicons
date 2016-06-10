@@ -14,6 +14,7 @@
 
 Features
 --------
+
 * Adds filetype glyphs (icons) to various vim plugins, currently supports:
   * [NERDTree], [vim-airline], [CtrlP][ctrlpvim-CtrlP], [powerline], [unite], [lightline.vim],
     [vim-startify], [vimfiler], [flagship]
@@ -24,13 +25,15 @@ Features
 * Supports library pattern matches _[(» More details... «)](#detailed-features)_
 * Works with patched fonts, especially [Nerd Fonts]
 
-## Quick Links
+Quick Links
+-----------
 
 | **[Screenshots](#screenshots)**| **[API](#api)** | **[Fonts ➶][patched-fonts]** | **[Patcher ➶][Nerd Fonts]** |
 |--------------------------------|-----------------|------------------------------|-----------------------------|
 | [![screenshots][img-visual-toc-screenshots]](#screenshots) | [![api][img-visual-toc-api]](#api) | [![patcher-logo-small][img-visual-toc-patched-fonts]][patched-fonts] | [![patcher-logo-small][img-visual-toc-fonts-patcher]][Nerd Fonts] |
 
-## Table of Contents
+Table of Contents
+-----------------
 
 - [Quick Setup (TL;DR)](#quick-setup)
 - [Installation](#installation)
@@ -53,7 +56,8 @@ Features
 
 
 <a name="quick-setup"></a>
-## Quick Setup (TL;DR)
+Quick Setup (TL;DR)
+-------------------
 
 1. Download and install a patched **[Nerd Fonts]** (or patch your own) _[(» More details... «)][Nerd Fonts]_
 
@@ -63,7 +67,8 @@ Features
   * a. **vim**: Set your terminal emulator font
   * b. **gvim**: Set `guifont` in your `vimrc`
 
-## Installation
+Installation
+------------
 
 This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
 
@@ -151,7 +156,8 @@ set guifont=<FONT_NAME>:h<FONT_SIZE>
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 ```
 
-## Usage
+Usage
+-----
 
 After installing the patched font and setting the vim font just open or look at any of the supported plugins you have installed ([NERDTree][nerdtree], [airline][vim-airline], [powerline], [unite], [lightline.vim], [vimfiler], or [flagship]).
 
@@ -162,7 +168,8 @@ After installing the patched font and setting the vim font just open or look at 
 * _NOTE:_ for better [nerdtree-git-plugin] support, you _should_ configure vim to load nerdtree-git-plugin **_before_** vim-devicons loads.
 
 
-## Screenshots
+Screenshots
+-----------
 
 ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/vim.png)
 
@@ -264,7 +271,9 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/osx-sample.png)
 *Thanks [@RageZBla](https://github.com/RageZBla)*
 
-## Detailed Features
+Detailed Features
+-----------------
+
 * Adds filetype glyphs (icons) to various vim plugins, currently supports:
   * [NERDTree][]
   * [vim-airline][] (statusline and tabline)
@@ -287,7 +296,8 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
   * ```jquery, angular, backbone, requirejs, materialize, mootools```
 * Works with patched fonts, especially [Nerd Fonts]
 
-## Extra Configuration
+Extra Configuration
+-------------------
 
 * These options can be defined in your `vimrc` or `gvimrc`
 * You *should* **not** need to configure anything, however, the following options are provided for customizing or changing the defaults:
@@ -501,7 +511,8 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'ƛ'
 let g:WebDevIconsOS = 'Darwin'
   ```
 
-## Lightline Setup
+Lightline Setup
+---------------
 
 To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` and/or `WebDevIconsGetFileFormatSymbol()` in your `.vimrc`. For example, you could set your sections to:
 
@@ -522,7 +533,8 @@ function! MyFileformat()
 endfunction
 ```
 
-## Powerline Setup
+Powerline Setup
+---------------
 
 * _Note this is for the current [Powerline][powerline] not the [deprecated vim-powerline](https://github.com/Lokaltog/vim-powerline)_
 
@@ -564,7 +576,8 @@ file format segment
 
 for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/powerline/themes/vim/default.json)
 
-## Public Methods
+Public Methods
+--------------
 
 ```vim
 " Returns the current version of the plugin
@@ -621,14 +634,16 @@ source: [vim-startify]
 echo WebDevIconsGetFileFormatSymbol()
 ```
 
-## Todo
+Todo
+----
 
 * [ ] more filetypes to support
 * [ ] customize filetype icon colors
 * [ ] more customization options in general
 * [ ] more specific FAQ and Troubleshooting help
 
-## FAQ / Troubleshooting
+FAQ / Troubleshooting
+---------------------
 
 > Why isn't it working? How come I don't see any icons ?
 
@@ -759,7 +774,8 @@ echo WebDevIconsGetFileFormatSymbol()
   for more info see: https://github.com/ryanoasis/vim-devicons/issues/153
 
 
-## Contributing
+Contributing
+------------
 
 Best ways to contribute
 * Star it on GitHub - if you use it and like it please at least star it :)
@@ -784,11 +800,13 @@ Contributions and Pull Requests are welcome.
 No real formal process has been setup - just stick to general good conventions
 for now.
 
-## Rationale
+Rationale
+---------
 
 After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work done for NERDTree and vim-airline and wanting something like this for Vim I decided to create my first plugin.
 
-## Inspiration and special thanks
+Inspiration and special thanks
+------------------------------
 
 * [vim-airline]
 * [nerdtree]
@@ -799,7 +817,8 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 * [Steve Losh](http://learnvimscriptthehardway.stevelosh.com/)
 * Also thanks to the many [contributors](https://github.com/ryanoasis/vim-devicons/graphs/contributors)
 
-## License
+License
+-------
 
 See [LICENSE](LICENSE)
 
