@@ -736,7 +736,7 @@ echo WebDevIconsGetFileFormatSymbol()
 
 	```vim
 	if exists("g:loaded_webdevicons")
-		call webdevicons#refresh()
+	  call webdevicons#refresh()
 	endif
 	```
 
@@ -776,7 +776,7 @@ Like the project? Please support to ensure continued development going forward:
 
 ### Source code
 
-Contributions and pull requests are welcome.
+Contributions and Pull Requests are welcome.
 
 No real formal process has been setup - just stick to general good conventions
 for now.
