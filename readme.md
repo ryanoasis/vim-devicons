@@ -199,7 +199,7 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ### [unite][unite]
 
-* Currently only supports `file`, `file_rec`, and `buffer`
+* Currently supports `file`, `file_rec`, `buffer`, `file_rec/async`, and `file_rec/neovim`
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/unite.png)
 
