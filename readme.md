@@ -536,7 +536,8 @@ WebDevIconsGetFileFormatSymbol()
 
 ## FAQ / Troubleshooting
 
-* It isn't working
+> Why isn't it working? How come I don't see any icons ?
+
   * Are you using the patched font provided in the separate repo ([Nerd Fonts]) or are you patching your own?
   * _NOTE:_ if running vim and no font set it will default to the terminal font that is set
   * check what the vim/gvim font is set to, from ex mode:
@@ -577,7 +578,10 @@ WebDevIconsGetFileFormatSymbol()
     :let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol='x'
     ```
 
-* How did you get color matching based on file type in nerdtree?
+---
+
+> How did you get color matching based on file type in nerdtree ?
+
   * my current settings are from: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
 
 	```vim
@@ -612,7 +616,10 @@ WebDevIconsGetFileFormatSymbol()
 	```
 	per: https://github.com/ryanoasis/vim-devicons/issues/49#issuecomment-101753558
 
-* How did you get color matching on just the glyph/icon in nerdtree?
+---
+
+> How did you get color matching on just the glyph/icon in nerdtree ?
+
 	```vim
 	" NERDTress File highlighting only the glyph/icon
 	" test highlight just the glyph (icons) in nerdtree:
@@ -628,7 +635,10 @@ WebDevIconsGetFileFormatSymbol()
 	autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 	```
 
-* Issues after re-sourcing `vimrc`
+---
+
+> How do I solve issues after re-sourcing my `vimrc` ?
+
   * Try adding this to the bottom of your `vimrc`
 
 	```vim
@@ -637,7 +647,10 @@ WebDevIconsGetFileFormatSymbol()
 	endif
 	```
 
-* Artifacts after or instead of glyphs
+---
+
+> Why do I have artifacts after (or instead) of icons ?
+
   * Dots after icons in NERDTree (on GVim), try:
   ```vim
   autocmd FileType nerdtree setlocal nolist
