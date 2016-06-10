@@ -64,7 +64,7 @@
 
 This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
 
-### Step 1
+### Step 1: `Vim Plugin`
 
 #### [Pathogen](https://github.com/tpope/vim-pathogen)
   *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
@@ -99,9 +99,9 @@ This plugin follows the standard runtime path structure, and as such it can be i
   *  copy all of the files into your `~/.vim` directory
 
 <a name="install-step2"></a>
-### Step 2
+### Step 2: `Configuration`
 
-Add the following to your .vimrc or .gvimrc:
+Add the following to your `.vimrc` or `.gvimrc`:
 
 ##### Encoding **must** be set to UTF-8 for the glyphs to show
   ```vim
@@ -115,8 +115,13 @@ Add the following to your .vimrc or .gvimrc:
 * [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/.vimrc-windows-1)
 * [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/.vimrc-linux-1)
 
+<a name="install-step3"></a>
+### Step 3: `Fonts`
+
 The _ONLY_ other configuration needed should be setting the font vim uses to a
-  patched font.
+  patched font such as [Nerd Fonts].
+  * _NOTE:_ You need to use a patched font or patch your own *unless* you want 
+    to configure the filetype to glyph mappings yourself for your current font
 
 Already patched fonts and the font patcher script are provided at:
 [Nerd Fonts]
@@ -182,7 +187,7 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/ctrlp.png)
 
-| Deprecation warning |
+| Deprecation Warning |
 -----------------------
 | Support for the [Original Kien CtrlP Repo][CtrlP] has been dropped since [v0.7.0](https://github.com/ryanoasis/vim-devicons/milestones/v0.7.0) and only the [active CtrlP fork][ctrlpvim-CtrlP] is supported |
 
@@ -281,10 +286,8 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ## Extra Configuration
 
-* by default you should not *NEED* to configure anything to get the basics working
-  * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own ([Nerd Fonts]) _unless_ you want to configure the filetype to glyph mappings yourself for your current font
-* these options can be defined in your `vimrc` or `gvimrc`
-* the following options are provided however for overriding
+* These options can be defined in your `vimrc` or `gvimrc`
+* You *should* **not** need to configure anything, however, the following options are provided for customizing or changing the defaults:
 
 ---
 
