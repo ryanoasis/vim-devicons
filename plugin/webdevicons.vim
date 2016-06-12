@@ -4,6 +4,8 @@
 " License: see LICENSE
 
 let s:version = '0.8.3'
+let s:plugin_home = expand('<sfile>:p:h:h')
+
 " set scriptencoding after 'encoding' and when using multibyte chars
 scriptencoding utf-8
 
@@ -474,6 +476,9 @@ endfunction
 " Support for kien/ctrlp.vim deprecated since v0.7.0
 " @TODO implementation for CtrlP buffer and find file mode
 function! s:initializeCtrlP()
+  let l:ctrlp_warning_message = 'vim-devicons: https://github.com/kien/ctrlp.vim is deprecated since v0.7.0, please use https://github.com/ctrlpvim/ctrlp.vim'
+  let l:ctrlp_warned_file = s:plugin_home . '/status_warned_ctrlp'
+
   if exists('g:loaded_ctrlp') && g:webdevicons_enable_ctrlp
     let s:glyphASCIIRangeStart = 57344
     let s:glyphASCIIRangeEnd = 63743
@@ -484,10 +489,15 @@ function! s:initializeCtrlP()
     if exists('g:ctrlp_mruf_map_string')
       " logic for ctrlpvim/ctrlp.vim:
       let g:ctrlp_mruf_map_string = '!stridx(v:val, cwd) ? WebDevIconsGetFileTypeSymbol(strpart(v:val, strridx(v:val, "/"))) . " " . strpart(v:val, idx) : g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol . " " . v:val'
-    else
+    elseif empty(glob(l:ctrlp_warned_file))
       " logic for kien/ctrlp.vim:
       echohl WarningMsg |
-        \ echomsg 'vim-devicons: https://github.com/kien/ctrlp.vim is deprecated since v0.7.0, please use https://github.com/ctrlpvim/ctrlp.vim'
+        \ echomsg l:ctrlp_warning_message
+      " only warn first time, do not warn again:
+      try
+        execute writefile(['File automatically generated after warning about CtrlP once', l:ctrlp_warning_message], l:ctrlp_warned_file)
+      catch
+      endtry
     endif
   endif
 endfunction
