@@ -69,7 +69,7 @@
 <a name="installation"></a>
 ## Installation
 
-This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
+Choose your favorite pugin manager or install manually
 
 ### Step 1
 
