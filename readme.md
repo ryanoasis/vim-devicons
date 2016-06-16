@@ -18,7 +18,6 @@
 
 ## Table of Contents
 
-- [vim-devicons v0.8.3](#)
 	- [Quick Setup (TL;DR)](#quick-setup)
     - [Installation](#installation)
 	- [Usage](#usage)
