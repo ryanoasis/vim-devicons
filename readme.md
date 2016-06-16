@@ -559,11 +559,11 @@ WebDevIconsGetFileFormatSymbol()
 
 ## FAQ / Troubleshooting
 
-* I don't want to use any of the fonts provided, I want to use font ABC
+**I don't want to use any of the fonts provided, I want to use font ABC**
  * try the font patcher: [nerd-fonts]
  * see font configuration above for more details
 
-* It isn't working
+**It isn't working**
   * Are you using the patched font provided in the separate repo ([nerd-fonts]) or are you patching your own?
   * _NOTE:_ if running vim and no font set it will default to the terminal font that is set
   * check what the vim/gvim font is set to, from ex mode:
@@ -604,7 +604,8 @@ WebDevIconsGetFileFormatSymbol()
     :let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol='x'
     ```
 
-* How did you get color matching based on file type in nerdtree?
+**How did you get color matching based on file type in nerdtree?**
+
   * my current settings are from: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
 
 	```vim
@@ -639,23 +640,25 @@ WebDevIconsGetFileFormatSymbol()
 	```
 	per: https://github.com/ryanoasis/vim-devicons/issues/49#issuecomment-101753558
 
-* How did you get color matching on just the glyph/icon in nerdtree?
-	```vim
-	" NERDTress File highlighting only the glyph/icon
-	" test highlight just the glyph (icons) in nerdtree:
-	autocmd filetype nerdtree highlight haskell_icon ctermbg=none ctermfg=Red guifg=#ffa500
-	autocmd filetype nerdtree highlight html_icon ctermbg=none ctermfg=Red guifg=#ffa500
-	autocmd filetype nerdtree highlight go_icon ctermbg=none ctermfg=Red guifg=#ffa500
+**How did you get color matching on just the glyph/icon in nerdtree?**
 
-	autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
-	" if you are using another syn highlight for a given line (e.g.
-	" NERDTreeHighlightFile) need to give that name in the 'containedin' for this
-	" other highlight to work with it
-	autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
-	autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
-	```
+```vim
+" NERDTress File highlighting only the glyph/icon
+" test highlight just the glyph (icons) in nerdtree:
+autocmd filetype nerdtree highlight haskell_icon ctermbg=none ctermfg=Red guifg=#ffa500
+autocmd filetype nerdtree highlight html_icon ctermbg=none ctermfg=Red guifg=#ffa500
+autocmd filetype nerdtree highlight go_icon ctermbg=none ctermfg=Red guifg=#ffa500
 
-* Issues after re-sourcing `vimrc`
+autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
+" if you are using another syn highlight for a given line (e.g.
+" NERDTreeHighlightFile) need to give that name in the 'containedin' for this
+" other highlight to work with it
+autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
+autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
+```
+
+**Issues after re-sourcing `vimrc`**
+
   * Try adding this to the bottom of your `vimrc`
 
 	```vim
@@ -664,14 +667,16 @@ WebDevIconsGetFileFormatSymbol()
 	endif
 	```
 
-* Artifacts after or instead of glyphs
+**Artifacts after or instead of glyphs**
+
   * Dots after icons in NERDTree (on GVim), try:
   ```vim
   autocmd FileType nerdtree setlocal nolist
   ```
   per: https://github.com/ryanoasis/vim-devicons/issues/110#issue-103801335
 
-* Newly created files in NERDTree are slow to show the glyph (icon)
+**Newly created files in NERDTree are slow to show the glyph (icon)**
+
   * check your current setting of `:updatetime?`
   * try setting `updatetime` in your `vimrc` to a lower value like `250`,
   for more info see: https://github.com/ryanoasis/vim-devicons/issues/153
