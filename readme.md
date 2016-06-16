@@ -1,3 +1,5 @@
+# VimDevicons – Add Icons to Your Plugins
+
 <h1 align="center">
 	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/branding-logo.png" alt="vim-devicons">
 </h1>
@@ -6,12 +8,10 @@
 	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
 </h1>
 
-[![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
-
-# VimDevicons – Add Icons to Your Plugins
-
 [NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim]
 | [vim-startify] | [vimfiler] | [flagship]
+
+[![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
 
 ## Quick Links
 
@@ -271,24 +271,33 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/glyph-set-test.png)
 
 ## Features
-* show developer file type glyphs from a font in various vim plugins, currently supports:
-  * [NERDTree]
-  * [vim-airline][vim-airline] (statusline and tabline)
-  * [lightline.vim][lightline.vim] (statusline)
-    * see: [lightline setup](#lightline-setup)
-  * [Powerline][powerline] (statusline)
-    * see: [powerline setup](#powerline-setup)
-* Adds a global config map of characters to file extensions (or entire filenames)
-* customizable and extendable filetype detections
+
+**Show developer file type glyphs from a font in various vim plugins, currently
+supports:**
+* [NERDTree]
+* [vim-airline][vim-airline] (statusline and tabline)
+* [lightline.vim][lightline.vim] (statusline)
+    - see: [lightline setup](#lightline-setup)
+* [Powerline][powerline] (statusline)
+    - see: [powerline setup](#powerline-setup)
+
+**Adds a global config map of characters to file extensions (or entire
+filenames)**
+
+**Customizable and extendable filetype detections**
   * ability to override predefined dictionary variable
   * if you are unhappy with the default glyph used you can choose your own
-* supports a range of file type extensions by default:
+
+**Supports a range of file type extensions by default:**
   * ```styl, scss, htm, html, slim, ejs, css, less, md, json, js, jsx, rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, bat, jpg, jpeg, bmp, png, gif, twig, cpp, c++, cxx, cc, cp, c, hs, lhs, lua, java, sh, fish, diff, db, clj, cljs, edn, scala, go, dart, xul, sln, suo, pl, pm, t, rss, f#, fsscript, fsx, fs, fsi, rs, rlib, d, erl, hrl, vim, ai, psd, psb, ts, jl```
-* supports full filename matches, by default:
+
+**Supports full filename matches, by default:**
   * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls, dropbox, .ds_store, .gitconfig, .gitignore, .bashrc, .bashprofile, favicon.ico, license, node_modules, react.jsx, procfile```
-* supports library pattern matches, by default:
+
+**Supports library pattern matches, by default:**
   * ```jquery, angular, backbone, requirejs, materialize, mootools```
-* font patcher ([nerd-fonts])
+
+**Font patcher ([nerd-fonts])**
   * requires: python2, python-fontforge package
   * example usage
 	> ./font-patcher unpatched-sample-fonts/Droid\ Sans\ Mono\ for\ Powerline.otf
