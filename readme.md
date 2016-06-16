@@ -2,13 +2,16 @@
 	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/branding-logo.png" alt="vim-devicons">
 </h1>
 
-[![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
-
-**Vim-Devicons** adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
-
 <h1 align="center">
 	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
 </h1>
+
+[![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
+
+# VimDevicons – Add Icons to Your Plugins
+
+[NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim]
+| [vim-startify] | [vimfiler] | [flagship]
 
 ## Quick Links
 
@@ -18,24 +21,41 @@
 
 ## Table of Contents
 
-	- [Quick Setup (TL;DR)](#quick-setup)
-    - [Installation](#installation)
-	- [Usage](#usage)
-	- [Screenshots](#screenshots)
-	- [Features](#features)
-	- [Extra Configuration](#extra-configuration)
-	  - [Character Mappings](#character-mappings)
-	- [Lightline Setup](#lightline-setup)
-	- [Powerline Setup](#powerline-setup)
-	- [Vim Plugin Installation](#installation)
-	- [Methods](#public-methods)
-	  - [API](#api)
-	- [Todo](#todo)
-	- [FAQ / Troubleshooting](#faq--troubleshooting)
-	- [Contributing](#contributing)
-	- [Rationale](#rationale)
-	- [Inspiration and special thanks](#inspiration-and-special-thanks)
-	- [License](#license)
+[Quick Setup (TL;DR)](#quick-setup)
+
+[Installation](#installation)
+
+[Usage](#usage)
+
+[Screenshots](#screenshots)
+
+[Features](#features)
+
+[Extra Configuration](#extra-configuration)
+
+[Character Mappings](#character-mappings)
+
+[Lightline Setup](#lightline-setup)
+
+[Powerline Setup](#powerline-setup)
+
+[Vim Plugin Installation](#installation)
+
+[Methods](#public-methods)
+
+[API](#api)
+
+[Todo](#todo)
+
+[FAQ / Troubleshooting](#faq--troubleshooting)
+
+[Contributing](#contributing)
+
+[Rationale](#rationale)
+
+[Inspiration and special thanks](#inspiration-and-special-thanks)
+
+[License](#license)
 
 
 <a name="quick-setup"></a>
