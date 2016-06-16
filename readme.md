@@ -8,9 +8,6 @@
 	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
 </h1>
 
-[NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim]
-| [vim-startify] | [vimfiler] | [flagship]
-
 [![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
 
 ## Quick Links
@@ -155,13 +152,14 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
 ## Usage
 
-After installing the patched font and setting the vim font just open or look at any of the supported plugins you have installed ([NERDTree][nerdtree], [airline][vim-airline], [powerline], [unite], [lightline.vim], [vimfiler], or [flagship]).
+**VimDevicons integrates with these pugins and more:**
 
-* _NOTE:_ if you don't have `guifont` set and are not running gvim you will need to set the terminal font.
+[NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
 
-* _NOTE:_ for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
+For support of these plugins you **must** configure vim to load these plugins
+**_before_** vim-devicons loads. 
 
-* _NOTE:_ for better [nerdtree-git-plugin] support, you _should_ configure vim to load nerdtree-git-plugin **_before_** vim-devicons loads.
+If you don't have `guifont` set and are not running gvim you will need to set the terminal font.
 
 ## Extra Configuration
 
