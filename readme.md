@@ -144,7 +144,7 @@ the separate repository above. Install the font and add it to your `vimrc` or
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 ```
 
-**OS X and Windows**
+**macOS and Windows**
 ```vim
 set guifont=<FONT_NAME>:h<FONT_SIZE>
 ```
