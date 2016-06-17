@@ -729,6 +729,7 @@ See [LICENSE](LICENSE)
 Link References
 -->
 
+[font-installation]:https://github.com/ryanoasis/nerd-fonts#font-installation
 [nerd-fonts]:https://github.com/ryanoasis/nerd-fonts
 [patched-fonts]:https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
 [NERDTree]:https://github.com/scrooloose/nerdtree
