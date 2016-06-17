@@ -328,15 +328,13 @@ fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/
 
 ### [CtrlP][CtrlP]
 
-* Only supports the [CtrlP active fork][ctrlpvim-CtrlP]
+* **Deprecation warning** the [Original Kien CtrlP Repo][CtrlP] has been dropped
+since [v0.7.0](https://github.com/ryanoasis/vim-devicons/milestones/v0.7.0)
+ – Only the [CtrlP active fork][ctrlpvim-CtrlP] is supported
+
 * Currently only MRU file mode supported
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/ctrlp.png)
-
-| Deprecation warning |
------------------------
-| Support for the [Original Kien CtrlP Repo][CtrlP] has been dropped since [v0.7.0](https://github.com/ryanoasis/vim-devicons/milestones/v0.7.0) and only the [active CtrlP fork][ctrlpvim-CtrlP] is supported |
-
 
 ### [powerline][powerline]
 
