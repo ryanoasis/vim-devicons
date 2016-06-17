@@ -283,18 +283,19 @@ let g:DevIconsDefaultFolderOpenSymbol = 'ƛ'
 " change the default dictionary mappings for file extension matches
 
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
-
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'ƛ'
 ```
 
 ```vim
 " change the default dictionary mappings for exact file node matches
+
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['MyReallyCoolFile.okay'] = 'ƛ'
 ```
 
 ```vim
 " add or override individual additional filetypes
+
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'ƛ'
 ```
