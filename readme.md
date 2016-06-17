@@ -69,9 +69,14 @@
 <a name="installation"></a>
 ## Installation
 
-Choose your favorite pugin manager or install manually
-
 ### Step 1
+
+Get a [**Nerd Font!**][font-installation] If you've already got one, move
+on to Step 2
+
+### Step 2
+
+Choose your favorite pugin manager or install manually
 
 #### [Pathogen](https://github.com/tpope/vim-pathogen)
   *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
@@ -106,7 +111,7 @@ Choose your favorite pugin manager or install manually
   *  copy all of the files into your `~/.vim` directory
 
 <a name="install-step2"></a>
-### Step 2
+### Step 3
 
 Add the following to your .vimrc or .gvimrc:
 
@@ -149,6 +154,12 @@ set guifont=<FONT_NAME>:h<FONT_SIZE>
 ```vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 ```
+<br />
+
+## That's it! You're done. ✅
+
+<br />
+<br />
 
 ## Usage
 
