@@ -168,69 +168,70 @@ If you don't have `guifont` set and are not running gvim you will need to set th
 * these options can be defined in your `vimrc` or `gvimrc`
 * the following options are provided however for overriding
 
-* enable/disable loading the plugin (default 1)
- ```vim
+ 
+```vim
+" enable/disable loading the plugin (default 1)
 let g:webdevicons_enable = 1
- ```
-
-* enable/disable adding the flags to NERDTree (default 1)
- ```vim
- let g:webdevicons_enable_nerdtree = 1
-  ```
-
-* enable/disable adding the custom source to unite (default 1)
- ```vim
- let g:webdevicons_enable_unite = 1
-  ```
-
-* enable/disable adding the column to vimfiler (default 1)
- ```vim
- let g:webdevicons_enable_vimfiler = 1
-  ```
-
-* enable/disable adding to vim-airline's tabline (default 1)
- ```vim
+```
+ 
+```vim
+" enable/disable adding the flags to NERDTree (default 1)
+let g:webdevicons_enable_nerdtree = 1
+```
+ 
+```vim
+" enable/disable adding the custom source to unite (default 1)
+let g:webdevicons_enable_unite = 1
+```
+ 
+```vim
+" enable/disable adding the column to vimfiler (default 1)
+let g:webdevicons_enable_vimfiler = 1
+```
+ 
+```vim
+" enable/disable adding to vim-airline's tabline (default 1)
 let g:webdevicons_enable_airline_tabline = 1
-  ```
-
-* enable/disable adding to vim-airline's statusline (default 1)
- ```vim
+```
+ 
+```vim
+" enable/disable adding to vim-airline's statusline (default 1)
 let g:webdevicons_enable_airline_statusline = 1
-  ```
-
-* enable/disable ctrlp MRU file mode glyphs (default 1)
- ```vim
- let g:webdevicons_enable_ctrlp = 1
-  ```
-
-* enable/disable adding to flagship's statusline (default 1)
- ```vim
+```
+ 
+```vim
+" enable/disable ctrlp MRU file mode glyphs (default 1)
+let g:webdevicons_enable_ctrlp = 1
+```
+ 
+```vim
+" enable/disable adding to flagship's statusline (default 1)
 let g:webdevicons_enable_flagship_statusline = 1
-  ```
-
-* turn on/off file node glyph decorations (not particularly useful)
- ```vim
+```
+ 
+```vim
+" turn on/off file node glyph decorations (not particularly useful)
 let g:WebDevIconsUnicodeDecorateFileNodes = 1
-  ```
+```
 
 * whether or not font is using double-width glyphs (default 1, set to 0 for single character width glyphs)
 	* _note:_ does not actually switch the font or try to use the correct font, just adds a space to account for a double width glyph, you have to set the correct double width glyph font in your terminal or `guifont`
- ```vim
-let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
-  ```
-
-* whether or not to show the nerdtree brackets around flags (default 1)
 ```vim
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+```
+ 
+```vim
+" whether or not to show the nerdtree brackets around flags (default 1)
 let g:webdevicons_conceal_nerdtree_brackets = 1
 ```
-
-* the amount of space to use after the glyph character (default ' ')
+ 
 ```vim
+" the amount of space to use after the glyph character (default ' ')
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 ```
 
-* Force extra padding in NERDTree so that the filetype icons line up vertically (when [nerdtree-git-plugin] is present) (default 1)
 ```vim
+" Force extra padding in NERDTree so that the filetype icons line up vertically (when [nerdtree-git-plugin] is present) (default 1)
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 ```
 
