@@ -10,6 +10,10 @@
 
 [![GitHub version][img-version-badge]][badge-version] [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter] [![Flattr this git repo][img-flattr-badge]][badge-flattr]
 
+## Rationale
+
+After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work done for NERDTree and vim-airline and wanting something like this for Vim I decided to create my first plugin.
+
 ## Quick Links
 
 | **[Screenshots](#screenshots)**| **[API](#api)** | **[Fonts ➶][patched-fonts]** | **[Patcher ➶][nerd-fonts]** |
@@ -22,6 +26,8 @@
 
 [Usage](#usage)
 
+* [Lightline & Powerline Setup](#lightline-setup)
+
 * [Extra Configuration](#extra-configuration)
 
 * [Character Mappings](#character-mappings)
@@ -29,10 +35,6 @@
 [Screenshots](#screenshots)
 
 [Features](#features)
-
-[Lightline Setup](#lightline-setup)
-
-[Powerline Setup](#powerline-setup)
 
 [Methods](#public-methods)
 
@@ -47,8 +49,6 @@
 * [Inspiration and special thanks](#inspiration-and-special-thanks)
 
 * [License](#license)
-
-[Rationale](#rationale)
 
 [FAQ / Troubleshooting](#faq--troubleshooting)
 
@@ -709,10 +709,6 @@ Contributions and pull requests are welcome.
 
 No real formal process has been setup - just stick to general good conventions
 for now.
-
-## Rationale
-
-After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work done for NERDTree and vim-airline and wanting something like this for Vim I decided to create my first plugin.
 
 ## Inspiration and special thanks
 
