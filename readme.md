@@ -167,7 +167,7 @@ For support of these plugins you **must** configure vim to load these plugins
 
 If you don't have `guifont` set and are not running gvim you will need to set the terminal font.
 
-## Extra Configuration
+### Extra Configuration
 
 * by default you should not *NEED* to configure anything to get the basics working
   * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own ([nerd-fonts]) _unless_ you want to configure the filetype to glyph mappings yourself for your current font
