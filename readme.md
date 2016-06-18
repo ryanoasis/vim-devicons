@@ -141,6 +141,9 @@ set guifont=<FONT_NAME>:h<FONT_SIZE>
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 ```
 
+**Note:** if you don't set `guifont` then you'll have to set your terminal's
+font, else things break!
+
 ##### If you use vim-airline you need this 
   ```vim
   let g:airline_powerline_fonts = 1
@@ -152,9 +155,8 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
 <br />
 
-## That's it! You're done. ✅
+### That's it! You're done. ✅
 
-<br />
 <br />
 
 ## Usage
@@ -162,57 +164,110 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 By default *you should not to configure anything* to get the basics working.
 However, these options are provided for overiding and can be defined in your `vimrc` or `gvimrc` 
 
+### Lightline Setup
 
-For support of these plugins you **must** configure vim to load these plugins
-**_before_** vim-devicons loads. 
+To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` and/or `WebDevIconsGetFileFormatSymbol()` in your `.vimrc`. For example, you could set your sections to:
 
-If you don't have `guifont` set and are not running gvim you will need to set the terminal font.
+```vim
+let g:lightline = {
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
+      \ }
+      \ }
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+```
+
+### Powerline Setup
+
+* _Note this is for the current [Powerline][powerline] not the [deprecated vim-powerline](https://github.com/Lokaltog/vim-powerline)_
+
+To enable for [Powerline][powerline] some `vimrc` and powerline configuration changes are needed:
+
+`vimrc` changes (only required if you don't already have powerline setup for vim):
+
+```vim
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+```
+
+powerline configuration changes:
+
+file type segment
+```json
+{
+	"function": "vim_devicons.powerline.segments.webdevicons",
+	"priority": 10,
+	"draw_soft_divider": false,
+	"after": "  "
+}
+```
+
+file format segment
+```json
+{
+	"function": "vim_devicons.powerline.segments.webdevicons_file_format",
+	"draw_soft_divider": false,
+	"exclude_modes": ["nc"],
+	"priority": 90
+ }
+```
+
+for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/powerline/themes/vim/default.json)
 
 ### Extra Configuration
 
-* by default you should not *NEED* to configure anything to get the basics working
-  * _NOTE:_ You *NEED* to use one of the patched font provided or patch your own ([nerd-fonts]) _unless_ you want to configure the filetype to glyph mappings yourself for your current font
-* these options can be defined in your `vimrc` or `gvimrc`
-* the following options are provided however for overriding
-
+Options are enabled **`1`** by default but can be disabled with **`0`**
  
 ```vim
-" enable/disable loading the plugin (default 1)
+" loading the plugin 
 let g:webdevicons_enable = 1
 ```
  
 ```vim
-" enable/disable adding the flags to NERDTree (default 1)
+" adding the flags to NERDTree 
 let g:webdevicons_enable_nerdtree = 1
 ```
  
 ```vim
-" enable/disable adding the custom source to unite (default 1)
+" adding the custom source to unite 
 let g:webdevicons_enable_unite = 1
 ```
  
 ```vim
-" enable/disable adding the column to vimfiler (default 1)
+" adding the column to vimfiler 
 let g:webdevicons_enable_vimfiler = 1
 ```
  
 ```vim
-" enable/disable adding to vim-airline's tabline (default 1)
+" adding to vim-airline's tabline 
 let g:webdevicons_enable_airline_tabline = 1
 ```
  
 ```vim
-" enable/disable adding to vim-airline's statusline (default 1)
+" adding to vim-airline's statusline 
 let g:webdevicons_enable_airline_statusline = 1
 ```
  
 ```vim
-" enable/disable ctrlp MRU file mode glyphs (default 1)
+" ctrlp MRU file mode glyphs 
 let g:webdevicons_enable_ctrlp = 1
 ```
  
 ```vim
-" enable/disable adding to flagship's statusline (default 1)
+" adding to flagship's statusline 
 let g:webdevicons_enable_flagship_statusline = 1
 ```
  
@@ -221,14 +276,14 @@ let g:webdevicons_enable_flagship_statusline = 1
 let g:WebDevIconsUnicodeDecorateFileNodes = 1
 ```
 
-* whether or not font is using double-width glyphs (default 1, set to 0 for single character width glyphs)
-	* _note:_ does not actually switch the font or try to use the correct font, just adds a space to account for a double width glyph, you have to set the correct double width glyph font in your terminal or `guifont`
 ```vim
+" use double-width(1) or single-width(0) glyphs 
+" only manipulates padding, has no effect on terminal or set(guifont) font
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 ```
  
 ```vim
-" whether or not to show the nerdtree brackets around flags (default 1)
+" whether or not to show the nerdtree brackets around flags 
 let g:webdevicons_conceal_nerdtree_brackets = 1
 ```
  
@@ -238,7 +293,7 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 ```
 
 ```vim
-" Force extra padding in NERDTree so that the filetype icons line up vertically (when [nerdtree-git-plugin] is present) (default 1)
+" Force extra padding in NERDTree so that the filetype icons line up vertically 
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 ```
 
@@ -348,69 +403,6 @@ filenames)**
   * requires: python2, python-fontforge package
   * example usage
 	> ./font-patcher unpatched-sample-fonts/Droid\ Sans\ Mono\ for\ Powerline.otf
-
-## Lightline Setup
-
-To add the appropriate icon to [lightline](https://github.com/itchyny/lightline.vim), call the function `WebDevIconsGetFileTypeSymbol()` and/or `WebDevIconsGetFileFormatSymbol()` in your `.vimrc`. For example, you could set your sections to:
-
-```vim
-let g:lightline = {
-      \ 'component_function': {
-      \   'filetype': 'MyFiletype',
-      \   'fileformat': 'MyFileformat',
-      \ }
-      \ }
-
-function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! MyFileformat()
-  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
-```
-
-## Powerline Setup
-
-* _Note this is for the current [Powerline][powerline] not the [deprecated vim-powerline](https://github.com/Lokaltog/vim-powerline)_
-
-To enable for [Powerline][powerline] some `vimrc` and powerline configuration changes are needed:
-
-`vimrc` changes (only required if you don't already have powerline setup for vim):
-
-```vim
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-
-" Always show statusline
-set laststatus=2
-
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
-```
-
-powerline configuration changes:
-
-file type segment
-```json
-{
-	"function": "vim_devicons.powerline.segments.webdevicons",
-	"priority": 10,
-	"draw_soft_divider": false,
-	"after": "  "
-}
-```
-
-file format segment
-```json
-{
-	"function": "vim_devicons.powerline.segments.webdevicons_file_format",
-	"draw_soft_divider": false,
-	"exclude_modes": ["nc"],
-	"priority": 90
- }
-```
-
-for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/powerline/themes/vim/default.json)
 
 ## Public Methods
 
