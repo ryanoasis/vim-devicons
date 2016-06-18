@@ -115,11 +115,11 @@ Choose your favorite pugin manager or install manually
 
 Add the following to your .vimrc or .gvimrc:
 
-##### Encoding **must** be set to UTF-8 for the glyphs to show
+##### Set encoding to UTF-8 to show glyphs
   ```vim
   set encoding=utf8
   ```
-##### For Powerline symbols to show in airline the following needs to be set
+##### If you use vim-airline you need this 
   ```vim
   let g:airline_powerline_fonts = 1
   ```
