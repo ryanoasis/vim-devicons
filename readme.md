@@ -26,8 +26,6 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 
 * [Character Mappings](#character-mappings)
 
-[Screenshots](#screenshots)
-
 [Features](#features)
 
 [Methods](#public-methods)
