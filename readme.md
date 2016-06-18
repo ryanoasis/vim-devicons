@@ -56,14 +56,14 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 <a name="installation"></a>
 # Installation
 
-### Step 1
+### Step 1 `Nerd Font`
 
 Get a [**Nerd Font!**][font-installation] If you've already got one, move
 on to Step 2
 
-### Step 2
+### Step 2 `Install Devicons`
 
-Choose your favorite pugin manager
+Choose your favorite plugin manager
 
 #### [Pathogen](https://github.com/tpope/vim-pathogen)
   *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
@@ -98,7 +98,7 @@ Choose your favorite pugin manager
   *  copy all of the files into your `~/.vim` directory
 
 <a name="install-step2"></a>
-### Step 3
+### Step 3 `Configure VIM`
 
 Add the following in your .vimrc or .gvimrc:
 
