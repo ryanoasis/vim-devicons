@@ -151,7 +151,7 @@ font, else things break!
 
 ## Usage
 
-By default *you should not to configure anything* to get the basics working.
+By default *you shouldn't need to configure anything* to get the basics working.
 However, these options are provided for overiding and can be defined in your `vimrc` or `gvimrc` 
 
 ### Lightline Setup
