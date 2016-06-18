@@ -22,13 +22,13 @@
 
 [Usage](#usage)
 
+* [Extra Configuration](#extra-configuration)
+
+* [Character Mappings](#character-mappings)
+
 [Screenshots](#screenshots)
 
 [Features](#features)
-
-[Extra Configuration](#extra-configuration)
-
-[Character Mappings](#character-mappings)
 
 [Lightline Setup](#lightline-setup)
 
@@ -158,9 +158,9 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
 ## Usage
 
-**VimDevicons integrates with these pugins and more:**
+By default *you should not to configure anything* to get the basics working.
+However, these options are provided for overiding and can be defined in your `vimrc` or `gvimrc` 
 
-[NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
 
 For support of these plugins you **must** configure vim to load these plugins
 **_before_** vim-devicons loads. 
@@ -313,6 +313,10 @@ let g:WebDevIconsOS = 'Darwin'
 ```
 
 ## Features
+
+**VimDevicons integrates with these pugins and more:**
+
+[NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
 
 **Show developer file type glyphs from a font in various vim plugins, currently
 supports:**
