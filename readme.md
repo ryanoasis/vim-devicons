@@ -76,7 +76,7 @@ on to Step 2
 
 ### Step 2
 
-Choose your favorite pugin manager or install manually
+Choose your favorite pugin manager
 
 #### [Pathogen](https://github.com/tpope/vim-pathogen)
   *  `git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons`
@@ -123,21 +123,10 @@ Add the following to your .vimrc or .gvimrc:
   ```vim
   let g:airline_powerline_fonts = 1
   ```
-#### vimrc examples
-* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/.vimrc-windows-1)
-* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/.vimrc-linux-1)
 
-The _ONLY_ other configuration needed should be setting the font vim uses to a
-  patched font.
+##### Set vim's font to a Nerd Font
 
-Already patched fonts and the font patcher script are provided at:
-[nerd-fonts]
-
-It works without configuration *ONLY* when used with a patched font provided in
-the separate repository above. Install the font and add it to your `vimrc` or
-`gvimrc`:
-
-**Linux**
+Linux
  ```vim
  set guifont=<FONT_NAME> <FONT_SIZE>
  ```
@@ -146,7 +135,7 @@ the separate repository above. Install the font and add it to your `vimrc` or
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 ```
 
-**macOS and Windows**
+macOS and Windows
 ```vim
 set guifont=<FONT_NAME>:h<FONT_SIZE>
 ```
@@ -154,6 +143,11 @@ set guifont=<FONT_NAME>:h<FONT_SIZE>
 ```vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 ```
+
+##### vimrc examples
+* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/.vimrc-windows-1)
+* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/.vimrc-linux-1)
+
 <br />
 
 ## That's it! You're done. ✅
