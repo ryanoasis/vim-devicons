@@ -18,9 +18,7 @@
 
 ## Table of Contents
 
-[Quick Setup (TL;DR)](#quick-setup)
-
-[Installation](#installation)
+[Installation](#quick-setup)
 
 [Usage](#usage)
 
@@ -35,8 +33,6 @@
 [Lightline Setup](#lightline-setup)
 
 [Powerline Setup](#powerline-setup)
-
-[Vim Plugin Installation](#installation)
 
 [Methods](#public-methods)
 
