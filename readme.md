@@ -58,8 +58,9 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 
 ### Step 1 `Nerd Font`
 
-Get a [**Nerd Font!**][font-installation] If you've already got one, move
-on to Step 2
+Get a [**Nerd Font!**][font-installation] or [patch your
+own.](https://github.com/ryanoasis/nerd-fonts#font-patcher) Without
+this, things break 
 
 ### Step 2 `Install Devicons`
 
