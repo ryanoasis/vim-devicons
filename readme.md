@@ -112,7 +112,7 @@ Add the following in your .vimrc or .gvimrc:
   set encoding=utf8
   ```
 
-##### Set vim's font to a Nerd Font
+##### Set Vim font to a Nerd Font
 
 Linux
  ```vim
