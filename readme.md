@@ -26,8 +26,6 @@
 
 * [Character Mappings](#character-mappings)
 
-[Developer](#developer)
-
 [Screenshots](#screenshots)
 
 [Features](#features)
@@ -38,20 +36,21 @@
 
 [Methods](#public-methods)
 
-[API](#api)
+[Developer](#developer)
 
-[Todo](#todo)
+* [API](#api)
 
-[FAQ / Troubleshooting](#faq--troubleshooting)
+* [Todo](#todo)
 
-[Contributing](#contributing)
+* [Contributing](#contributing)
+
+* [Inspiration and special thanks](#inspiration-and-special-thanks)
+
+* [License](#license)
 
 [Rationale](#rationale)
 
-[Inspiration and special thanks](#inspiration-and-special-thanks)
-
-[License](#license)
-
+[FAQ / Troubleshooting](#faq--troubleshooting)
 
 <a name="quick-setup"></a>
 ## Quick Setup (TL;DR)
@@ -438,34 +437,6 @@ webdevicons#hardRefresh()
 webdevicons#softRefresh()
 ```
 
-<a name="developer"></a>
-## Developer
-
-### API
-
-```vim
-" returns the font character that represents the icon
-" parameters: a:1 (filename), a:2 (isDirectory)
-" both parameters optional
-" by default without parameters uses buffer name
-WebDevIconsGetFileTypeSymbol(...)
-
-" returns the font character that represents
-" the file format as an icon (windows, linux, mac)
-WebDevIconsGetFileFormatSymbol()
-```
-
-#### API Examples
-
-* todo
-
-## Todo
-
-* [ ] more filetypes to support
-* [ ] customize filetype icon colors
-* [ ] more customization options in general
-* [ ] more specific FAQ and Troubleshooting help
-
 ## FAQ / Troubleshooting
 
 **I don't want to use any of the fonts provided, I want to use font ABC**
@@ -693,6 +664,34 @@ since [v0.7.0](https://github.com/ryanoasis/vim-devicons/milestones/v0.7.0)
 ### Glyph set test file
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/glyph-set-test.png)
+
+<a name="developer"></a>
+## Developer
+
+### API
+
+```vim
+" returns the font character that represents the icon
+" parameters: a:1 (filename), a:2 (isDirectory)
+" both parameters optional
+" by default without parameters uses buffer name
+WebDevIconsGetFileTypeSymbol(...)
+
+" returns the font character that represents
+" the file format as an icon (windows, linux, mac)
+WebDevIconsGetFileFormatSymbol()
+```
+
+#### API Examples
+
+* todo
+
+## Todo
+
+* [ ] more filetypes to support
+* [ ] customize filetype icon colors
+* [ ] more customization options in general
+* [ ] more specific FAQ and Troubleshooting help
 
 ## Contributing
 
