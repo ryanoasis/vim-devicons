@@ -16,33 +16,25 @@ After seeing the awesome theme for Atom (seti-ui) and the awesome plugins work d
 
 ## Table of Contents
 
-[Installation](#quick-setup)
+[**Installation**](#quick-setup)
 
-[Usage](#usage)
+[**Usage**](#usage)
+* [**Lightline & Powerline Setup**](#lightline-setup)
+* [**Extra Configuration**](#extra-configuration)
+* [**Character Mappings**](#character-mappings)
 
-* [Lightline & Powerline Setup](#lightline-setup)
+[**Features**](#features)
 
-* [Extra Configuration](#extra-configuration)
+[**Methods**](#public-methods)
 
-* [Character Mappings](#character-mappings)
+[**Developer**](#developer)
+* [**API**](#api)
+* [**Contributing**](#contributing)
+* [**Inspiration and special thanks**](#inspiration-and-special-thanks)
+* [**Todo**](#todo)
+* [**License**](#license)
 
-[Features](#features)
-
-[Methods](#public-methods)
-
-[Developer](#developer)
-
-* [API](#api)
-
-* [Todo](#todo)
-
-* [Contributing](#contributing)
-
-* [Inspiration and special thanks](#inspiration-and-special-thanks)
-
-* [License](#license)
-
-[FAQ / Troubleshooting](#faq--troubleshooting)
+[**FAQ / Troubleshooting**](#faq--troubleshooting)
 
 ### Quick Links
 
@@ -449,13 +441,6 @@ WebDevIconsGetFileFormatSymbol()
 
 * todo
 
-## Todo
-
-* [ ] more filetypes to support
-* [ ] customize filetype icon colors
-* [ ] more customization options in general
-* [ ] more specific FAQ and Troubleshooting help
-
 ## Contributing
 
 Best ways to contribute
@@ -463,6 +448,13 @@ Best ways to contribute
 * [Promote](#promotion)
 * Open [issues/tickets](https://github.com/ryanoasis/vim-devicons/issues)
 * Submit fixes and/or improvements with [Pull Requests](#source-code)
+
+### Source code
+
+Contributions and pull requests are welcome.
+
+No real formal process has been setup - just stick to general good conventions
+for now.
 
 ### Promotion
 
@@ -473,13 +465,6 @@ Like the project? Please support to ensure continued development going forward:
 * Follow me
   * [Twitter](http://twitter.com/ryanlmcintyre)
   * [GitHub](https://github.com/ryanoasis)
-
-### Source code
-
-Contributions and pull requests are welcome.
-
-No real formal process has been setup - just stick to general good conventions
-for now.
 
 ## Inspiration and special thanks
 
@@ -494,6 +479,12 @@ for now.
 ### Also thanks to the many contributors:
 * [contributors list](https://github.com/ryanoasis/vim-devicons/graphs/contributors)
 
+## Todo
+
+* [ ] more filetypes to support
+* [ ] customize filetype icon colors
+* [ ] more customization options in general
+* [ ] more specific FAQ and Troubleshooting help
 ## License
 
 See [LICENSE](LICENSE)
