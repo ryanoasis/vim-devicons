@@ -364,15 +364,6 @@ let g:WebDevIconsOS = 'Darwin'
 
 [NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
 
-**Show developer file type glyphs from a font in various vim plugins, currently
-supports:**
-* [NERDTree]
-* [vim-airline][vim-airline] (statusline and tabline)
-* [lightline.vim][lightline.vim] (statusline)
-    - see: [lightline setup](#lightline-setup)
-* [Powerline][powerline] (statusline)
-    - see: [powerline setup](#powerline-setup)
-
 **Adds a global config map of characters to file extensions (or entire
 filenames)**
 
