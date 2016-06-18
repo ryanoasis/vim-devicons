@@ -26,6 +26,8 @@
 
 * [Character Mappings](#character-mappings)
 
+[Developer](#developer)
+
 [Screenshots](#screenshots)
 
 [Features](#features)
@@ -435,6 +437,9 @@ webdevicons#hardRefresh()
 " resets vim-devicons syntax and toggles NERDTree to the same state
 webdevicons#softRefresh()
 ```
+
+<a name="developer"></a>
+## Developer
 
 ### API
 
