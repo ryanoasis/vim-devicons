@@ -109,15 +109,15 @@ Choose your favorite pugin manager
 <a name="install-step2"></a>
 ### Step 3
 
-Add the following to your .vimrc or .gvimrc:
+Add the following in your .vimrc or .gvimrc:
+
+##### Set Devicons to load _before_ these plugins!
+
+[NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
 
 ##### Set encoding to UTF-8 to show glyphs
   ```vim
   set encoding=utf8
-  ```
-##### If you use vim-airline you need this 
-  ```vim
-  let g:airline_powerline_fonts = 1
   ```
 
 ##### Set vim's font to a Nerd Font
@@ -139,6 +139,11 @@ set guifont=<FONT_NAME>:h<FONT_SIZE>
 ```vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 ```
+
+##### If you use vim-airline you need this 
+  ```vim
+  let g:airline_powerline_fonts = 1
+  ```
 
 ##### vimrc examples
 * [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/.vimrc-windows-1)
