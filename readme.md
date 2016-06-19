@@ -38,8 +38,8 @@ Quick Links
 Table of Contents
 -----------------
 
-
 [**TL;DR Installation**](#quick-installation)
+
 [**Installation**](#installation)
 
 [**Usage**](#usage)
@@ -65,15 +65,11 @@ Table of Contents
 
 [**Rationale**](#rationale)
 
-### Quick Links
-
-| **[Screenshots](#screenshots)**| **[API](#api)** | **[Fonts ➶][patched-fonts]** | **[Patcher ➶][nerd-fonts]** |
-|--------------------------------|-----------------|------------------------------|-----------------------------|
-| [![screenshots][img-visual-toc-screenshots]](#screenshots) | [![api][img-visual-toc-api]](#api) | [![patcher-logo-small][img-visual-toc-patched-fonts]][patched-fonts] | [![patcher-logo-small][img-visual-toc-fonts-patcher]][nerd-fonts] |
+<br />
 
 <a name="quick-installation"></a>
 Quick Installation (TL;DR)
--------------------
+--------------------------
 
 1. Download and install a patched **[Nerd Font]** (or patch your own) _[(» More details... «)][Nerd Fonts]_
 
@@ -93,7 +89,7 @@ Get a [**Nerd Font!**][font-installation] or [patch your own.][nerd-fonts-patche
 Without this, things break
 
 <a name="install-step2"></a>
-### Step 2 `Install VimDevIcons Plugin`
+### Step 2 `VimDevIcons Plugin`
 
 Choose your favorite plugin manager
 
@@ -176,13 +172,11 @@ font, else things break!
 * [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/.vimrc-windows-1)
 * [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.8.x/.vimrc-linux-1)
 
-
-
+<br />
 
 ### That's it! You're done. ✅
 
-
-
+<br />
 
 ## Usage
 
@@ -508,6 +502,8 @@ See [LICENSE](LICENSE)
 
 FAQ / Troubleshooting
 ---------------------
+
+---
 
 > Why isn't it working? How come I don't see any icons ?
 
