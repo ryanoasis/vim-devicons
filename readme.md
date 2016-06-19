@@ -142,7 +142,7 @@ Add the following in your `.vimrc` or `.gvimrc`:
 
 ##### Set Vim font to a Nerd Font
 
-**Linux**
+Linux
  ```vim
  set guifont=<FONT_NAME> <FONT_SIZE>
  ```
@@ -151,7 +151,7 @@ Add the following in your `.vimrc` or `.gvimrc`:
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 ```
 
-**macOS (OS X) and Windows**
+macOS (OS X) and Windows
 ```vim
 set guifont=<FONT_NAME>:h<FONT_SIZE>
 ```
@@ -728,7 +728,7 @@ since [v0.7.0](https://github.com/ryanoasis/vim-devicons/milestones/v0.7.0)
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/windows-sample.png)
 
-### Mac OS X
+### macOS (OS X)
 
 ![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/osx-sample.png)
 *Thanks [@RageZBla](https://github.com/RageZBla)*
