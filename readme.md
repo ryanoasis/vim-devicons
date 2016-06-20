@@ -1,7 +1,7 @@
 # VimDevIcons – Add Icons to Your Plugins
 
 <h1 align="center">
-	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/branding-logo.png" alt="vim-devicons">
+  <img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/branding-logo.png" alt="vim-devicons">
 </h1>
 
 [![GitHub version][img-version-badge]][badge-version]
@@ -11,7 +11,7 @@
 **VimDevIcons** adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP][ctrlpvim-CtrlP], [powerline], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
 
 <h3 align="center">
-	<img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
+  <img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
 </h3>
 
 Features
@@ -636,108 +636,7 @@ FAQ / Troubleshooting
 
 ## Screenshots
 
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/vim.png)
-
-### [NERDTree]
-
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/nerdtree-1.png)
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/nerdtree-2.png)
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/nerdtree-3.png)
-
-
-### [vim-airline]
-
-section             | preview
-------------------- | -------------
-statusline          | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/airline-statusline.png)
-tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/airline-tabline-1.png)
-tabline             | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/airline-tabline-2.png)
-fileformats symbols | ![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/fileformats-symbols-sample.png)
-
-
-### [CtrlP][CtrlP]
-
-* **Deprecation warning** the [Original Kien CtrlP Repo][CtrlP] has been dropped
-since [v0.7.0](https://github.com/ryanoasis/vim-devicons/milestones/v0.7.0)
- – Only the [CtrlP active fork][ctrlpvim-CtrlP] is supported
-
-* Currently only MRU file mode supported
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/ctrlp.png)
-
-### [powerline][powerline]
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/powerline.png)
-
-
-### [unite][unite]
-
-* Currently supports `file`, `file_rec`, `buffer`, `file_rec/async`, and `file_rec/neovim`
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/unite.png)
-
-
-### [lightline.vim][lightline.vim]
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/lightline.png)
-
-
-### [vim-startify][vim-startify]
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/vim-startify.png)
-
-
-### [vimfiler][vimfiler]
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/vimfiler.png)
-
-
-### [flagship][flagship]
-
-* _NOTE: [flagship] support is **experimental** because the [API may be changing](https://github.com/tpope/vim-flagship/issues/6#issuecomment-116121220)_
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/flagship.png)
-
-
-### [nerdtree-git-plugin]
-
-* with `g:WebDevIconsNerdTreeGitPluginForceVAlign` on
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/nerdtree-git-plugin-valign-on-sample.png)
-
-* with `g:WebDevIconsNerdTreeGitPluginForceVAlign` off
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/nerdtree-git-plugin-valign-off-sample.png)
-
-
-### Different patched fonts example
-
-![image](https://raw.githubusercontent.com/wiki/ryanoasis/vim-devicons/screenshots/v0.8.x/different-fonts-sample.png)
-
-
-### Various Terminal Emulators
-
-* gnome terminal
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/terminal-gnome-sample.png)
-
-* Urxvt terminal
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/terminal-urxvt-sample.png)
-
-### Windows
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/windows-sample.png)
-
-### macOS (OS X)
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/osx-sample.png)
-*Thanks [@RageZBla](https://github.com/RageZBla)*
-
-### Glyph set test file
-
-![image](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/glyph-set-test.png)
-
+See [Screenshots][wiki-screenshots]
 
 Contributing
 ------------
@@ -808,6 +707,8 @@ Link References
 [ctrlpvim-CtrlP]:https://github.com/ctrlpvim/ctrlp.vim
 [powerline]:https://github.com/powerline/powerline
 [vim-startify]:https://github.com/mhinz/vim-startify
+
+[wiki-screenshots]:https://github.com/ryanoasis/vim-devicons/wiki/Screenshots
 
 [vim-devicons-repo]:https://github.com/ryanoasis/vim-devicons
 [vim-devicons-polls]:https://github.com/ryanoasis/vim-devicons/labels/poll
