@@ -504,135 +504,7 @@ See [LICENSE](LICENSE)
 FAQ / Troubleshooting
 ---------------------
 
----
-
-> Why isn't it working? How come I don't see any icons ?
-
-  * Are you using the patched font provided in the separate repo ([Nerd Fonts]) or are you patching your own?
-  * _NOTE:_ if running vim and no font set it will default to the terminal font that is set
-  * check what the vim/gvim font is set to, from ex mode:
-
-    ```vim
-    :set guifont?
-    ```
-
-  * check if the plugin is loaded (should give '1'), from ex mode:
-
-    ```vim
-    :echo loaded_webdevicons
-    ```
-
-  * check if the plugin is enabled (should give '1'), from ex mode:
-
-    ```vim
-    :echo g:webdevicons_enable
-    ```
-
-  * check if the plugin is enabled for NERDTree (should give '1'), from ex mode:
-    * this should *NOT* need to be set under normal circumstances
-
-    ```vim
-    :echo g:webdevicons_enable_nerdtree
-    ```
-
-  * check if you are able to see the characters, from ex mode:
-
-    ```vim
-    :echo g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
-    ```
-
-  * if all this looks correct you may try this to see if any files show flags
-    * last resort, see if you can even set the default symbol and have it display anywhere (NERDTree, vim-airline's statusline, vim-airlines's tabline), from ex mode:
-
-    ```vim
-    :let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol='x'
-    ```
-
----
-
-> How did you get color matching based on file type in nerdtree ?
-
-  * my current settings are from: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
-
-	```vim
-	" NERDTress File highlighting
-	function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
-	 exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
-	 exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-	endfunction
-
-	call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-	call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-	call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-	call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-	call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-	call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-	call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-	call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-	call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-	call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-	call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-	call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-	call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-	call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
-	call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
-	call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
-	call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
-	call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
-	```
-	Note: If the colors still are not highlighting, try invoking such as:
-	```
-	autocmd VimEnter * call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-	```
-	per: https://github.com/ryanoasis/vim-devicons/issues/49#issuecomment-101753558
-
----
-
-> How did you get color matching on just the glyph/icon in nerdtree ?
-
-  * You can add something like this to your `vimrc`
-
-	```vim
-	" NERDTress File highlighting only the glyph/icon
-	" test highlight just the glyph (icons) in nerdtree:
-	autocmd filetype nerdtree highlight haskell_icon ctermbg=none ctermfg=Red guifg=#ffa500
-	autocmd filetype nerdtree highlight html_icon ctermbg=none ctermfg=Red guifg=#ffa500
-	autocmd filetype nerdtree highlight go_icon ctermbg=none ctermfg=Red guifg=#ffa500
-
-	autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
-	" if you are using another syn highlight for a given line (e.g.
-	" NERDTreeHighlightFile) need to give that name in the 'containedin' for this
-	" other highlight to work with it
-	autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
-	autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
-	```
-
----
-
-> How do I solve issues after re-sourcing my `vimrc` ?
-
-  * Try adding this to the bottom of your `vimrc`
-
-	```vim
-	if exists("g:loaded_webdevicons")
-	  call webdevicons#refresh()
-	endif
-	```
-
----
-
-> Why do I have artifacts after (or instead) of icons ?
-
-  * Dots after icons in NERDTree (on GVim), try:
-  ```vim
-  autocmd FileType nerdtree setlocal nolist
-  ```
-  per: https://github.com/ryanoasis/vim-devicons/issues/110#issue-103801335
-
-* Newly created files in NERDTree are slow to show the glyph (icon)
-  * check your current setting of `:updatetime?`
-  * try setting `updatetime` in your `vimrc` to a lower value like `250`,
-  for more info see: https://github.com/ryanoasis/vim-devicons/issues/153
+See [FAQ][wiki-faq]
 
 ## Screenshots
 
@@ -709,6 +581,7 @@ Link References
 [vim-startify]:https://github.com/mhinz/vim-startify
 
 [wiki-screenshots]:https://github.com/ryanoasis/vim-devicons/wiki/Screenshots
+[wiki-faq]:https://github.com/ryanoasis/vim-devicons/wiki/FAQ
 
 [vim-devicons-repo]:https://github.com/ryanoasis/vim-devicons
 [vim-devicons-polls]:https://github.com/ryanoasis/vim-devicons/labels/poll
