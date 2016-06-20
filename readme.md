@@ -454,8 +454,8 @@ webdevicons#softRefresh()
 ```
 
 
-# Developer
------------
+Developer
+---------
 
 ### API
 
