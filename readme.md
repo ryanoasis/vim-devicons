@@ -100,7 +100,7 @@ This plugin follows the standard runtime path structure, and as such it can be i
 
        ```vim
        :so ~/.vimrc
-       :PluginInstall`
+       :PluginInstall
        ```
 
 #### Manual
