@@ -419,6 +419,14 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'ƛ'
 ```
 
+```vim
+" add or override pattern matches for filetypes
+" these take precedence over the file extensions
+
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*jquery.*\.js$'] = 'ƛ'
+```
+
 > specify OS to decide an icon for unix fileformat (_not_ defined by default)
   - this is useful for avoiding unnecessary `system()` call. see [#135](https://github.com/ryanoasis/vim-devicons/pull/135) for  further details.
 
