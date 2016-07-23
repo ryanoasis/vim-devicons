@@ -585,6 +585,7 @@ function! WebDevIconsGetFileTypeSymbol(...)
     for [pattern, glyph] in items(g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols)
       if match(fileNode, pattern) != -1
         let symbol = glyph
+        break
       endif
     endfor
 
