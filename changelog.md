@@ -3,6 +3,13 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.8.4
+  - Fixed always warning about deprecated CtrlP version (fixes #137)
+  - Fixed missing configuration info about pattern based symbols (fixes #152)
+  - Fixed `WebDevIconsGetFileTypeSymbol` method iterator missing `break` (PR #156) (@blueyed)
+  - Fixed a typo in the readme (PR #159) (@SSARCandy)
+  - Added reference to [tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight) in readme (PR #161) (@tiagofumo)
+    - However, the [FAQ](https://github.com/ryanoasis/vim-devicons/wiki/FAQ) has been moved to the [Wiki](https://github.com/ryanoasis/vim-devicons/wiki) in this release
 - v0.8.3
   - Fixed NERDTree not displaying glyph (icon) for newly created files (fixes #153)
     - Also adds info to readme about `updatetime`
