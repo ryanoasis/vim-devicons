@@ -692,6 +692,7 @@ FAQ / Troubleshooting
 > How did you get color matching based on file type in nerdtree ?
 
   * my current settings are from: https://github.com/scrooloose/nerdtree/issues/201#issuecomment-9954740
+  * you can add [this](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight) extension created by [@tiagofumo](https://github.com/tiagofumo)
 
 	```vim
 	" NERDTress File highlighting
@@ -725,12 +726,10 @@ FAQ / Troubleshooting
 	```
 	per: https://github.com/ryanoasis/vim-devicons/issues/49#issuecomment-101753558
 
----
+* How did you get color matching on just the glyph/icon in nerdtree?
+  * You can add [this](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight) extension created by [@tiagofumo](https://github.com/tiagofumo)
 
-> How did you get color matching on just the glyph/icon in nerdtree ?
-
-  * You can add something like this to your `vimrc`
-
+  * Or you can add something like this to your `vimrc`:
 	```vim
 	" NERDTress File highlighting only the glyph/icon
 	" test highlight just the glyph (icons) in nerdtree:
