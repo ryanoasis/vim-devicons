@@ -501,7 +501,7 @@ Todo
 ----
 
 * [ ] more filetypes to support
-* [ ] customize filetype icon colors
+* [ ] [customize filetype icon colors](https://github.com/ryanoasis/vim-devicons/issues/158) (for a current solution see: [tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight))
 * [ ] more customization options in general
 * [ ] more specific FAQ and Troubleshooting help
 
