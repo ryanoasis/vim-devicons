@@ -22,7 +22,7 @@ Contents ~
      3. Set Vim font to a Nerd Font          |readme-set-vim-font-to-nerd-font|
      4. If you use vim-airline you need this |readme-if-you-use-vim-airline-you-need-this|
      5. vimrc examples                                  |readme-vimrc-examples|
-   4. That's it! You're done. ✅                   |readme-thats-it-youre-done.|
+   4. That's it! You're done.                     |readme-thats-it-youre-done.|
   5. Usage                                                       |readme-usage|
    1. Lightline Setup                                  |readme-lightline-setup|
    2. Powerline Setup                                  |readme-powerline-setup|
@@ -227,7 +227,7 @@ vimrc examples ~
 
 -------------------------------------------------------------------------------
                                                   *readme-thats-it-youre-done.*
-That's it! You're done. ✅ ~
+That's it! You're done.   ~
 
 -------------------------------------------------------------------------------
                                                                  *readme-usage*
@@ -258,11 +258,11 @@ your '.vimrc'. For example, you could set your sections to:
         \   'fileformat': 'MyFileformat',
         \ }
         \ }
-  
+
   function! MyFiletype()
     return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
   endfunction
-  
+
   function! MyFileformat()
     return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
   endfunction
@@ -281,10 +281,10 @@ are needed:
 vim):
 >
   set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-  
+
   " Always show statusline
   set laststatus=2
-  
+
   " Use 256 colours (Use this setting only if your terminal supports 256 colours)
   set t_Co=256
 <
@@ -370,42 +370,42 @@ Extra Configuration ~
 - You _should_**not** need to configure anything, however, the following
   options are provided for customizing or changing the defaults:
 >
-  " loading the plugin 
+  " loading the plugin
   let g:webdevicons_enable = 1
 <
 
 >
-  " adding the flags to NERDTree 
+  " adding the flags to NERDTree
   let g:webdevicons_enable_nerdtree = 1
 <
 
 >
-  " adding the custom source to unite 
+  " adding the custom source to unite
   let g:webdevicons_enable_unite = 1
 <
 
 >
-  " adding the column to vimfiler 
+  " adding the column to vimfiler
   let g:webdevicons_enable_vimfiler = 1
 <
 
 >
-  " adding to vim-airline's tabline 
+  " adding to vim-airline's tabline
   let g:webdevicons_enable_airline_tabline = 1
 <
 
 >
-  " adding to vim-airline's statusline 
+  " adding to vim-airline's statusline
   let g:webdevicons_enable_airline_statusline = 1
 <
 
 >
-  " ctrlp MRU file mode glyphs 
+  " ctrlp MRU file mode glyphs
   let g:webdevicons_enable_ctrlp = 1
 <
 
 >
-  " adding to flagship's statusline 
+  " adding to flagship's statusline
   let g:webdevicons_enable_flagship_statusline = 1
 <
 
@@ -415,13 +415,13 @@ Extra Configuration ~
 <
 
 >
-  " use double-width(1) or single-width(0) glyphs 
+  " use double-width(1) or single-width(0) glyphs
   " only manipulates padding, has no effect on terminal or set(guifont) font
   let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 <
 
 >
-  " whether or not to show the nerdtree brackets around flags 
+  " whether or not to show the nerdtree brackets around flags
   let g:webdevicons_conceal_nerdtree_brackets = 1
 <
 
@@ -431,7 +431,7 @@ Extra Configuration ~
 <
 
 >
-  " Force extra padding in NERDTree so that the filetype icons line up vertically 
+  " Force extra padding in NERDTree so that the filetype icons line up vertically
   let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 <
 -------------------------------------------------------------------------------
@@ -466,7 +466,7 @@ Character Mappings ~
 <
 
 >
-  " enable custom folder/directory glyph exact matching 
+  " enable custom folder/directory glyph exact matching
   " (enabled by default when g:WebDevIconsUnicodeDecorateFolderNodes is set to 1)
   let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
 <
@@ -483,21 +483,21 @@ Character Mappings ~
 
 >
   " change the default dictionary mappings for file extension matches
-  
+
   let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
   let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'ƛ'
 <
 
 >
   " change the default dictionary mappings for exact file node matches
-  
+
   let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
   let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['MyReallyCoolFile.okay'] = 'ƛ'
 <
 
 >
   " add or override individual additional filetypes
-  
+
   let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
   let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['myext'] = 'ƛ'
 <
@@ -505,7 +505,7 @@ Character Mappings ~
 >
   " add or override pattern matches for filetypes
   " these take precedence over the file extensions
-  
+
   let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
   let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*jquery.*\.js$'] = 'ƛ'
 <
@@ -553,7 +553,7 @@ API ~
   " both parameters optional
   " by default without parameters uses buffer name
   WebDevIconsGetFileTypeSymbol(...)
-  
+
   " returns the font character that represents
   " the file format as an icon (windows, linux, mac)
   WebDevIconsGetFileFormatSymbol()
@@ -563,7 +563,7 @@ API ~
 API Examples ~
 >
   let entry_format = "'   ['. index .']'. repeat(' ', (3 - strlen(index)))"
-  
+
   if exists('*WebDevIconsGetFileTypeSymbol')  " support for vim-devicons
     let entry_format .= ". WebDevIconsGetFileTypeSymbol(entry_path) .' '.  entry_path"
   else
