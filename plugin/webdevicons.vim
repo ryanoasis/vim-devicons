@@ -369,12 +369,21 @@ function! s:CursorHoldUpdate()
     return
   endif
 
+  " Do not update when a special buffer is selected
+  if !empty(&l:buftype)
+    return
+  endif
+
   " winnr need to make focus go to opened file
   " CursorToTreeWin needed to avoid error on opening file
   let l:winnr = winnr()
+  let l:altwinnr = winnr('#')
+
   call g:NERDTree.CursorToTreeWin()
   call b:NERDTree.root.refreshFlags()
   call NERDTreeRender()
+
+  exec l.altwinnr . 'wincmd w'
   exec l:winnr . 'wincmd w'
 endfunction
 
