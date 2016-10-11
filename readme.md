@@ -258,8 +258,7 @@ Detailed Features
 * Adds filetype glyphs (icons) to various vim plugins, currently supports:
   * [NERDTree][]
   * [vim-airline][] (statusline and tabline)
-  * [CtrlP][ctrlpvim-CtrlP]
-    * Currently only MRU file mode supported
+  * [CtrlP][ctrlpvim-CtrlP] (All modes now supported)
   * [powerline][] (statusline)
     * see: [powerline setup](#powerline-setup)
   * [unite]
