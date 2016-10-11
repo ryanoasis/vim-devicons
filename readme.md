@@ -130,7 +130,7 @@ Choose your favorite plugin manager
 
 Add the following in your `.vimrc` or `.gvimrc`:
 
-##### Set VimDevIcons to load _before_ these plugins!
+##### Set VimDevIcons to load _after_ these plugins!
 
 [NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
 
