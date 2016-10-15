@@ -3,6 +3,15 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.8.5
+  - Fixed errors in neovim (E670) (PR #163, fixes #162) (@mhartington)
+  - Fixed issue of updating NERDTree window via `CursorHoldUpdate` (PR #166) (@svanharmelen)
+    - Fixes updating of special buffer when selected
+    - Fixes potential issues CtrlP opening in wrong buffer when NERDTree is opened
+  - Fixed issue with CtrlP `:CtrlPMRU` always defaulting to current buffer (fixes #88)
+    - Also adds glyphs to other CtrlP modes besides MRU as a side effect
+  - Fixed documentation discrepency on pluging load order (PR #169) (@F1LT3R)
+  - Fixed documentation related to CtrlP MRU mode (PR #170, fixes #168) (@F1LT3R)
 - v0.8.4
   - Fixed always warning about deprecated CtrlP version (fixes #137)
   - Fixed missing configuration info about pattern based symbols (fixes #152)
