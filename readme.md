@@ -317,7 +317,7 @@ let g:webdevicons_enable_airline_statusline = 1
 ```
  
 ```vim
-" ctrlp MRU file mode glyphs 
+" ctrlp glyphs
 let g:webdevicons_enable_ctrlp = 1
 ```
  
