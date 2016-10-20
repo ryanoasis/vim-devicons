@@ -1,4 +1,4 @@
-*readme.txt*  VimDevIcons – Add Icons to Your Plugins
+*readme.txt*  VimDevIcons - Add Icons to Your Plugins
 
 ===============================================================================
 Contents ~
