@@ -257,10 +257,10 @@ Detailed Features
 
 * Adds filetype glyphs (icons) to various vim plugins, currently supports:
   * [NERDTree][]
-      * Must be up to date or no icons will show
+      * Using the version hosted on [vimscripts](http://www.vim.org/scripts/script.php?script_id=1658) in favor of GitHub will lead to a outdated message, and icons will fail to show.
   * [vim-airline][] (statusline and tabline)
   * [CtrlP][ctrlpvim-CtrlP] (All modes now supported)
-      * Must be up to date or you will recieve outdated messages
+      * Using the version hosted on [vimscripts](http://www.vim.org/scripts/script.php?script_id=3736) in favor of GitHub will lead to a outdated message, and icons will fail to show.
   * [powerline][] (statusline)
     * see: [powerline setup](#powerline-setup)
   * [unite]
