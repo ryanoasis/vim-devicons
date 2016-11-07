@@ -482,6 +482,14 @@ WebDevIconsGetFileFormatSymbol()
 
 #### API Examples
 
+##### Simple function call
+
+```vim
+echo WebDevIconsGetFileFormatSymbol()
+```
+
+##### [vim-startify]
+
 ```vim
 let entry_format = "'   ['. index .']'. repeat(' ', (3 - strlen(index)))"
 
@@ -492,10 +500,12 @@ else
 endif
 ```
 
-source: [vim-startify]
+##### Custom status line
+
+> Custom vim status line (not relying on vim-airline or lightline):
 
 ```vim
-echo WebDevIconsGetFileFormatSymbol()
+:set statusline=%f\ %{WebDevIconsGetFileTypeSymbol()}\ %h%w%m%r\ %=%(%l,%c%V\ %Y\ %=\ %P%)
 ```
 
 Todo
