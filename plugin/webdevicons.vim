@@ -472,7 +472,8 @@ endfunction
 function! s:initializeVimfiler()
   if exists('g:loaded_vimfiler') && g:webdevicons_enable_vimfiler
     call vimfiler#custom#profile('default', 'context', {
-      \ 'columns' : 'type:devicons:size:time'
+      \ 'columns' : 'devicons:size:time',
+      \ 'explorer_columns': 'devicons'
       \ })
   endif
 endfunction
