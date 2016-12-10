@@ -495,7 +495,7 @@ function! s:initializeCtrlP()
     if l:forkedCtrlp
       if !exists('g:ctrlp_formatline_func')
         " logic for ctrlpvim/ctrlp.vim:
-        let g:ctrlp_formatline_func = 's:formatline(WebDevIconsGetFileTypeSymbol(v:val) . " " . v:val)'
+        let g:ctrlp_formatline_func = 's:formatline(s:curtype() == "buf" ? v:val : WebDevIconsGetFileTypeSymbol(v:val) . " " . v:val) '
       endif
     elseif empty(glob(l:ctrlp_warned_file))
       " logic for kien/ctrlp.vim:
