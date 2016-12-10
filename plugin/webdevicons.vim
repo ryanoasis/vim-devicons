@@ -365,7 +365,7 @@ function! s:CursorHoldUpdate()
     return
   endif
 
-  if !g:NERDTree.IsOpen()
+  if !exists('g:NERDTree') || !g:NERDTree.IsOpen()
     return
   endif
 
