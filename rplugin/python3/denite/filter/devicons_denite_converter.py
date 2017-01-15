@@ -7,7 +7,7 @@ class Filter(Base):
 
 	def __init__(self, vim):
 		super().__init__(vim)
-		self.name = 'converter_devicons'
+		self.name = 'devicons_denite_converter'
 		self.description = 'add devicons in front of candidates'
 
 	def filter(self, context):
