@@ -12,5 +12,5 @@ class Filter(Base):
 
 	def filter(self, context):
 		for candidate in context['candidates']:
-			candidate['word'] = ' '+self.vim.funcs.WebDevIconsGetFileTypeSymbol(candidate['word'], isdir(candidate['word']))+' '+candidate['word']
+			candidate['abbr'] = ' '+self.vim.funcs.WebDevIconsGetFileTypeSymbol(candidate['word'], isdir(candidate['word']))+' '+candidate['word']
 		return context['candidates']
