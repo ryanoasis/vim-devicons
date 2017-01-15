@@ -38,6 +38,10 @@ if !exists('g:webdevicons_enable_unite')
   let g:webdevicons_enable_unite = 1
 endif
 
+if !exists('g:webdevicons_enable_denite')
+  let g:webdevicons_enable_denite = 1
+endif
+
 if !exists('g:webdevicons_enable_vimfiler')
   let g:webdevicons_enable_vimfiler = 1
 endif
@@ -430,7 +434,7 @@ endfunction
 function! s:initializeUnite()
   if exists('g:loaded_unite') && g:webdevicons_enable_unite
     let s:filters = {
-          \   'name' : 'devicons_converter',
+          \   'name' : 'devicons_unite_converter',
           \}
 
     function! s:filters.filter(candidates, context)
@@ -461,7 +465,17 @@ function! s:initializeUnite()
     call unite#define_filter(s:filters)
     unlet s:filters
 
-    call unite#custom#source('file,file_rec,buffer,file_rec/async,file_rec/neovim,file_rec/neovim2,file_rec/git', 'converters', 'devicons_converter')
+    call unite#custom#source('file,file_rec,buffer,file_rec/async,file_rec/neovim,file_rec/neovim2,file_rec/git', 'converters', 'devicons_unite_converter')
+  endif
+endfunction
+
+" for denite plugin {{{3
+"========================================================================
+
+" scope: local
+function! s:initializeDenite()
+  if exists('g:loaded_denite') && g:webdevicons_enable_denite
+    call denite#custom#source('file_rec,file_old,directory_rec,buffer', 'converters', ['converter_devicons'])
   endif
 endfunction
 
@@ -510,6 +524,9 @@ function! s:initializeCtrlP()
   endif
 endfunction
 
+" local initialization {{{2
+"========================================================================
+
 " scope: local
 function! s:initialize()
   call s:setDictionaries()
@@ -517,14 +534,12 @@ function! s:initialize()
   call s:setCursorHold()
   call s:initializeFlagship()
   call s:initializeUnite()
+  call s:initializeDenite()
   call s:initializeVimfiler()
   call s:initializeCtrlP()
 endfunction
 
-" local initialization {{{2
-"========================================================================
-
-call s:initialize()
+autocmd! VimEnter * call s:initialize()
 
 " public functions {{{2
 "========================================================================
