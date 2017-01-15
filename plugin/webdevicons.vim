@@ -539,7 +539,9 @@ function! s:initialize()
   call s:initializeCtrlP()
 endfunction
 
-autocmd! VimEnter * call s:initialize()
+augroup devicons_init
+  autocmd VimEnter * call s:initialize()
+augroup END
 
 " public functions {{{2
 "========================================================================
