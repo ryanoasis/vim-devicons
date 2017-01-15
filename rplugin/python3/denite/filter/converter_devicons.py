@@ -10,7 +10,7 @@ class Filter(Base):
 		self.name = 'converter_devicons'
 		self.description = 'add devicons in front of candidates'
 
-def filter(self, context):
-	for candidate in context['candidates']:
-		candidate['word'] = ' '+self.vim.funcs.WebDevIconsGetFileTypeSymbol(candidate['word'], isdir(candidate['word']))+' '+candidate['word']
-	return context['candidates']
+	def filter(self, context):
+		for candidate in context['candidates']:
+			candidate['word'] = ' '+self.vim.funcs.WebDevIconsGetFileTypeSymbol(candidate['word'], isdir(candidate['word']))+' '+candidate['word']
+		return context['candidates']
