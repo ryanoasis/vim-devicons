@@ -3,6 +3,14 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.8.6
+  - Added support for vimfiler explorer mode (fixes #171)
+  - Added `doc/tags` to `.gitignore` (PR #182) (@doronbehar)
+  - Added warning to readme pertaining to old versions of NERDTree and CtrlP (PR #177, fixes #174) (@Melon-Bread)
+  - Fixes CtrlP buffer names (PR #185) (@HerringtonDarkholme)
+  - Fixes character encoding issue in vim doc (PR #178) (@mhartington)
+  - Fixes extraneous space after glyph in airline (PR #184) (@tbodt)
+  - Fixes errors when NERDTree not present (PR #187) (@blueyed)
 - v0.8.5
   - Fixed errors in neovim (E670) (PR #163, fixes #162) (@mhartington)
   - Fixed issue of updating NERDTree window via `CursorHoldUpdate` (PR #166) (@svanharmelen)
