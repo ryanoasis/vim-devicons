@@ -11,6 +11,8 @@ This project is using [Semantic Versioning 2.0.0](http://semver.org/)
   - Fixes character encoding issue in vim doc (PR #178) (@mhartington)
   - Fixes extraneous space after glyph in airline (PR #184) (@tbodt)
   - Fixes errors when NERDTree not present (PR #187) (@blueyed)
+  - Updated Contributor Covenant to `v1.4`
+  - Updated API examples
 - v0.8.5
   - Fixed errors in neovim (E670) (PR #163, fixes #162) (@mhartington)
   - Fixed issue of updating NERDTree window via `CursorHoldUpdate` (PR #166) (@svanharmelen)
