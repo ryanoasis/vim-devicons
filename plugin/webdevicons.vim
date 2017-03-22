@@ -125,6 +125,10 @@ if !exists('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol')
   let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
 endif
 
+if !exists('g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol')
+  let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
+endif
+
 if !exists('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol')
   if g:DevIconsEnableFoldersOpenClose
     " use new glyph
@@ -607,6 +611,11 @@ endfunction
 " scope: public
 function! WebDevIconsGetFileFormatSymbol(...)
   let fileformat = ''
+  let bomb = ''
+
+  if (&bomb && g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol !=? '')
+    let bomb = g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol . ' '
+  endif
 
   if &fileformat ==? 'dos'
     let fileformat = ''
@@ -624,7 +633,7 @@ function! WebDevIconsGetFileFormatSymbol(...)
   " actual font patcher)
   let artifactFix = "\u00A0"
 
-  return fileformat . artifactFix
+  return bomb . fileformat . artifactFix
 endfunction
 
 " for airline plugin {{{3
