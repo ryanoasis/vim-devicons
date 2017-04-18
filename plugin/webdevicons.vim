@@ -281,6 +281,8 @@ function! s:setDictionaries()
         \ '.gitconfig'                       : '',
         \ '.gitignore'                       : '',
         \ '.bashrc'                          : '',
+        \ '.zshrc'                           : '',
+        \ '.vimrc'                           : '',
         \ '.bashprofile'                     : '',
         \ 'favicon.ico'                      : '',
         \ 'license'                          : '',
