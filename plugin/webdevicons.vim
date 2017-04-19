@@ -299,7 +299,8 @@ function! s:setDictionaries()
         \ '.*require.*\.js$'      : '',
         \ '.*materialize.*\.js$'  : '',
         \ '.*materialize.*\.css$' : '',
-        \ '.*mootools.*\.js$'     : ''
+        \ '.*mootools.*\.js$'     : '',
+        \ 'Vagrantfile$'          : ''
         \}
 
   if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
