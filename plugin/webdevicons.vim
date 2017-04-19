@@ -264,7 +264,8 @@ function! s:setDictionaries()
         \ 'psd'      : '',
         \ 'psb'      : '',
         \ 'ts'       : '',
-        \ 'jl'       : ''
+        \ 'jl'       : '',
+        \ 'pp'       : ''
         \}
 
   let s:file_node_exact_matches = {
