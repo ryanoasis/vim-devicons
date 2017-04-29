@@ -268,7 +268,8 @@ function! s:setDictionaries()
         \ 'psd'      : '',
         \ 'psb'      : '',
         \ 'ts'       : '',
-        \ 'jl'       : ''
+        \ 'jl'       : '',
+        \ 'pp'       : ''
         \}
 
   let s:file_node_exact_matches = {
@@ -285,6 +286,8 @@ function! s:setDictionaries()
         \ '.gitconfig'                       : '',
         \ '.gitignore'                       : '',
         \ '.bashrc'                          : '',
+        \ '.zshrc'                           : '',
+        \ '.vimrc'                           : '',
         \ '.bashprofile'                     : '',
         \ 'favicon.ico'                      : '',
         \ 'license'                          : '',
@@ -300,7 +303,8 @@ function! s:setDictionaries()
         \ '.*require.*\.js$'      : '',
         \ '.*materialize.*\.js$'  : '',
         \ '.*materialize.*\.css$' : '',
-        \ '.*mootools.*\.js$'     : ''
+        \ '.*mootools.*\.js$'     : '',
+        \ 'Vagrantfile$'          : ''
         \}
 
   if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
