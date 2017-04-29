@@ -552,9 +552,10 @@ function! webdevicons#softRefresh()
   call s:softRefreshNerdTree()
 endfunction
 
-" a:1 (bufferName), a:2 (isDirectory)
+" a:1 (bufferName), a:2 (isDirectory), a:3 (appendArtifactFix)
 " scope: public
 function! WebDevIconsGetFileTypeSymbol(...)
+  let appendArtifactFix = 1
   if a:0 == 0
     let fileNodeExtension = expand('%:e')
     let fileNode = expand('%:t')
@@ -562,10 +563,14 @@ function! WebDevIconsGetFileTypeSymbol(...)
   else
     let fileNodeExtension = fnamemodify(a:1, ':e')
     let fileNode = fnamemodify(a:1, ':t')
-    if a:0 == 2
+    if a:0 > 1
       let isDirectory = a:2
     else
       let isDirectory = 0
+    endif
+
+    if a:0 == 3
+      let appendArtifactFix = a:3
     endif
   endif
 
@@ -598,7 +603,11 @@ function! WebDevIconsGetFileTypeSymbol(...)
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
   " actual font patcher)
-  let artifactFix = "\u00A0"
+  if appendArtifactFix == 1
+    let artifactFix = "\u00A0"
+  else
+    let artifactFix = ""
+  endif
 
   return symbol . artifactFix
 
@@ -694,13 +703,13 @@ function! NERDTreeWebDevIconsRefreshListener(event)
       if g:DevIconsEnableFoldersOpenClose && directoryOpened
         let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
       else
-        let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory) . padding
+        let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory, 0) . padding
       endif
     else
       if g:DevIconsEnableFoldersOpenClose && directoryOpened
         let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
       else
-        let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
+        let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol . padding
       endif
     endif
   else
