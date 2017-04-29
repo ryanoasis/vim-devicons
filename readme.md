@@ -273,6 +273,7 @@ Detailed Features
   * [vimfiler]
   * [flagship]
     * Support is **experimental** because the [API may be changing](https://github.com/tpope/vim-flagship/issues/6#issuecomment-116121220)
+* Supports byte order marker (BOM)
 * Customizable and extendable glyphs (icons) settings
   * ability to override defaults and use your own characters or glyphs
 * Supports a wide range of file type extensions by default:
@@ -282,6 +283,7 @@ Detailed Features
 * Supports a few library pattern matches, by default:
   * ```jquery, angular, backbone, requirejs, materialize, mootools, Vagrantfile```
 * Works with patched fonts, especially [Nerd Fonts]
+
 
 Extra Configuration
 -------------------
@@ -363,6 +365,12 @@ let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 ```vim
 " change the default character when no match found
 let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = 'ƛ'
+```
+
+```vim
+" set a byte character marker (BOM) utf-8 symbol when retrieving file encoding
+" disabled by default with no value
+let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
 ```
 
 ```vim
