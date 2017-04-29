@@ -539,11 +539,8 @@ function! s:initialize()
   call s:initializeCtrlP()
 endfunction
 
-if v:vim_did_enter
-  call s:initialize()
-else
-  au VimEnter * call s:initialize()
-endif
+" had some issues with VimEnter, for now using:
+call s:initialize()
 
 " public functions {{{2
 "========================================================================
