@@ -3,6 +3,14 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.9.0
+  - Added support for [Denite](https://github.com/Shougo/denite.nvim) (PR #191) (@0phoff)
+  - Added symbol for byte order marker (BOM) (utf-8) (PR #199) (@Snaptags)
+  - Added support for `.zshrc`, `.vimrc`, `pp` (Puppet classes extensions), and `Vagrantfile` filetypes (enhancement #200) (@kiyanwang)
+  - Added support for `h`, `hpp`, `hxx` (C/C++ header filetype extensions) (enhancement #190)
+  - Added support for `bash`, `zsh`, `ksh`, `csh`, `awk`, `ps1` (script extensions) (enhancement #196)
+  - Added support for `rmd` (R Markdown) (partially fixes #195)
+  - Fixes opened folders titles padding/spacing offset (fixes #197)
 - v0.8.6
   - Added support for vimfiler explorer mode (fixes #171)
   - Added `doc/tags` to `.gitignore` (PR #182) (@doronbehar)
