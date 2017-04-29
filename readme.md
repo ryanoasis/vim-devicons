@@ -8,7 +8,7 @@
 [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter]
 [![Flattr this git repo][img-flattr-badge]][badge-flattr]
 
-**VimDevIcons** adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP][ctrlpvim-CtrlP], [powerline], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
+**VimDevIcons** adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP][ctrlpvim-CtrlP], [powerline], [Denite], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
 
 <h3 align="center">
   <img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.9.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
@@ -19,7 +19,7 @@ Features
 
 **VimDevIcons integrates with these plugins and more:**
 
-[NERDTree] | [vim-airline] | [CtrlP][ctrlpvim-CtrlP] | [powerline] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
+[NERDTree] | [vim-airline] | [CtrlP][ctrlpvim-CtrlP] | [powerline] | [Denite] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
 
 * Customizable and extendable glyphs (icons) settings
   * ability to override defaults and use your own characters or glyphs
@@ -132,7 +132,7 @@ Add the following in your `.vimrc` or `.gvimrc`:
 
 ##### Set VimDevIcons to load _after_ these plugins!
 
-[NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
+[NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [Denite] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
 
 ##### Set encoding to UTF-8 to show glyphs
 
@@ -183,7 +183,7 @@ font, else things break!
 If you installed and setup things correctly you should now see icons in the [supported plugins](#features)!
 
 **Notes on include order:**
-* for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [powerline], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
+* for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [powerline], [Denite], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
 * for better [nerdtree-git-plugin] support, you _should_ configure vim to load nerdtree-git-plugin **_before_** VimDevIcons loads.
 
 [Lightline Setup](#lightline-setup) and [Powerline Setup](#powerline-setup) require some extra setup as shown below:
@@ -263,6 +263,8 @@ Detailed Features
       * Using the version hosted on [vimscripts](http://www.vim.org/scripts/script.php?script_id=3736) in favor of GitHub will lead to a outdated message, and icons will fail to show.
   * [powerline][] (statusline)
     * see: [powerline setup](#powerline-setup)
+  * [Denite]
+    * Currently supports `file_rec`, `file_old`, `buffer`, and `directory_rec`
   * [unite]
     * Currently supports `file`, `file_rec`, `buffer`, `file_rec/async`, and `file_rec/neovim`
   * [lightline.vim][] (statusline)
@@ -590,6 +592,7 @@ Link References
 [lightline.vim]:https://github.com/itchyny/lightline.vim
 [lightline]:https://github.com/itchyny/lightline.vim
 [nerdtree-git-plugin]:https://github.com/Xuyuanp/nerdtree-git-plugin
+[Denite]:https://github.com/Shougo/denite.nvim
 [unite]:https://github.com/Shougo/unite.vim
 [unite.vim]:https://github.com/Shougo/unite.vim
 [vimfiler]:https://github.com/Shougo/vimfiler.vim
