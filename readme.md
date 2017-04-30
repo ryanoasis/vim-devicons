@@ -6,7 +6,6 @@
 
 [![GitHub version][img-version-badge]][badge-version]
 [![Join the chat at https://gitter.im/ryanoasis/vim-devicons][img-gitter-badge]][badge-gitter]
-[![Flattr this git repo][img-flattr-badge]][badge-flattr]
 
 **VimDevIcons** adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP][ctrlpvim-CtrlP], [powerline], [Denite], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
 
@@ -617,11 +616,9 @@ Link References
 [vim-devicons-polls]:https://github.com/ryanoasis/vim-devicons/labels/poll
 [badge-version]:http://badge.fury.io/gh/ryanoasis%2Fvim-devicons
 [badge-gitter]:https://gitter.im/ryanoasis/vim-devicons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-[badge-flattr]:https://flattr.com/submit/auto?user_id=ryanoasis&url=https://github.com/ryanoasis/vim-devicons&title=vim-devicons&language=viml&tags=github&category=software
 
-[img-version-badge]:https://badge.fury.io/gh/ryanoasis%2Fvim-devicons.svg
-[img-gitter-badge]:https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat
-[img-flattr-badge]:https://img.shields.io/badge/donate-flattr%20this!-8DB65B.svg?style=flat
+[img-version-badge]:https://img.shields.io/github/release/ryanoasis/vim-devicons.svg?style=flat-square
+[img-gitter-badge]:https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square
 [img-visual-toc-screenshots]:https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v1.0.0/branding-logo-screenshots-sm.png
 [img-visual-toc-api]:https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v1.0.0/branding-logo-api-sm.png
 [img-visual-toc-patched-fonts]:https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/images/nerd-fonts-character-logo-md.png
