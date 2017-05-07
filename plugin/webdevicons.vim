@@ -682,7 +682,8 @@ endfunction
 function! AirlineWebDevIcons(...)
   let w:airline_section_x = get(w:, 'airline_section_x', g:airline_section_x)
   let w:airline_section_x .= ' %{WebDevIconsGetFileTypeSymbol()} '
-  if g:webdevicons_enable_airline_statusline_fileformat_symbols
+  let hasFileFormatEncodingPart = airline#parts#ffenc() != ''
+  if g:webdevicons_enable_airline_statusline_fileformat_symbols && hasFileFormatEncodingPart
     let w:airline_section_y = ' %{&fenc . " " . WebDevIconsGetFileFormatSymbol()} '
   endif
 endfunction
