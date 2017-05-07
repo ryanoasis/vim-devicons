@@ -6,6 +6,7 @@ This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 - v0.9.1
   - Added `sass` filetype (PR #202) (@toastal)
   - Fixed NERDTree open/close folder icon bugs (fixes #194)
+  - Fixed airline conflict with file enconding `skip_expected_string` feature (fixes #203)
   - Fixed possible glyph artifacts on open/close folder glyphs
 - v0.9.0
   - Added support for [Denite](https://github.com/Shougo/denite.nvim) (PR #191) (@0phoff)
