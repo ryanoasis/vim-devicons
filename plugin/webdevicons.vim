@@ -193,6 +193,7 @@ function! s:setDictionaries()
 
   let s:file_node_extensions = {
         \ 'styl'     : '',
+        \ 'sass'     : '',
         \ 'scss'     : '',
         \ 'htm'      : '',
         \ 'html'     : '',
