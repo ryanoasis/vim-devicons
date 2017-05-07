@@ -728,12 +728,12 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   if !path.isDirectory
     let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str()) . padding
   elseif path.isDirectory && g:WebDevIconsUnicodeDecorateFolderNodes == 1
-
     let directoryOpened = 0
 
     if g:DevIconsEnableFoldersOpenClose && len(path.flagSet._flagsForScope('webdevicons')) > 0
-      " isOpen is not available on the path listener, compare using symbols
-      if path.flagSet._flagsForScope('webdevicons')[0] == prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
+      " isOpen is not available on the path listener directly
+      " but we added one via overriding particular keymappings for NERDTree
+      if has_key(path, 'isOpen') && path.isOpen == 1
         let directoryOpened = 1
       endif
     endif
