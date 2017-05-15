@@ -22,7 +22,7 @@ Features
 
 **VimDevIcons integrates with these plugins and more:**
 
-[NERDTree] | [vim-airline] | [CtrlP][ctrlpvim-CtrlP] | [powerline] | [Denite] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
+[NERDTree] | [vim-airline] | [CtrlP][ctrlpvim-CtrlP] | [powerline] | [Denite] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship] | [vim-workspace]
 
 * Customizable and extendable glyphs (icons) settings
   * ability to override defaults and use your own characters or glyphs
@@ -612,6 +612,7 @@ Link References
 [ctrlpvim-CtrlP]:https://github.com/ctrlpvim/ctrlp.vim
 [powerline]:https://github.com/powerline/powerline
 [vim-startify]:https://github.com/mhinz/vim-startify
+[vim-workspace]:https://github.com/bagrat/vim-workspace
 
 [wiki-screenshots]:https://github.com/ryanoasis/vim-devicons/wiki/Screenshots
 [wiki-faq]:https://github.com/ryanoasis/vim-devicons/wiki/FAQ
