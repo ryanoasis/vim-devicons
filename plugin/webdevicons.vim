@@ -219,6 +219,7 @@ function! s:setDictionaries()
         \ 'conf'     : '',
         \ 'ini'      : '',
         \ 'yml'      : '',
+        \ 'yaml'     : '',
         \ 'bat'      : '',
         \ 'jpg'      : '',
         \ 'jpeg'     : '',
