@@ -69,6 +69,13 @@ function! s:SetupListeners()
   call g:NERDTreePathNotifier.AddListener('refreshFlags', 'NERDTreeWebDevIconsRefreshListener')
 endfunction
 
+" util like helpers
+" scope: local
+function! s:Refresh()
+  call b:NERDTree.root.refreshFlags()
+  call NERDTreeRender()
+endfunction
+
 " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
 " actual font patcher)
 
@@ -222,6 +229,15 @@ function! WebDevIconsNERDTreeMapCloseDir(node)
   endif
 endfunction
 
+function! WebDevIconsNERDTreeMapUpdirKeepOpen()
+  call WebDevIconsNERDTreeDirOpen(b:NERDTree.root)
+  " continue with normal logic:
+  call nerdtree#ui_glue#upDir(1)
+  call s:Refresh()
+  " glyph change possible artifact clean-up
+  redraw!
+endfunction
+
 if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
   call s:SetupListeners()
 
@@ -270,6 +286,14 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
       \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
       \ 'override': 1,
       \ 'scope': 'DirNode' })
+
+    " NERDTreeMapUpdirKeepOpen
+    call NERDTreeAddKeyMap({
+      \ 'key': g:NERDTreeMapUpdirKeepOpen,
+      \ 'callback': 'WebDevIconsNERDTreeMapUpdirKeepOpen',
+      \ 'override': 1,
+      \ 'scope': 'all' })
+
   endif
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
