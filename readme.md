@@ -280,7 +280,7 @@ Detailed Features
 * Customizable and extendable glyphs (icons) settings
   * ability to override defaults and use your own characters or glyphs
 * Supports a wide range of file type extensions by default:
-  * ```styl, sass, scss, htm, html, slim, ejs, css, less, md, rmd, json, js, jsx, rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, bat, jpg, jpeg, bmp, png, gif, twig, cpp, c++, cxx, cc, cp, c, h, hpp, hxx, hs, lhs, lua, java, sh, bash, zsh, ksh, csh, awk, ps1, fish, diff, db, clj, cljs, edn, scala, go, dart, xul, sln, suo, pl, pm, t, rss, f#, fsscript, fsx, fs, fsi, rs, rlib, d, erl, hrl, vim, ai, psd, psb, ts, jl, pp```
+  * ```styl, sass, scss, htm, html, slim, ejs, css, less, md, rmd, json, js, jsx, rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, yaml, bat, jpg, jpeg, bmp, png, gif, twig, cpp, c++, cxx, cc, cp, c, h, hpp, hxx, hs, lhs, lua, java, sh, bash, zsh, ksh, csh, awk, ps1, fish, diff, db, clj, cljs, edn, scala, go, dart, xul, sln, suo, pl, pm, t, rss, f#, fsscript, fsx, fs, fsi, rs, rlib, d, erl, hrl, vim, ai, psd, psb, ts, jl, pp```
 * Supports a few full filename matches, by default:
   * ```gruntfile.coffee, gruntfile.js, gruntfile.ls, gulpfile.coffee, gulpfile.js, gulpfile.ls, dropbox, .ds_store, .gitconfig, .gitignore, .bashrc, .zshrc, .vimrc, .bashprofile, favicon.ico, license, node_modules, react.jsx, procfile```
 * Supports a few library pattern matches, by default:

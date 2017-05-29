@@ -369,7 +369,7 @@ Detailed Features ~
 - Supports a wide range of file type extensions by default:
 
 - 'styl, sass, scss, htm, html, slim, ejs, css, less, md, rmd, json, js, jsx,
-  rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, bat,
+  rb, php, py, pyc, pyd, pyo, coffee, mustache, hbs, conf, ini, yml, yaml, bat,
   jpg, jpeg, bmp, png, gif, twig, cpp, c++, cxx, cc, cp, c, h, hpp, hxx, hs,
   lhs, lua, java, sh, bash, zsh, ksh, csh, awk, ps1, fish, diff, db, clj,
   cljs, edn, scala, go, dart, xul, sln, suo, pl, pm, t, rss, f#, fsscript,
