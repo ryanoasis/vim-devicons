@@ -284,6 +284,7 @@ function! s:setDictionaries()
         \ 'psd'      : '',
         \ 'psb'      : '',
         \ 'ts'       : '',
+        \ 'tsx'      : '',
         \ 'jl'       : '',
         \ 'pp'       : ''
         \}
