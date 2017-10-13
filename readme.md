@@ -151,7 +151,7 @@ Linux
  ```
 
 ```vim
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 ```
 
 macOS (OS X) and Windows
@@ -160,7 +160,9 @@ set guifont=<FONT_NAME>:h<FONT_SIZE>
 ```
 
 ```vim
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+set guifont=DroidSansMono\ Nerd\ Font:h11
+" or:
+set guifont=DroidSansMono_Nerd_Font:h11
 ```
 
 **Note:** if you don't set `guifont` then you'll have to set your terminal's
