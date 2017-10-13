@@ -1,6 +1,6 @@
 "=============================================================================
 " FILE: devicons.vim
-" Version: 0.9.2
+" Version: 0.9.3
 " Webpage: https://github.com/ryanoasis/vim-devicons
 " Maintainer: Ryan McIntyre <ryanoasis@gmail.com>
 " License: MIT license  {{{
