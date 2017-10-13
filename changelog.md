@@ -3,6 +3,10 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.9.3
+  - Added `tsx` filetype (PR #210) (@dustinblackman)
+  - Updated links of [deprecated kien/ctrlp](https://github.com/kien/ctrlp.vim) to [active ctrlp fork](https://github.com/ctrlpvim/ctrlp.vim) (PR #211) (@haxorjim)
+  - Updated MacOS and Windows `guifont` examples with alternate format (fixes #208)
 - v0.9.2
   - Added `yaml` filetype (PR #207) (@jpoppe)
   - Added mention of `vim-workspace` as an integrated plugin (PR #206) (@bagrat)
