@@ -135,7 +135,7 @@ Add the following in your `.vimrc` or `.gvimrc`:
 
 ##### Set VimDevIcons to load _after_ these plugins!
 
-[NERDTree] | [vim-airline] | [CtrlP] | [powerline] | [Denite] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
+[NERDTree] | [vim-airline] | [CtrlP][ctrlpvim-CtrlP] | [powerline] | [Denite] | [unite] | [lightline.vim] | [vim-startify] | [vimfiler] | [flagship]
 
 ##### Set encoding to UTF-8 to show glyphs
 
@@ -188,7 +188,7 @@ font, else things break!
 If you installed and setup things correctly you should now see icons in the [supported plugins](#features)!
 
 **Notes on include order:**
-* for support of these plugins: [NERDTree], [vim-airline], [CtrlP], [powerline], [Denite], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
+* for support of these plugins: [NERDTree], [vim-airline], [CtrlP][ctrlpvim-CtrlP], [powerline], [Denite], [unite], [vimfiler], [flagship] you **must** configure vim to load those plugins **_before_** vim-devicons loads.
 * for better [nerdtree-git-plugin] support, you _should_ configure vim to load nerdtree-git-plugin **_before_** VimDevIcons loads.
 
 [Lightline Setup](#lightline-setup) and [Powerline Setup](#powerline-setup) require some extra setup as shown below:
