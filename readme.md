@@ -606,7 +606,7 @@ Link References
 [nerd-fonts-patcher]:https://github.com/ryanoasis/nerd-fonts#font-patcher
 [patched-fonts]:https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
 [NERDTree]:https://github.com/scrooloose/nerdtree
-[vim-airline]:https://github.com/bling/vim-airline
+[vim-airline]:https://github.com/vim-airline/vim-airline
 [lightline.vim]:https://github.com/itchyny/lightline.vim
 [lightline]:https://github.com/itchyny/lightline.vim
 [nerdtree-git-plugin]:https://github.com/Xuyuanp/nerdtree-git-plugin
