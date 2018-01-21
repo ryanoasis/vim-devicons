@@ -37,15 +37,14 @@ Contents ~
      2. vim-startify [20]                            |devicons-vim-startify-20|
      3. Custom status line                        |devicons-custom-status-line|
   10. Todo                                                      |devicons-todo|
-  11. License                                                |devicons-license|
-  12. FAQ / Troubleshooting                      |devicons-faq-troubleshooting|
-  13. Screenshots                                        |devicons-screenshots|
-  14. Contributing                                      |devicons-contributing|
+  11. FAQ / Troubleshooting                      |devicons-faq-troubleshooting|
+  12. Screenshots                                        |devicons-screenshots|
+  13. Contributing                                      |devicons-contributing|
    1. Promotion                                            |devicons-promotion|
    2. Source code                                        |devicons-source-code|
-  15. Rationale                                            |devicons-rationale|
-  16. Inspiration and special thanks      |devicons-inspiration-special-thanks|
-  17. License
+  14. Rationale                                            |devicons-rationale|
+  15. Inspiration and special thanks      |devicons-inspiration-special-thanks|
+  16. License                                                |devicons-license|
  3. References                                            |devicons-references|
 
 ===============================================================================
@@ -402,32 +401,32 @@ Extra Configuration ~
 - You _should_**not** need to configure anything, however, the following
   options are provided for customizing or changing the defaults:
 >
-  " loading the plugin 
+  " loading the plugin
   let g:webdevicons_enable = 1
 <
 
 >
-  " adding the flags to NERDTree 
+  " adding the flags to NERDTree
   let g:webdevicons_enable_nerdtree = 1
 <
 
 >
-  " adding the custom source to unite 
+  " adding the custom source to unite
   let g:webdevicons_enable_unite = 1
 <
 
 >
-  " adding the column to vimfiler 
+  " adding the column to vimfiler
   let g:webdevicons_enable_vimfiler = 1
 <
 
 >
-  " adding to vim-airline's tabline 
+  " adding to vim-airline's tabline
   let g:webdevicons_enable_airline_tabline = 1
 <
 
 >
-  " adding to vim-airline's statusline 
+  " adding to vim-airline's statusline
   let g:webdevicons_enable_airline_statusline = 1
 <
 
@@ -437,7 +436,7 @@ Extra Configuration ~
 <
 
 >
-  " adding to flagship's statusline 
+  " adding to flagship's statusline
   let g:webdevicons_enable_flagship_statusline = 1
 <
 
@@ -447,13 +446,13 @@ Extra Configuration ~
 <
 
 >
-  " use double-width(1) or single-width(0) glyphs 
+  " use double-width(1) or single-width(0) glyphs
   " only manipulates padding, has no effect on terminal or set(guifont) font
   let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 <
 
 >
-  " whether or not to show the nerdtree brackets around flags 
+  " whether or not to show the nerdtree brackets around flags
   let g:webdevicons_conceal_nerdtree_brackets = 1
 <
 
@@ -463,8 +462,13 @@ Extra Configuration ~
 <
 
 >
-  " Force extra padding in NERDTree so that the filetype icons line up vertically 
+  " Force extra padding in NERDTree so that the filetype icons line up vertically
   let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+<
+
+>
+  " Adding the custom source to denite
+  let g:webdevicons_enable_denite = 1
 <
 -------------------------------------------------------------------------------
                                                   *devicons-character-mappings*
@@ -504,7 +508,7 @@ Character Mappings ~
 <
 
 >
-  " enable custom folder/directory glyph exact matching 
+  " enable custom folder/directory glyph exact matching
   " (enabled by default when g:WebDevIconsUnicodeDecorateFolderNodes is set to 1)
   let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
 <
@@ -637,12 +641,6 @@ Todo ~
 - [ ] more specific FAQ and Troubleshooting help
 
 -------------------------------------------------------------------------------
-                                                             *devicons-license*
-License ~
-
-See LICENSE
-
--------------------------------------------------------------------------------
                                                  *devicons-faq-troubleshooting*
 FAQ / Troubleshooting ~
 
@@ -701,6 +699,7 @@ Inspiration and special thanks ~
 - Also thanks to the many contributors [58]
 
 -------------------------------------------------------------------------------
+                                                             *devicons-license*
 License ~
 
 See LICENSE
