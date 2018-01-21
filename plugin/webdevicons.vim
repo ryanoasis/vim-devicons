@@ -143,6 +143,10 @@ if !exists('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol')
   endif
 endif
 
+if !exists('g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol')
+  let g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol =  ''
+endif
+
 if !exists('g:DevIconsDefaultFolderOpenSymbol')
     let g:DevIconsDefaultFolderOpenSymbol = ''
 endif
@@ -731,11 +735,16 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   endif
 
   if !path.isDirectory
+    " Hey we got a regular file, lets get it's proper icon
     let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str()) . padding
+
   elseif path.isDirectory && g:WebDevIconsUnicodeDecorateFolderNodes == 1
+    " Ok we got a directory, some more tests and checks
     let directoryOpened = 0
 
     if g:DevIconsEnableFoldersOpenClose && len(path.flagSet._flagsForScope('webdevicons')) > 0
+      " did the user set different icons for open and close?
+
       " isOpen is not available on the path listener directly
       " but we added one via overriding particular keymappings for NERDTree
       if has_key(path, 'isOpen') && path.isOpen == 1
@@ -744,18 +753,40 @@ function! NERDTreeWebDevIconsRefreshListener(event)
     endif
 
     if g:WebDevIconsUnicodeDecorateFolderNodesExactMatches == 1
+      " Did the user enable exact matching of folder type/names
+      " think node_modules
       if g:DevIconsEnableFoldersOpenClose && directoryOpened
+        " the folder is open
         let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
       else
-        let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory, 0) . padding
+        " the folder is not open
+        if path.isSymLink
+          " We have a symlink
+          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . padding
+        else
+          " We have a regular folder
+          let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory, 0) . padding
+        endif
       endif
+
     else
+      " the user did not enable exact matching
       if g:DevIconsEnableFoldersOpenClose && directoryOpened
+        " the folder is open
         let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
       else
-        let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol . padding
+        " the folder is not open
+        if path.isSymLink
+          " We have a symlink
+          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . padding
+        else
+          " We have a regular folder
+          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol . padding
+        endif
       endif
+
     endif
+
   else
     let flag = ''
   endif
