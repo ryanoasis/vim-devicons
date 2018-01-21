@@ -102,6 +102,19 @@ function! WebDevIconsNERDTreeDirUpdateFlags(node, glyph)
   let prePadding = ''
   let hasGitFlags = (len(path.flagSet._flagsForScope('git')) > 0)
   let hasGitNerdTreePlugin = (exists('g:loaded_nerdtree_git_status') == 1)
+  let collapsesToSameLine = (exists('g:NERDTreeCascadeSingleChildDir') == 1)
+  let dirHasOnlyOneChildDir = 0
+
+  if collapsesToSameLine
+    " need to call to determin children:
+    call a:node._initChildren(1)
+    let dirHasOnlyOneChildDir = (a:node.getChildCount() ==# 1 && a:node.children[0].path.isDirectory)
+  endif
+
+  " properly set collapsed/combined directory display to opened glyph
+  if collapsesToSameLine && dirHasOnlyOneChildDir
+    call WebDevIconsNERDTreeDirOpen(a:node.children[0])
+  endif
 
   if g:WebDevIconsUnicodeGlyphDoubleWidth == 0
     let padding = ''
@@ -122,7 +135,9 @@ function! WebDevIconsNERDTreeDirUpdateFlags(node, glyph)
 
   if flag !=? ''
     call a:node.path.flagSet.addFlag('webdevicons', flag)
+    "echom "added flag of " . flag
     call a:node.path.refreshFlags(b:NERDTree)
+    "echom "flagset is now " . string(a:node.path.flagSet)
   endif
 endfunction
 
