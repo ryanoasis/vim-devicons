@@ -536,9 +536,6 @@ Todo
 * [ ] more customization options in general
 * [ ] more specific FAQ and Troubleshooting help
 
-## License
-
-See [LICENSE](LICENSE)
 
 FAQ / Troubleshooting
 ---------------------
