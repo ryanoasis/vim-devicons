@@ -3,6 +3,13 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.10.0
+  - Added support for symlink directories (PR #221) (@mhartington)
+  - Added missing Denite config in readme (PR #217, fixes #205) (@mohamadLy)
+  - Fixed NERDTree folder open bug with cascade setting (fixes #194)
+  - Fixed potential issue with Vim-Airline (PR #219) (@chrisbra)
+  - Fixed readme.md (removed duplicate section) (PR #222) (@thehappydinoa)
+  - Updated Vim-Airline Repo link in readme (PR #220) (@chrisbra)
 - v0.9.3
   - Added `tsx` filetype (PR #210) (@dustinblackman)
   - Updated links of [deprecated kien/ctrlp](https://github.com/kien/ctrlp.vim) to [active ctrlp fork](https://github.com/ctrlpvim/ctrlp.vim) (PR #211) (@haxorjim)
