@@ -1,7 +1,7 @@
 # VimDevIcons - Add Icons to Your Plugins
 
 <h1 align="center">
-  <img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.9.x/branding-logo.png" alt="vim-devicons">
+  <img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.10.x/branding-logo.png" alt="vim-devicons">
 </h1>
 
 [![GitHub version][img-version-badge]][badge-version]
@@ -14,7 +14,7 @@
 **VimDevIcons** adds filetype glyphs (icons) to other plugins such as [NERDTree], [vim-airline], [CtrlP][ctrlpvim-CtrlP], [powerline], [Denite], [unite], [lightline.vim], [vim-startify], [vimfiler], and [flagship].
 
 <h3 align="center">
-  <img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.9.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
+  <img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.10.x/overall-screenshot.png" alt="vim-devicons overall screenshot" />
 </h3>
 
 Features
@@ -174,8 +174,8 @@ font, else things break!
   ```
 
 ##### vimrc examples
-* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.9.x/.vimrc-windows-1)
-* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.9.x/.vimrc-linux-1)
+* [Sample Windows vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.10.x/.vimrc-windows-1)
+* [Sample Linux vimrc configuration 1](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.10.x/.vimrc-linux-1)
 
 <br />
 
@@ -255,7 +255,7 @@ file format segment
  }
 ```
 
-for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.9.x/powerline/themes/vim/default.json)
+for full example see [sample file](https://github.com/ryanoasis/vim-devicons/wiki/samples/v0.10.x/powerline/themes/vim/default.json)
 
 Detailed Features
 -----------------
