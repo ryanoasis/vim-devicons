@@ -618,7 +618,7 @@ Link References
 [vim-workspace]:https://github.com/bagrat/vim-workspace
 
 [wiki-screenshots]:https://github.com/ryanoasis/vim-devicons/wiki/Screenshots
-[wiki-faq]:https://github.com/ryanoasis/vim-devicons/wiki/FAQ
+[wiki-faq]:https://github.com/ryanoasis/vim-devicons/wiki/FAQ-&-Troubleshooting
 
 [vim-devicons-repo]:https://github.com/ryanoasis/vim-devicons
 [vim-devicons-polls]:https://github.com/ryanoasis/vim-devicons/labels/poll
