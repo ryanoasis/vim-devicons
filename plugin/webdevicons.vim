@@ -290,7 +290,8 @@ function! s:setDictionaries()
         \ 'ts'       : '',
         \ 'tsx'      : '',
         \ 'jl'       : '',
-        \ 'pp'       : ''
+        \ 'pp'       : '',
+        \ 'vue'      : '﵂'
         \}
 
   let s:file_node_exact_matches = {
