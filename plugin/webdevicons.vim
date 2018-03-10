@@ -523,7 +523,7 @@ endfunction
 " scope: local
 function! s:initializeDenite()
   if exists('g:loaded_denite') && g:webdevicons_enable_denite
-    call denite#custom#source('file_rec,file_old,buffer,directory_rec', 'converters', ['devicons_denite_converter'])
+    call denite#custom#source('file_rec,file_mru,file_old,buffer,directory_rec,directory_mru', 'converters', ['devicons_denite_converter'])
   endif
 endfunction
 

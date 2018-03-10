@@ -3,6 +3,7 @@
 from .base import Base
 from os.path import isdir
 
+
 class Filter(Base):
 
 	def __init__(self, vim):
@@ -13,21 +14,18 @@ class Filter(Base):
 	def filter(self, context):
 		for candidate in context['candidates']:
 
-			if self.vim.funcs.has_key(candidate, 'bufnr'):
+			if 'bufnr' in candidate:
 				bufname = self.vim.funcs.bufname(candidate['bufnr'])
 				filename = self.vim.funcs.fnamemodify(bufname, ':p:t')
-				path = self.vim.funcs.fnamemodify(bufname, ':p:h')
-			elif self.vim.funcs.has_key(candidate, 'word') and self.vim.funcs.has_key(candidate, 'action__path'):
-				path = candidate['action__path']
+			elif 'word' in candidate and 'action__path' in candidate:
 				filename = candidate['word']
 
-			icon = self.vim.funcs.WebDevIconsGetFileTypeSymbol(filename, isdir(filename))
+			icon = self.vim.funcs.WebDevIconsGetFileTypeSymbol(
+				filename, isdir(filename))
 
-			# prevent filenames of buffers getting 'lost'
-			if filename != path:
-				path = self.vim.funcs.printf('%s', filename)
-
-			# Customize output format.
-			candidate['abbr'] = self.vim.funcs.printf(' %s %s', icon, path)
+			# Customize output format if not done already.
+			if icon not in candidate.get('abbr', '')[:10]:
+				candidate['abbr'] = ' {} {}'.format(
+					icon, candidate.get('abbr', candidate['word']))
 
 		return context['candidates']
