@@ -298,7 +298,7 @@ function! s:setDictionaries()
         \ 'd'        : '',
         \ 'erl'      : '',
         \ 'hrl'      : '',
-        \ 'vim'      : '',
+        \ 'vim'      : '',
         \ 'ai'       : '',
         \ 'psd'      : '',
         \ 'psb'      : '',
@@ -324,7 +324,10 @@ function! s:setDictionaries()
         \ '.gitignore'                       : '',
         \ '.bashrc'                          : '',
         \ '.zshrc'                           : '',
-        \ '.vimrc'                           : '',
+        \ '.vimrc'                           : '',
+        \ '.gvimrc'                          : '',
+        \ '_vimrc'                           : '',
+        \ '_gvimrc'                          : '',
         \ '.bashprofile'                     : '',
         \ 'favicon.ico'                      : '',
         \ 'license'                          : '',
@@ -341,6 +344,7 @@ function! s:setDictionaries()
         \ '.*materialize.*\.js$'  : '',
         \ '.*materialize.*\.css$' : '',
         \ '.*mootools.*\.js$'     : '',
+        \ '.*vimrc.*'             : '',
         \ 'Vagrantfile$'          : ''
         \}
 
