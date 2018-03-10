@@ -97,7 +97,7 @@ function! WebDevIconsNERDTreeChangeRootHandler(node)
   call b:NERDTree.changeRoot(a:node)
   call NERDTreeRender()
   call a:node.putCursorHere(0, 0)
-  if g:DevIconsEnableNERDTreeRedraw #== 1
+  if g:DevIconsEnableNERDTreeRedraw ==# 1
     redraw!
   endif
 endfunction
@@ -106,7 +106,7 @@ endfunction
 " scope: global
 function! WebDevIconsNERDTreeUpDirCurrentRootClosedHandler()
   call nerdtree#ui_glue#upDir(0)
-  if g:DevIconsEnableNERDTreeRedraw #== 1
+  if g:DevIconsEnableNERDTreeRedraw ==# 1
     redraw!
   endif
 endfunction
@@ -210,7 +210,7 @@ function! WebDevIconsNERDTreeMapActivateNode(node)
   " continue with normal activate logic
   call a:node.activate()
   " glyph change possible artifact clean-up
-  if g:DevIconsEnableNERDTreeRedraw #== 1
+  if g:DevIconsEnableNERDTreeRedraw ==# 1
     redraw!
   endif
 endfunction
@@ -223,7 +223,7 @@ function! WebDevIconsNERDTreeMapOpenRecursively(node)
   " continue with normal original logic:
   call b:NERDTree.render()
   " glyph change possible artifact clean-up
-  if g:DevIconsEnableNERDTreeRedraw #== 1
+  if g:DevIconsEnableNERDTreeRedraw ==# 1
     redraw!
   endif
   call nerdtree#echo("Recursively opening node. Please wait... DONE")
@@ -237,7 +237,7 @@ function! WebDevIconsNERDTreeMapCloseChildren(node)
   call b:NERDTree.render()
   call a:node.putCursorHere(0, 0)
   " glyph change possible artifact clean-up
-  if g:DevIconsEnableNERDTreeRedraw #== 1
+  if g:DevIconsEnableNERDTreeRedraw ==# 1
     redraw!
   endif
 endfunction
@@ -262,7 +262,7 @@ function! WebDevIconsNERDTreeMapCloseDir(node)
     call b:NERDTree.render()
     call parent.putCursorHere(0, 0)
     " glyph change possible artifact clean-up
-    if g:DevIconsEnableNERDTreeRedraw #== 1
+    if g:DevIconsEnableNERDTreeRedraw ==# 1
       redraw!
     endif
   endif
@@ -274,7 +274,7 @@ function! WebDevIconsNERDTreeMapUpdirKeepOpen()
   call nerdtree#ui_glue#upDir(1)
   call s:Refresh()
   " glyph change possible artifact clean-up
-  if g:DevIconsEnableNERDTreeRedraw #== 1
+  if g:DevIconsEnableNERDTreeRedraw ==# 1
     redraw!
   endif
 endfunction
@@ -339,7 +339,7 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
   " actual font patcher)
-  if g:webdevicons_gui_glyph_fix #== 1
+  if g:webdevicons_gui_glyph_fix ==# 1
     call NERDTreeAddKeyMap({
       \ 'key': g:NERDTreeMapChangeRoot,
       \ 'callback': 'WebDevIconsNERDTreeChangeRootHandler',
@@ -354,6 +354,7 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
       \ 'quickhelpText': "move tree root up a dir\n\"    plus devicons redraw\n\"    hack fix",
       \ 'scope': 'all' })
   endif
+
 endif
 
 " modeline syntax:

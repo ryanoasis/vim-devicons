@@ -79,6 +79,7 @@ if !exists('g:DevIconsAppendArtifactFix')
     let g:DevIconsAppendArtifactFix = 1
   else
     let g:DevIconsAppendArtifactFix = 0
+  endif
 endif
 
 if !exists('g:DevIconsArtifactFixChar')
@@ -163,7 +164,7 @@ if !exists('g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol')
 endif
 
 if !exists('g:DevIconsDefaultFolderOpenSymbol')
-    let g:DevIconsDefaultFolderOpenSymbol = ''
+  let g:DevIconsDefaultFolderOpenSymbol = ''
 endif
 
 " functions {{{1
@@ -310,8 +311,8 @@ function! s:setDictionaries()
         \}
 
   let s:file_node_exact_matches = {
-        \ 'exact-match-case-sensitive-1.txt' : 'X1',
-        \ 'exact-match-case-sensitive-2'     : 'X2',
+        \ 'exact-match-case-sensitive-1.txt' : '1',
+        \ 'exact-match-case-sensitive-2'     : '2',
         \ 'gruntfile.coffee'                 : '',
         \ 'gruntfile.js'                     : '',
         \ 'gruntfile.ls'                     : '',
@@ -333,7 +334,7 @@ function! s:setDictionaries()
         \ 'license'                          : '',
         \ 'node_modules'                     : '',
         \ 'react.jsx'                        : '',
-        \ 'procfile'                         : '',
+        \ 'procfile'                         : ''
         \}
 
   let s:file_node_pattern_matches = {
@@ -667,7 +668,7 @@ function! WebDevIconsGetFileTypeSymbol(...)
   if appendArtifactFix == 1
     let artifactFix = g:DevIconsArtifactFixChar
   else
-    let artifactFix = ""
+    let artifactFix = ''
   endif
 
   return symbol . artifactFix
