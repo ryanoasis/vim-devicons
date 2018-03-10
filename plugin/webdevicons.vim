@@ -334,7 +334,9 @@ function! s:setDictionaries()
         \ 'license'                          : '',
         \ 'node_modules'                     : '',
         \ 'react.jsx'                        : '',
-        \ 'procfile'                         : ''
+        \ 'procfile'                         : '',
+        \ 'dockerfile'                       : '',
+        \ 'docker-compose.yml'               : '',
         \}
 
   let s:file_node_pattern_matches = {
