@@ -74,6 +74,17 @@ if !exists('g:webdevicons_conceal_nerdtree_brackets')
   let g:webdevicons_conceal_nerdtree_brackets = 1
 endif
 
+if !exists('g:DevIconsAppendArtifactFix')
+  if has('gui_running')
+    let g:DevIconsAppendArtifactFix = 1
+  else
+    let g:DevIconsAppendArtifactFix = 0
+endif
+
+if !exists('g:DevIconsArtifactFixChar')
+  let g:DevIconsArtifactFixChar = "\u00A0"
+endif
+
 " config options {{{1
 "========================================================================
 
@@ -109,8 +120,12 @@ if !exists('g:WebDevIconsUnicodeGlyphDoubleWidth')
   let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 endif
 
+if !exists('g:WebDevIconsNerdTreeBeforeGlyphPadding')
+  let g:WebDevIconsNerdTreeBeforeGlyphPadding = ' '
+endif
+
 if !exists('g:WebDevIconsNerdTreeAfterGlyphPadding')
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 endif
 
 if !exists('g:WebDevIconsNerdTreeGitPluginForceVAlign')
@@ -597,7 +612,7 @@ endfunction
 " a:1 (bufferName), a:2 (isDirectory), a:3 (appendArtifactFix)
 " scope: public
 function! WebDevIconsGetFileTypeSymbol(...)
-  let appendArtifactFix = 1
+  let appendArtifactFix = g:DevIconsAppendArtifactFix
   if a:0 == 0
     let fileNodeExtension = expand('%:e')
     let fileNode = expand('%:t')
@@ -646,7 +661,7 @@ function! WebDevIconsGetFileTypeSymbol(...)
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
   " actual font patcher)
   if appendArtifactFix == 1
-    let artifactFix = "\u00A0"
+    let artifactFix = g:DevIconsArtifactFixChar
   else
     let artifactFix = ""
   endif
@@ -678,7 +693,7 @@ function! WebDevIconsGetFileFormatSymbol(...)
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
   " actual font patcher)
-  let artifactFix = "\u00A0"
+  let artifactFix = g:DevIconsArtifactFixChar
 
   return bomb . fileformat . artifactFix
 endfunction
@@ -717,17 +732,17 @@ endif
 " scope: public
 function! NERDTreeWebDevIconsRefreshListener(event)
   let path = a:event.subject
-  let padding = g:WebDevIconsNerdTreeAfterGlyphPadding
-  let prePadding = ''
+  let postPadding = g:WebDevIconsNerdTreeAfterGlyphPadding
+  let prePadding = g:WebDevIconsNerdTreeBeforeGlyphPadding
   let hasGitFlags = (len(path.flagSet._flagsForScope('git')) > 0)
   let hasGitNerdTreePlugin = (exists('g:loaded_nerdtree_git_status') == 1)
 
   if g:WebDevIconsUnicodeGlyphDoubleWidth == 0
-    let padding = ''
+    let postPadding = ''
   endif
 
   if hasGitFlags && g:WebDevIconsUnicodeGlyphDoubleWidth == 1
-    let prePadding = ' '
+    let prePadding .= ' '
   endif
 
   " align vertically at the same level: non git-flag nodes with git-flag nodes
@@ -737,7 +752,7 @@ function! NERDTreeWebDevIconsRefreshListener(event)
 
   if !path.isDirectory
     " Hey we got a regular file, lets get it's proper icon
-    let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str()) . padding
+    let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str()) . postPadding
 
   elseif path.isDirectory && g:WebDevIconsUnicodeDecorateFolderNodes == 1
     " Ok we got a directory, some more tests and checks
@@ -758,15 +773,15 @@ function! NERDTreeWebDevIconsRefreshListener(event)
       " think node_modules
       if g:DevIconsEnableFoldersOpenClose && directoryOpened
         " the folder is open
-        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
+        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . postPadding
       else
         " the folder is not open
         if path.isSymLink
           " We have a symlink
-          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . padding
+          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . postPadding
         else
           " We have a regular folder
-          let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory, 0) . padding
+          let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory, 0) . postPadding
         endif
       endif
 
@@ -774,15 +789,15 @@ function! NERDTreeWebDevIconsRefreshListener(event)
       " the user did not enable exact matching
       if g:DevIconsEnableFoldersOpenClose && directoryOpened
         " the folder is open
-        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . padding
+        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . postPadding
       else
         " the folder is not open
         if path.isSymLink
           " We have a symlink
-          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . padding
+          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . postPadding
         else
           " We have a regular folder
-          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol . padding
+          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol . postPadding
         endif
       endif
 
