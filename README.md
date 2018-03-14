@@ -32,6 +32,8 @@ Features
 
 > See [Detailed Features](https://github.com/ryanoasis/vim-devicons/wiki/Detailed-Features) for more.
 
+> See [Configuration](https://github.com/ryanoasis/vim-devicons/wiki/Extra-Configuration) for a list of configuration and customization options.
+
 Installation
 ------------
 
@@ -50,14 +52,17 @@ Installation
     set encoding=UTF-8
     ```
 
-	> Neovim always use UTF-8 as default encoding. No need to set explicitly under Neovim.
+	> No need to set explicitly under Neovim: always uses UTF-8 as the default encoding.
+
+
+> See [Installation](https://github.com/ryanoasis/vim-devicons/wiki/Installation) for detailed setup instructions
 
 Use `:help devicons` for further configuration.
 
 Developers
 ----------
 
-See [DEVELOPER](DEVELOPER.md) to how to use API.
+See [DEVELOPER](DEVELOPER.md) for how to use the API.
 
 Troubleshooting
 ---------------
