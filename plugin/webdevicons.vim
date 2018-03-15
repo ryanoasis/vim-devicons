@@ -26,146 +26,60 @@ let g:loaded_webdevicons = 1
 " config enable / disable settings {{{1
 "========================================================================
 
-if !exists('g:webdevicons_enable')
-  let g:webdevicons_enable = 1
-endif
-
-if !exists('g:webdevicons_enable_nerdtree')
-  let g:webdevicons_enable_nerdtree = 1
-endif
-
-if !exists('g:webdevicons_enable_unite')
-  let g:webdevicons_enable_unite = 1
-endif
-
-if !exists('g:webdevicons_enable_denite')
-  let g:webdevicons_enable_denite = 1
-endif
-
-if !exists('g:webdevicons_enable_vimfiler')
-  let g:webdevicons_enable_vimfiler = 1
-endif
-
-if !exists('g:webdevicons_enable_ctrlp')
-  let g:webdevicons_enable_ctrlp = 1
-endif
-
-if !exists('g:webdevicons_enable_airline_tabline')
-  let g:webdevicons_enable_airline_tabline = 1
-endif
-
-if !exists('g:webdevicons_enable_airline_statusline')
-  let g:webdevicons_enable_airline_statusline = 1
-endif
-
-if !exists('g:webdevicons_enable_airline_statusline_fileformat_symbols')
-  let g:webdevicons_enable_airline_statusline_fileformat_symbols = 1
-endif
-
-if !exists('g:webdevicons_enable_flagship_statusline')
-  let g:webdevicons_enable_flagship_statusline = 1
-endif
-
-if !exists('g:webdevicons_enable_flagship_statusline_fileformat_symbols')
-  let g:webdevicons_enable_flagship_statusline_fileformat_symbols = 1
-endif
-
-if !exists('g:webdevicons_conceal_nerdtree_brackets')
-  let g:webdevicons_conceal_nerdtree_brackets = 1
-endif
-
-if !exists('g:DevIconsAppendArtifactFix')
-  if has('gui_running')
-    let g:DevIconsAppendArtifactFix = 1
-  else
-    let g:DevIconsAppendArtifactFix = 0
+""
+" Set the variable to the default value, only if variable is not defined.
+"
+" @param {string} var Variable name with its scope.
+" @param {*} default Default value for variable.
+""
+function! s:set(var, default) abort
+  if !exists(a:var)
+    if type(a:default)
+      execute 'let' a:var '=' string(a:default)
+    else
+      execute 'let' a:var '=' a:default
+    endif
   endif
-endif
+endfunction
 
-if !exists('g:DevIconsArtifactFixChar')
-  let g:DevIconsArtifactFixChar = "\u00A0"
-endif
+call s:set('g:webdevicons_enable', 1)
+call s:set('g:webdevicons_enable_nerdtree', 1)
+call s:set('g:webdevicons_enable_unite ', 1)
+call s:set('g:webdevicons_enable_denite', 1)
+call s:set('g:webdevicons_enable_vimfiler', 1)
+call s:set('g:webdevicons_enable_ctrlp', 1)
+call s:set('g:webdevicons_enable_airline_tabline', 1)
+call s:set('g:webdevicons_enable_airline_statusline', 1)
+call s:set('g:webdevicons_enable_airline_statusline_fileformat_symbols', 1)
+call s:set('g:webdevicons_enable_flagship_statusline', 1)
+call s:set('g:webdevicons_enable_flagship_statusline_fileformat_symbols', 1)
+call s:set('g:webdevicons_conceal_nerdtree_brackets', 1)
+call s:set('g:DevIconsAppendArtifactFix', has('gui_running') ? 1 : 0)
+call s:set('g:DevIconsArtifactFixChar', "\u00A0")
 
 " config options {{{1
 "========================================================================
 
-if !exists('g:WebDevIconsUnicodeDecorateFileNodes')
-  let g:WebDevIconsUnicodeDecorateFileNodes = 1
-endif
-
-" whether to show default folder glyphs on directories:
-if !exists('g:WebDevIconsUnicodeDecorateFolderNodes')
-  let g:WebDevIconsUnicodeDecorateFolderNodes = 0
-endif
-
-if !exists('g:DevIconsEnableFoldersOpenClose')
-  let g:DevIconsEnableFoldersOpenClose = 0
-endif
-
-if !exists('g:DevIconsEnableFolderPatternMatching')
-  let g:DevIconsEnableFolderPatternMatching = 1
-endif
-
-if !exists('g:DevIconsEnableFolderExtensionPatternMatching')
-  let g:DevIconsEnableFolderExtensionPatternMatching = 0
-endif
-
-" whether to try to match folder notes with any exact file node matches
-" default is to match but requires WebDevIconsUnicodeDecorateFolderNodes set
-" to 1:
-if !exists('g:WebDevIconsUnicodeDecorateFolderNodesExactMatches')
-  let g:WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
-endif
-
-if !exists('g:WebDevIconsUnicodeGlyphDoubleWidth')
-  let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
-endif
-
-if !exists('g:WebDevIconsNerdTreeBeforeGlyphPadding')
-  let g:WebDevIconsNerdTreeBeforeGlyphPadding = ' '
-endif
-
-if !exists('g:WebDevIconsNerdTreeAfterGlyphPadding')
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-endif
-
-if !exists('g:WebDevIconsNerdTreeGitPluginForceVAlign')
-  let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-endif
-
-" fix for refreshing NERDTree flags upon creating new files
-if !exists('g:NERDTreeUpdateOnCursorHold')
-  let g:NERDTreeUpdateOnCursorHold = 1
-endif
+call s:set('g:WebDevIconsUnicodeDecorateFileNodes', 1)
+call s:set('g:WebDevIconsUnicodeDecorateFolderNodes', 0)
+call s:set('g:DevIconsEnableFoldersOpenClose', 0)
+call s:set('g:DevIconsEnableFolderPatternMatching', 1)
+call s:set('g:DevIconsEnableFolderExtensionPatternMatching', 0)
+call s:set('g:WebDevIconsUnicodeDecorateFolderNodesExactMatches', 1)
+call s:set('g:WebDevIconsUnicodeGlyphDoubleWidth', 1)
+call s:set('g:WebDevIconsNerdTreeBeforeGlyphPadding', ' ')
+call s:set('g:WebDevIconsNerdTreeAfterGlyphPadding', ' ')
+call s:set('g:WebDevIconsNerdTreeGitPluginForceVAlign', 1)
+call s:set('g:NERDTreeUpdateOnCursorHold', 1)
 
 " config defaults {{{1
 "========================================================================
 
-if !exists('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol')
-  let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
-endif
-
-if !exists('g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol')
-  let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
-endif
-
-if !exists('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol')
-  if g:DevIconsEnableFoldersOpenClose
-    " use new glyph
-    let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
-  else
-    " use older glyph
-    let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
-  endif
-endif
-
-if !exists('g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol')
-  let g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol =  ''
-endif
-
-if !exists('g:DevIconsDefaultFolderOpenSymbol')
-  let g:DevIconsDefaultFolderOpenSymbol = ''
-endif
+call s:set('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol', '')
+call s:set('g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol', '')
+call s:set('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol', g:DevIconsEnableFoldersOpenClose ? '' : '')
+call s:set('g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol',  '')
+call s:set('g:DevIconsDefaultFolderOpenSymbol', '')
 
 " functions {{{1
 "========================================================================
