@@ -455,123 +455,6 @@ function! s:softRefreshNerdTree()
   endif
 endfunction
 
-" for vim-flagship plugin {{{3
-"========================================================================
-
-" scope: local
-function! s:initializeFlagship()
-  if exists('g:loaded_flagship')
-    if g:webdevicons_enable_flagship_statusline
-      augroup webdevicons_flagship_filetype
-        autocmd User Flags call Hoist('buffer', 'WebDevIconsGetFileTypeSymbol')
-      augroup END
-    endif
-
-    if g:webdevicons_enable_flagship_statusline_fileformat_symbols
-      augroup webdevicons_flagship_filesymbol
-        autocmd User Flags call Hoist('buffer', 'WebDevIconsGetFileFormatSymbol')
-      augroup END
-    endif
-  endif
-endfunction
-
-" for unite plugin {{{3
-"========================================================================
-
-" scope: local
-function! s:initializeUnite()
-  if exists('g:loaded_unite') && g:webdevicons_enable_unite
-    let s:filters = {
-          \   'name' : 'devicons_unite_converter',
-          \}
-
-    function! s:filters.filter(candidates, context)
-      for candidate in a:candidates
-
-        if has_key(candidate, 'action__buffer_nr')
-          let bufname = bufname(candidate.action__buffer_nr)
-          let filename = fnamemodify(bufname, ':p:t')
-          let path = fnamemodify(bufname, ':p:h')
-        elseif has_key(candidate, 'word') && has_key(candidate, 'action__path')
-          let path = candidate.action__path
-          let filename = candidate.word
-        endif
-
-        let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
-
-        " prevent filenames of buffers getting 'lost'
-        if filename != path
-          let path = printf('%s', filename)
-        endif
-
-        " Customize output format.
-        let candidate.abbr = printf('%s %s', icon, path)
-      endfor
-      return a:candidates
-    endfunction
-
-    call unite#define_filter(s:filters)
-    unlet s:filters
-
-    call unite#custom#source('file,file_rec,buffer,file_rec/async,file_rec/neovim,file_rec/neovim2,file_rec/git', 'converters', 'devicons_unite_converter')
-  endif
-endfunction
-
-" for denite plugin {{{3
-"========================================================================
-
-" scope: local
-function! s:initializeDenite()
-  if exists('g:loaded_denite') && g:webdevicons_enable_denite
-    call denite#custom#source('file_rec,file_mru,file_old,buffer,directory_rec,directory_mru', 'converters', ['devicons_denite_converter'])
-  endif
-endfunction
-
-" for vimfiler plugin {{{3
-"========================================================================
-
-" scope: local
-function! s:initializeVimfiler()
-  if exists('g:loaded_vimfiler') && g:webdevicons_enable_vimfiler
-    call vimfiler#custom#profile('default', 'context', {
-      \ 'columns' : 'devicons:size:time',
-      \ 'explorer_columns': 'devicons'
-      \ })
-  endif
-endfunction
-
-" for ctrlp plugin {{{3
-"========================================================================
-
-" scope: local
-" Initialize for up to date ctrlp fork: ctrlpvim/ctrlp.vim
-" Support for kien/ctrlp.vim deprecated since v0.7.0
-" @TODO implementation for CtrlP buffer and find file mode
-function! s:initializeCtrlP()
-  let l:ctrlp_warning_message = 'vim-devicons: https://github.com/kien/ctrlp.vim is deprecated since v0.7.0, please use https://github.com/ctrlpvim/ctrlp.vim'
-  let l:ctrlp_warned_file = s:plugin_home . '/status_warned_ctrlp'
-
-  if exists('g:loaded_ctrlp') && g:webdevicons_enable_ctrlp
-    let l:forkedCtrlp = exists('g:ctrlp_mruf_map_string')
-
-    if l:forkedCtrlp
-      if !exists('g:ctrlp_formatline_func')
-        " logic for ctrlpvim/ctrlp.vim:
-        let g:ctrlp_formatline_func = 's:formatline(s:curtype() == "buf" ? v:val : WebDevIconsGetFileTypeSymbol(v:val) . " " . v:val) '
-      endif
-    elseif empty(glob(l:ctrlp_warned_file))
-      " logic for kien/ctrlp.vim:
-      echohl WarningMsg |
-        \ echomsg l:ctrlp_warning_message
-      " only warn first time, do not warn again:
-      try
-        execute writefile(['File automatically generated after warning about CtrlP once', l:ctrlp_warning_message], l:ctrlp_warned_file)
-      catch
-      endtry
-    endif
-  endif
-endfunction
-
 " local initialization {{{2
 "========================================================================
 
@@ -580,11 +463,12 @@ function! s:initialize()
   call s:setDictionaries()
   call s:setSyntax()
   call s:setCursorHold()
-  call s:initializeFlagship()
-  call s:initializeUnite()
-  call s:initializeDenite()
-  call s:initializeVimfiler()
-  call s:initializeCtrlP()
+
+  if exists('g:loaded_flagship') | call devicons#plugins#flagship#init() | endif
+  if exists('g:loaded_unite') && g:webdevicons_enable_unite | call devicons#plugins#unite#init() | endif
+  if exists('g:loaded_denite') && g:webdevicons_enable_denite | call devicons#plugins#denite#init() | endif
+  if exists('g:loaded_vimfiler') && g:webdevicons_enable_vimfiler | call devicons#plugins#vimfiler#init() | endif
+  if exists('g:loaded_ctrlp') && g:webdevicons_enable_ctrlp | call devicons#plugins#ctrlp#init() | endif
 endfunction
 
 " had some issues with VimEnter, for now using:
