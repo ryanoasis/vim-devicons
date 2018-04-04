@@ -327,6 +327,13 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
       \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
       \ 'override': 1,
       \ 'scope': 'DirNode' })
+    
+    " <LeftRelease>
+    call NERDTreeAddKeyMap({
+      \ 'key': '<LeftRelease>',
+      \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
+      \ 'override': 1,
+      \ 'scope': 'DirNode' })
 
     " NERDTreeMapUpdirKeepOpen
     call NERDTreeAddKeyMap({
