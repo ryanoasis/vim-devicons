@@ -132,14 +132,6 @@ function! WebDevIconsNERDTreeDirUpdateFlags(node, glyph)
     call WebDevIconsNERDTreeDirOpen(a:node.children[0])
   endif
 
-  if g:WebDevIconsUnicodeGlyphDoubleWidth == 0
-    let postPadding = ''
-  endif
-
-  if hasGitFlags && g:WebDevIconsUnicodeGlyphDoubleWidth == 1
-    let prePadding .= ' '
-  endif
-
   " align vertically at the same level: non git-flag nodes with git-flag nodes
   if g:WebDevIconsNerdTreeGitPluginForceVAlign && !hasGitFlags && hasGitNerdTreePlugin
     let prePadding .= '  '

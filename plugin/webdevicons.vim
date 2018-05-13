@@ -83,7 +83,7 @@ if !exists('g:DevIconsAppendArtifactFix')
 endif
 
 if !exists('g:DevIconsArtifactFixChar')
-  let g:DevIconsArtifactFixChar = "\u00A0"
+  let g:DevIconsArtifactFixChar = " "
 endif
 
 " config options {{{1
@@ -616,10 +616,9 @@ function! webdevicons#softRefresh()
   call s:softRefreshNerdTree()
 endfunction
 
-" a:1 (bufferName), a:2 (isDirectory), a:3 (appendArtifactFix)
+" a:1 (bufferName), a:2 (isDirectory)
 " scope: public
 function! WebDevIconsGetFileTypeSymbol(...)
-  let appendArtifactFix = g:DevIconsAppendArtifactFix
   if a:0 == 0
     let fileNodeExtension = expand('%:e')
     let fileNode = expand('%:t')
@@ -631,10 +630,6 @@ function! WebDevIconsGetFileTypeSymbol(...)
       let isDirectory = a:2
     else
       let isDirectory = 0
-    endif
-
-    if a:0 == 3
-      let appendArtifactFix = a:3
     endif
   endif
 
@@ -665,16 +660,23 @@ function! WebDevIconsGetFileTypeSymbol(...)
     let symbol = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
   endif
 
-  " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
-  " actual font patcher)
-  if appendArtifactFix == 1
+  let artifactFix = s:DevIconsGetArtifactFix()
+
+  return symbol . artifactFix
+
+endfunction
+
+" scope: local
+" Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
+" actual font patcher)
+function! s:DevIconsGetArtifactFix()
+  if g:DevIconsAppendArtifactFix == 1
     let artifactFix = g:DevIconsArtifactFixChar
   else
     let artifactFix = ''
   endif
 
-  return symbol . artifactFix
-
+  return artifactFix
 endfunction
 
 " scope: public
@@ -698,9 +700,7 @@ function! WebDevIconsGetFileFormatSymbol(...)
     let fileformat = ''
   endif
 
-  " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
-  " actual font patcher)
-  let artifactFix = g:DevIconsArtifactFixChar
+  let artifactFix = s:DevIconsGetArtifactFix()
 
   return bomb . fileformat . artifactFix
 endfunction
@@ -743,10 +743,7 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   let prePadding = g:WebDevIconsNerdTreeBeforeGlyphPadding
   let hasGitFlags = (len(path.flagSet._flagsForScope('git')) > 0)
   let hasGitNerdTreePlugin = (exists('g:loaded_nerdtree_git_status') == 1)
-
-  if g:WebDevIconsUnicodeGlyphDoubleWidth == 0
-    let postPadding = ''
-  endif
+  let artifactFix = s:DevIconsGetArtifactFix()
 
   if hasGitFlags && g:WebDevIconsUnicodeGlyphDoubleWidth == 1
     let prePadding .= ' '
@@ -780,15 +777,15 @@ function! NERDTreeWebDevIconsRefreshListener(event)
       " think node_modules
       if g:DevIconsEnableFoldersOpenClose && directoryOpened
         " the folder is open
-        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . postPadding
+        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . artifactFix . postPadding
       else
         " the folder is not open
         if path.isSymLink
           " We have a symlink
-          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . postPadding
+          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . artifactFix . postPadding
         else
           " We have a regular folder
-          let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory, 0) . postPadding
+          let flag = prePadding . WebDevIconsGetFileTypeSymbol(path.str(), path.isDirectory) . postPadding
         endif
       endif
 
@@ -796,15 +793,15 @@ function! NERDTreeWebDevIconsRefreshListener(event)
       " the user did not enable exact matching
       if g:DevIconsEnableFoldersOpenClose && directoryOpened
         " the folder is open
-        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . postPadding
+        let flag = prePadding . g:DevIconsDefaultFolderOpenSymbol . artifactFix . postPadding
       else
         " the folder is not open
         if path.isSymLink
           " We have a symlink
-          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . postPadding
+          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol . artifactFix . postPadding
         else
           " We have a regular folder
-          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol . postPadding
+          let flag = prePadding . g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol . artifactFix . postPadding
         endif
       endif
 
