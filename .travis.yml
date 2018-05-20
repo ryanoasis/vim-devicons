@@ -1,0 +1,9 @@
+sudo: required
+dist: trusty
+
+before_install:
+  - sudo apt-get install python
+  - pip install --user vim-vint
+
+script:
+  - vint --verbose --stat $(find . -type f -name '*.vim')
