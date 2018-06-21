@@ -435,7 +435,7 @@ function! s:CursorHoldUpdate()
   call b:NERDTree.root.refreshFlags()
   call NERDTreeRender()
 
-  exec l.altwinnr . 'wincmd w'
+  exec l:altwinnr . 'wincmd w'
   exec l:winnr . 'wincmd w'
 endfunction
 
