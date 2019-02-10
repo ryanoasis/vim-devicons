@@ -1,9 +1,10 @@
 " Initialize for up to date ctrlp fork: ctrlpvim/ctrlp.vim
 " Support for kien/ctrlp.vim deprecated since v0.7.0
 " @TODO implementation for CtrlP buffer and find file mode
+
 function! devicons#plugins#ctrlp#init() abort
   let l:ctrlp_warning_message = 'vim-devicons: https://github.com/kien/ctrlp.vim is deprecated since v0.7.0, please use https://github.com/ctrlpvim/ctrlp.vim'
-  let l:ctrlp_warned_file = s:plugin_home . '/status_warned_ctrlp'
+  let l:ctrlp_warned_file = webdevicons#pluginHome() . '/status_warned_ctrlp'
 
   if exists('g:loaded_ctrlp') && g:webdevicons_enable_ctrlp
     let l:forkedCtrlp = exists('g:ctrlp_mruf_map_string')

@@ -390,8 +390,6 @@ function! s:initialize()
   if exists('g:loaded_ctrlp') && g:webdevicons_enable_ctrlp | call devicons#plugins#ctrlp#init() | endif
 endfunction
 
-" had some issues with VimEnter, for now using:
-call s:initialize()
 
 " public functions {{{2
 "========================================================================
@@ -399,6 +397,11 @@ call s:initialize()
 " scope: public
 function! webdevicons#version()
   return s:version
+endfunction
+
+" scope: public
+function! webdevicons#pluginHome()
+  return s:plugin_home
 endfunction
 
 " scope: public
@@ -621,6 +624,11 @@ function! NERDTreeWebDevIconsRefreshListener(event)
   endif
 
 endfunction
+
+" call setup after processing all the functions (to avoid errors) {{{1
+"========================================================================
+" had some issues with VimEnter, for now using:
+call s:initialize()
 
 " standard fix/safety: line continuation (avoiding side effects) {{{1
 "========================================================================
