@@ -53,6 +53,7 @@ call s:set('g:webdevicons_enable_airline_statusline', 1)
 call s:set('g:webdevicons_enable_airline_statusline_fileformat_symbols', 1)
 call s:set('g:webdevicons_enable_flagship_statusline', 1)
 call s:set('g:webdevicons_enable_flagship_statusline_fileformat_symbols', 1)
+call s:set('g:webdevicons_enable_startify', 1)
 call s:set('g:webdevicons_conceal_nerdtree_brackets', 1)
 call s:set('g:DevIconsAppendArtifactFix', has('gui_running') ? 1 : 0)
 call s:set('g:DevIconsArtifactFixChar', " ")
@@ -388,6 +389,7 @@ function! s:initialize()
   if exists('g:loaded_denite') && g:webdevicons_enable_denite | call devicons#plugins#denite#init() | endif
   if exists('g:loaded_vimfiler') && g:webdevicons_enable_vimfiler | call devicons#plugins#vimfiler#init() | endif
   if exists('g:loaded_ctrlp') && g:webdevicons_enable_ctrlp | call devicons#plugins#ctrlp#init() | endif
+  if exists('g:loaded_startify') && g:webdevicons_enable_startify | call devicons#plugins#startify#init() | endif
 endfunction
 
 
