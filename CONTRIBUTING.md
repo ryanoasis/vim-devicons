@@ -18,5 +18,5 @@ Work In Progress, for now the minimum:
 * I try to group fixes into milestones/versions
   * If your bug or PR is *not* trivial it will likely end up in the next **MINOR** version
   * If your bug or PR *is* trivial *or* critical it will likely end up in the next **PATCH** version
-* Most of the time PRs and fixes are *not* merged directly into master without being present on a new versioned branch
-** Sometimes for small items I will make exceptions to get the fix or readme change on master sooner but even after there will *always* be a versioned branch to keep track of each release
+* Most of the time PRs and fixes are *not* merged directly into `master` without being present on a new versioned branch
+  * Sometimes for small items I will make exceptions to get the fix or readme change on master sooner but even after there will *always* be a versioned branch to keep track of each release
