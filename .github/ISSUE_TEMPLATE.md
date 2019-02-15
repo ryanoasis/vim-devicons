@@ -15,7 +15,7 @@ _--- ✂ snip ✂ --- Delete this line and all of the ^above^ after reading and 
 - [ ] I have searched the [issues](https://github.com/ryanoasis/vim-devicons/issues) for my issue and found nothing related and/or helpful
 - [ ] I have read or at least glanced at the [FAQ](https://github.com/ryanoasis/vim-devicons/wiki/FAQ-&-Troubleshooting)
 - [ ] I have read or at least glanced at the [Wiki](https://github.com/ryanoasis/vim-devicons/wiki)
-
+- [ ] `VimDevIcons` is the last loaded vim plugin?
 - [ ] What **version** of vim are you using?
   - hint: `vim --version`
 - [ ] What **version** of vim-devicons are you using?
