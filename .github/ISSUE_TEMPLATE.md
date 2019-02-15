@@ -13,7 +13,7 @@ _--- ✂ snip ✂ --- Delete this line and all of the ^above^ after reading and 
 #### Required Info
 
 - [ ] I have searched the [issues](https://github.com/ryanoasis/vim-devicons/issues) for my issue and found nothing related and/or helpful
-- [ ] I have read or at least glanced at the [FAQ](https://github.com/ryanoasis/vim-devicons#faq--troubleshooting)
+- [ ] I have read or at least glanced at the [FAQ](https://github.com/ryanoasis/vim-devicons/wiki/FAQ-&-Troubleshooting)
 - [ ] I have read or at least glanced at the [Wiki](https://github.com/ryanoasis/vim-devicons/wiki)
 
 - [ ] What **version** of vim are you using?
