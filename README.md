@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![version](https://img.shields.io/codeclimate/issues/ryanoasis/vim-devicons.svg?style=for-the-badge)
+![version](https://img.shields.io/github/release/ryanoasis/vim-devicons.svg?style=for-the-badge)
 ![chat on gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=for-the-badge)
 ![issue count](https://img.shields.io/codeclimate/issues/ryanoasis/vim-devicons.svg?style=for-the-badge)
 ![code of conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=for-the-badge)
