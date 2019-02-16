@@ -87,8 +87,8 @@ You can help us by simply giving a star or voting on vim.org. It will ensure con
 - Star this repository [on GitHub](https://github.com/ryanoasis/vim-devicons).
 - Vote for it [on vim.org](http://www.vim.org/scripts/script.php?script_id=5114).
 
-Credits
--------
+Acknowledgments
+---------------
 
 Thanks goes to these people for inspiration and helping with sending PRs.
 
