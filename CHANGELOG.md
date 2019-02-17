@@ -3,6 +3,23 @@ CHANGELOG
 ================================================================================
 This project is using [Semantic Versioning 2.0.0](http://semver.org/)
 
+- v0.11.0
+  - Added Docker filetypes support (PR #228) (@IngoHeimbach)
+  - Added Swift filetypes support (PR #252) (@motform)
+  - Added Elixir filetypes support (PR #244) (@akoutmos)
+  - Added configuration for 'prePadding' (fixes #231)
+  - Added support for `vue` filetype extensions out-of-the-box (fixes #235)
+  - Added configuration for 'DevIconsArtifactFix' (#225)
+  - Added leftrelease override to work on single mouse click (PR #246) (@Matrix86)
+  - Added Travis CI with vim linting (PR #236) (@kutsan)
+  - Fixed Vim-Startify no longer working "out of the box" (#233)
+  - Fixed Denite information being discarded (fixes #216) (PR #229 @carlitux)
+  - Fixed inconsistent spacing between folder and file glyphs (fixes #213)
+  - Updated variable declarations and refactored into set function (PR #237) (@kutsan)
+  - Updated plugin initialization functions to autoload on demand (PR #238) (@kutsan)
+  - Updated documentation and refactored massively to Wiki (PR #232) (@kutsan)
+  - Updated `vim` glyph to better glyph (fixes #234)
+  - Updated Readme screenshots and badges
 - v0.10.0
   - Added support for symlink directories (PR #221) (@mhartington)
   - Added missing Denite config in readme (PR #217, fixes #205) (@mohamadLy)
