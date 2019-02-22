@@ -25,7 +25,7 @@ Features
 - Adds filetype glyphs (icons) to various vim plugins.
 - Customizable and extendable glyphs settings.
 - Supports a wide range of file type extensions.
-- Supports popular full filenames, like `.gitignore`, `node_modules`, `.vimrc`.
+- Supports popular full filenames, like `.gitignore`, `node_modules`, `.vimrc`, and many more.
 - Supports byte order marker (BOM).
 - Works with patched fonts, especially [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
 
