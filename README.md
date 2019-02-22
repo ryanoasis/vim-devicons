@@ -23,10 +23,10 @@ Features
 --------
 
 - Adds filetype glyphs (icons) to various vim plugins.
-- Supports byte order marker (BOM).
 - Customizable and extendable glyphs settings.
 - Supports a wide range of file type extensions.
 - Supports popular full filenames, like `.gitignore`, `node_modules`, `.vimrc`.
+- Supports byte order marker (BOM).
 - Works with patched fonts, especially [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
 
 > See [Detailed Features](https://github.com/ryanoasis/vim-devicons/wiki/Detailed-Features) for more.
