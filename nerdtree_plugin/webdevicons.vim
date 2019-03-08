@@ -207,6 +207,28 @@ function! WebDevIconsNERDTreeMapActivateNode(node)
   endif
 endfunction
 
+" NERDTreeMapActivateNodeSingleMode 
+" handle the user activating a tree node if NERDTreeMouseMode is setted to 3
+" scope: global
+function! WebDevIconsNERDTreeMapActivateNodeSingleMode(node)
+  if g:NERDTreeMouseMode == 3
+    let isOpen = a:node.isOpen
+    if isOpen
+      let glyph = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
+    else
+      let glyph = g:DevIconsDefaultFolderOpenSymbol
+    endif
+    let a:node.path.isOpen = !isOpen
+    call WebDevIconsNERDTreeDirUpdateFlags(a:node, glyph)
+    " continue with normal activate logic
+    call a:node.activate()
+    " glyph change possible artifact clean-up
+    if g:DevIconsEnableNERDTreeRedraw ==# 1
+      redraw!
+    endif
+  endif
+endfunction
+
 function! WebDevIconsNERDTreeMapOpenRecursively(node)
   " normal original logic:
   call nerdtree#echo("Recursively opening node. Please wait...")
@@ -319,11 +341,11 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
       \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
       \ 'override': 1,
       \ 'scope': 'DirNode' })
-    
+
     " <LeftRelease>
     call NERDTreeAddKeyMap({
       \ 'key': '<LeftRelease>',
-      \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
+      \ 'callback': 'WebDevIconsNERDTreeMapActivateNodeSingleMode',
       \ 'override': 1,
       \ 'scope': 'DirNode' })
 
