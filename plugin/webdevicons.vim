@@ -195,7 +195,7 @@ function! s:setDictionaries()
         \ 'cljs'     : '',
         \ 'edn'      : '',
         \ 'scala'    : '',
-        \ 'go'       : '',
+        \ 'go'       : 'ﳑ',
         \ 'dart'     : '',
         \ 'xul'      : '',
         \ 'sln'      : '',
