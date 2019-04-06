@@ -3,6 +3,9 @@ dist: trusty
 
 before_install:
   - sudo apt-get install python
+  - pip install --user enum34
+  - pip install --user pathlib
+  - pip install --user typing
   - pip install --user vim-vint
 
 script:
