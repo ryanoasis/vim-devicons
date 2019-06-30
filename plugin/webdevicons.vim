@@ -56,7 +56,7 @@ call s:set('g:webdevicons_enable_flagship_statusline_fileformat_symbols', 1)
 call s:set('g:webdevicons_enable_startify', 1)
 call s:set('g:webdevicons_conceal_nerdtree_brackets', 1)
 call s:set('g:DevIconsAppendArtifactFix', has('gui_running') ? 1 : 0)
-call s:set('g:DevIconsArtifactFixChar', " ")
+call s:set('g:DevIconsArtifactFixChar', ' ')
 
 " config options {{{1
 "========================================================================
@@ -522,7 +522,7 @@ function! AirlineWebDevIcons(...)
   let w:airline_section_x = get(w:, 'airline_section_x',
         \ get(g:, 'airline_section_x', ''))
   let w:airline_section_x .= ' %{WebDevIconsGetFileTypeSymbol()} '
-  let hasFileFormatEncodingPart = airline#parts#ffenc() != ''
+  let hasFileFormatEncodingPart = airline#parts#ffenc() !=? ''
   if g:webdevicons_enable_airline_statusline_fileformat_symbols && hasFileFormatEncodingPart
     let w:airline_section_y = ' %{&fenc . " " . WebDevIconsGetFileFormatSymbol()} '
   endif

@@ -231,7 +231,7 @@ endfunction
 
 function! WebDevIconsNERDTreeMapOpenRecursively(node)
   " normal original logic:
-  call nerdtree#echo("Recursively opening node. Please wait...")
+  call nerdtree#echo('Recursively opening node. Please wait...')
   call a:node.openRecursively()
   call WebDevIconsNERDTreeDirOpenRecursively(a:node)
   " continue with normal original logic:
@@ -240,7 +240,7 @@ function! WebDevIconsNERDTreeMapOpenRecursively(node)
   if g:DevIconsEnableNERDTreeRedraw ==# 1
     redraw!
   endif
-  call nerdtree#echo("Recursively opening node. Please wait... DONE")
+  call nerdtree#echo('Recursively opening node. Please wait... DONE')
 endfunction
 
 function! WebDevIconsNERDTreeMapCloseChildren(node)
@@ -268,7 +268,7 @@ function! WebDevIconsNERDTreeMapCloseDir(node)
     endif
   endwhile
   if parent ==# {} || parent.isRoot()
-    call nerdtree#echo("cannot close tree root")
+    call nerdtree#echo('cannot close tree root')
   else
     call parent.close()
     " update the glyph

@@ -3,7 +3,7 @@ function! devicons#plugins#unite#init() abort
     \ 'name': 'devicons_unite_converter'
   \ }
 
-  function! s:filters.filter(candidates, context)
+  function! s:filters.filter(candidates, context) abort
     for candidate in a:candidates
 
       if has_key(candidate, 'action__buffer_nr')
