@@ -62,7 +62,7 @@ call s:set('g:DevIconsArtifactFixChar', ' ')
 "========================================================================
 
 call s:set('g:WebDevIconsUnicodeDecorateFileNodes', 1)
-call s:set('g:WebDevIconsUnicodeDecorateFolderNodes', 0)
+call s:set('g:WebDevIconsUnicodeDecorateFolderNodes', 1)
 call s:set('g:DevIconsEnableFoldersOpenClose', 0)
 call s:set('g:DevIconsEnableFolderPatternMatching', 1)
 call s:set('g:DevIconsEnableFolderExtensionPatternMatching', 0)
