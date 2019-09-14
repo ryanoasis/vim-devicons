@@ -142,6 +142,7 @@ function! s:setDictionaries()
         \ 'rmd'      : '',
         \ 'json'     : '',
         \ 'js'       : '',
+        \ 'mjs'      : '',
         \ 'jsx'      : '',
         \ 'rb'       : '',
         \ 'php'      : '',
