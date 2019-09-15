@@ -314,6 +314,13 @@ if g:webdevicons_enable == 1 && g:webdevicons_enable_nerdtree == 1
       \ 'override': 1,
       \ 'scope': 'DirNode' })
 
+    " NERDTreeMapCustomOpen
+    call NERDTreeAddKeyMap({
+      \ 'key': g:NERDTreeMapCustomOpen,
+      \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
+      \ 'override': 1,
+      \ 'scope': 'DirNode' })
+
     " NERDTreeMapOpenRecursively
     call NERDTreeAddKeyMap({
       \ 'key': g:NERDTreeMapOpenRecursively,
