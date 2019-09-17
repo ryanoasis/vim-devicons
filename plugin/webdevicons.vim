@@ -157,6 +157,7 @@ function! s:setDictionaries()
         \ 'ini'      : '',
         \ 'yml'      : '',
         \ 'yaml'     : '',
+        \ 'toml'     : '',
         \ 'bat'      : '',
         \ 'jpg'      : '',
         \ 'jpeg'     : '',
