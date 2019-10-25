@@ -231,6 +231,7 @@ function! s:setDictionaries()
         \ 'jl'       : '',
         \ 'pp'       : '',
         \ 'vue'      : '﵂',
+        \ 'elm'      : '',
         \ 'swift'    : '',
         \ 'xcplayground' : ''
         \}
