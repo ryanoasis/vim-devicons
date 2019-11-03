@@ -172,6 +172,7 @@ function! s:setDictionaries()
         \ 'cc'       : '',
         \ 'cp'       : '',
         \ 'c'        : '',
+        \ 'cs'       : '',
         \ 'h'        : '',
         \ 'hh'       : '',
         \ 'hpp'      : '',
