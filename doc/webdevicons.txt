@@ -623,6 +623,18 @@ Extra Configuration ~
 >
   " Adding the custom source to denite
   let g:webdevicons_enable_denite = 1
+
+
+
+  " the amount of space to use after the glyph character in vim-airline
+	tabline(default '')
+  let g:WebDevIconsTabAirLineAfterGlyphPadding = ' '
+
+
+
+  " the amount of space to use before the glyph character in vim-airline
+	tabline(default ' ')
+  let g:WebDevIconsTabAirLineBeforeGlyphPadding = ' '
 <
 -------------------------------------------------------------------------------
                                                   *devicons-character-mappings*

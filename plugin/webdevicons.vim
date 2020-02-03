@@ -72,6 +72,8 @@ call s:set('g:WebDevIconsNerdTreeBeforeGlyphPadding', ' ')
 call s:set('g:WebDevIconsNerdTreeAfterGlyphPadding', ' ')
 call s:set('g:WebDevIconsNerdTreeGitPluginForceVAlign', 1)
 call s:set('g:NERDTreeUpdateOnCursorHold', 1)
+call s:set('g:WebDevIconsTabAirLineBeforeGlyphPadding', ' ')
+call s:set('g:WebDevIconsTabAirLineAfterGlyphPadding', '')
 
 " config defaults {{{1
 "========================================================================
