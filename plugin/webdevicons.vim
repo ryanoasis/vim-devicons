@@ -380,7 +380,7 @@ endfunction
 
 " scope: local
 function! s:softRefreshNerdTree()
-  if g:webdevicons_enable_nerdtree == 1 && g:NERDTree.IsOpen()
+  if g:webdevicons_enable_nerdtree == 1 && exists('g:NERDTree') && g:NERDTree.IsOpen()
     NERDTreeToggle
     NERDTreeToggle
   endif
