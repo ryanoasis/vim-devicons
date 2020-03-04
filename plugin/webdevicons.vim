@@ -523,7 +523,7 @@ function! WebDevIconsGetFileFormatSymbol(...)
       elseif s:lsb =~# 'Debian'
         let fileformat = ''
       elseif s:lsb =~# 'Dock'
-        let s:lsb = ''
+        let fileformat = ''
       else
         let fileformat = ''
       endif
