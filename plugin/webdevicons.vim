@@ -513,7 +513,20 @@ function! WebDevIconsGetFileFormatSymbol(...)
     if s:isDarwin()
       let fileformat = ''
     else
-      let fileformat = ''
+      let s:lsb = system('lsb_release -i')
+      if s:lsb =~# 'Arch'
+        let fileformat = ''
+      elseif s:lsb =~# 'Ubuntu'
+        let fileformat = ''
+      elseif s:lsb =~# 'Cent'
+        let fileformat = ''
+      elseif s:lsb =~# 'Debian'
+        let fileformat = ''
+      elseif s:lsb =~# 'Dock'
+        let fileformat = ''
+      else
+        let fileformat = ''
+      endif
     endif
   elseif &fileformat ==? 'mac'
     let fileformat = ''
