@@ -96,7 +96,7 @@ function s:getDistro()
     return s:distro
   endif
 
-  if executable('lsb_release -i')
+  if executable('lsb_release')
     let s:lsb = system('lsb_release -i')
     if s:lsb =~# 'Arch'
       let s:distro = ''
@@ -113,7 +113,9 @@ function s:getDistro()
     endif
     return s:distro
   endif
-  return
+
+  let s:distro = ''
+  return s:distro
 endfunction
 
 " scope: local
