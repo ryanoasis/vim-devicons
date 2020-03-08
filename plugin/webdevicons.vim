@@ -114,7 +114,7 @@ function s:getDistro()
     return s:distro
   endif
 
-  let s:distro = ''
+  let s:distro = ''
   return s:distro
 endfunction
 
