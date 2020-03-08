@@ -96,22 +96,25 @@ function s:getDistro()
     return s:distro
   endif
 
-  let s:lsb = system('lsb_release -i')
-
-  if s:lsb =~# 'Arch'
-    let s:distro = ''
-  elseif s:lsb =~# 'Ubuntu'
-    let s:distro = ''
-  elseif s:lsb =~# 'Cent'
-    let s:distro = ''
-  elseif s:lsb =~# 'Debian'
-    let s:distro = ''
-  elseif s:lsb =~# 'Dock'
-    let s:distro = ''
-  else
-    let s:distro = ''
+  if executable('lsb_release')
+    let s:lsb = system('lsb_release -i')
+    if s:lsb =~# 'Arch'
+      let s:distro = ''
+    elseif s:lsb =~# 'Ubuntu'
+      let s:distro = ''
+    elseif s:lsb =~# 'Cent'
+      let s:distro = ''
+    elseif s:lsb =~# 'Debian'
+      let s:distro = ''
+    elseif s:lsb =~# 'Dock'
+      let s:distro = ''
+    else
+      let s:distro = ''
+    endif
+    return s:distro
   endif
 
+  let s:distro = ''
   return s:distro
 endfunction
 
