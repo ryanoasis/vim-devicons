@@ -297,6 +297,8 @@ function! s:setDictionaries()
         \ 'procfile'                         : '',
         \ 'dockerfile'                       : '',
         \ 'docker-compose.yml'               : '',
+        \ 'makefile'                         : '',
+        \ 'cmakelists.txt'                   : ''
         \}
 
   let s:file_node_pattern_matches = {
