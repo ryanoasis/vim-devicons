@@ -232,8 +232,8 @@ endfunction
 function! WebDevIconsNERDTreeMapOpenRecursively(node)
   " normal original logic:
   call nerdtree#echo('Recursively opening node. Please wait...')
-  call a:node.openRecursively()
   call WebDevIconsNERDTreeDirOpenRecursively(a:node)
+  call a:node.openRecursively()
   " continue with normal original logic:
   call b:NERDTree.render()
   " glyph change possible artifact clean-up
