@@ -1,8 +1,0 @@
-language: python
-python: "3.8"
-
-install:
-  - pip install vim-vint
-
-script:
-  - vint --verbose --stat $(find . -type f -name '*.vim')
