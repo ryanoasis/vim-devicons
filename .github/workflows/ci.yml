@@ -1,32 +1,29 @@
-name: ci
+name: CI
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: [push, pull_request]
+
 jobs:
-  build:
-
+  test:
+    name: Test
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8]
-
+        vim:
+        - v8.2.0000
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+    - name: Checkout code
+      uses: actions/checkout@master
+    - name: Checkout vim-themis
+      uses: actions/checkout@master
       with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-    - name: Install vint
-      run: |
-        pip install vim-vint
-    - name: Test with vint
-      run: |
-        vint --verbose --stat $(find . -type f -name '*.vim')
+        repository: thinca/vim-themis
+        path: vim-themis
+    - name: Setup Vim
+      uses: rhysd/action-setup-vim@v1
+      id: vim
+      with:
+        version: ${{ matrix.vim }}
+    - name: Test
+      env:
+        THEMIS_VIM: ${{ steps.vim.outputs.executable }}
+      run: ./vim-themis/bin/themis --reporter spec
