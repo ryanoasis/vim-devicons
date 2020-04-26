@@ -265,7 +265,10 @@ function! s:setDictionaries()
         \ 'vue'      : '﵂',
         \ 'elm'      : '',
         \ 'swift'    : '',
-        \ 'xcplayground' : ''
+        \ 'xcplayground' : '',
+        \ 'tex'      : 'ﭨ',
+        \ 'r'        : 'ﳒ',
+        \ 'rproj'    : '鉶'
         \}
 
   let s:file_node_exact_matches = {
