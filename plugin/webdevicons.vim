@@ -171,6 +171,7 @@ function! s:setDictionaries()
         \ 'markdown' : '',
         \ 'rmd'      : '',
         \ 'json'     : '',
+        \ 'webmanifest' : '',
         \ 'js'       : '',
         \ 'mjs'      : '',
         \ 'jsx'      : '',
