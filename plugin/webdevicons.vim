@@ -163,6 +163,7 @@ function! s:setDictionaries()
         \ 'htm'      : '',
         \ 'html'     : '',
         \ 'slim'     : '',
+        \ 'haml'     : '',
         \ 'ejs'      : '',
         \ 'css'      : '',
         \ 'less'     : '',
@@ -176,6 +177,8 @@ function! s:setDictionaries()
         \ 'mjs'      : '',
         \ 'jsx'      : '',
         \ 'rb'       : '',
+        \ 'gemspec'  : '',
+        \ 'rake'     : '',
         \ 'php'      : '',
         \ 'py'       : '',
         \ 'pyc'      : '',
@@ -301,6 +304,8 @@ function! s:setDictionaries()
         \ 'procfile'                         : '',
         \ 'dockerfile'                       : '',
         \ 'docker-compose.yml'               : '',
+        \ 'rakefile'                         : '',
+        \ 'config.ru'                        : '',
         \ 'makefile'                         : '',
         \ 'cmakelists.txt'                   : ''
         \}
@@ -314,6 +319,7 @@ function! s:setDictionaries()
         \ '.*materialize.*\.css$' : '',
         \ '.*mootools.*\.js$'     : '',
         \ '.*vimrc.*'             : '',
+        \ 'Gemfile$'              : '',
         \ 'Vagrantfile$'          : ''
         \}
 
