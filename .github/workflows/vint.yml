@@ -1,4 +1,4 @@
-name: ci
+name: vint
 
 on:
   push:
@@ -27,6 +27,6 @@ jobs:
     - name: Install vint
       run: |
         pip install vim-vint
-    - name: Test with vint
+    - name: Run vint
       run: |
         vint --verbose --stat $(find . -type f -name '*.vim')
