@@ -10,6 +10,9 @@ jobs:
       matrix:
         vim:
         - v8.2.0000
+        - v8.1.0000
+        - v8.0.0000
+        - v7.4.0000
     steps:
     - name: Checkout code
       uses: actions/checkout@master
