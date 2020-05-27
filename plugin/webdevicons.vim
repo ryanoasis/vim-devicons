@@ -306,6 +306,7 @@ function! s:setDictionaries()
         \ 'docker-compose.yml'               : '',
         \ 'rakefile'                         : '',
         \ 'config.ru'                        : '',
+        \ 'gemfile'                          : '',
         \ 'makefile'                         : '',
         \ 'cmakelists.txt'                   : ''
         \}
@@ -319,7 +320,6 @@ function! s:setDictionaries()
         \ '.*materialize.*\.css$' : '',
         \ '.*mootools.*\.js$'     : '',
         \ '.*vimrc.*'             : '',
-        \ 'Gemfile$'              : '',
         \ 'Vagrantfile$'          : ''
         \}
 
