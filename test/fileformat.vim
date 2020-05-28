@@ -7,5 +7,15 @@ let s:assert = themis#helper('assert')
 
 " It may return Ubuntu because github-actions's OS is Ubuntu
 function! s:suite.DefaultIcon()
-  call s:assert.equals('', WebDevIconsGetFileFormatSymbol())
+  call s:assert.equals(WebDevIconsGetFileFormatSymbol(), '')
+endfunction
+
+function! s:suite.WindowsIcon()
+  set fileformat=dos
+  call s:assert.equals(WebDevIconsGetFileFormatSymbol(), '')
+endfunction
+
+function! s:suite.MacIcon()
+  set fileformat=mac
+  call s:assert.equals(WebDevIconsGetFileFormatSymbol(), '')
 endfunction

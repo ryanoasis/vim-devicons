@@ -1,0 +1,38 @@
+scriptencoding utf-8
+
+let s:suite = themis#suite('Webdevicons-default-value')
+let s:assert = themis#helper('assert')
+
+function! s:suite.ExtensionConfig()
+  call s:assert.equals(1, g:webdevicons_enable)
+  call s:assert.equals(1, g:webdevicons_enable_nerdtree)
+  call s:assert.equals(1, g:webdevicons_enable_unite )
+  call s:assert.equals(1, g:webdevicons_enable_denite)
+  call s:assert.equals(1, g:webdevicons_enable_vimfiler)
+  call s:assert.equals(1, g:webdevicons_enable_ctrlp)
+  call s:assert.equals(1, g:webdevicons_enable_airline_tabline)
+  call s:assert.equals(1, g:webdevicons_enable_airline_statusline)
+  call s:assert.equals(1, g:webdevicons_enable_airline_statusline_fileformat_symbols)
+  call s:assert.equals(1, g:webdevicons_enable_flagship_statusline)
+  call s:assert.equals(1, g:webdevicons_enable_flagship_statusline_fileformat_symbols)
+  call s:assert.equals(1, g:webdevicons_enable_startify)
+  call s:assert.equals(1, g:webdevicons_conceal_nerdtree_brackets)
+  endfunction
+
+function! s:suite.ConfigOptions()
+  call s:assert.equals(0, g:DevIconsAppendArtifactFix)
+  call s:assert.equals(' ', g:DevIconsArtifactFixChar)
+  call s:assert.equals(1, g:WebDevIconsUnicodeDecorateFileNodes)
+  call s:assert.equals(1, g:WebDevIconsUnicodeDecorateFolderNodes)
+  call s:assert.equals(0, g:DevIconsEnableFoldersOpenClose)
+  call s:assert.equals(1, g:DevIconsEnableFolderPatternMatching)
+  call s:assert.equals(0, g:DevIconsEnableFolderExtensionPatternMatching)
+  call s:assert.equals(1, g:WebDevIconsUnicodeDecorateFolderNodesExactMatches)
+  call s:assert.equals(1, g:WebDevIconsUnicodeGlyphDoubleWidth)
+  call s:assert.equals(' ', g:WebDevIconsNerdTreeBeforeGlyphPadding)
+  call s:assert.equals(' ', g:WebDevIconsNerdTreeAfterGlyphPadding)
+  call s:assert.equals(1, g:WebDevIconsNerdTreeGitPluginForceVAlign)
+  call s:assert.equals(1, g:NERDTreeUpdateOnCursorHold)
+  call s:assert.equals(' ', g:WebDevIconsTabAirLineBeforeGlyphPadding)
+  call s:assert.equals('', g:WebDevIconsTabAirLineAfterGlyphPadding)
+endfunction
