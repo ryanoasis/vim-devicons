@@ -178,7 +178,7 @@ function! s:suite.CSymbol()
 endfunction
 
 function! s:suite.CSSymbol()
-  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cs'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cs'), '')
 endfunction
 
 function! s:suite.ElixirSymbol()
