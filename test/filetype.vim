@@ -113,7 +113,7 @@ endfunction
 function! s:suite.ReactSymbol()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.jsx'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.tsx'), '')
-  call s:assert.equals(WebDevIconsGetFileTypeSymbol('react.jsx'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('react.jsx'), '')
 endfunction
 
 function! s:suite.JsonSymbol()

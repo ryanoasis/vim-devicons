@@ -300,7 +300,7 @@ function! s:setDictionaries()
         \ 'favicon.ico'                      : '',
         \ 'license'                          : '',
         \ 'node_modules'                     : '',
-        \ 'react.jsx'                        : '',
+        \ 'react.jsx'                        : '',
         \ 'procfile'                         : '',
         \ 'dockerfile'                       : '',
         \ 'docker-compose.yml'               : '',
