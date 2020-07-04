@@ -585,11 +585,7 @@ endif
 
 if g:webdevicons_enable == 1 && g:webdevicons_enable_airline_tabline
   " Store original formatter.
-  if exists('g:airline#extensions#tabline#formatter')
-    let g:_webdevicons_airline_orig_formatter = g:airline#extensions#tabline#formatter
-  else
-    let g:_webdevicons_airline_orig_formatter = 'default'
-  endif
+  let g:_webdevicons_airline_orig_formatter = get(g:, 'airline#extensions#tabline#formatter', 'default')
   let g:airline#extensions#tabline#formatter = 'webdevicons'
 endif
 
