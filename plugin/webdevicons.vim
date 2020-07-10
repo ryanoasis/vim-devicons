@@ -66,6 +66,7 @@ call s:set('g:WebDevIconsUnicodeDecorateFolderNodes', 1)
 call s:set('g:DevIconsEnableFoldersOpenClose', 0)
 call s:set('g:DevIconsEnableFolderPatternMatching', 1)
 call s:set('g:DevIconsEnableFolderExtensionPatternMatching', 0)
+call s:set('g:DevIconsEnableDistro', 1)
 call s:set('g:WebDevIconsUnicodeDecorateFolderNodesExactMatches', 1)
 call s:set('g:WebDevIconsUnicodeGlyphDoubleWidth', 1)
 call s:set('g:WebDevIconsNerdTreeBeforeGlyphPadding', ' ')
@@ -96,7 +97,7 @@ function s:getDistro()
     return s:distro
   endif
 
-  if executable('lsb_release')
+  if g:DevIconsEnableDistro && executable('lsb_release')
     let s:lsb = system('lsb_release -i')
     if s:lsb =~# 'Arch'
       let s:distro = ''

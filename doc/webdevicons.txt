@@ -674,6 +674,11 @@ Character Mappings ~
 <
 
 >
+  " disable showing the distribution for unix file encoding (enabled by default with 1)
+  let g:DevIconsEnableDistro = 0
+<
+
+>
   " enable custom folder/directory glyph exact matching
   " (enabled by default when g:WebDevIconsUnicodeDecorateFolderNodes is set to 1)
   let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
