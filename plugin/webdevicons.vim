@@ -214,6 +214,7 @@ function! s:setDictionaries()
         \ 'hxx'      : '',
         \ 'hs'       : '',
         \ 'lhs'      : '',
+        \ 'nix'      : '',
         \ 'lua'      : '',
         \ 'java'     : '',
         \ 'sh'       : '',
