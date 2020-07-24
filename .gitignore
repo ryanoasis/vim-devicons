@@ -1,2 +1,5 @@
 doc/tags
 __pycache__/
+.DS_Store
+.netrwhist
+*.swp
