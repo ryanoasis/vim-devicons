@@ -100,6 +100,8 @@ function s:getDistro()
     let s:lsb = system('lsb_release -i')
     if s:lsb =~# 'Arch'
       let s:distro = ''
+    elseif s:lsb =~# 'Gentoo'
+      let s:distro = ''
     elseif s:lsb =~# 'Ubuntu'
       let s:distro = ''
     elseif s:lsb =~# 'Cent'
