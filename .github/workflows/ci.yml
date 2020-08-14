@@ -22,9 +22,9 @@ jobs:
         - v7.4
     steps:
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: Checkout vim-themis
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
       with:
         repository: thinca/vim-themis
         path: vim-themis
