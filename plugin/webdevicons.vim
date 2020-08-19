@@ -71,7 +71,7 @@ call s:set('g:WebDevIconsUnicodeGlyphDoubleWidth', 1)
 call s:set('g:WebDevIconsNerdTreeBeforeGlyphPadding', ' ')
 call s:set('g:WebDevIconsNerdTreeAfterGlyphPadding', ' ')
 call s:set('g:WebDevIconsNerdTreeGitPluginForceVAlign', 1)
-call s:set('g:NERDTreeUpdateOnCursorHold', 1)
+call s:set('g:NERDTreeGitStatusUpdateOnCursorHold', 1)
 call s:set('g:WebDevIconsTabAirLineBeforeGlyphPadding', ' ')
 call s:set('g:WebDevIconsTabAirLineAfterGlyphPadding', '')
 
@@ -388,7 +388,7 @@ endfunction
 " scope: local
 " stole solution/idea from nerdtree-git-plugin :)
 function! s:CursorHoldUpdate()
-  if g:NERDTreeUpdateOnCursorHold != 1
+  if g:NERDTreeGitStatusUpdateOnCursorHold != 1
     return
   endif
 
