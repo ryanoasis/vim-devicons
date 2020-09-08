@@ -292,6 +292,7 @@ function! s:setDictionaries()
         \ '.ds_store'                        : '',
         \ '.gitconfig'                       : '',
         \ '.gitignore'                       : '',
+        \ '.gitattributes'                   : '',
         \ '.gitlab-ci.yml'                   : '',
         \ '.bashrc'                          : '',
         \ '.zshrc'                           : '',
