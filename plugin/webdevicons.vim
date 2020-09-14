@@ -114,6 +114,9 @@ function s:getDistro()
       let s:distro = ''
     endif
     return s:distro
+  elseif get(g:, 'WebDevIconsOS') ==? 'Android' || executable('uname') && system('uname -o') =~# 'Android'
+    let s:distro = ''
+    return s:distro
   endif
 
   let s:distro = ''
