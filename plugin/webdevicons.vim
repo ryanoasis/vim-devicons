@@ -276,7 +276,8 @@ function! s:setDictionaries()
         \ 'xcplayground' : '',
         \ 'tex'      : 'ﭨ',
         \ 'r'        : 'ﳒ',
-        \ 'rproj'    : '鉶'
+        \ 'rproj'    : '鉶',
+        \ 'pro'      : ' '
         \}
 
   let s:file_node_exact_matches = {
