@@ -32,7 +32,8 @@ function! s:suite.ConfigOptions()
   call s:assert.equals(g:WebDevIconsNerdTreeBeforeGlyphPadding, ' ')
   call s:assert.equals(g:WebDevIconsNerdTreeAfterGlyphPadding, ' ')
   call s:assert.equals(g:WebDevIconsNerdTreeGitPluginForceVAlign, 1)
-  call s:assert.equals(g:NERDTreeUpdateOnCursorHold, 1)
+  call s:assert.equals(g:NERDTreeUpdateOnCursorHold, 1) " Obsolete: for backward compatibility
+  call s:assert.equals(g:NERDTreeGitStatusUpdateOnCursorHold, 1)
   call s:assert.equals(g:WebDevIconsTabAirLineBeforeGlyphPadding, ' ')
   call s:assert.equals(g:WebDevIconsTabAirLineAfterGlyphPadding, '')
 endfunction
