@@ -552,26 +552,48 @@ function! s:DevIconsGetArtifactFix()
 endfunction
 
 " scope: public
-function! WebDevIconsGetFileFormatSymbol(...)
-  let fileformat = ''
-  let bomb = ''
+if exists(":def")
+  def WebDevIconsGetFileFormatSymbol(): string
+    var fileformat = ''
+    var bomb = ''
+    if (&bomb && g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol !=? '')
+      bomb = g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol .. ' '
+    endif
 
-  if (&bomb && g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol !=? '')
-    let bomb = g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol . ' '
-  endif
+    if &fileformat ==? 'dos'
+      fileformat = ''
+    elseif &fileformat ==? 'unix'
+      fileformat = s:isDarwin() ? '' : s:getDistro()
+    elseif &fileformat ==? 'mac'
+      fileformat = ''
+    endif
 
-  if &fileformat ==? 'dos'
-    let fileformat = ''
-  elseif &fileformat ==? 'unix'
-    let fileformat = s:isDarwin() ? '' : s:getDistro()
-  elseif &fileformat ==? 'mac'
-    let fileformat = ''
-  endif
+    var artifactFix = s:DevIconsGetArtifactFix()
 
-  let artifactFix = s:DevIconsGetArtifactFix()
+    return bomb .. fileformat .. artifactFix
+  enddef
+else
+  function! WebDevIconsGetFileFormatSymbol(...)
+    let fileformat = ''
+    let bomb = ''
 
-  return bomb . fileformat . artifactFix
-endfunction
+    if (&bomb && g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol !=? '')
+      let bomb = g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol . ' '
+    endif
+
+    if &fileformat ==? 'dos'
+      let fileformat = ''
+    elseif &fileformat ==? 'unix'
+      let fileformat = s:isDarwin() ? '' : s:getDistro()
+    elseif &fileformat ==? 'mac'
+      let fileformat = ''
+    endif
+
+    let artifactFix = s:DevIconsGetArtifactFix()
+
+    return bomb . fileformat . artifactFix
+  endfunction
+endif
 
 " for airline plugin {{{3
 "========================================================================
