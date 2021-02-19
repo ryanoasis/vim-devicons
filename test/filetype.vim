@@ -194,3 +194,15 @@ function! s:suitePerlSymbol()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.pm'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.t'), '')
 endfunction
+
+function! s:suite.CSharpSymbol()
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cs'), '')
+endfunction
+
+
+function! s:suite.FSharpSymbol()
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fs'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fsx'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fsi'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fsscript'), '')
+endfunction
