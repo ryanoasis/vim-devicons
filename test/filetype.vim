@@ -206,3 +206,7 @@ function! s:suite.FSharpSymbol()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fsi'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fsscript'), '')
 endfunction
+
+function! s:suite.DartSymbol()
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.dart'), '')
+endfunction
