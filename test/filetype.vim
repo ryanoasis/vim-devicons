@@ -210,3 +210,8 @@ endfunction
 function! s:suite.DartSymbol()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.dart'), '')
 endfunction
+
+function! s:suite.OverrideSymbol()
+  set ft=vim
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
