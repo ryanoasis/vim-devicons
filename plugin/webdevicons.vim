@@ -490,9 +490,9 @@ endfunction
 
 " a:1 (bufferName), a:2 (isDirectory)
 " scope: public
-function! WebDevIconsGetFileTypeSymbol(...)
+function! WebDevIconsGetFileTypeSymbol(...) abort
   if a:0 == 0
-    let fileNodeExtension = expand('%:e')
+    let fileNodeExtension = &filetype
     let fileNode = expand('%:t')
     let isDirectory = 0
   else
