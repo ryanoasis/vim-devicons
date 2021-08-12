@@ -493,7 +493,7 @@ endfunction
 " scope: public
 function! WebDevIconsGetFileTypeSymbol(...) abort
   if a:0 == 0
-    let fileNodeExtension = &filetype
+    let fileNodeExtension = !empty(expand('%:e')) ? expand('%:e') : &filetype
     let fileNode = expand('%:t')
     let isDirectory = 0
   else
