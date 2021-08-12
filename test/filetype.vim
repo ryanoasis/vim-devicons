@@ -220,18 +220,22 @@ function! s:suite.OverrideSymbol()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
-function! s:suite.PythonSymbol_NoError_NoArgument()
+function! s:suite.EditPythonFile_NoError_NoArgument()
   edit! test.py
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
-function! s:suite.VimSymbol_NoError_NoArgument()
+function! s:suite.EditVimFile_NoError_NoArgument()
   edit! test.vim
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
+function! s:suite.Editvimrc_NoError_NoArgument()
+  edit! vimrc
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
 
-function! s:suite.javaScriptSymbol_NoError_NoArgument()
+function! s:suite.EditjavaScript_NoError_NoArgument()
   edit! test.js
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
