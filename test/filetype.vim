@@ -219,3 +219,19 @@ function! s:suite.OverrideSymbol()
   set ft=vim
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
+
+function! s:suite.PythonSymbol_NoError_NoArgument()
+  edit! test.py
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
+
+function! s:suite.VimSymbol_NoError_NoArgument()
+  edit! test.vim
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
+
+
+function! s:suite.javaScriptSymbol_NoError_NoArgument()
+  edit! test.js
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
