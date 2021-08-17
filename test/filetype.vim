@@ -5,11 +5,11 @@ scriptencoding utf-8
 let s:suite = themis#suite('WebDevIconsGetFileTypeSymbol')
 let s:assert = themis#helper('assert')
 
-function! s:suite.FileNodesDefaultSymbol()
+function! s:suite.NoArgument_GetDefaultIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
-function! s:suite.VimSymbol()
+function! s:suite.OneArgument_GetVimIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('.vimrc'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('vimrc'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('_vimrc'), '')
@@ -19,48 +19,48 @@ function! s:suite.VimSymbol()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.vim'), '')
 endfunction
 
-function! s:suite.RubySymbol()
+function! s:suite.OneArgumet_GetRubyIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.rb'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('Rakefile'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('Gemfile'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('config.ru'), '')
 endfunction
 
-function! s:suite.GoSymbol()
+function! s:suite.OneArgument_GetGoIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.go'), '')
 endfunction
 
-function! s:suite.PhpSymbol()
+function! s:suite.OneArgument_GetPhpIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.php'),'')
 endfunction
 
-function! s:suite.ScalaSymbol()
+function! s:suite.OneArgument_GetScalaIcon()
   call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.scala'), '')
 endfunction
 
-function! s:suite.TexSymbol()
+function! s:suite.OneArgument_GetTexIcon()
   call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.tex'), 'ﭨ')
 endfunction
 
-function! s:suite.LicenseSymbol()
+function! s:suite.OneArgument_GetLicenseIcon()
   call s:assert.equals( WebDevIconsGetFileTypeSymbol('LICENSE'), '')
 endfunction
 
-function! s:suite.MarkdownSymbol()
+function! s:suite.OneArgument_GetMarkdownIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.md'),'')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.markdown'),'')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.mdx'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.rmd'), '')
 endfunction
 
-function! s:suite.PythonSymbol()
+function! s:suite.OneArgument_GetPythonIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.py'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.pyc'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.pyo'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.pyd'), '')
 endfunction
 
-function! s:suite.ShellSymbol()
+function! s:suite.OneArgument_GetShellIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.sh'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fish'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.bash'), '')
@@ -70,62 +70,62 @@ function! s:suite.ShellSymbol()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.ps1'), '')
 endfunction
 
-function! s:suite.ElmSymbol()
+function! s:suite.OneArgument_GetElmIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.elm'), '')
 endfunction
 
-function! s:suite.RssSymbol()
+function! s:suite.OneArgument_GetRssIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.rss'), '')
 endfunction
 
-function! s:suite.DBSymbol()
+function! s:suite.OneArgument_GetDBIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.db'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.sql'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.dump'), '')
 endfunction
 
-function! s:suite.VueSymbol()
+function! s:suite.OneArgument_GetVueIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.vue'), '﵂')
 endfunction
 
-function! s:suite.RustSymbol()
+function! s:suite.OneArgument_GetRustIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.rs'), '')
 endfunction
 
-function! s:suite.DockerSymbol()
+function! s:suite.OneArgument_GetDockerIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('Dockerfile'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('docker-compose.yml'), '')
 endfunction
 
-function! s:suite.JavaSymbol()
+function! s:suite.OneArgument_GetJavaIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.java'), '')
 endfunction
 
-function! s:suite.JavaScriptSymbol()
+function! s:suite.OneArgument_GetJavaScriptIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.js'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.mjs'), '')
 endfunction
 
-function! s:suite.TypeScript()
+function! s:suite.OneArgument_GetTypeScriptIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.ts'), '')
 endfunction
 
-function! s:suite.ReactSymbol()
+function! s:suite.OneArgument_GetReactIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.jsx'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.tsx'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('react.jsx'), '')
 endfunction
 
-function! s:suite.JsonSymbol()
+function! s:suite.OneArgument_GetJsonIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.json'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.webmanifest'), '')
 endfunction
 
-function! s:suite.NodeModuleSymbol()
+function! s:suite.OneArgument_GetNodeModuleIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('node_modules'), '')
 endfunction
 
-function! s:suite.GearSymbol()
+function! s:suite.OneArgument_GetGearIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('.DS_Store'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('Makefile'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('.bashrc'), '')
@@ -139,34 +139,34 @@ function! s:suite.GearSymbol()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.bat'), '')
 endfunction
 
-function! s:suite.DropboxSymbol()
+function! s:suite.OneArgument_GetDropboxIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('Dropbox'), '')
 endfunction
 
-function! s:suite.ErlangSymbol()
+function! s:suite.OneArgument_GetErlangIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.erl'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.hrl'), '')
 endfunction
 
-function! s:suite.SwiftSymbol()
+function! s:suite.OneArgument_GetSwiftIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.swift'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.xcplayground'), '')
 endfunction
 
-function! s:suite.RSymbol()
+function! s:suite.OneArgument_GetRIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.r'), 'ﳒ')
 endfunction
 
-function! s:suite.HaskellSymbol()
+function! s:suite.OneArgument_GetHaskellIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.hs'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.lhs'), '')
 endfunction
 
-function! s:suite.LuaSymbol()
+function! s:suite.OneArgument_GetLuaIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.lua'), '')
 endfunction
 
-function! s:suite.CppSymbol()
+function! s:suite.OneArgument_GetCppIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cpp'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.c++'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cp'), '')
@@ -174,68 +174,68 @@ function! s:suite.CppSymbol()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cc'), '')
 endfunction
 
-function! s:suite.CSymbol()
+function! s:suite.OneArgument_GetCIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.c'), '')
 endfunction
 
-function! s:suite.CSSymbol()
+function! s:suite.OneArgument_GetCSSIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cs'), '')
 endfunction
 
-function! s:suite.ElixirSymbol()
+function! s:suite.OneArgument_GetElixirIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.ex'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.exs'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.eex'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.leex'), '')
 endfunction
 
-function! s:suitePerlSymbol()
+function! s:suite.OneArgument_GetPerlIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.pl'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.pm'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.t'), '')
 endfunction
 
-function! s:suite.CSharpSymbol()
+function! s:suite.OneArgument_GetCSharpIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cs'), '')
 endfunction
 
 
-function! s:suite.FSharpSymbol()
+function! s:suite.OneArgument_GetFSharpIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fs'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fsx'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fsi'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.fsscript'), '')
 endfunction
 
-function! s:suite.DartSymbol()
+function! s:suite.OneArgument_GetDartIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.dart'), '')
 endfunction
 
-function! s:suite.SoliditySymbol()
+function! s:suite.OneArgument_GetSolidityIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.sol'), 'ﲹ')
 endfunction
 
-function! s:suite.OverrideSymbol()
+function! s:suite.NoArgument_OverWriteFileType_GetVimIcon()
   set ft=vim
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
-function! s:suite.EditPythonFile_NoError_NoArgument()
+function! s:suite.NoArgument_EditPythonFile_GetPythonIcon()
   edit! test.py
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
-function! s:suite.EditVimFile_NoError_NoArgument()
+function! s:suite.NoArgument_EditVimFile_GetVimIcon()
   edit! test.vim
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
-function! s:suite.Editvimrc_NoError_NoArgument()
+function! s:suite.NoArgument_Editvimrc_GetVimIcon()
   edit! vimrc
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
-function! s:suite.EditjavaScript_NoError_NoArgument()
+function! s:suite.NoArgument_EditjavaScriptFile_GetjavaScriptIcon()
   edit! test.js
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
