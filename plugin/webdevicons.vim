@@ -197,6 +197,7 @@ function! s:setDictionaries()
         \ 'yaml'     : '',
         \ 'toml'     : '',
         \ 'bat'      : '',
+        \ 'mk'       : '',
         \ 'jpg'      : '',
         \ 'jpeg'     : '',
         \ 'bmp'      : '',
