@@ -132,6 +132,7 @@ endfunction
 function! s:suite.OneArgument_GetGearIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('.DS_Store'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('Makefile'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.mk'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('.bashrc'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('.zshrc'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('.gitignore'), '')
@@ -247,6 +248,11 @@ endfunction
 function! s:suite.NoArgument_EditRustFile_GetRustIcon()
   edit! test.rs
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
+
+function! s:suite.NoArgument_EditMKFile_GetGearIcon()
+  edit! test.mk
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
 function! s:suite.OneArgument_EditPythonFile_GetRubyIcon()
