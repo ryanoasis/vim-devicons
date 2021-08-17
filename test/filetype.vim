@@ -22,7 +22,10 @@ endfunction
 function! s:suite.OneArgumet_GetRubyIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.rb'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('Rakefile'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('RAKEFILE'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('rakefile'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('Gemfile'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('gemfile'), '')
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('config.ru'), '')
 endfunction
 
@@ -90,6 +93,7 @@ endfunction
 
 function! s:suite.OneArgument_GetRustIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.rs'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.rlib'), '')
 endfunction
 
 function! s:suite.OneArgument_GetDockerIcon()
@@ -220,11 +224,6 @@ function! s:suite.NoArgument_OverWriteFileType_GetVimIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
-function! s:suite.NoArgument_EditPythonFile_GetPythonIcon()
-  edit! test.py
-  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
-endfunction
-
 function! s:suite.NoArgument_EditVimFile_GetVimIcon()
   edit! test.vim
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
@@ -235,7 +234,22 @@ function! s:suite.NoArgument_Editvimrc_GetVimIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
 endfunction
 
+function! s:suite.NoArgument_EditPythonFile_GetPythonIcon()
+  edit! test.py
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
+
 function! s:suite.NoArgument_EditjavaScriptFile_GetjavaScriptIcon()
   edit! test.js
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
+
+function! s:suite.NoArgument_EditRustFile_GetRustIcon()
+  edit! test.rs
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
+
+function! s:suite.OneArgument_EditPythonFile_GetRubyIcon()
+  edit! test.py
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.rb'), '')
 endfunction
