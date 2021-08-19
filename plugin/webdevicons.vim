@@ -169,7 +169,7 @@ function! s:setDictionaries()
         \ 'slim'     : '',
         \ 'haml'     : '',
         \ 'ejs'      : '',
-        \ 'css'      : '',
+        \ 'css'      : '',
         \ 'less'     : '',
         \ 'md'       : '',
         \ 'mdx'      : '',
