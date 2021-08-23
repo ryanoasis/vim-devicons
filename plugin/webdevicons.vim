@@ -117,6 +117,11 @@ function s:getDistro()
     endif
     return s:distro
   endif
+ " check for freeBSD
+  if system('uname -s') ==# "FreeBSD\n"
+    let s:distro = ''
+    return s:distro
+  endif
 
   let s:distro = ''
   return s:distro
