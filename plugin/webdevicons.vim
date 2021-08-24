@@ -572,7 +572,7 @@ function! WebDevIconsGetFileFormatSymbol(...)
       let fileformat = ''
     else
       let fileformat = s:getDistro()
-	endif
+    endif
   elseif &fileformat ==? 'mac'
     let fileformat = ''
   endif
