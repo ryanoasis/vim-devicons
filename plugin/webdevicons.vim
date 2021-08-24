@@ -117,11 +117,6 @@ function s:getDistro()
     endif
     return s:distro
   endif
- " check for freeBSD
-  if system('uname -s') ==# "FreeBSD\n"
-    let s:distro = ''
-    return s:distro
-  endif
 
   let s:distro = ''
   return s:distro
@@ -571,6 +566,13 @@ function! WebDevIconsGetFileFormatSymbol(...)
     let fileformat = ''
   elseif &fileformat ==? 'unix'
     let fileformat = s:isDarwin() ? '' : s:getDistro()
+    if s:isDarwin()
+      let fileformat = '' 
+    elseif has('bsd')
+      let fileformat = ''
+    else
+      let fileformat = s:getDistro()
+	endif
   elseif &fileformat ==? 'mac'
     let fileformat = ''
   endif
