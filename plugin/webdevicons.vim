@@ -318,7 +318,8 @@ function! s:setDictionaries()
         \ 'config.ru'                        : '',
         \ 'gemfile'                          : '',
         \ 'makefile'                         : '',
-        \ 'cmakelists.txt'                   : ''
+        \ 'cmakelists.txt'                   : '',
+        \ 'robots.txt'                       : 'ﮧ'
         \}
 
   let s:file_node_pattern_matches = {
