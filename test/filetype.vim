@@ -10,192 +10,192 @@ function! s:Assert(filename, icon)
 endfunction
 
 function! s:suite.__OneArgument_VimIcon__()
-  let targetfilenames = ['.vimrc', "vimrc", ".gvimrc", "_gvimrc", "test.vim"]
+  let targetfilenames = ['.vimrc', 'vimrc', '.gvimrc', '_gvimrc', 'test.vim']
   let expecticon = ''
   let child = themis#suite('OneArgument_VimIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_RubyIcon__()
-  let targetfilenames = ['test.rb', "rakefile", "RAKEFILE", "Gemfile", "config.ru"]
+  let targetfilenames = ['test.rb', 'rakefile', 'RAKEFILE', 'Gemfile', 'config.ru']
   let expecticon = ''
   let child = themis#suite('OneArgument_RubyIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_MarkDownIcon__()
-  let targetfilenames = ['test.md', "test.markdown", "test.mdx", "test.rmd"]
+  let targetfilenames = ['test.md', 'test.markdown', 'test.mdx', 'test.rmd']
   let expecticon = ''
   let child = themis#suite('OneArgument_MarkDownIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_PythonIcon__()
-  let targetfilenames = ['test.py', "test.pyc", "test.pyo", "test.pyd"]
+  let targetfilenames = ['test.py', 'test.pyc', 'test.pyo', 'test.pyd']
   let expecticon = ''
   let child = themis#suite('OneArgument_PythonIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_ShellIcon__()
-  let targetfilenames = ['test.sh', "test.fish", "test.bash", "test.ksh", "test.csh", "test.awk", "test.ps1"]
+  let targetfilenames = ['test.sh', 'test.fish', 'test.bash', 'test.ksh', 'test.csh', 'test.awk', 'test.ps1']
   let expecticon = ''
   let child = themis#suite('OneArgument_ShellIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_DBIcon__()
-  let targetfilenames = ['test.db', "test.sql", "test.dump"]
+  let targetfilenames = ['test.db', 'test.sql', 'test.dump']
   let expecticon = ''
   let child = themis#suite('OneArgument_DBIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_RustIcon__()
-  let targetfilenames = ['test.rs', "test.rlib"]
+  let targetfilenames = ['test.rs', 'test.rlib']
   let expecticon = ''
   let child = themis#suite('OneArgument_RustIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_DockerIcon__()
-  let targetfilenames = ['Dockerfile', "docker-compose.yml"]
+  let targetfilenames = ['Dockerfile', 'docker-compose.yml']
   let expecticon = ''
   let child = themis#suite('OneArgument_DockerIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_JavaScriptIcon__()
-  let targetfilenames = ['test.js', "test.mjs"]
+  let targetfilenames = ['test.js', 'test.mjs']
   let expecticon = ''
   let child = themis#suite('OneArgument_JavaScriptIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_ReactIcon__()
-  let targetfilenames = ['test.jsx', "test.tsx", "react.jsx"]
+  let targetfilenames = ['test.jsx', 'test.tsx', 'react.jsx']
   let expecticon = ''
   let child = themis#suite('OneArgument_ReactIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_JsonIcon__()
-  let targetfilenames = ['test.json', "test.webmanifest"]
+  let targetfilenames = ['test.json', 'test.webmanifest']
   let expecticon = ''
   let child = themis#suite('OneArgument_JsonIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_GearIcon__()
-  let targetfilenames = ['.DS_Store', "Makefile", "test.mk", ".bashrc", ".zshrc", ".gitignore", ".gitattributes",  "cmakelists.txt", "test.yaml", "test.yml", "test.toml", "test.bat"]
+  let targetfilenames = ['.DS_Store', 'Makefile', 'test.mk', '.bashrc', '.zshrc', '.gitignore', '.gitattributes',  'cmakelists.txt', 'test.yaml', 'test.yml', 'test.toml', 'test.bat']
   let expecticon = ''
   let child = themis#suite('OneArgument_GearIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_ErlangIcon__()
-  let targetfilenames = ['test.erl', "test.hrl"]
+  let targetfilenames = ['test.erl', 'test.hrl']
   let expecticon = ''
   let child = themis#suite('OneArgument_ErlangIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_SwiftIcon__()
-  let targetfilenames = ['test.swift', "test.xcplayground"]
+  let targetfilenames = ['test.swift', 'test.xcplayground']
   let expecticon = ''
   let child = themis#suite('OneArgument_SwiftIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_HaskellIcon__()
-  let targetfilenames = ['test.hs', "test.lhs"]
+  let targetfilenames = ['test.hs', 'test.lhs']
   let expecticon = ''
   let child = themis#suite('OneArgument_HaskellIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_CppIcon__()
-  let targetfilenames = ['test.cpp', "test.c++", "test.cp", "test.cxx", "test.cc"]
+  let targetfilenames = ['test.cpp', 'test.c++', 'test.cp', 'test.cxx', 'test.cc']
   let expecticon = ''
   let child = themis#suite('OneArgument_C++Icon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_ElixirIcon__()
-  let targetfilenames = ['test.ex', "test.exs", "test.eex", "test.leex"]
+  let targetfilenames = ['test.ex', 'test.exs', 'test.eex', 'test.leex']
   let expecticon = ''
   let child = themis#suite('OneArgument_ElixirIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_PerlIcon__()
-  let targetfilenames = ['test.pl', "test.pm", "test.t"]
+  let targetfilenames = ['test.pl', 'test.pm', 'test.t']
   let expecticon = ''
   let child = themis#suite('OneArgument_PerlIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
 function! s:suite.__OneArgument_FSharpIcon__()
-  let targetfilenames = ['test.fs', "test.fsx", "test.fsi", "test.fsscript"]
+  let targetfilenames = ['test.fs', 'test.fsx', 'test.fsi', 'test.fsscript']
   let expecticon = ''
   let child = themis#suite('OneArgument_FSharpIcon')
 
   for targetfilename in targetfilenames
-    let child[targetfilename] = funcref("s:Assert", [targetfilename, expecticon])
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
   endfor
 endfunction
 
