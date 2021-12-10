@@ -279,7 +279,8 @@ function! s:setDictionaries()
         \ 'tex'      : 'ﭨ',
         \ 'r'        : 'ﳒ',
         \ 'rproj'    : '鉶',
-        \ 'sol'      : 'ﲹ'
+        \ 'sol'      : 'ﲹ',
+        \ 'pem'      : ''
         \}
 
   let s:file_node_exact_matches = {
