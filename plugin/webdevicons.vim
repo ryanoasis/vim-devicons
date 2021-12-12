@@ -567,7 +567,13 @@ function! WebDevIconsGetFileFormatSymbol(...)
   if &fileformat ==? 'dos'
     let fileformat = ''
   elseif &fileformat ==? 'unix'
-    let fileformat = s:isDarwin() ? '' : s:getDistro()
+    if s:isDarwin()
+      let fileformat = '' 
+    elseif has('bsd')
+      let fileformat = ''
+    else
+      let fileformat = s:getDistro()
+    endif
   elseif &fileformat ==? 'mac'
     let fileformat = ''
   endif
