@@ -275,6 +275,10 @@ function! s:suite.OneArgument_GetLicenseIcon()
   call s:assert.equals( WebDevIconsGetFileTypeSymbol('LICENSE'), '')
 endfunction
 
+function! s:suite.OneArgument_GetRobotIcon()
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('robots.txt'), 'ﮧ')
+endfunction
+
 function! s:suite.NoArgument_OverWriteFileType_GetVimIcon()
   set ft=vim
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
