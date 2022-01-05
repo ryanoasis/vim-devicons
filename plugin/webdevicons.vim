@@ -269,6 +269,7 @@ function! s:setDictionaries()
         \ 'exs'      : '',
         \ 'eex'      : '',
         \ 'leex'     : '',
+        \ 'heex'     : '',
         \ 'vim'      : '',
         \ 'ai'       : '',
         \ 'psd'      : '',
