@@ -170,7 +170,7 @@ function! s:suite.__OneArgument_CppIcon__()
 endfunction
 
 function! s:suite.__OneArgument_ElixirIcon__()
-  let targetfilenames = ['test.ex', 'test.exs', 'test.eex', 'test.leex']
+  let targetfilenames = ['test.ex', 'test.exs', 'test.eex', 'test.leex', 'test.heex']
   let expecticon = ''
   let child = themis#suite('OneArgument_ElixirIcon')
 
