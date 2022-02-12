@@ -170,7 +170,7 @@ function! s:suite.__OneArgument_CppIcon__()
 endfunction
 
 function! s:suite.__OneArgument_ElixirIcon__()
-  let targetfilenames = ['test.ex', 'test.exs', 'test.eex', 'test.leex']
+  let targetfilenames = ['test.ex', 'test.exs', 'test.eex', 'test.leex', 'test.heex']
   let expecticon = ''
   let child = themis#suite('OneArgument_ElixirIcon')
 
@@ -273,6 +273,14 @@ endfunction
 
 function! s:suite.OneArgument_GetLicenseIcon()
   call s:assert.equals( WebDevIconsGetFileTypeSymbol('LICENSE'), '')
+endfunction
+
+function! s:suite.OneArgument_GetRobotIcon()
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('robots.txt'), 'ﮧ')
+endfunction
+
+function! s:suite.OneArgument_PemIcon()
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.pem'), '')
 endfunction
 
 function! s:suite.NoArgument_OverWriteFileType_GetVimIcon()

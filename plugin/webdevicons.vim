@@ -98,6 +98,11 @@ function s:getDistro()
     return s:distro
   endif
 
+  if has('bsd')
+    let s:distro = ''
+    return s:distro
+  endif
+
   if g:DevIconsEnableDistro && executable('lsb_release')
     let s:lsb = system('lsb_release -i')
     if s:lsb =~# 'Arch'
@@ -264,6 +269,7 @@ function! s:setDictionaries()
         \ 'exs'      : '',
         \ 'eex'      : '',
         \ 'leex'     : '',
+        \ 'heex'     : '',
         \ 'vim'      : '',
         \ 'ai'       : '',
         \ 'psd'      : '',
@@ -567,13 +573,7 @@ function! WebDevIconsGetFileFormatSymbol(...)
   if &fileformat ==? 'dos'
     let fileformat = ''
   elseif &fileformat ==? 'unix'
-    if s:isDarwin()
-      let fileformat = '' 
-    elseif has('bsd')
-      let fileformat = ''
-    else
-      let fileformat = s:getDistro()
-    endif
+    let fileformat = s:isDarwin() ? '' : s:getDistro()
   elseif &fileformat ==? 'mac'
     let fileformat = ''
   endif

@@ -1,6 +1,6 @@
 #### Requirements (please check off with 'x')
 
-- [ ] I have read the [Contributing Guidelines](https://github.com/ryanoasis/vim-devicons/blob/master/contributing.md)
+- [ ] I have read the [Contributing Guidelines](https://github.com/ryanoasis/vim-devicons/blob/master/CONTRIBUTING.md)
 - [ ] I have read or at least glanced at the [FAQ](https://github.com/ryanoasis/vim-devicons#faq--troubleshooting)
 - [ ] I have read or at least glanced at the [Wiki](https://github.com/ryanoasis/vim-devicons/wiki)
 
