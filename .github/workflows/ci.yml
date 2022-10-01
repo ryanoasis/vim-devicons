@@ -32,6 +32,10 @@ jobs:
       id: vim
       with:
         version: ${{ matrix.vim }}
+
+    - name: Check OS
+      run: uname -a
+
     - name: Test
       env:
         THEMIS_VIM: ${{ steps.vim.outputs.executable }}

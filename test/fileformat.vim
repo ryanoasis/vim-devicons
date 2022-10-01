@@ -14,7 +14,7 @@ function! s:suite.UnixIcon()
   elseif os =~# 'ubuntu'
     call s:assert.equals(WebDevIconsGetFileFormatSymbol(), '')
   else
-    call s:assert.skip("Skip testing except for Ubuntu and Mac.")
+    call s:assert.skip('Skip testing except for Ubuntu and Mac.')
   endif
 endfunction
 
