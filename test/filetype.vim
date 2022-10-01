@@ -296,11 +296,11 @@ function! s:suite.TwoArgument_one_GetFolderIcon()
 endfunction
 
 function! s:suite.TwoArgument_two_GetDefaultIcon()
-  call s:assert.equals( WebDevIconsGetFileTypeSymbol("test.vim", 2), '')
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.vim', 2), '')
 endfunction
 
 function! s:suite.TwoArgument_string_GetFileTypeIcon()
-  call s:assert.equals( WebDevIconsGetFileTypeSymbol("test.php", "test.vim"), '')
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.php', 'test.vim'), '')
 endfunction
 
 function! s:suite.NoArgument_OverWriteFileType_GetVimIcon()
