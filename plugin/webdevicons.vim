@@ -524,18 +524,17 @@ function! WebDevIconsGetFileTypeSymbol(...) abort
     for [pattern, glyph] in items(g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols)
       if match(fileNode, pattern) != -1
         let symbol = glyph
+        return glyph . s:DevIconsGetArtifactFix()
         break
       endif
     endfor
 
-    if symbol == g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol
-      if has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, fileNode)
-        let symbol = g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[fileNode]
-      elseif ((isDirectory == 1 && g:DevIconsEnableFolderExtensionPatternMatching) || isDirectory == 0) && has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
-        let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
-      elseif isDirectory == 1
-        let symbol = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
-      endif
+    if has_key(g:WebDevIconsUnicodeDecorateFileNodesExactSymbols, fileNode)
+      let symbol = g:WebDevIconsUnicodeDecorateFileNodesExactSymbols[fileNode]
+    elseif ((isDirectory == 1 && g:DevIconsEnableFolderExtensionPatternMatching) || isDirectory == 0) && has_key(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, fileNodeExtension)
+      let symbol = g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols[fileNodeExtension]
+    elseif isDirectory == 1
+      let symbol = g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol
     endif
 
   else
