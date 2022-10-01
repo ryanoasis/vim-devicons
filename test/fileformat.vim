@@ -7,11 +7,11 @@ let s:assert = themis#helper('assert')
 
 function! s:suite.UnixIcon()
   set fileformat=unix
-  let os = system('uname -s')
+  let os = system('uname -a')
   if os =~# 'Darwin'
     call s:assert.equals(WebDevIconsGetFileFormatSymbol(), '')
   " It may return Ubuntu because github-actions's OS is Ubuntu
-  elseif os =~# 'ubuntu'
+  elseif os =~# 'Ubuntu'
     call s:assert.equals(WebDevIconsGetFileFormatSymbol(), '')
   else
     call s:assert.skip('Skip testing except for Ubuntu and Mac.')

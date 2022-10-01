@@ -19,6 +19,7 @@ jobs:
         - v8.2.0000
         - v8.1.0000
         - v8.0.0000
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -27,14 +28,12 @@ jobs:
       with:
         repository: thinca/vim-themis
         path: vim-themis
+
     - name: Setup Vim
       uses: rhysd/action-setup-vim@v1
       id: vim
       with:
         version: ${{ matrix.vim }}
-
-    - name: Check OS
-      run: uname -a
 
     - name: Test
       env:
