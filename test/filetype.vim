@@ -9,6 +9,10 @@ function! s:Assert(filename, icon)
   call s:assert.equals(WebDevIconsGetFileTypeSymbol(a:filename), a:icon)
 endfunction
 
+function! s:suite.NoArgument_GetDefaultIcon()
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol(), '')
+endfunction
+
 function! s:suite.__OneArgument_VimIcon__()
   let targetfilenames = ['.vimrc', 'vimrc', '.gvimrc', '_gvimrc', 'test.vim']
   let expecticon = ''
@@ -281,6 +285,22 @@ endfunction
 
 function! s:suite.OneArgument_PemIcon()
   call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.pem'), '')
+endfunction
+
+function! s:suite.TwoArgument_zero_GetFileIcon()
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.vim', 0), '')
+endfunction
+
+function! s:suite.TwoArgument_one_GetFolderIcon()
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.vim', 1), '')
+endfunction
+
+function! s:suite.TwoArgument_two_GetDefaultIcon()
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.vim', 2), '')
+endfunction
+
+function! s:suite.TwoArgument_string_GetFileTypeIcon()
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.php', 'test.vim'), '')
 endfunction
 
 function! s:suite.NoArgument_OverWriteFileType_GetVimIcon()
