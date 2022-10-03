@@ -416,7 +416,7 @@ function! s:CursorHoldUpdate()
   endif
 
   " Do not update when a special buffer is selected
-  if !empty(&l:buftype)
+  if !empty(&l:buftype) && &l:filetype !=# 'nerdtree'
     return
   endif
 
