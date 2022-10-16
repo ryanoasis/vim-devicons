@@ -188,6 +188,7 @@ function! s:setDictionaries()
         \ 'rb'       : '',
         \ 'gemspec'  : '',
         \ 'rake'     : '',
+        \ 'cr'       : '',
         \ 'php'      : '',
         \ 'py'       : '',
         \ 'pyc'      : '',

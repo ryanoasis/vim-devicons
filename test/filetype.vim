@@ -33,6 +33,17 @@ function! s:suite.__OneArgument_RubyIcon__()
   endfor
 endfunction
 
+function! s:suite.__OneArgument_CrystalIcon__()
+  let targetfilenames = ['test.cr']
+  let expecticon = ''
+  let child = themis#suite('OneArgument_CrystalIcon')
+
+  for targetfilename in targetfilenames
+    let child[targetfilename] = funcref('s:Assert', [targetfilename, expecticon])
+  endfor
+endfunction
+
+
 function! s:suite.__OneArgument_MarkDownIcon__()
   let targetfilenames = ['test.md', 'test.markdown', 'test.mdx', 'test.rmd']
   let expecticon = ''
