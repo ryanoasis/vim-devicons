@@ -257,28 +257,24 @@ function! WebDevIconsNERDTreeMapCloseChildren(node)
 endfunction
 
 function! WebDevIconsNERDTreeMapCloseDir(node)
-  " continue with normal original logic:
-  let parent = a:node.parent
-  while g:NERDTreeCascadeOpenSingleChildDir && !parent.isRoot()
-    let childNodes = parent.getVisibleChildren()
-    if len(childNodes) == 1 && childNodes[0].path.isDirectory
-      let parent = parent.parent
-    else
-      break
-    endif
+  let l:parent = a:node.parent
+  while l:parent.isCascadable()
+      let l:parent = l:parent.parent
   endwhile
-  if parent ==# {} || parent.isRoot()
-    call nerdtree#echo('cannot close tree root')
-  else
-    call parent.close()
-    " update the glyph
-    call WebDevIconsNERDTreeDirClose(parent)
-    call b:NERDTree.render()
-    call parent.putCursorHere(0, 0)
-    " glyph change possible artifact clean-up
-    if g:DevIconsEnableNERDTreeRedraw ==# 1
-      redraw!
-    endif
+
+  if l:parent.isRoot()
+      call nerdtree#echo('cannot close tree root')
+      return
+  endif
+
+  call parent.close()
+  " update the glyph
+  call WebDevIconsNERDTreeDirClose(parent)
+  call b:NERDTree.render()
+  call parent.putCursorHere(0, 0)
+  " glyph change possible artifact clean-up
+  if g:DevIconsEnableNERDTreeRedraw ==# 1
+    redraw!
   endif
 endfunction
 
