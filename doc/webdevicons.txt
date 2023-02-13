@@ -679,6 +679,11 @@ Character Mappings ~
 <
 
 >
+  " configure the icon to be used for your OS/Linux distribution
+  let g:WebDevIconsDistro = ''
+<
+
+>
   " enable custom folder/directory glyph exact matching
   " (enabled by default when g:WebDevIconsUnicodeDecorateFolderNodes is set to 1)
   let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
