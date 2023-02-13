@@ -97,6 +97,11 @@ function s:getDistro()
   if exists('s:distro')
     return s:distro
   endif
+  
+  if exists('g:WebDevIconsDistro') && g:WebDevIconsDistro != ''
+    let s:distro = g:WebDevIconsDistro
+    return s:distro
+  endif
 
   if has('bsd')
     let s:distro = ''
