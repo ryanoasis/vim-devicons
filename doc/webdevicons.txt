@@ -258,7 +258,7 @@ Set Font ~
 
 Linux 'vim set guifont='
 >
-  set guifont=DroidSansMono\ Nerd\ Font\ 11
+  set guifont=DroidSansM\ Nerd\ Font\ 11
 <
 macOS (OS X) and Windows
 >
@@ -266,9 +266,9 @@ macOS (OS X) and Windows
 <
 
 >
-  set guifont=DroidSansMono\ Nerd\ Font:h11
+  set guifont=DroidSansM\ Nerd\ Font:h11
   " or:
-  set guifont=DroidSansMono_Nerd_Font:h11
+  set guifont=DroidSansM_Nerd_Font:h11
 <
 **Note:** if you don't set 'guifont' then you'll have to set your terminal's
 font, else things break!
