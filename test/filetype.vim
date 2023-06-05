@@ -208,7 +208,7 @@ function! s:suite.OneArgument_GetTypeScriptIcon()
 endfunction
 
 function! s:suite.OneArgument_GetVueIcon()
-  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.vue'), '﵂')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.vue'), '󰡄')
 endfunction
 
 function! s:suite.OneArgument_GetNodeModuleIcon()
@@ -220,7 +220,7 @@ function! s:suite.OneArgument_GetDropboxIcon()
 endfunction
 
 function! s:suite.OneArgument_GetRIcon()
-  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.r'), 'ﳒ')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.r'), '󰟔')
 endfunction
 
 function! s:suite.OneArgument_GetLuaIcon()
@@ -236,11 +236,11 @@ function! s:suite.OneArgument_GetCIcon()
 endfunction
 
 function! s:suite.OneArgument_GetCSSIcon()
-  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cs'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cs'), '󰌛')
 endfunction
 
 function! s:suite.OneArgument_GetCSharpIcon()
-  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cs'), '')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.cs'), '󰌛')
 endfunction
 
 function! s:suite.OneArgument_GetElmIcon()
@@ -256,7 +256,7 @@ function! s:suite.OneArgument_GetDartIcon()
 endfunction
 
 function! s:suite.OneArgument_GetSolidityIcon()
-  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.sol'), 'ﲹ')
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.sol'), '󰡪')
 endfunction
 
 function! s:suite.OneArgument_GetGoIcon()
@@ -272,7 +272,7 @@ function! s:suite.OneArgument_GetScalaIcon()
 endfunction
 
 function! s:suite.OneArgument_GetTexIcon()
-  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.tex'), 'ﭨ')
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.tex'), '󰙩')
 endfunction
 
 function! s:suite.OneArgument_GetLicenseIcon()
@@ -280,11 +280,11 @@ function! s:suite.OneArgument_GetLicenseIcon()
 endfunction
 
 function! s:suite.OneArgument_GetRobotIcon()
-  call s:assert.equals( WebDevIconsGetFileTypeSymbol('robots.txt'), 'ﮧ')
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('robots.txt'), '󰚩')
 endfunction
 
 function! s:suite.OneArgument_PemIcon()
-  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.pem'), '')
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.pem'), '󰌋')
 endfunction
 
 function! s:suite.TwoArgument_zero_GetFileIcon()
