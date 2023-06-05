@@ -217,7 +217,7 @@ function! s:setDictionaries()
         \ 'cc'       : '',
         \ 'cp'       : '',
         \ 'c'        : '',
-        \ 'cs'       : '',
+        \ 'cs'       : '󰌛',
         \ 'h'        : '',
         \ 'hh'       : '',
         \ 'hpp'      : '',
@@ -278,15 +278,15 @@ function! s:setDictionaries()
         \ 'tsx'      : '',
         \ 'jl'       : '',
         \ 'pp'       : '',
-        \ 'vue'      : '﵂',
+        \ 'vue'      : '󰡄',
         \ 'elm'      : '',
         \ 'swift'    : '',
         \ 'xcplayground' : '',
-        \ 'tex'      : 'ﭨ',
-        \ 'r'        : 'ﳒ',
-        \ 'rproj'    : '鉶',
-        \ 'sol'      : 'ﲹ',
-        \ 'pem'      : ''
+        \ 'tex'      : '󰙩',
+        \ 'r'        : '󰟔',
+        \ 'rproj'    : '󰗆',
+        \ 'sol'      : '󰡪',
+        \ 'pem'      : '󰌋'
         \}
 
   let s:file_node_exact_matches = {
@@ -326,7 +326,7 @@ function! s:setDictionaries()
         \ 'gemfile'                          : '',
         \ 'makefile'                         : '',
         \ 'cmakelists.txt'                   : '',
-        \ 'robots.txt'                       : 'ﮧ'
+        \ 'robots.txt'                       : '󰚩'
         \}
 
   let s:file_node_pattern_matches = {
