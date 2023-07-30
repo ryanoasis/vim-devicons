@@ -80,7 +80,7 @@ call s:set('g:WebDevIconsTabAirLineAfterGlyphPadding', '')
 " config defaults {{{1
 "========================================================================
 
-call s:set('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol', '')
+call s:set('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol', '󰈚')
 call s:set('g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol', '')
 call s:set('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol', g:DevIconsEnableFoldersOpenClose ? '' : '')
 call s:set('g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol',  '')
@@ -169,21 +169,21 @@ function! s:setDictionaries()
         \ 'styl'     : '',
         \ 'sass'     : '',
         \ 'scss'     : '',
-        \ 'htm'      : '',
-        \ 'html'     : '',
-        \ 'slim'     : '',
-        \ 'haml'     : '',
+        \ 'htm'      : '',
+        \ 'html'     : '',
+        \ 'slim'     : '',
+        \ 'haml'     : '',
         \ 'ejs'      : '',
-        \ 'css'      : '',
-        \ 'less'     : '',
-        \ 'md'       : '',
-        \ 'mdx'      : '',
-        \ 'markdown' : '',
-        \ 'rmd'      : '',
+        \ 'css'      : '',
+        \ 'less'     : '',
+        \ 'md'       : '',
+        \ 'mdx'      : '',
+        \ 'markdown' : '',
+        \ 'rmd'      : '',
         \ 'json'     : '',
         \ 'webmanifest' : '',
-        \ 'js'       : '',
-        \ 'mjs'      : '',
+        \ 'js'       : '',
+        \ 'mjs'      : '󰎙',
         \ 'jsx'      : '',
         \ 'rb'       : '',
         \ 'gemspec'  : '',
@@ -301,9 +301,10 @@ function! s:setDictionaries()
         \ 'mix.lock'                         : '',
         \ 'dropbox'                          : '',
         \ '.ds_store'                        : '',
-        \ '.gitconfig'                       : '',
-        \ '.gitignore'                       : '',
-        \ '.gitattributes'                   : '',
+        \ '.gitconfig'                       : '',
+        \ '.gitignore'                       : '',
+        \ '.gitmodules'                      : '',
+        \ '.gitattributes'                   : '',
         \ '.gitlab-ci.yml'                   : '',
         \ '.bashrc'                          : '',
         \ '.zshrc'                           : '',
