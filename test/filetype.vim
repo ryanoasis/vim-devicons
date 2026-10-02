@@ -287,6 +287,10 @@ function! s:suite.OneArgument_PemIcon()
   call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.pem'), '')
 endfunction
 
+function! s:suite.OneArgument_GetScmIcon()
+  call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.scm'), '')
+endfunction
+
 function! s:suite.TwoArgument_zero_GetFileIcon()
   call s:assert.equals( WebDevIconsGetFileTypeSymbol('test.vim', 0), '')
 endfunction
